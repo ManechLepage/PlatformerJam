@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dry82gupjq6pi"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_57qmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(20, 70.86957)
+
+[node name="Waterfall" type="StaticBody2D" unique_id=1257707682]
+
+[node name="Head" type="Sprite2D" parent="." unique_id=954685481]
+modulate = Color(0.38928655, 0.38928664, 0.38928658, 1)
+position = Vector2(0, -21)
+scale = Vector2(20, 6.9)
+texture = SubResource("CanvasTexture_57qmd")
+
+[node name="Water" type="Sprite2D" parent="." unique_id=620774578]
+modulate = Color(0.13333334, 0.5137255, 1, 1)
+position = Vector2(2.4676322e-07, -10.000001)
+rotation = 1.5707964
+scale = Vector2(20, 6.9)
+texture = SubResource("CanvasTexture_57qmd")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=526198721]
+position = Vector2(0, -12.225002)
+scale = Vector2(1, 0.345)
+shape = SubResource("RectangleShape2D_yf5fn")

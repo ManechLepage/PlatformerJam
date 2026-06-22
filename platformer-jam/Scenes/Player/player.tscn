@@ -47,7 +47,6 @@ jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
-friction = null
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
 script = ExtResource("5_0u5uq")
@@ -67,7 +66,6 @@ script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
-jump_force = 600.0
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="1_7yn8b"]
 [ext_resource type="PackedScene" uid="uid://do7h5f4dt7trf" path="res://Scenes/Square.tscn" id="2_etk83"]
 [ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="3_etk83"]
+[ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="4_qumfl"]
+[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="5_r08cw"]
 
 [sub_resource type="Animation" id="Animation_qumfl"]
 resource_name = "Lucidity"
@@ -10,58 +12,46 @@ step = 0.0078125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("T_door:position")
+tracks/0/path = NodePath("T_obstacle_cir:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(360, 380.00003), Vector2(360, 560)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("T_obstacle_cir:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1.205, 1.205), Vector2(0.396, 0.396)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("T_rot_floor:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("T_rot_floor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, -0.34906584]
+"values": [0.87266463, -0.34906584]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("T_obstacle_cir_2:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("T_obstacle_cir_2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0.55, 0.55), Vector2(1.595, 1.595)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("T_floor_2:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("T_floor_2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -73,58 +63,46 @@ step = 0.0078125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("T_door:position")
+tracks/0/path = NodePath("T_obstacle_cir:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(360, 380.00003)]
+"values": [Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("T_obstacle_cir:scale")
+tracks/1/path = NodePath("T_rot_floor:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [0.34906584]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("T_rot_floor:rotation")
+tracks/2/path = NodePath("T_obstacle_cir_2:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.34906584]
+"values": [Vector2(0.55, 0.55)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("T_obstacle_cir_2:scale")
+tracks/3/path = NodePath("T_floor_2:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.55, 0.55)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("T_floor_2:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -144,11 +122,6 @@ libraries/ = SubResource("AnimationLibrary_00287")
 autoplay = &"Lucidity"
 speed_scale = 0.0
 script = ExtResource("1_7yn8b")
-
-[node name="T_door" parent="." unique_id=166165308 instance=ExtResource("2_etk83")]
-modulate = Color(0.69484264, 1, 0.9988758, 1)
-position = Vector2(360, 380.00003)
-scale = Vector2(1.215, 2.62)
 
 [node name="T_ceiling" parent="." unique_id=333022209 instance=ExtResource("3_etk83")]
 modulate = Color(0.5648586, 0.6104487, 1, 1)
@@ -172,7 +145,7 @@ rotation = -0.06981317
 scale = Vector2(2.605, 0.48)
 
 [node name="T_obstacle_cir" parent="." unique_id=102090910 instance=ExtResource("3_etk83")]
-position = Vector2(560, 409.00003)
+position = Vector2(567, 375)
 
 [node name="T_rot_floor" parent="." unique_id=924663462 instance=ExtResource("2_etk83")]
 position = Vector2(828, 521)
@@ -182,3 +155,21 @@ scale = Vector2(3.82, 0.3)
 [node name="T_obstacle_cir_2" parent="." unique_id=1595801041 instance=ExtResource("3_etk83")]
 position = Vector2(1130, 452)
 scale = Vector2(0.55, 0.55)
+
+[node name="Player" parent="." unique_id=1898798850 instance=ExtResource("4_qumfl")]
+position = Vector2(108, 374)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=187496255]
+
+[node name="T_obstacle_sq_1" parent="." unique_id=166165308 instance=ExtResource("2_etk83")]
+position = Vector2(333, 483.99997)
+rotation = 0.23212878
+
+[node name="Square" parent="." unique_id=189950919 instance=ExtResource("2_etk83")]
+position = Vector2(1286, 484)
+rotation = 0.017453292
+scale = Vector2(1.835, 0.865)
+
+[node name="Waterfall" parent="." unique_id=1257707682 instance=ExtResource("5_r08cw")]
+position = Vector2(1290, 440)
+scale = Vector2(5, 5)
