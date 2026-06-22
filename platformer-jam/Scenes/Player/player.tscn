@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://jus0vffp4nem"]
+
+[ext_resource type="Script" uid="uid://b8kew3elbwlo" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
+[ext_resource type="Script" uid="uid://covxk1e87jddg" path="res://Scripts/Player/StateMachine/state_machine.gd" id="2_xpcdj"]
+[ext_resource type="Script" uid="uid://bm5o7y4tnpqcd" path="res://Scripts/Player/StateMachine/running.gd" id="3_xpcdj"]
+[ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
+[ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
+[ext_resource type="Script" uid="uid://cgphvdt543pfo" path="res://Scripts/Player/StateMachine/jump.gd" id="6_jlvik"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1898798850]
+script = ExtResource("1_a3d8c")
+
+[node name="StateMachine" type="Node" parent="." unique_id=482495664]
+script = ExtResource("2_xpcdj")
+
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("idle")]
+script = ExtResource("3_xpcdj")
+idle = NodePath("../Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849]
+script = ExtResource("4_dd0ac")
+
+[node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
+script = ExtResource("5_0u5uq")
+run = NodePath("../Running")
+idle = NodePath("../Idle")
+
+[node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall")]
+script = ExtResource("6_jlvik")
+idle = NodePath("../Idle")
+run = NodePath("../Running")
+fall = NodePath("../Fall")
+
+[node name="Meditate" type="Node" parent="StateMachine" unique_id=786325008]
