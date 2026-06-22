@@ -8,7 +8,6 @@ extends State
 func enter():
 	super()
 	#parent.sprite.play("Idle")
-	parent.velocity.x = 0
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Meditate"):
@@ -20,13 +19,12 @@ func process_inputs(event):
 	return null
 
 func process_physics(delta):
+	parent.velocity.x = move_toward(parent.velocity.x, 0, friction * delta)
+	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()
 	
-	if parent.velocity.y > 0:
-		return fall
-	
-	var movement = Input.get_axis("Left", "Right") * move_speed
-	if movement != 0:
+	if Input.get_axis("Left", "Right") != 0:
 		return run
+	
 	return null

@@ -14,8 +14,9 @@ func enter():
 func process_physics(delta):
 	parent.velocity.y += gravity * delta
 	
-	var movement = Input.get_axis("Left", "Right") * move_speed
-	flip_character(movement)
+	var direction = Input.get_axis("Left", "Right")
+	var movement = move_toward(parent.velocity.x, direction * move_speed, acceleration * delta)
+	flip_character(direction)
 	
 	if movement != 0:
 		pass # Flip animation

@@ -13,13 +13,13 @@
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
 gradient = SubResource("Gradient_dd0ac")
-width = 100
-height = 100
+width = 29
+height = 40
 fill_from = Vector2(0.22395833, 0.47395834)
 fill_to = Vector2(0.765625, 0.4565972)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
-size = Vector2(100, 100)
+size = Vector2(30, 40)
 
 [node name="Player" type="CharacterBody2D" unique_id=1898798850]
 script = ExtResource("1_a3d8c")
@@ -47,6 +47,7 @@ jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
+friction = null
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
 script = ExtResource("5_0u5uq")
@@ -66,6 +67,7 @@ script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
+jump_force = 600.0
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")

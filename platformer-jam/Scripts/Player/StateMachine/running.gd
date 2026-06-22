@@ -16,16 +16,17 @@ func process_inputs(event):
 		return jump
 
 func process_physics(delta):
-	var movement = Input.get_axis("Left", "Right") * move_speed
+	var direction = Input.get_axis("Left", "Right")
 	
-	flip_character(movement)
+	flip_character(direction)
 	
-	parent.velocity.x = movement
+	if direction != 0:
+		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed, acceleration * delta)
+	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()
 	
-	if movement == 0:
+	if direction == 0:
 		return idle
 	if parent.velocity.y > 0:
 		return fall
-	return null

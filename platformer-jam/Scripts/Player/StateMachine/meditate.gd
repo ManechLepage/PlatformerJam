@@ -20,15 +20,13 @@ func process_inputs(event):
 
 func process_physics(delta):
 	Game.event_manager.change_lucidity(meditation_power)
-	print(Game.lucidity)
+	
+	parent.velocity.x = move_toward(parent.velocity.x, 0, friction * delta)
 	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()
 	
-	if parent.velocity.y > 0:
-		return fall
-	
-	var movement = Input.get_axis("Left", "Right") * move_speed
-	if movement != 0:
+	if Input.get_axis("Left", "Right") != 0:
 		return meditate_running
+	
 	return null
