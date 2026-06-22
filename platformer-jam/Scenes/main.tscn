@@ -4,6 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
+[ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
+[ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("5_21xkr")
+shader_parameter/inner_radius = -0.05
+shader_parameter/outer_radius = 400.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.05
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D" unique_id=295821621]
 
@@ -16,4 +26,16 @@ rooms = Dictionary[String, PackedScene]({
 })
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
+z_index = 2
 position = Vector2(-2, -116)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
+
+[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=609312635 groups=["Vignette"]]
+material = SubResource("ShaderMaterial_g4v7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_21xkr")

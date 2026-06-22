@@ -4,10 +4,16 @@ extends Node
 @onready var audio_manager: AudioManager = $AudioManager
 @onready var event_manager: EventManager = $EventManager
 
-var lucidity: float = 0
+var lucidity: float = 0:
+	set(value):
+		lucidity = value
+		event_manager.lucidity_changed.emit(value)
+var max_lucidity: float = 80.0
+var camera: CameraManager
+var player: Player
 
 func _ready() -> void:
-	pass
+	player = get_tree().get_first_node_in_group("Player")
 	#lucid_test()
 
 func lucid_test():
@@ -16,10 +22,14 @@ func lucid_test():
 	lucid_test()
 
 func camera_shake(strength: float):
-	get_tree().get_first_node_in_group("Camera").set_shake(strength)
+	camera.set_shake(strength)
 
 func clear_shake():
-	get_tree().get_first_node_in_group("Camera").clear_shake()
+	camera.clear_shake()
 
-func meditate_camera_shake():
+func start_meditation_animation():
 	camera_shake(2.0)
+
+func _process(delta: float) -> void:
+	if lucidity > max_lucidity:
+		lucidity = lerpf(lucidity, max_lucidity, delta * 6)

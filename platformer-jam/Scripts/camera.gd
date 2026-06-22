@@ -6,6 +6,9 @@ var rng = RandomNumberGenerator.new()
 var shake_strength: float = 0.0
 var shake: float = 0.0
 
+func _ready() -> void:
+	Game.camera = self
+
 func set_shake(shake_value: float) -> void:
 	shake = shake_value
 

@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://cdpq4m5itvhvc" path="res://Scripts/Room/room.gd" id="1_7fk0y"]
 [ext_resource type="Script" uid="uid://7j6kmuhpbc3h" path="res://Scripts/camera.gd" id="2_dyxu8"]
 [ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="2_x7265"]
+[ext_resource type="Script" uid="uid://lyi0yeqjiv4d" path="res://Scripts/Room/parallax_background.gd" id="3_g3m34"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dyxu8"]
+seed = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g4v7s"]
+noise = SubResource("FastNoiseLite_dyxu8")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g3m34"]
+seed = 4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c2haw"]
+noise = SubResource("FastNoiseLite_g3m34")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_622ha"]
+seed = 6
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qvido"]
+noise = SubResource("FastNoiseLite_622ha")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyxu8"]
 size = Vector2(22, 124)
@@ -24,6 +43,35 @@ script = ExtResource("1_7fk0y")
 
 [node name="Camera2D" type="Camera2D" parent="Offset" unique_id=946351804 groups=["Camera"]]
 script = ExtResource("2_dyxu8")
+
+[node name="Background" type="Node2D" parent="Offset" unique_id=1300832449]
+script = ExtResource("3_g3m34")
+
+[node name="Parallax2D" type="Parallax2D" parent="Offset/Background" unique_id=739467125]
+scroll_scale = Vector2(0.15, 0.15)
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D" unique_id=2114057531]
+texture = SubResource("NoiseTexture2D_g4v7s")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Offset/Background" unique_id=1426022184]
+scroll_scale = Vector2(0.3, 0.3)
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D2" unique_id=147492606]
+scale = Vector2(0.7, 0.7)
+texture = SubResource("NoiseTexture2D_c2haw")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Offset/Background" unique_id=1988134974]
+scroll_scale = Vector2(0.6, 0.6)
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D3" unique_id=1798159065]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("NoiseTexture2D_qvido")
 
 [node name="RoomTriggers" type="Node2D" parent="Offset" unique_id=281844601]
 
