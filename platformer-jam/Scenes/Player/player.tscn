@@ -22,6 +22,7 @@ fill_to = Vector2(0.765625, 0.4565972)
 size = Vector2(30, 40)
 
 [node name="Player" type="CharacterBody2D" unique_id=1898798850]
+collision_layer = 3
 script = ExtResource("1_a3d8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1332544209]
@@ -47,7 +48,6 @@ jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
-friction = null
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
 script = ExtResource("5_0u5uq")

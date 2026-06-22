@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3064a5ui58k2"]
+
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="1_jv4em"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+resource_local_to_scene = true
+
+[node name="RoomTrigger" type="Area2D" unique_id=174834819]
+script = ExtResource("1_jv4em")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=449186360]
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

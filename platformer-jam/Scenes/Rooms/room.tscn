@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dmosabcgkit6v"]
+
+[ext_resource type="Script" uid="uid://cdpq4m5itvhvc" path="res://Scripts/Room/room.gd" id="1_7fk0y"]
+[ext_resource type="Script" uid="uid://7j6kmuhpbc3h" path="res://Scripts/camera.gd" id="2_dyxu8"]
+[ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="2_x7265"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyxu8"]
+size = Vector2(22, 124)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7fk0y"]
+width = 100
+height = 100
+noise = SubResource("FastNoiseLite_57qmd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7265"]
+size = Vector2(940, 53)
+
+[node name="Room" type="Node2D" unique_id=197990627]
+script = ExtResource("1_7fk0y")
+
+[node name="Offset" type="Node2D" parent="." unique_id=652906693]
+
+[node name="Camera2D" type="Camera2D" parent="Offset" unique_id=946351804 groups=["Camera"]]
+script = ExtResource("2_dyxu8")
+
+[node name="RoomTriggers" type="Node2D" parent="Offset" unique_id=281844601]
+
+[node name="RoomTrigger" parent="Offset/RoomTriggers" unique_id=174834819 instance=ExtResource("2_x7265")]
+position = Vector2(481, 167)
+
+[node name="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(-1, -23)
+shape = SubResource("RectangleShape2D_dyxu8")
+
+[node name="Obstables" type="Node2D" parent="Offset" unique_id=457880380]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Offset/Obstables" unique_id=746778874]
+position = Vector2(-33, 212)
+scale = Vector2(1.3599995, 1)
+
+[node name="Sprite" type="Sprite2D" parent="Offset/Obstables/StaticBody2D" unique_id=1306923116]
+position = Vector2(42.5, 22.5)
+scale = Vector2(9.41, 0.55)
+texture = SubResource("NoiseTexture2D_7fk0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstables/StaticBody2D" unique_id=2135583097]
+position = Vector2(41, 23.5)
+shape = SubResource("RectangleShape2D_x7265")
+
+[editable path="Offset/RoomTriggers/RoomTrigger"]

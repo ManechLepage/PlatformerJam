@@ -10,7 +10,12 @@ extends State
 
 func enter():
 	super()
+	Game.meditate_camera_shake()
 	#parent.sprite.play("Meditation Run")
+
+func exit():
+	super()
+	Game.clear_shake()
 
 func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):
