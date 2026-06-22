@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1a3pis82gmoo"]
 
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="2_bo1nx"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
 
@@ -28,3 +29,6 @@ texture = SubResource("NoiseTexture2D_yf5fn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1365587912]
 position = Vector2(41, 23.5)
 shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Node2D" parent="." unique_id=1760792903 instance=ExtResource("2_bo1nx")]
+position = Vector2(603, 344)

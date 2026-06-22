@@ -21,6 +21,7 @@ func _physics_process(delta):
 
 func _process(delta):
 	state_machine.process_frame(delta)
+	print(has_jumped)
 
 func _unhandled_input(event):
 	state_machine.process_inputs(event)
