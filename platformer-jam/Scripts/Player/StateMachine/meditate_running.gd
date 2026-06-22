@@ -1,22 +1,28 @@
 extends State
 
-@export var jump: State
+@export var meditation_power: float
+
 @export var idle: State
+@export var run: State
 @export var fall: State
-@export var meditate_running: State
+@export var meditate_idle: State
+@export var jump: State
 
 func enter():
 	super()
-	#parent.sprite.play("Run")
+	#parent.sprite.play("Meditation Run")
 
 func process_inputs(event):
-	if Input.is_action_just_pressed("Meditate"):
-		return meditate_running
+	if Input.is_action_just_released("Meditate"):
+		return run
 	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():
 		return jump
 
 func process_physics(delta):
-	var movement = Input.get_axis("Left", "Right") * move_speed
+	Game.event_manager.change_lucidity(meditation_power)
+	print(Game.lucidity)
+	
+	var movement = Input.get_axis("Left", "Right") * move_speed * 0.9
 	
 	flip_character(movement)
 	
@@ -25,7 +31,7 @@ func process_physics(delta):
 	parent.move_and_slide()
 	
 	if movement == 0:
-		return idle
+		return meditate_idle
 	if parent.velocity.y > 0:
 		return fall
 	return null

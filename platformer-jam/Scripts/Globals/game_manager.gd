@@ -7,7 +7,8 @@ extends Node
 var lucidity: float = 0
 
 func _ready() -> void:
-	lucid_test()
+	pass
+	#lucid_test()
 
 func lucid_test():
 	event_manager.change_lucidity(1)

@@ -4,6 +4,7 @@ extends CharacterBody2D
 var facing_right: bool = true
 var sprite: AnimatedSprite2D
 var has_jumped: bool = false
+
 @onready var state_machine: StateMachine = $StateMachine
 
 @onready var running: State = $StateMachine/Running

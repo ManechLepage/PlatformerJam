@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
 [ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
 [ext_resource type="Script" uid="uid://cgphvdt543pfo" path="res://Scripts/Player/StateMachine/jump.gd" id="6_jlvik"]
+[ext_resource type="Script" uid="uid://c2ajxns6iujxi" path="res://Scripts/Player/StateMachine/meditate.gd" id="7_0u5uq"]
+[ext_resource type="Script" uid="uid://dl3j66yoqe0yg" path="res://Scripts/Player/StateMachine/meditate_running.gd" id="8_jlvik"]
 
 [sub_resource type="Gradient" id="Gradient_dd0ac"]
 
@@ -32,17 +34,19 @@ shape = SubResource("RectangleShape2D_dd0ac")
 script = ExtResource("2_xpcdj")
 starting_state = NodePath("Fall")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall")]
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running")]
 script = ExtResource("3_xpcdj")
 jump = NodePath("../Jump")
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
+meditate_running = NodePath("../MeditateRunning")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle")]
 script = ExtResource("4_dd0ac")
 jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
+meditate_idle = NodePath("../MeditateIdle")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
 script = ExtResource("5_0u5uq")
@@ -62,3 +66,19 @@ script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
+
+[node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
+script = ExtResource("7_0u5uq")
+meditation_power = 0.02
+idle = NodePath("../Idle")
+fall = NodePath("../Fall")
+meditate_running = NodePath("../MeditateRunning")
+
+[node name="MeditateRunning" type="Node" parent="StateMachine" unique_id=651461945 node_paths=PackedStringArray("idle", "run", "fall", "meditate_idle", "jump")]
+script = ExtResource("8_jlvik")
+meditation_power = 0.02
+idle = NodePath("../Idle")
+run = NodePath("../Running")
+fall = NodePath("../Fall")
+meditate_idle = NodePath("../MeditateIdle")
+jump = NodePath("../Jump")
