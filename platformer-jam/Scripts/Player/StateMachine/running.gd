@@ -6,7 +6,7 @@ extends State
 
 func enter():
 	super()
-	parent.sprite.play("Run")
+	#parent.sprite.play("Run")
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():

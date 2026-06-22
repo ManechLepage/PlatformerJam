@@ -6,7 +6,7 @@ extends State
 
 func enter():
 	super()
-	parent.sprite.play("Idle")
+	#parent.sprite.play("Idle")
 	parent.velocity.x = 0
 
 func process_inputs(event):

@@ -27,4 +27,4 @@ func flip_character(movement):
 		parent.facing_right = true
 	elif movement > 0 and parent.facing_right:
 		parent.facing_right = false
-	parent.sprite.flip_h = parent.facing_right
+	#parent.sprite.flip_h = parent.facing_right

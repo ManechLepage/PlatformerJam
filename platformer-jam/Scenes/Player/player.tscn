@@ -7,28 +7,58 @@
 [ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
 [ext_resource type="Script" uid="uid://cgphvdt543pfo" path="res://Scripts/Player/StateMachine/jump.gd" id="6_jlvik"]
 
+[sub_resource type="Gradient" id="Gradient_dd0ac"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_dd0ac")
+width = 100
+height = 100
+fill_from = Vector2(0.22395833, 0.47395834)
+fill_to = Vector2(0.765625, 0.4565972)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
+size = Vector2(100, 100)
+
 [node name="Player" type="CharacterBody2D" unique_id=1898798850]
 script = ExtResource("1_a3d8c")
 
-[node name="StateMachine" type="Node" parent="." unique_id=482495664]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1332544209]
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=285193432]
+shape = SubResource("RectangleShape2D_dd0ac")
+
+[node name="StateMachine" type="Node" parent="." unique_id=482495664 node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_xpcdj")
+starting_state = NodePath("Fall")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("idle")]
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall")]
 script = ExtResource("3_xpcdj")
+jump = NodePath("../Jump")
 idle = NodePath("../Idle")
+fall = NodePath("../Fall")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall")]
 script = ExtResource("4_dd0ac")
+jump = NodePath("../Jump")
+run = NodePath("../Running")
+fall = NodePath("../Fall")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("run", "idle")]
 script = ExtResource("5_0u5uq")
 run = NodePath("../Running")
 idle = NodePath("../Idle")
 
+[node name="CoyoteJump" type="Timer" parent="StateMachine/Fall" unique_id=1082639192]
+wait_time = 0.1
+one_shot = true
+
+[node name="InputDelay" type="Timer" parent="StateMachine/Fall" unique_id=1688796664]
+wait_time = 0.2
+one_shot = true
+
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall")]
 script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
-
-[node name="Meditate" type="Node" parent="StateMachine" unique_id=786325008]
