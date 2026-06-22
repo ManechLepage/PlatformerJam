@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PlatformerJam"
+config/features=PackedStringArray("4.6", "Forward Plus")
+
+[file_customization]
+
+folder_colors={
+"res://Addons/": "red",
+"res://Audio/": "orange",
+"res://Graphics/": "yellow",
+"res://Resources/": "green",
+"res://Scenes/": "teal",
+"res://Scripts/": "blue"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
