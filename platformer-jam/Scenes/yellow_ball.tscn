@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d08qp6wyfg55j"]
+
+[ext_resource type="Script" uid="uid://drmplgba2oyv7" path="res://Scenes/yellow_ball.gd" id="1_1ytvh"]
+[ext_resource type="Texture2D" uid="uid://cai7dkna6mm4v" path="res://Sprites/boulejaune.png" id="1_426vg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 7.0
+
+[node name="Yellowball" type="Node2D" unique_id=1760792903]
+scale = Vector2(2, 2)
+script = ExtResource("1_1ytvh")
+
+[node name="Area" type="Area2D" parent="." unique_id=1068528286]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1615720275]
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226457427]
+texture = ExtResource("1_426vg")

@@ -3,7 +3,6 @@ extends State
 @export var idle: State
 @export var run: State
 @export var fall: State
-
 @export var jump_force: float = 500.0
 
 func enter():
