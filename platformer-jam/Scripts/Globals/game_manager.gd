@@ -11,5 +11,5 @@ func _ready() -> void:
 
 func lucid_test():
 	event_manager.change_lucidity(1)
-	await get_tree().create_timer(0.01).timeout
+	await get_tree().create_timer(0.1).timeout
 	lucid_test()
