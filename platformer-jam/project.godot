@@ -13,6 +13,10 @@ config_version=5
 config/name="PlatformerJam"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+Game="*uid://ces3yepxa2r0n"
+
 [file_customization]
 
 folder_colors={

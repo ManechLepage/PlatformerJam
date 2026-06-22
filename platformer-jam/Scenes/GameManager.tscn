@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ces3yepxa2r0n"]
+
+[ext_resource type="Script" uid="uid://drd0nok8aj0o3" path="res://Scripts/Globals/game_manager.gd" id="1_m2tc1"]
+[ext_resource type="Script" uid="uid://dd6sopkwe2kvo" path="res://Scripts/Globals/audio_manager.gd" id="2_bwyv8"]
+[ext_resource type="Script" uid="uid://cvvq38say4o6e" path="res://Scripts/Globals/event_manager.gd" id="3_7cxpe"]
+
+[node name="GameManager" type="Node" unique_id=27191951]
+script = ExtResource("1_m2tc1")
+
+[node name="AudioManager" type="Node" parent="." unique_id=370862607]
+script = ExtResource("2_bwyv8")
+
+[node name="EventManager" type="Node" parent="." unique_id=1914472049]
+script = ExtResource("3_7cxpe")
