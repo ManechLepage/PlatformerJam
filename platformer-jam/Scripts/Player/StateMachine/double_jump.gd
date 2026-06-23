@@ -12,7 +12,7 @@ func enter():
 	super()
 	parent.velocity.y = -jump_force
 	parent.has_jumped = true
-	Game.player.sprite.play("jump")
+	Game.player.sprite.play("idle")
 	if not Input.is_action_pressed("Jump"):
 		return fall
 	var orbs: Array = Game.player.interact_area.get_overlapping_areas()
