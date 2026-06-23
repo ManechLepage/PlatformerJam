@@ -144,21 +144,21 @@ debug_color = Color(0.37033582, 0.60469365, 0.33828056, 0.41960785)
 script = ExtResource("2_xpcdj")
 starting_state = NodePath("Fall")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running", "wash")]
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running", "interact")]
 script = ExtResource("3_xpcdj")
 jump = NodePath("../Jump")
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
 meditate_running = NodePath("../MeditateRunning")
-wash = NodePath("../Wash")
+interact = NodePath("../Interact")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle", "wash")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle", "interact")]
 script = ExtResource("4_dd0ac")
 jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
-wash = NodePath("../Wash")
+interact = NodePath("../Interact")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("double_jump", "jump", "run", "idle")]
 script = ExtResource("5_0u5uq")
@@ -210,7 +210,7 @@ fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
 jump = NodePath("../Jump")
 
-[node name="Wash" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
+[node name="Interact" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
 script = ExtResource("9_gk6dx")
 wash_power = 0.04
 idle = NodePath("../Idle")
