@@ -12,9 +12,11 @@ extends State
 var can_control: bool = true
 
 func enter():
-	Game.player.velocity.y = max(Game.player.velocity.y, 80+Game.player.velocity.y/2) #quick release makes u instant fall
+	Game.player.velocity.y = max(Game.player.velocity.y, -130) #quick release makes u instant fall
 	timer.start()
 	super()
+	if Game.player.sprite.animation == "jump":
+		Game.player.sprite.play("fall")
 
 func exit():
 	can_control = true
@@ -22,8 +24,9 @@ func exit():
 func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
 		if timer.time_left > 0 and !parent.has_jumped:
+			flip_character(Input.get_axis("Left", "Right"))
 			return jump
-		elif timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
+		elif Game.player.interact_area.get_overlapping_areas():
 			return double_jump
 		else:
 			input_delay_timer.start()
@@ -34,15 +37,23 @@ func process_physics(delta):
 	#flip_character(movement)
 	
 	parent.velocity.y += gravity * delta * gravity_multiplier
+	parent.velocity.y = min(parent.velocity.y,max_fall_speed)
 	if can_control:
 		parent.velocity.x = movement
 	parent.move_and_slide()
 	
+	if Game.player.sprite.animation == "jump" and parent.velocity.y >=0:
+		Game.player.sprite.play("fall")
+	
 	if parent.is_on_floor():
 		parent.has_jumped = false
 		if input_delay_timer.time_left > 0:
+			flip_character(movement)
 			return jump
 		if movement != 0:
 			return run
 		return idle
+	elif input_delay_timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
+		return double_jump
+	
 	return null

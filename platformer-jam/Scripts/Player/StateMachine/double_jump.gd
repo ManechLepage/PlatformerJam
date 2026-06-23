@@ -12,9 +12,17 @@ func enter():
 	super()
 	parent.velocity.y = -jump_force
 	parent.has_jumped = true
-	Game.player.sprite.play("jump")
+	Game.player.sprite.play("idle")
 	if not Input.is_action_pressed("Jump"):
 		return fall
+	var orbs: Array = Game.player.interact_area.get_overlapping_areas()
+	if orbs:
+		var tweenx = get_tree().create_tween()
+		var tweeny = get_tree().create_tween()
+		tweenx.tween_property(Game.player,"global_position:x",orbs[0].global_position.x,0.1)
+		tweeny.tween_property(Game.player,"global_position:y",orbs[0].global_position.y-10,0.05)
+		tweenx.finished.connect(func(): flip_character(Input.get_axis("Left", "Right")))
+	
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
