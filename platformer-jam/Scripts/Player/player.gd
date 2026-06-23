@@ -9,6 +9,7 @@ var is_meditating: bool = false
 @onready var state_machine: StateMachine = $StateMachine
 @export var sprite: AnimatedSprite2D
 @export var interact_area: Area2D
+@onready var icon: Sprite2D = $Icon
 
 @onready var running: State = $StateMachine/Running
 @onready var idle: State = $StateMachine/Idle
@@ -19,6 +20,7 @@ var ground_info: Node2D
 
 func _ready() -> void:
 	state_machine.init(self)
+	Game.event_manager.interactable_object_changed.connect(update_x_icon)
 
 func _physics_process(delta):
 	state_machine.process_physics(delta)
@@ -34,3 +36,7 @@ func _on_floor_info_body_entered(body: Node2D) -> void:
 
 func _on_floor_info_body_exited(body: Node2D) -> void:
 	Game.event_manager.exit_floor.emit(body)
+
+func update_x_icon() -> void:
+	if Game.event_manager.interactable_object: icon.visible = true
+	else: icon.visible = false

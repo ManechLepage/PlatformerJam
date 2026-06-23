@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8kew3elbwlo" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://p44sdkr4nqtu" path="res://Sprites/char_sheet.png" id="2_jhyir"]
+[ext_resource type="Texture2D" uid="uid://dk0ulwdb308w0" path="res://Sprites/icon_x.png" id="2_oikmp"]
 [ext_resource type="Script" uid="uid://covxk1e87jddg" path="res://Scripts/Player/StateMachine/state_machine.gd" id="2_xpcdj"]
 [ext_resource type="Script" uid="uid://bm5o7y4tnpqcd" path="res://Scripts/Player/StateMachine/running.gd" id="3_xpcdj"]
 [ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
@@ -151,6 +152,12 @@ script = ExtResource("1_a3d8c")
 sprite = NodePath("Sprite")
 interact_area = NodePath("Interact")
 
+[node name="Icon" type="Sprite2D" parent="." unique_id=785440481]
+visible = false
+position = Vector2(0, -30)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_oikmp")
+
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
@@ -230,14 +237,14 @@ one_shot = true
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")
-meditation_power = 2.0
+meditation_power = 4.0
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
 meditate_running = NodePath("../MeditateRunning")
 
 [node name="MeditateRunning" type="Node" parent="StateMachine" unique_id=651461945 node_paths=PackedStringArray("idle", "run", "fall", "meditate_idle", "jump")]
 script = ExtResource("8_jlvik")
-meditation_power = 0.04
+meditation_power = 2.0
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
@@ -246,7 +253,7 @@ jump = NodePath("../Jump")
 
 [node name="Interact" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
 script = ExtResource("9_gk6dx")
-wash_power = 0.04
+wash_power = 2.0
 idle = NodePath("../Idle")
 
 [connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]

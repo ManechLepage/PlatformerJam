@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://ev6wn4wsgyq2"]
 
+[ext_resource type="Script" uid="uid://dgipfi6qyh84" path="res://Scripts/Objects/water.gd" id="1_po638"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(66, 62)
 
-[node name="Node2D" type="Area2D" unique_id=1652650217]
+[node name="Water" type="Area2D" unique_id=1652650217]
+script = ExtResource("1_po638")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=400528529]
 shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.7948995, 0.37901923, 0.5154127, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
