@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
 [ext_resource type="Script" uid="uid://cgphvdt543pfo" path="res://Scripts/Player/StateMachine/jump.gd" id="6_jlvik"]
 [ext_resource type="Script" uid="uid://c2ajxns6iujxi" path="res://Scripts/Player/StateMachine/meditate.gd" id="7_0u5uq"]
+[ext_resource type="Script" uid="uid://btjc0g806uilc" path="res://Scripts/Player/StateMachine/double_jump.gd" id="8_74mp2"]
 [ext_resource type="Script" uid="uid://dl3j66yoqe0yg" path="res://Scripts/Player/StateMachine/meditate_running.gd" id="8_jlvik"]
 [ext_resource type="Script" uid="uid://d2y1dft21woiq" path="res://Scripts/Player/StateMachine/wash.gd" id="9_gk6dx"]
 
@@ -102,10 +103,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
 size = Vector2(30, 40)
 
-[node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite", "interact_area") groups=["Player"]]
 collision_layer = 3
 script = ExtResource("1_a3d8c")
 sprite = NodePath("Sprite")
+interact_area = NodePath("Interact")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
 position = Vector2(0, -1)
@@ -114,6 +116,12 @@ animation = &"running"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
+shape = SubResource("RectangleShape2D_dd0ac")
+
+[node name="Interact" type="Area2D" parent="." unique_id=2103578818]
+collision_mask = 4
+
+[node name="CollisionArea" type="CollisionShape2D" parent="Interact" unique_id=1567277934]
 shape = SubResource("RectangleShape2D_dd0ac")
 
 [node name="StateMachine" type="Node" parent="." unique_id=482495664 node_paths=PackedStringArray("starting_state")]
@@ -136,8 +144,9 @@ fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
 wash = NodePath("../Wash")
 
-[node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("jump", "run", "idle")]
+[node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("double_jump", "jump", "run", "idle")]
 script = ExtResource("5_0u5uq")
+double_jump = NodePath("../DoubleJump")
 jump = NodePath("../Jump")
 run = NodePath("../Running")
 idle = NodePath("../Idle")
@@ -150,11 +159,24 @@ one_shot = true
 wait_time = 0.1
 one_shot = true
 
-[node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall")]
+[node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall", "double_jump")]
 script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
+double_jump = NodePath("../DoubleJump")
+
+[node name="DoubleJump" type="Node" parent="StateMachine" unique_id=275578264 node_paths=PackedStringArray("idle", "run", "fall", "jump", "double_jump")]
+script = ExtResource("8_74mp2")
+idle = NodePath("../Idle")
+run = NodePath("../Running")
+fall = NodePath("../Fall")
+jump = NodePath("../Jump")
+double_jump = NodePath(".")
+
+[node name="InputDelay" type="Timer" parent="StateMachine/DoubleJump" unique_id=583899507]
+wait_time = 0.1
+one_shot = true
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")

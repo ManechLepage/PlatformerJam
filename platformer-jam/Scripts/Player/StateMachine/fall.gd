@@ -4,7 +4,7 @@ extends State
 
 @onready var timer = $CoyoteJump
 @onready var input_delay_timer = $InputDelay
-
+@export var double_jump: State
 @export var jump: State
 @export var run: State
 @export var idle: State
@@ -23,6 +23,8 @@ func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
 		if timer.time_left > 0 and !parent.has_jumped:
 			return jump
+		elif timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
+			return double_jump
 		else:
 			input_delay_timer.start()
 	return null
