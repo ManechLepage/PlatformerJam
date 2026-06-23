@@ -87,17 +87,7 @@ texture = SubResource("GradientTexture2D_3gngh")
 position = Vector2(-342.5, 2)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1376364263]
-position = Vector2(-121.000015, 205.99991)
-node_a = NodePath("../Block4")
-node_b = NodePath("../Plant/Branch")
-
-[node name="PinJoint2D3" type="PinJoint2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=249278760]
-position = Vector2(-305, 23)
-node_a = NodePath("../Block")
-node_b = NodePath("../Plant/Branch2")
-
-[node name="Plant" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=952569118 instance=ExtResource("2_5khlg")]
+[node name="Plant" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=952569118 instance=ExtResource("2_5khlg")]
 position = Vector2(-191, 189)
 
 [node name="PinJoint2D2" parent="Offset/Obstacles/Plant" index="0" unique_id=1955612199]
@@ -106,7 +96,6 @@ position = Vector2(-23, -75)
 [node name="Leaf2" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="0" unique_id=1233958342]
 position = Vector2(29, -29)
 rotation = 3.1415927
-rotation_offset = -10.0
 
 [node name="Branch" parent="Offset/Obstacles/Plant" index="2" unique_id=313482899]
 position = Vector2(-26, -71)
@@ -129,5 +118,15 @@ polygon = PackedVector2Array(0, 0, 10, 0, 10, 130, 0, 130)
 [node name="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Branch2" index="1" unique_id=1088296710]
 position = Vector2(4.949768, 65.0538)
 shape = SubResource("RectangleShape2D_oug80")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="Offset/Obstacles/Plant" index="4" unique_id=249278760]
+position = Vector2(-114, -166)
+node_a = NodePath("../../Block")
+node_b = NodePath("../Branch2")
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="Offset/Obstacles/Plant" index="5" unique_id=1376364263]
+position = Vector2(69.999985, 16.999908)
+node_a = NodePath("../../Block4")
+node_b = NodePath("../Branch")
 
 [editable path="Offset/Obstacles/Plant"]

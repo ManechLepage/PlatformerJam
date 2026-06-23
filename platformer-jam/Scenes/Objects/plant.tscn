@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7umuivegwpuf"]
 
-[ext_resource type="Script" uid="uid://ccntrpdj1yhvw" path="res://Scripts/Objects/leaf.gd" id="1_r5cgt"]
+[ext_resource type="Script" uid="uid://ccntrpdj1yhvw" path="res://Scripts/Objects/animation_object.gd" id="1_r5cgt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(10, 50)
@@ -19,7 +19,8 @@ modulate = Color(0.6550534, 0.6550533, 0.65505326, 1)
 [node name="Leaf2" type="AnimatableBody2D" parent="Leaves" unique_id=1233958342]
 position = Vector2(65, -14)
 script = ExtResource("1_r5cgt")
-max_y_offset = 15.0
+max_y_offset = 3.0
+displacement_speed = 0.01
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Leaves/Leaf2" unique_id=1065365291]
 position = Vector2(-0.099998474, -0.70000076)

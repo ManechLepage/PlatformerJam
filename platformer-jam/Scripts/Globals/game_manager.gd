@@ -15,10 +15,8 @@ var player: Player
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
-	event_manager.received_floor.connect(handle_floor)
-	event_manager.exit_floor.connect(handle_floor_exit)
-	#lucid_test()
-	pass
+	event_manager.received_floor.connect(set_ground)
+	event_manager.exit_floor.connect(clear_ground)
 
 func lucid_test():
 	event_manager.change_lucidity(1)
@@ -38,13 +36,8 @@ func _process(delta: float) -> void:
 	if lucidity > max_lucidity:
 		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
 
-func handle_floor(node: Node2D) -> void:
-	if node is Leaf:
-		node.animate_up()
-		player.ground_info = node
+func set_ground(node: Node2D) -> void:
+	if node is AnimationObject: node.is_ground = true
 
-func handle_floor_exit(node: Node2D) -> void:
-	if node != player.ground_info: return
-	if node is Leaf:
-		node.animate_down()
-	player.ground_info = null
+func clear_ground(node: Node2D) -> void:
+	if node is AnimationObject: node.is_ground = false
