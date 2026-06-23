@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_l3fbw"]
 [ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="2_l3fbw"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_l4vvy"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="3_0p57m"]
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_hg02c"]
 [ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_l4vvy"]
@@ -20,6 +21,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(158, 214)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_tu28n"]
 resource_name = "lucidity"
@@ -36,6 +49,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(158, 214), Vector2(136.99998, 16)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.4835298, 0.7853982]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a4cir"]
 _data = {
@@ -48,6 +73,7 @@ _data = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1932419129]
 libraries/ = SubResource("AnimationLibrary_a4cir")
 speed_scale = 0.0
+script = ExtResource("2_l4vvy")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(3, -539)
@@ -63,8 +89,8 @@ scale = Vector2(14.13, 1)
 is_platform = true
 
 [node name="Middle_platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=857514178 instance=ExtResource("3_0p57m")]
-position = Vector2(-179, 4)
-scale = Vector2(16.215, 1)
+position = Vector2(-164, 8)
+scale = Vector2(18.87, 1)
 is_platform = true
 
 [node name="Left_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1418715656 instance=ExtResource("3_0p57m")]
@@ -72,17 +98,22 @@ position = Vector2(-390.99997, 105)
 rotation = 0.2617994
 scale = Vector2(3.04, 17.035)
 
-[node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=721685211 instance=ExtResource("3_0p57m")]
+[node name="Right_ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1874509105 instance=ExtResource("3_0p57m")]
+position = Vector2(95.99999, -151.99997)
+rotation = 1.8709929
+scale = Vector2(3.04, 19.645)
+
+[node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=721685211 instance=ExtResource("3_0p57m")]
 position = Vector2(282, 54)
 rotation = -0.06632251
 scale = Vector2(3.04, 17.035)
 
-[node name="Middle_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=533953051 instance=ExtResource("3_0p57m")]
+[node name="Middle_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=533953051 instance=ExtResource("3_0p57m")]
 position = Vector2(49, 259)
 rotation = 1.4835298
 scale = Vector2(3.04, 22.68)
 
-[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1257707682 instance=ExtResource("4_hg02c")]
+[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1257707682 instance=ExtResource("4_hg02c")]
 position = Vector2(44, 227)
 scale = Vector2(3, 3)
 
@@ -90,7 +121,16 @@ scale = Vector2(3, 3)
 position = Vector2(-0.33333302, -13)
 scale = Vector2(0.33333334, 0.33333334)
 
-[node name="Rising_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1163463554 instance=ExtResource("3_0p57m")]
+[node name="Rising_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1163463554 instance=ExtResource("3_0p57m")]
 position = Vector2(158, 214)
 rotation = -0.05235988
 scale = Vector2(4.82, 1)
+
+[node name="Fall_pilar_rot" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1108675869]
+position = Vector2(-94.00001, -217)
+
+[node name="Falling_pilar" parent="Offset/Obstacles/Fall_pilar_rot" index="0" unique_id=1749484715 instance=ExtResource("3_0p57m")]
+position = Vector2(-27.192528, 129.45488)
+rotation = 0.26179937
+scale = Vector2(3.04, 17.035)
+sync_to_physics = false

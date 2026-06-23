@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="PlatformerJam"
-run/main_scene="uid://d1tq2x1lipe0"
+run/main_scene="uid://b1a3pis82gmoo"
 config/features=PackedStringArray("4.7", "Forward Plus")
+run/stretch/scale_mode="integer"
+run/size/mode=0
 
 [autoload]
 
@@ -22,11 +24,11 @@ Game="*uid://ces3yepxa2r0n"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/size/mode=2
 window/size/sharp_corners=true
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [file_customization]
 
