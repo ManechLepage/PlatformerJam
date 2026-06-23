@@ -15,7 +15,7 @@ func enter():
 	Game.player.velocity.y = max(Game.player.velocity.y, -130) #quick release makes u instant fall
 	timer.start()
 	super()
-	if not Game.player.sprite.animation == "jump":
+	if Game.player.sprite.animation == "jump":
 		Game.player.sprite.play("fall")
 
 func exit():
