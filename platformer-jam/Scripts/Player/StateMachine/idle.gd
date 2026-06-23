@@ -7,7 +7,14 @@ extends State
 
 func enter():
 	super()
-	#parent.sprite.play("Idle")
+	if Game.player.sprite.animation == "running" and Game.player.sprite.frame > 1:
+		Game.player.sprite.animation_looped.connect(idle_on_loop_finished)
+	else: Game.player.sprite.play("idle")
+	
+func idle_on_loop_finished(): Game.player.sprite.play("idle")
+func exit():
+	if Game.player.sprite.animation_looped.is_connected(idle_on_loop_finished):
+		Game.player.sprite.animation_looped.disconnect(idle_on_loop_finished)
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Meditate"):

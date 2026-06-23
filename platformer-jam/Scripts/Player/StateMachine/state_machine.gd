@@ -16,6 +16,7 @@ func change_state(new_state: State):
 		current_state.exit()
 	
 	current_state = new_state
+	
 	current_state.enter()
 
 func process_frame(delta):

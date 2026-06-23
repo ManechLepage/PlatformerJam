@@ -8,8 +8,14 @@ extends State
 
 func enter():
 	super()
-	#parent.sprite.play("Idle")
-	parent.velocity.x = 0
+	Game.start_meditation_animation()
+	parent.is_meditating = true
+	Game.player.sprite.play("meditate")
+
+func exit():
+	super()
+	parent.is_meditating = false
+	Game.clear_shake()
 
 func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):

@@ -10,7 +10,9 @@ extends State
 
 func enter():
 	super()
-	#parent.sprite.play("Meditation Run")
+	Game.start_meditation_animation()
+	parent.is_meditating = true
+	Game.player.sprite.play("running")
 
 func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):
