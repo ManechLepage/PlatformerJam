@@ -10,7 +10,7 @@ func enter():
 	super()
 	Game.start_meditation_animation()
 	parent.is_meditating = true
-	Game.player.sprite.play("meditate")
+	Game.player.sprite.play("meditation_idle")
 
 func exit():
 	super()
@@ -19,6 +19,7 @@ func exit():
 
 func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):
+		Game.player.sprite.play("meditation_idle",-1)
 		return idle
 	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
 		return meditate_running

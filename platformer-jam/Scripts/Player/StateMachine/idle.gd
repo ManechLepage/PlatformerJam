@@ -8,7 +8,8 @@ extends State
 
 func enter():
 	super()
-	if Game.player.sprite.animation == "running" and Game.player.sprite.frame > 1:
+	if (Game.player.sprite.animation == "running" and Game.player.sprite.frame > 1
+	or Game.player.sprite.animation == "meditation_idle"):
 		Game.player.sprite.animation_looped.connect(idle_on_loop_finished)
 	else: Game.player.sprite.play("idle")
 	
