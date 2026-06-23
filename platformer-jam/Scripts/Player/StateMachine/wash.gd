@@ -9,7 +9,7 @@ func enter():
 	#parent.sprite.play("Idle")
 
 func process_inputs(event):
-	if Input.is_action_just_released("Interact"):
+	if Input.is_action_just_released("Wash"):
 		return idle
 	return null
 
