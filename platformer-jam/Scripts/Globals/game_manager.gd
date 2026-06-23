@@ -3,6 +3,7 @@ extends Node
 
 @onready var audio_manager: AudioManager = $AudioManager
 @onready var event_manager: EventManager = $EventManager
+@onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
 
 var lucidity: float = 0:
 	set(value):
@@ -14,6 +15,8 @@ var player: Player
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+	event_manager.received_floor.connect(handle_floor)
+	event_manager.exit_floor.connect(handle_floor_exit)
 	#lucid_test()
 	pass
 
@@ -35,6 +38,13 @@ func _process(delta: float) -> void:
 	if lucidity > max_lucidity:
 		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
 
-func animate_object_displacement(object: Node2D, offset: Vector2) -> void:
-	var tween = create_tween()
-	tween.tween_property(object, "position", offset, 1.0).as_relative().set_ease(Tween.EASE_OUT)
+func handle_floor(node: Node2D) -> void:
+	if node is Leaf:
+		node.animate_up()
+		player.ground_info = node
+
+func handle_floor_exit(node: Node2D) -> void:
+	if node != player.ground_info: return
+	if node is Leaf:
+		node.animate_down()
+	player.ground_info = null

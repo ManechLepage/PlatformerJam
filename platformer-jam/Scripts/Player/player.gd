@@ -15,6 +15,8 @@ var is_meditating: bool = false
 @onready var jump: State = $StateMachine/Jump
 @onready var fall: State = $StateMachine/Fall
 
+var ground_info: Node2D
+
 func _ready() -> void:
 	state_machine.init(self)
 
@@ -26,3 +28,9 @@ func _process(delta):
 
 func _unhandled_input(event):
 	state_machine.process_inputs(event)
+
+func _on_floor_info_body_entered(body: Node2D) -> void:
+	Game.event_manager.received_floor.emit(body)
+
+func _on_floor_info_body_exited(body: Node2D) -> void:
+	Game.event_manager.exit_floor.emit(body)

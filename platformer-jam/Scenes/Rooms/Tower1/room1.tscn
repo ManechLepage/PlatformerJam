@@ -103,18 +103,10 @@ position = Vector2(-191, 189)
 [node name="PinJoint2D2" parent="Offset/Obstacles/Plant" index="0" unique_id=1955612199]
 position = Vector2(-23, -75)
 
-[node name="Leaf" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="0" unique_id=800348972]
-position = Vector2(114, -34)
+[node name="Leaf2" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="0" unique_id=1233958342]
+position = Vector2(29, -29)
 rotation = 3.1415927
-
-[node name="PinJoint2D" parent="Offset/Obstacles/Plant/Leaves/Leaf" index="0" unique_id=952926085]
-position = Vector2(76, -14)
-
-[node name="Shape" parent="Offset/Obstacles/Plant/Leaves/Leaf" index="1" unique_id=446382906]
-position = Vector2(8.099991, 0.69999623)
-
-[node name="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf" index="2" unique_id=709592495]
-position = Vector2(8.099991, 0.69999623)
+rotation_offset = -10.0
 
 [node name="Branch" parent="Offset/Obstacles/Plant" index="2" unique_id=313482899]
 position = Vector2(-26, -71)

@@ -104,6 +104,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
 size = Vector2(21, 38)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 5)
+
 [node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite", "interact_area") groups=["Player"]]
 collision_layer = 3
 floor_max_angle = 0.9843657
@@ -123,11 +126,19 @@ shape = SubResource("RectangleShape2D_dd0ac")
 
 [node name="Pusher" type="Node2D" parent="." unique_id=173058658]
 script = ExtResource("3_74mp2")
+
 [node name="Interact" type="Area2D" parent="." unique_id=2103578818]
 collision_mask = 4
 
 [node name="CollisionArea" type="CollisionShape2D" parent="Interact" unique_id=1567277934]
 shape = SubResource("RectangleShape2D_dd0ac")
+
+[node name="FloorInfo" type="Area2D" parent="." unique_id=1566830747]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorInfo" unique_id=2031477649]
+position = Vector2(0, 21.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.37033582, 0.60469365, 0.33828056, 0.41960785)
 
 [node name="StateMachine" type="Node" parent="." unique_id=482495664 node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_xpcdj")
@@ -203,3 +214,6 @@ jump = NodePath("../Jump")
 script = ExtResource("9_gk6dx")
 wash_power = 0.04
 idle = NodePath("../Idle")
+
+[connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]
+[connection signal="body_exited" from="FloorInfo" to="." method="_on_floor_info_body_exited"]
