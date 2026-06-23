@@ -11,6 +11,7 @@ scale = Vector2(2, 2)
 script = ExtResource("1_1ytvh")
 
 [node name="Area" type="Area2D" parent="." unique_id=1068528286]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1615720275]
 shape = SubResource("CircleShape2D_bhunq")

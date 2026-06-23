@@ -4,7 +4,7 @@ extends State
 
 @onready var timer = $CoyoteJump
 @onready var input_delay_timer = $InputDelay
-
+@export var double_jump: State
 @export var jump: State
 @export var run: State
 @export var idle: State
@@ -12,6 +12,7 @@ extends State
 var can_control: bool = true
 
 func enter():
+	Game.player.velocity.y = max(Game.player.velocity.y, 80+Game.player.velocity.y/2) #quick release makes u instant fall
 	timer.start()
 	super()
 
@@ -22,15 +23,15 @@ func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
 		if timer.time_left > 0 and !parent.has_jumped:
 			return jump
+		elif timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
+			return double_jump
 		else:
 			input_delay_timer.start()
-	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
-		return run
 	return null
 
 func process_physics(delta):
 	var movement = Input.get_axis("Left", "Right") * move_speed
-	flip_character(movement)
+	#flip_character(movement)
 	
 	parent.velocity.y += gravity * delta * gravity_multiplier
 	if can_control:

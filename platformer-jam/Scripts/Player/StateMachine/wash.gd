@@ -6,7 +6,8 @@ extends State
 
 func enter():
 	super()
-	#parent.sprite.play("Idle")
+	Game.player.sprite.play("idle")
+
 
 func process_inputs(event):
 	if Input.is_action_just_released("Wash"):

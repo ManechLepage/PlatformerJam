@@ -8,7 +8,8 @@ extends State
 
 func enter():
 	super()
-	#parent.sprite.play("Run")
+	Game.player.sprite.play("running")
+
 
 func process_inputs(event):
 	if Input.is_action_just_released("Wash"):
