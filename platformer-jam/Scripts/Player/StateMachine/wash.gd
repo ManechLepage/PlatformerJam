@@ -10,11 +10,10 @@ func enter():
 
 
 func process_inputs(event):
-	if Input.is_action_just_released("Wash"):
+	if Input.is_action_just_released("Interact"):
 		return idle
 	return null
 
 func process_physics(delta):
-	Game.event_manager.change_lucidity(-wash_power)
-	
+	#Game.event_manager.change_lucidity(-wash_power)
 	return null

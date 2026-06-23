@@ -3,6 +3,7 @@ extends Node
 
 @onready var audio_manager: AudioManager = $AudioManager
 @onready var event_manager: EventManager = $EventManager
+@onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
 
 var lucidity: float = 0:
 	set(value):
@@ -14,8 +15,8 @@ var player: Player
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
-	#lucid_test()
-	pass
+	event_manager.received_floor.connect(set_ground)
+	event_manager.exit_floor.connect(clear_ground)
 
 func lucid_test():
 	event_manager.change_lucidity(1)
@@ -34,3 +35,9 @@ func start_meditation_animation():
 func _process(delta: float) -> void:
 	if lucidity > max_lucidity:
 		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
+
+func set_ground(node: Node2D) -> void:
+	if node is AnimationObject: node.is_ground = true
+
+func clear_ground(node: Node2D) -> void:
+	if node is AnimationObject: node.is_ground = false

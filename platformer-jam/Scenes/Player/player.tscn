@@ -139,10 +139,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
-size = Vector2(30, 40)
+size = Vector2(21, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite", "interact_area") groups=["Player"]]
 collision_layer = 3
+floor_max_angle = 0.9843657
 script = ExtResource("1_a3d8c")
 sprite = NodePath("Sprite")
 interact_area = NodePath("Interact")
@@ -154,6 +158,7 @@ animation = &"jump"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_dd0ac")
 
 [node name="Interact" type="Area2D" parent="." unique_id=2103578818]
@@ -162,25 +167,32 @@ collision_mask = 4
 [node name="CollisionArea" type="CollisionShape2D" parent="Interact" unique_id=1567277934]
 shape = SubResource("RectangleShape2D_dd0ac")
 
+[node name="FloorInfo" type="Area2D" parent="." unique_id=1566830747]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorInfo" unique_id=2031477649]
+position = Vector2(0, 21.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.37033582, 0.60469365, 0.33828056, 0.41960785)
+
 [node name="StateMachine" type="Node" parent="." unique_id=482495664 node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_xpcdj")
 starting_state = NodePath("Fall")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running", "wash")]
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running", "interact")]
 script = ExtResource("3_xpcdj")
 jump = NodePath("../Jump")
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
 meditate_running = NodePath("../MeditateRunning")
-wash = NodePath("../Wash")
+interact = NodePath("../Interact")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle", "wash")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle", "interact")]
 script = ExtResource("4_dd0ac")
 jump = NodePath("../Jump")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
-wash = NodePath("../Wash")
+interact = NodePath("../Interact")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=2110054641 node_paths=PackedStringArray("double_jump", "jump", "run", "idle")]
 script = ExtResource("5_0u5uq")
@@ -232,7 +244,10 @@ fall = NodePath("../Fall")
 meditate_idle = NodePath("../MeditateIdle")
 jump = NodePath("../Jump")
 
-[node name="Wash" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
+[node name="Interact" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
 script = ExtResource("9_gk6dx")
 wash_power = 0.04
 idle = NodePath("../Idle")
+
+[connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]
+[connection signal="body_exited" from="FloorInfo" to="." method="_on_floor_info_body_exited"]

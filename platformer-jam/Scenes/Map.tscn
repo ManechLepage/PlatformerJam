@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0xcwxdx2jg0a"]
 
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="1_7yn8b"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="1_7yn8b"]
 [ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="2_etk83"]
 [ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="3_etk83"]
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="5_r08cw"]

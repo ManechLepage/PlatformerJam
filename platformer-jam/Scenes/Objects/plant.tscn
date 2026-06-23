@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://7umuivegwpuf"]
+
+[ext_resource type="Script" uid="uid://ccntrpdj1yhvw" path="res://Scripts/Objects/animation_object.gd" id="1_r5cgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+size = Vector2(10, 50)
+
+[node name="Plant" type="Node2D" unique_id=952569118]
+modulate = Color(0.3697454, 0.5391103, 0.31187817, 1)
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=1955612199]
+position = Vector2(70, -14)
+node_a = NodePath("../Branch")
+node_b = NodePath("../Branch2")
+
+[node name="Leaves" type="Node2D" parent="." unique_id=950709168]
+modulate = Color(0.6550534, 0.6550533, 0.65505326, 1)
+
+[node name="Leaf2" type="AnimatableBody2D" parent="Leaves" unique_id=1233958342]
+position = Vector2(65, -14)
+script = ExtResource("1_r5cgt")
+max_y_offset = 3.0
+displacement_speed = 0.01
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Leaves/Leaf2" unique_id=1065365291]
+position = Vector2(-0.099998474, -0.70000076)
+node_a = NodePath("..")
+node_b = NodePath("../../../Branch")
+
+[node name="Shape" type="Polygon2D" parent="Leaves/Leaf2" unique_id=848527407]
+position = Vector2(-65.1, 13.299999)
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Leaves/Leaf2" unique_id=859441761]
+position = Vector2(-65.1, 13.299999)
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+
+[node name="Branch" type="RigidBody2D" parent="." unique_id=313482899]
+position = Vector2(65, -14)
+
+[node name="Shape" type="Polygon2D" parent="Branch" unique_id=2073908535]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 50, 0, 50)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Branch" unique_id=1107473172]
+position = Vector2(5, 25)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Branch2" type="RigidBody2D" parent="." unique_id=911035486]
+position = Vector2(65, -64)
+
+[node name="Shape" type="Polygon2D" parent="Branch2" unique_id=746135046]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 50, 0, 50)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Branch2" unique_id=1088296710]
+position = Vector2(5, 25)
+shape = SubResource("RectangleShape2D_5khlg")
