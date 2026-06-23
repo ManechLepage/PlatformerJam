@@ -1,30 +1,41 @@
 [gd_scene format=3 uid="uid://b1a3pis82gmoo"]
 
+[ext_resource type="Script" uid="uid://b8qim1g0nvgo2" path="res://Scripts/Room/room_manager.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
+[ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
+[ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yf5fn"]
-width = 100
-height = 100
-noise = SubResource("FastNoiseLite_57qmd")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(940, 53)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("5_21xkr")
+shader_parameter/inner_radius = -0.05
+shader_parameter/outer_radius = 400.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.05
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D" unique_id=295821621]
 
+[node name="RoomManager" type="Node" parent="." unique_id=1500035244]
+script = ExtResource("1_8gbba")
+initial_room = "0"
+rooms = Dictionary[String, PackedScene]({
+"0": ExtResource("2_8gbba"),
+"1": ExtResource("3_jjvhh")
+})
+
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
-position = Vector2(447, 84)
+z_index = 2
+position = Vector2(-2, -116)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1461429750]
-position = Vector2(436, 476)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
 
-[node name="Sprite" type="Sprite2D" parent="StaticBody2D" unique_id=1548612595]
-position = Vector2(42.5, 22.5)
-scale = Vector2(9.41, 0.55)
-texture = SubResource("NoiseTexture2D_yf5fn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1365587912]
-position = Vector2(41, 23.5)
-shape = SubResource("RectangleShape2D_yf5fn")
+[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=609312635 groups=["Vignette"]]
+material = SubResource("ShaderMaterial_g4v7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_21xkr")

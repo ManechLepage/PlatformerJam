@@ -4,12 +4,15 @@ extends State
 @export var idle: State
 @export var fall: State
 @export var meditate_running: State
+@export var wash: State
 
 func enter():
 	super()
 	#parent.sprite.play("Run")
 
 func process_inputs(event):
+	if Input.is_action_just_released("Wash"):
+		return wash
 	if Input.is_action_just_pressed("Meditate"):
 		return meditate_running
 	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():

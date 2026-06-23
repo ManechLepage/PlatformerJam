@@ -5,6 +5,7 @@ var facing_right: bool = true
 var sprite: AnimatedSprite2D
 var has_jumped: bool = false
 var speed: float = 0.0
+var is_meditating: bool = false
 
 @onready var state_machine: StateMachine = $StateMachine
 
