@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dtfcbf6moyu2w"]
+
+[ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="1_3apk8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+
+[node name="Platform" type="AnimatableBody2D" unique_id=2119178859]
+script = ExtResource("1_3apk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1349571073]
+shape = SubResource("RectangleShape2D_5khlg")

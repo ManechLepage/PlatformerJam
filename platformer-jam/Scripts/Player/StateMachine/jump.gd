@@ -24,10 +24,8 @@ func process_physics(delta):
 	
 	var direction = Input.get_axis("Left", "Right")
 	var movement = move_toward(parent.velocity.x, direction * move_speed, acceleration * delta)
-	#flip_character(direction)
+
 	
-	if movement != 0:
-		pass # Flip animation
 	
 	parent.velocity.x = movement
 	parent.move_and_slide()

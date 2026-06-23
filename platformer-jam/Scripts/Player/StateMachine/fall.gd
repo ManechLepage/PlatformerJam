@@ -15,6 +15,8 @@ func enter():
 	Game.player.velocity.y = max(Game.player.velocity.y, -130) #quick release makes u instant fall
 	timer.start()
 	super()
+	if Game.player.sprite.animation == "jump":
+		Game.player.sprite.play("fall")
 
 func exit():
 	can_control = true
@@ -39,6 +41,9 @@ func process_physics(delta):
 	if can_control:
 		parent.velocity.x = movement
 	parent.move_and_slide()
+	
+	if Game.player.sprite.animation == "jump" and parent.velocity.y >=0:
+		Game.player.sprite.play("fall")
 	
 	if parent.is_on_floor():
 		parent.has_jumped = false

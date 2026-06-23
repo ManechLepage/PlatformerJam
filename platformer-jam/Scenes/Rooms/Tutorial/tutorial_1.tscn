@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
 [ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="2_xq6d4"]
 [ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="3_04iir"]
-[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="4_8pykr"]
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="5_rwxj0"]
+[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_8pykr"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="5_xq6d4"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="6_04iir"]
 

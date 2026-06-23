@@ -4,7 +4,7 @@ extends State
 @export var run: State
 @export var fall: State
 @export var meditate_idle: State
-@export var wash: State
+@export var interact: State
 
 func enter():
 	super()
@@ -20,8 +20,8 @@ func exit():
 func process_inputs(event):
 	if Input.is_action_just_pressed("Meditate"):
 		return meditate_idle
-	if Input.is_action_just_pressed("Wash"):
-		return wash
+	if Input.is_action_just_pressed("Interact"):
+		return interact
 	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():
 		return jump
 	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
