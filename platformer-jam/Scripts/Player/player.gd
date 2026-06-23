@@ -7,7 +7,7 @@ var speed: float = 0.0
 var is_meditating: bool = false
 
 @onready var state_machine: StateMachine = $StateMachine
-@onready var sprite: AnimatedSprite2D = $Sprite
+@export var sprite: AnimatedSprite2D
 
 @onready var running: State = $StateMachine/Running
 @onready var idle: State = $StateMachine/Idle

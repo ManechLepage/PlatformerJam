@@ -12,7 +12,7 @@ func enter():
 	super()
 	Game.start_meditation_animation()
 	parent.is_meditating = true
-	#parent.sprite.play("Meditation Run")
+	Game.player.sprite.play("running")
 
 func exit():
 	super()

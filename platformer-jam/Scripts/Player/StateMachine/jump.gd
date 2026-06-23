@@ -9,13 +9,20 @@ func enter():
 	super()
 	parent.velocity.y = -jump_force
 	parent.has_jumped = true
+	Game.player.sprite.play("jump")
+	if not Input.is_action_pressed("Jump"):
+		return fall
+
+func process_inputs(event):
+	if Input.is_action_just_released("Jump"):
+		return fall
 
 func process_physics(delta):
 	parent.velocity.y += gravity * delta
 	
 	var direction = Input.get_axis("Left", "Right")
 	var movement = move_toward(parent.velocity.x, direction * move_speed, acceleration * delta)
-	flip_character(direction)
+	#flip_character(direction)
 	
 	if movement != 0:
 		pass # Flip animation
