@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8kew3elbwlo" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://p44sdkr4nqtu" path="res://Sprites/char_sheet.png" id="2_jhyir"]
+[ext_resource type="Texture2D" uid="uid://dk0ulwdb308w0" path="res://Sprites/icon_x.png" id="2_oikmp"]
 [ext_resource type="Script" uid="uid://covxk1e87jddg" path="res://Scripts/Player/StateMachine/state_machine.gd" id="2_xpcdj"]
 [ext_resource type="Script" uid="uid://bm5o7y4tnpqcd" path="res://Scripts/Player/StateMachine/running.gd" id="3_xpcdj"]
 [ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
@@ -293,8 +294,14 @@ jump = NodePath("../Jump")
 
 [node name="Interact" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
 script = ExtResource("9_gk6dx")
-wash_power = 0.04
+wash_power = 4.0
 idle = NodePath("../Idle")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=817910960]
+visible = false
+position = Vector2(-9.536743e-07, -29)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("2_oikmp")
 
 [connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]
 [connection signal="body_exited" from="FloorInfo" to="." method="_on_floor_info_body_exited"]
