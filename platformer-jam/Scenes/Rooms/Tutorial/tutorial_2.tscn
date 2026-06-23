@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://beq8da56mgnib"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_l3fbw"]
+[ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="2_0p57m"]
+[ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="3_hg02c"]
+
+[node name="Tutorial_2" unique_id=197990627 instance=ExtResource("1_l3fbw")]
+
+[node name="Offset" parent="." index="0" unique_id=652906693]
+position = Vector2(906, 0)
+
+[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-479, 167)
+room_name = "tutorial_1"
+
+[node name="T_rot_floor" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=166165308 instance=ExtResource("2_0p57m")]
+position = Vector2(-568, 246.00003)
+rotation = 0.34906584
+scale = Vector2(3.82, 0.3)
+
+[node name="T_obstacle_cir_2" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1864644533 instance=ExtResource("3_hg02c")]
+position = Vector2(-266, 177)
+scale = Vector2(0.55, 0.55)
+
+[node name="T_waterfall_plateform" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1137620265 instance=ExtResource("2_0p57m")]
+position = Vector2(-110, 209.00003)
+rotation = 0.017453292
+scale = Vector2(1.8350002, 0.86500007)
+
+[editable path="Offset/RoomTriggers/RoomTrigger"]

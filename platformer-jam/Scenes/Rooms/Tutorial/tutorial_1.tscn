@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://b0xcwxdx2jg0a"]
+[gd_scene format=3 uid="uid://ccfcgttb2c4md"]
 
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="1_7yn8b"]
-[ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="2_etk83"]
-[ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="3_etk83"]
-[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="5_r08cw"]
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
+[ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="2_xq6d4"]
+[ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="3_04iir"]
+[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="4_8pykr"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="5_rwxj0"]
 
 [sub_resource type="Animation" id="Animation_qumfl"]
 resource_name = "Lucidity"
@@ -108,62 +109,68 @@ tracks/3/keys = {
 "values": [-0.06981317]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_00287"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_653nx"]
 _data = {
 &"Lucidity": SubResource("Animation_qumfl"),
 &"RESET": SubResource("Animation_r08cw")
 }
 
-[node name="Map" type="Node2D" unique_id=434722644]
+[node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=233012344]
-libraries/ = SubResource("AnimationLibrary_00287")
-autoplay = &"Lucidity"
-speed_scale = 0.0
-script = ExtResource("1_7yn8b")
+[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+room_name = "tutorial_2"
 
-[node name="T_ceiling" parent="." unique_id=333022209 instance=ExtResource("3_etk83")]
+[node name="T_ceiling" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=166165308 instance=ExtResource("2_xq6d4")]
 modulate = Color(0.5648586, 0.6104487, 1, 1)
-position = Vector2(168, 169)
+position = Vector2(-309.00006, -106.00003)
 scale = Vector2(2.46, 2.46)
 
-[node name="T_floor" parent="." unique_id=162150827 instance=ExtResource("2_etk83")]
+[node name="T_floor" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=935573851 instance=ExtResource("3_04iir")]
 modulate = Color(0.5137255, 0.8117647, 1, 1)
-position = Vector2(144, 529)
+position = Vector2(-333, 254)
 rotation = 0.034906585
 scale = Vector2(3.154, 0.675)
 
-[node name="T_wall" parent="." unique_id=670085129 instance=ExtResource("2_etk83")]
-position = Vector2(-11.999996, 347.00003)
+[node name="T_wall" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1848413745 instance=ExtResource("3_04iir")]
+position = Vector2(-489, 72.00006)
 rotation = -0.16580628
 scale = Vector2(1, 3.62)
 
-[node name="T_floor_2" parent="." unique_id=329785389 instance=ExtResource("2_etk83")]
-position = Vector2(459.00003, 537)
+[node name="T_floor_2" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=24954910 instance=ExtResource("3_04iir")]
+position = Vector2(-17.999908, 262.00003)
 rotation = -0.06981317
 scale = Vector2(2.605, 0.48)
 
-[node name="T_obstacle_cir" parent="." unique_id=102090910 instance=ExtResource("3_etk83")]
-position = Vector2(567, 375)
+[node name="T_obstacle_cir" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=471133740 instance=ExtResource("2_xq6d4")]
+position = Vector2(90, 100)
 
-[node name="T_rot_floor" parent="." unique_id=924663462 instance=ExtResource("2_etk83")]
-position = Vector2(828, 521)
+[node name="T_rot_floor" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1461141849 instance=ExtResource("3_04iir")]
+position = Vector2(351, 246)
 rotation = 0.34906584
 scale = Vector2(3.82, 0.3)
 
-[node name="T_obstacle_cir_2" parent="." unique_id=1595801041 instance=ExtResource("3_etk83")]
-position = Vector2(1130, 452)
+[node name="T_obstacle_cir_2" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1588937700 instance=ExtResource("2_xq6d4")]
+position = Vector2(653, 177)
 scale = Vector2(0.55, 0.55)
 
-[node name="T_obstacle_sq_1" parent="." unique_id=166165308 instance=ExtResource("2_etk83")]
-position = Vector2(333, 483.99997)
+[node name="T_obstacle_sq_1" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=616590500 instance=ExtResource("3_04iir")]
+position = Vector2(-144, 208.99997)
 rotation = 0.23212878
 
-[node name="T_waterfall_plateform" parent="." unique_id=189950919 instance=ExtResource("2_etk83")]
-position = Vector2(1286, 484)
+[node name="T_waterfall_plateform" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1929867997 instance=ExtResource("3_04iir")]
+position = Vector2(809, 209.00003)
 rotation = 0.017453292
 scale = Vector2(1.835, 0.865)
 
-[node name="Waterfall" parent="." unique_id=1257707682 instance=ExtResource("5_r08cw")]
-position = Vector2(1290, 440)
+[node name="Waterfall" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1257707682 instance=ExtResource("4_8pykr")]
+position = Vector2(813, 165.00003)
 scale = Vector2(5, 5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
+root_node = NodePath("../Offset/Obstables")
+libraries/ = SubResource("AnimationLibrary_653nx")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("5_rwxj0")
+
+[editable path="Offset/RoomTriggers/RoomTrigger"]

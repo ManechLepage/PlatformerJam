@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://k74suqdar2h5"]
 
+[ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="1_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="2_6uqi0"]
+
 [sub_resource type="Gradient" id="Gradient_mf4mk"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.4759036)
@@ -13,9 +16,20 @@ color_ramp = SubResource("Gradient_mf4mk")
 [node name="Test" type="Node2D" unique_id=131779804]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1792994679]
+visible = false
 offset_left = 260.0
 offset_top = 94.0
 offset_right = 680.0
 offset_bottom = 436.0
 texture = SubResource("NoiseTexture2D_mf4mk")
 expand_mode = 2
+
+[node name="Tutorial_1" parent="." unique_id=197990627 instance=ExtResource("1_8uh7m")]
+
+[node name="Tutorial_2" parent="." unique_id=1749992779 instance=ExtResource("2_6uqi0")]
+
+[node name="Offset" parent="Tutorial_2" index="0" unique_id=652906693]
+position = Vector2(906, 0)
+
+[editable path="Tutorial_2"]
+[editable path="Tutorial_2/Offset/RoomTriggers/RoomTrigger"]
