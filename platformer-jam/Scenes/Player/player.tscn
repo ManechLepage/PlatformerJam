@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://dl3j66yoqe0yg" path="res://Scripts/Player/StateMachine/meditate_running.gd" id="8_jlvik"]
 [ext_resource type="Script" uid="uid://d2y1dft21woiq" path="res://Scripts/Player/StateMachine/wash.gd" id="9_gk6dx"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnuln"]
+atlas = ExtResource("2_jhyir")
+region = Rect2(128, 128, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhyir"]
 atlas = ExtResource("2_jhyir")
 region = Rect2(0, 0, 64, 64)
@@ -47,6 +51,14 @@ region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnuln")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jhyir")
@@ -117,7 +129,7 @@ interact_area = NodePath("Interact")
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"running"
+animation = &"fall"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
