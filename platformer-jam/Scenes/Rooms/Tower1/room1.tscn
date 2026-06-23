@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nwy7d"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="2_5khlg"]
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="3_oug80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
 size = Vector2(42, 524)
@@ -28,14 +29,21 @@ position = Vector2(-407, -120)
 position = Vector2(0, -36)
 shape = SubResource("RectangleShape2D_snhcn")
 
-[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1645739517 instance=ExtResource("2_5khlg")]
+[node name="Wall3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=238023231 instance=ExtResource("2_5khlg")]
+position = Vector2(105, -75)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall3" index="0" unique_id=1349571073]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1645739517 instance=ExtResource("2_5khlg")]
 position = Vector2(0, 247)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1356621709 instance=ExtResource("2_5khlg")]
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1356621709 instance=ExtResource("2_5khlg")]
 position = Vector2(254, 138)
 is_platform = true
 
@@ -43,7 +51,11 @@ is_platform = true
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_oug80")
 
+[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1652650217 instance=ExtResource("3_oug80")]
+position = Vector2(248, 91)
+
 [editable path="Offset/Obstacles/Wall"]
 [editable path="Offset/Obstacles/Wall2"]
+[editable path="Offset/Obstacles/Wall3"]
 [editable path="Offset/Obstacles/Platform"]
 [editable path="Offset/Obstacles/Platform2"]
