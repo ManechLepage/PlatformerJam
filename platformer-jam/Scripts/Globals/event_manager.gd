@@ -15,7 +15,7 @@ var interactable_object: Area2D:
 		interactable_object_changed.emit()
 
 func set_lucidity(value):
-	Game.lucidity = value
+	Game.lucidity_target = value
 
 func change_lucidity(value):
-	Game.lucidity += value
+	Game.lucidity_target += value

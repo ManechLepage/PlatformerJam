@@ -5,6 +5,7 @@ var facing_right: bool = true
 var has_jumped: bool = false
 var speed: float = 0.0
 var is_meditating: bool = false
+var poem_collected: int = 0
 
 @onready var state_machine: StateMachine = $StateMachine
 @export var sprite: AnimatedSprite2D

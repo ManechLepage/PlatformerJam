@@ -3,11 +3,38 @@
 [ext_resource type="Script" uid="uid://b8qim1g0nvgo2" path="res://Scripts/Room/room_manager.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="2_344ge"]
 [ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="4_344ge"]
+[ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="4_344ge"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7fk0y"]
+width = 100
+height = 100
+noise = SubResource("FastNoiseLite_57qmd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7265"]
+size = Vector2(940, 53)
+
+[sub_resource type="PackedScene" id="PackedScene_ynf5e"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [NodePath("Offset/RoomTriggers/RoomTrigger")],
+"id_paths": [PackedInt32Array(), PackedInt32Array(281844601), PackedInt32Array(457880380), PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("Room", "Offset", "position", "RoomTrigger", "position", "room_name", "StaticBody2D2", "StaticBody2D", "position", "scale", "Sprite", "Sprite2D", "position", "scale", "texture", "CollisionShape2D", "CollisionShape2D", "position", "shape"),
+"node_count": 6,
+"node_ids": PackedInt32Array(197990627, 652906693, 174834819, 1864443540, 1158180473, 1493925413),
+"node_paths": [NodePath("."), NodePath("./Offset/RoomTriggers"), NodePath("./Offset/Obstables"), NodePath("./Offset/Obstables/StaticBody2D2"), NodePath("./Offset/Obstables/StaticBody2D2")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0, 1073741825, -1, 2147483647, 262147, -1, 2, 4, 2, 5, 3, 0, 1073741826, 0, 7, 524294, -1, 2, 8, 4, 9, 5, 0, 1073741827, 0, 11, 262154, -1, 3, 12, 6, 13, 7, 14, 8, 0, 1073741828, 0, 16, 524303, -1, 2, 17, 9, 18, 10, 0),
+"variants": [ExtResource("2_344ge"), Vector2(961, 0), Vector2(-542, 167), "0", Vector2(-33.000004, -290.99997), Vector2(1.3599995, 1), Vector2(42.5, 22.5), Vector2(9.41, 0.55), SubResource("NoiseTexture2D_7fk0y"), Vector2(41, 23.5), SubResource("RectangleShape2D_x7265")],
+"version": 3
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -23,8 +50,9 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 script = ExtResource("1_8gbba")
 initial_room = "tutorial_1"
 rooms = Dictionary[String, PackedScene]({
-"1": ExtResource("3_jjvhh"),
+"1": SubResource("PackedScene_ynf5e"),
 "Tower1-01": ExtResource("2_8gbba"),
+"Tower1-02": ExtResource("3_jjvhh"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
