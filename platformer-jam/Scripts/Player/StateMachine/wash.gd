@@ -26,3 +26,6 @@ func process_physics(delta):
 func interact() -> void:
 	if Game.event_manager.interactable_object is Water:
 		is_washing = true
+	if Game.event_manager.interactable_object is Poem:
+		parent.poem_collected += 1
+		Game.event_manager.interactable_object.collect()

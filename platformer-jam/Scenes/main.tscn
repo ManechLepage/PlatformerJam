@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="4_344ge"]
+[ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="4_344ge"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
