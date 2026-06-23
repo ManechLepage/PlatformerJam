@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ccfcgttb2c4md"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
+[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_8pykr"]
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_etpyt"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
 
@@ -21,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform:position")
+tracks/1/path = NodePath("Offset/Obstacles/Lift:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +43,7 @@ tracks/0/path = NodePath("Offset/Obstacles/Door:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0, 0.05),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-24, 24), Vector2(-16, -176.00002)]
@@ -49,14 +51,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform:position")
+tracks/1/path = NodePath("Offset/Obstacles/Lift:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(107, 101), Vector2(107, -25)]
+"values": [Vector2(107, 101), Vector2(113.99999, -27.000002)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xq6d4"]
@@ -94,31 +96,36 @@ position = Vector2(-277, 48.999973)
 rotation = -0.17453292
 scale = Vector2(4.76, 17.665)
 
-[node name="Left_wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1649337812 instance=ExtResource("6_xq6d4")]
+[node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1649337812 instance=ExtResource("6_xq6d4")]
 position = Vector2(258.99997, -63.999996)
 rotation = -0.057595864
 scale = Vector2(4.76, 17.665)
 
-[node name="Door" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
-position = Vector2(-24, 24)
+[node name="Right_ledge" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=297719583 instance=ExtResource("6_xq6d4")]
+position = Vector2(188.99997, 15.000004)
+rotation = -0.057595864
+scale = Vector2(3.035, 11.243)
+
+[node name="Door" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
+position = Vector2(-16, -176.00002)
 rotation = 0.05235988
 scale = Vector2(3.28, 7.435)
 
-[node name="Floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=928395927 instance=ExtResource("6_xq6d4")]
+[node name="Floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=928395927 instance=ExtResource("6_xq6d4")]
 position = Vector2(-137.00003, 119.000015)
 scale = Vector2(14.87, 3.015)
 
-[node name="Floor_right" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1506923564 instance=ExtResource("6_xq6d4")]
+[node name="Floor_right" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1506923564 instance=ExtResource("6_xq6d4")]
 position = Vector2(115.99997, 109.00001)
 rotation = -0.08726646
 scale = Vector2(14.87, 3.015)
 
-[node name="Ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=728658692 instance=ExtResource("6_xq6d4")]
+[node name="Ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=728658692 instance=ExtResource("6_xq6d4")]
 position = Vector2(-130.00003, -86)
 rotation = 0.08726646
 scale = Vector2(14.87, 3.015)
 
-[node name="TextEdit" type="TextEdit" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=949010719]
+[node name="TextEdit" type="TextEdit" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=949010719]
 offset_left = 280.0
 offset_top = -234.0
 offset_right = 431.0
@@ -126,7 +133,15 @@ offset_bottom = -186.0
 text = "MAX 20 lucidity
 "
 
-[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=506611079 instance=ExtResource("6_xq6d4")]
-position = Vector2(107, 101)
+[node name="Lift" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=506611079 instance=ExtResource("6_xq6d4")]
+position = Vector2(109.33333, 58.333336)
 rotation = 0.05235988
 scale = Vector2(3, 3)
+
+[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1257707682 instance=ExtResource("4_8pykr")]
+position = Vector2(174, -97.00001)
+scale = Vector2(3, 3)
+
+[node name="Node2D" parent="Offset/Obstacles/Waterfall" index="2" unique_id=1652650217 instance=ExtResource("5_etpyt")]
+position = Vector2(-0.6666641, -12.333332)
+scale = Vector2(0.33333334, 0.33333334)
