@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="4_8pykr"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="5_xq6d4"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="6_04iir"]
 
 [sub_resource type="Gradient" id="Gradient_5r2ab"]
 interpolation_mode = 1
@@ -189,6 +190,9 @@ scale = Vector2(5, 5)
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1760792903 instance=ExtResource("5_xq6d4")]
 position = Vector2(18, 124)
+
+[node name="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=681222939 instance=ExtResource("6_04iir")]
+position = Vector2(-369, 169)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
 libraries/ = SubResource("AnimationLibrary_653nx")
