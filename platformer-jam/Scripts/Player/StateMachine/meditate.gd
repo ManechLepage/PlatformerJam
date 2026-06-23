@@ -25,7 +25,7 @@ func process_inputs(event):
 	return null
 
 func process_physics(delta):
-	Game.event_manager.change_lucidity(meditation_power)
+	Game.event_manager.change_lucidity(meditation_power*delta)
 	
 	parent.velocity.x = move_toward(parent.velocity.x, 0, friction * delta)
 	
