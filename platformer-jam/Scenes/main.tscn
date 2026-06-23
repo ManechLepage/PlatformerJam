@@ -21,7 +21,7 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-01"
+initial_room = "tutorial_1"
 rooms = Dictionary[String, PackedScene]({
 "1": ExtResource("3_jjvhh"),
 "Tower1-01": ExtResource("2_8gbba"),
@@ -31,7 +31,7 @@ rooms = Dictionary[String, PackedScene]({
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
 z_index = 2
-position = Vector2(-2, -116)
+position = Vector2(-206, 208)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
 
