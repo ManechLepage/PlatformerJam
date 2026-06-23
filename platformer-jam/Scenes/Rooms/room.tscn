@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdpq4m5itvhvc" path="res://Scripts/Room/room.gd" id="1_7fk0y"]
 [ext_resource type="Script" uid="uid://7j6kmuhpbc3h" path="res://Scripts/camera.gd" id="2_dyxu8"]
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Global_animations.gd" id="2_g3m34"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_g3m34"]
 [ext_resource type="Script" uid="uid://lyi0yeqjiv4d" path="res://Scripts/Room/parallax_background.gd" id="3_g3m34"]
 
 [sub_resource type="Animation" id="Animation_g3m34"]
