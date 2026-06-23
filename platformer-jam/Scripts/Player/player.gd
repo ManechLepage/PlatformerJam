@@ -2,12 +2,12 @@ class_name Player
 extends CharacterBody2D
 
 var facing_right: bool = true
-var sprite: AnimatedSprite2D
 var has_jumped: bool = false
 var speed: float = 0.0
 var is_meditating: bool = false
 
 @onready var state_machine: StateMachine = $StateMachine
+@onready var sprite: AnimatedSprite2D = $Sprite
 
 @onready var running: State = $StateMachine/Running
 @onready var idle: State = $StateMachine/Idle
