@@ -343,10 +343,8 @@ size = Vector2(42, 700)
 size = Vector2(182, 10)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_snhcn"]
-radius = 37.035522
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhqpd"]
-radius = 33.430786
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqsa4"]
 size = Vector2(391, 13)
@@ -434,7 +432,7 @@ shape = SubResource("RectangleShape2D_snhcn")
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2097024558 instance=ExtResource("4_x34c6")]
 position = Vector2(377, 352)
-rotation = -0.43633232
+rotation = 0.5061455
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=1349571073]
@@ -444,7 +442,7 @@ disabled = true
 
 [node name="Plant2" parent="Offset/Obstacles/Plant1" index="1" unique_id=1543584035 instance=ExtResource("4_x34c6")]
 position = Vector2(-181.72774, 0.118163824)
-rotation = -0.6928956
+rotation = 0.13788101
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2" index="0" unique_id=1349571073]
@@ -461,7 +459,7 @@ shape = SubResource("CircleShape2D_snhcn")
 
 [node name="Plant3" parent="Offset/Obstacles/Plant1" index="2" unique_id=2069036399 instance=ExtResource("4_x34c6")]
 position = Vector2(-181.72774, 0.118163824)
-rotation = -6.064044
+rotation = -4.813618
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant3" index="0" unique_id=1349571073]
@@ -485,7 +483,7 @@ position = Vector2(4.5, 17.5)
 shape = SubResource("RectangleShape2D_iqsa4")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1606434563 instance=ExtResource("4_x34c6")]
-position = Vector2(431.9855, 22.620638)
+position = Vector2(269, 52)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
@@ -556,6 +554,7 @@ disabled = true
 [node name="Yellowball" parent="Offset/Obstacles/Bulb/CollisionShape2D2" index="0" unique_id=1760792903 instance=ExtResource("5_omffa")]
 position = Vector2(26.174805, -0.28274536)
 rotation = -1.0995574
+scale = Vector2(1e-05, 1e-05)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Bulb" index="2" unique_id=1689030178]
 position = Vector2(7.864929, -2.1935425)
@@ -566,6 +565,7 @@ disabled = true
 [node name="Yellowball2" parent="Offset/Obstacles/Bulb/CollisionShape2D3" index="0" unique_id=667460046 instance=ExtResource("5_omffa")]
 position = Vector2(26.174835, -0.28277588)
 rotation = -1.0995574
+scale = Vector2(1e-05, 1e-05)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Bulb" index="3" unique_id=869804625]
 position = Vector2(-15.001938, 46.73529)
@@ -576,6 +576,7 @@ disabled = true
 [node name="Yellowball4" parent="Offset/Obstacles/Bulb/CollisionShape2D4" index="0" unique_id=2034367726 instance=ExtResource("5_omffa")]
 position = Vector2(26.174805, -0.28276062)
 rotation = -1.0995575
+scale = Vector2(1e-05, 1e-05)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Offset/Obstacles/Bulb" index="4" unique_id=177423344]
 position = Vector2(-14.001938, -52.26471)
@@ -586,6 +587,7 @@ disabled = true
 [node name="Yellowball5" parent="Offset/Obstacles/Bulb/CollisionShape2D5" index="0" unique_id=1196452262 instance=ExtResource("5_omffa")]
 position = Vector2(26.174805, -0.28274536)
 rotation = -1.0995575
+scale = Vector2(1e-05, 1e-05)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Offset/Obstacles/Bulb" index="5" unique_id=663882071]
 position = Vector2(7.864929, -86.19354)
@@ -596,6 +598,7 @@ disabled = true
 [node name="Yellowball3" parent="Offset/Obstacles/Bulb/CollisionShape2D6" index="0" unique_id=1345248833 instance=ExtResource("5_omffa")]
 position = Vector2(26.174866, -0.28277588)
 rotation = -1.0995574
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1652650217 instance=ExtResource("5_3vjox")]
 position = Vector2(330, 225)
@@ -629,9 +632,8 @@ position = Vector2(35, -31)
 curve = SubResource("Curve2D_omffa")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=426132547]
-position = Vector2(-78.40866, 7.0064344)
-rotation = 7.123647
-progress = 860.1972
+position = Vector2(-929, -40)
+rotation = 1.0435092
 rotates = false
 
 [node name="CirclePlatform" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=1927746051 instance=ExtResource("4_x34c6")]
