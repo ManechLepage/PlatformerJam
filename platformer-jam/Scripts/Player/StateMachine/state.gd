@@ -3,7 +3,7 @@ extends Node
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var move_speed: float = 310.0
+var move_speed: float = 130.0
 var acceleration: float = 1200.0
 
 var friction: float = 1200.0
@@ -30,4 +30,4 @@ func flip_character(movement):
 		parent.facing_right = true
 	elif movement > 0 and parent.facing_right:
 		parent.facing_right = false
-	#parent.sprite.flip_h = parent.facing_right
+	parent.sprite.flip_h = parent.facing_right
