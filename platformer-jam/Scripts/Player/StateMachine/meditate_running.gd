@@ -26,7 +26,7 @@ func process_inputs(event):
 		return jump
 
 func process_physics(delta):
-	Game.event_manager.change_lucidity(meditation_power)
+	Game.event_manager.change_lucidity(meditation_power*delta)
 	var direction = Input.get_axis("Left", "Right")
 	
 	flip_character(direction)
