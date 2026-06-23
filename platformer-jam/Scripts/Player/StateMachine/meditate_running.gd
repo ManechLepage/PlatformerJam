@@ -10,7 +10,14 @@ extends State
 
 func enter():
 	super()
+	Game.start_meditation_animation()
+	parent.is_meditating = true
 	#parent.sprite.play("Meditation Run")
+
+func exit():
+	super()
+	Game.clear_shake()
+	parent.is_meditating = false
 
 func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):
@@ -25,7 +32,7 @@ func process_physics(delta):
 	flip_character(direction)
 	
 	if direction != 0:
-		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed * 0.9, acceleration * delta)
+		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed * 0.5, acceleration * delta)
 	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()

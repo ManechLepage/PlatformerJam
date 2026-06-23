@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjh22wy576j4w"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nwy7d"]
+
+[node name="Room" unique_id=197990627 instance=ExtResource("1_nwy7d")]
+
+[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(530, 167)
+room_name = "1"
+
+[editable path="Offset/RoomTriggers/RoomTrigger"]
