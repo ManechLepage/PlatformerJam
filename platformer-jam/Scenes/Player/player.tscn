@@ -253,7 +253,7 @@ jump = NodePath("../Jump")
 
 [node name="Interact" type="Node" parent="StateMachine" unique_id=1045315900 node_paths=PackedStringArray("idle")]
 script = ExtResource("9_gk6dx")
-wash_power = 0.04
+wash_power = 2.0
 idle = NodePath("../Idle")
 
 [connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]

@@ -10,6 +10,9 @@ func enter():
 	Game.player.sprite.play("idle")
 	if Game.event_manager.interactable_object: interact()
 
+func exit():
+	super()
+	is_washing = false
 
 func process_inputs(event):
 	if Input.is_action_just_released("Interact"):
@@ -17,7 +20,7 @@ func process_inputs(event):
 	return null
 
 func process_physics(delta):
-	if is_washing: Game.event_manager.change_lucidity(-wash_power)
+	if is_washing: Game.event_manager.change_lucidity(-wash_power*delta)
 	return null
 
 func interact() -> void:
