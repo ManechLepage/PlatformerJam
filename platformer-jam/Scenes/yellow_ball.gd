@@ -14,8 +14,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		body.has_jumped = false
+		pass
 		
 func _on_body_exited(body):
 	if body.name == "Player":
-		body.has_jumped = true
+		pass

@@ -8,6 +8,7 @@ var is_meditating: bool = false
 
 @onready var state_machine: StateMachine = $StateMachine
 @export var sprite: AnimatedSprite2D
+@export var interact_area: Area2D
 
 @onready var running: State = $StateMachine/Running
 @onready var idle: State = $StateMachine/Idle

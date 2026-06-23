@@ -4,9 +4,10 @@ extends Node
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var move_speed: float = 150.0
-var acceleration: float = 1600.0
+var acceleration: float = 2000.0
 
 var friction: float = 1200.0
+var max_fall_speed: float = 550.0
 
 var parent: Player
 var animation_name: String
