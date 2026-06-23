@@ -1,37 +1,252 @@
 [gd_scene format=3 uid="uid://qhvhw4i0ygvc"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_n4yhi"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_dsljk"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_omffa"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_x34c6"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.025999997, 0.104),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5061455, -0.43633232]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Plant1/Plant2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.025999997, 0.126),
+"transitions": PackedFloat32Array(1.8660665, 1),
+"update": 0,
+"values": [0.13788101090755164, -0.8709193]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Plant1/Plant2/Plant3/CollisionShape2D:shape:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.025999997, 0.126),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [10.0, 40.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Plant1/Plant3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.025999997, 0.126),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-4.813618, -6.2011547]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Plant1/Plant3/Plant3/CollisionShape2D:shape:radius")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.025999997, 0.126),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [10.0, 36.0]
+}
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7fk0y"]
-width = 100
-height = 100
-noise = SubResource("FastNoiseLite_57qmd")
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5061455]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Plant1/Plant2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.31066862]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Plant1/Plant2/Plant3/CollisionShape2D:shape:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Plant1/Plant3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-4.813618]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Plant1/Plant3/Plant3/CollisionShape2D:shape:radius")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7265"]
-size = Vector2(940, 53)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(779, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
+size = Vector2(42, 700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_487jx"]
+size = Vector2(182, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snhcn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mhqpd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqsa4"]
+size = Vector2(391, 13)
 
 [node name="Room" unique_id=197990627 instance=ExtResource("1_n4yhi")]
 
-[node name="Offset" parent="." index="0" unique_id=652906693]
-position = Vector2(961, 0)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_dsljk")
 
-[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
-position = Vector2(-542, 167)
-room_name = "0"
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(0, -528)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Offset/Obstables" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1864443540]
-position = Vector2(-33.000004, -290.99997)
-scale = Vector2(1.3599995, 1)
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-35, 297)
+script = ExtResource("3_omffa")
+room_name = "Tower1-01"
 
-[node name="Sprite" type="Sprite2D" parent="Offset/Obstables/StaticBody2D2" index="0" unique_id=1158180473]
-position = Vector2(42.5, 22.5)
-scale = Vector2(9.41, 0.55)
-texture = SubResource("NoiseTexture2D_7fk0y")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstables/StaticBody2D2" index="1" unique_id=1493925413]
-position = Vector2(41, 23.5)
-shape = SubResource("RectangleShape2D_x7265")
+[node name="Wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_x34c6")]
+position = Vector2(411, 0)
 
-[editable path="Offset/RoomTriggers/RoomTrigger"]
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall" index="0" unique_id=1349571073]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1888718163 instance=ExtResource("4_x34c6")]
+position = Vector2(-407, 36)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall2" index="0" unique_id=1349571073]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2097024558 instance=ExtResource("4_x34c6")]
+position = Vector2(377, 352)
+rotation = 0.5061455
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=1349571073]
+position = Vector2(-91, 0)
+shape = SubResource("RectangleShape2D_487jx")
+
+[node name="Plant2" parent="Offset/Obstacles/Plant1" index="1" unique_id=1543584035 instance=ExtResource("4_x34c6")]
+position = Vector2(-181.72774, 0.118163824)
+rotation = 0.13788101
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2" index="0" unique_id=1349571073]
+position = Vector2(-91, 0)
+shape = SubResource("RectangleShape2D_487jx")
+
+[node name="Plant3" parent="Offset/Obstacles/Plant1/Plant2" index="1" unique_id=1844794982 instance=ExtResource("4_x34c6")]
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2/Plant3" index="0" unique_id=1349571073]
+position = Vector2(-181.60506, -0.84342957)
+shape = SubResource("CircleShape2D_snhcn")
+
+[node name="Plant3" parent="Offset/Obstacles/Plant1" index="2" unique_id=2069036399 instance=ExtResource("4_x34c6")]
+position = Vector2(-181.72774, 0.118163824)
+rotation = -4.813618
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant3" index="0" unique_id=1349571073]
+position = Vector2(-91, 0)
+shape = SubResource("RectangleShape2D_487jx")
+
+[node name="Plant3" parent="Offset/Obstacles/Plant1/Plant3" index="1" unique_id=1621785309 instance=ExtResource("4_x34c6")]
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant3/Plant3" index="0" unique_id=1349571073]
+position = Vector2(-181.60506, -0.84342957)
+shape = SubResource("CircleShape2D_mhqpd")
+
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=624249033 instance=ExtResource("4_x34c6")]
+position = Vector2(190, 238)
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
+position = Vector2(4.5, 17.5)
+shape = SubResource("RectangleShape2D_iqsa4")
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+
+[editable path="Offset/Obstacles/Wall"]
+[editable path="Offset/Obstacles/Wall2"]
+[editable path="Offset/Obstacles/Plant1"]
+[editable path="Offset/Obstacles/Plant1/Plant2"]
+[editable path="Offset/Obstacles/Plant1/Plant2/Plant3"]
+[editable path="Offset/Obstacles/Plant1/Plant3"]
+[editable path="Offset/Obstacles/Plant1/Plant3/Plant3"]
+[editable path="Offset/Obstacles/Platform"]

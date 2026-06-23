@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gfub5in33c3c"]
+
+[ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="3_n7gr7"]
+[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_t0v3l"]
+[ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
+
+[node name="Main" type="Node2D" unique_id=295821621]
+
+[node name="Player" parent="." unique_id=838431178 instance=ExtResource("6_mypwg")]
+z_index = 2
+position = Vector2(-2, -116)
+
+[node name="Room" parent="." unique_id=197990627 instance=ExtResource("3_n7gr7")]
+
+[node name="Room2" parent="." unique_id=802061890 instance=ExtResource("3_t0v3l")]
