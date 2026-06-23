@@ -9,6 +9,8 @@
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="7_hptm8"]
+[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room4.tscn" id="8_d1ilt"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
 
@@ -53,6 +55,8 @@ rooms = Dictionary[String, PackedScene]({
 "1": SubResource("PackedScene_ynf5e"),
 "Tower1-01": ExtResource("2_8gbba"),
 "Tower1-02": ExtResource("3_jjvhh"),
+"Tower1-03": ExtResource("7_hptm8"),
+"Tower1-04": ExtResource("8_d1ilt"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
