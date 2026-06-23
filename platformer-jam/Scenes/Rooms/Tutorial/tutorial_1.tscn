@@ -6,19 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="4_8pykr"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="5_xq6d4"]
-
-[sub_resource type="Gradient" id="Gradient_5r2ab"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.5120482)
-colors = PackedColorArray(0.021199998, 0.028093334, 0.04, 1, 1, 1, 1, 0)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_653nx"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rwxj0"]
-width = 1193
-height = 795
-noise = SubResource("FastNoiseLite_653nx")
-color_ramp = SubResource("Gradient_5r2ab")
+[ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="7_04iir"]
 
 [sub_resource type="Animation" id="Animation_qumfl"]
 resource_name = "Lucidity"
@@ -129,7 +117,26 @@ _data = {
 &"RESET": SubResource("Animation_r08cw")
 }
 
+[sub_resource type="Gradient" id="Gradient_5r2ab"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.5120482)
+colors = PackedColorArray(0.021199998, 0.028093334, 0.04, 1, 1, 1, 1, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_653nx"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rwxj0"]
+width = 1193
+height = 795
+noise = SubResource("FastNoiseLite_653nx")
+color_ramp = SubResource("Gradient_5r2ab")
+
 [node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
+libraries/ = SubResource("AnimationLibrary_653nx")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("5_rwxj0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=237255790]
 texture = SubResource("NoiseTexture2D_rwxj0")
@@ -190,8 +197,4 @@ scale = Vector2(5, 5)
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1760792903 instance=ExtResource("5_xq6d4")]
 position = Vector2(18, 124)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
-libraries/ = SubResource("AnimationLibrary_653nx")
-autoplay = &"Lucidity"
-speed_scale = 0.0
-script = ExtResource("5_rwxj0")
+[node name="Player" parent="." index="3" unique_id=1898798850 instance=ExtResource("7_04iir")]
