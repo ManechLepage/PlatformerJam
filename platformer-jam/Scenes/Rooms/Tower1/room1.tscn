@@ -1,132 +1,18 @@
 [gd_scene format=3 uid="uid://cjh22wy576j4w"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nwy7d"]
-[ext_resource type="PackedScene" uid="uid://7umuivegwpuf" path="res://Scenes/Objects/plant.tscn" id="2_5khlg"]
-
-[sub_resource type="Gradient" id="Gradient_nwy7d"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_3gngh"]
-gradient = SubResource("Gradient_nwy7d")
-width = 256
-height = 256
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(75, 570)
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="2_5khlg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
-size = Vector2(10, 130.10765)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oug80"]
-size = Vector2(10, 130.10765)
+size = Vector2(987, 45)
 
 [node name="Room" unique_id=197990627 instance=ExtResource("1_nwy7d")]
 
-[node name="Block" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=917085587]
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("2_5khlg")]
+position = Vector2(0, 247)
 
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block" index="0" unique_id=350153690]
-position = Vector2(-342, 1.9999471)
-scale = Vector2(0.2890625, 2.2265623)
-texture = SubResource("GradientTexture2D_3gngh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block" index="1" unique_id=2140421830]
-position = Vector2(-342.5, 2)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Block2" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2050927830]
-position = Vector2(693, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block2" index="0" unique_id=1285160765]
-position = Vector2(-342, 1.9999471)
-scale = Vector2(0.2890625, 2.2265623)
-texture = SubResource("GradientTexture2D_3gngh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block2" index="1" unique_id=1352662910]
-position = Vector2(-342.5, 2)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Block3" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=480701157]
-position = Vector2(-227, 642.00006)
-rotation = 1.5707964
-scale = Vector2(1.1776402, 0.2683857)
-
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block3" index="0" unique_id=644252089]
-position = Vector2(-342, 1.9999471)
-scale = Vector2(0.2890625, 2.2265623)
-texture = SubResource("GradientTexture2D_3gngh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block3" index="1" unique_id=1438956339]
-position = Vector2(-342.5, 2)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Block4" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=431086557]
-position = Vector2(-72.00001, 654.00006)
-rotation = 1.5707964
-scale = Vector2(1.1776402, 0.2683857)
-
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block4" index="0" unique_id=615255477]
-position = Vector2(-342, 1.9999471)
-scale = Vector2(0.2890625, 2.2265623)
-texture = SubResource("GradientTexture2D_3gngh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block4" index="1" unique_id=2093265773]
-position = Vector2(-342.5, 2)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Block5" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1017189817]
-position = Vector2(237.00002, 634.00006)
-rotation = 1.5707964
-scale = Vector2(1.1776402, 0.2683857)
-
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block5" index="0" unique_id=925669119]
-position = Vector2(-342, 1.9999471)
-scale = Vector2(0.2890625, 2.2265623)
-texture = SubResource("GradientTexture2D_3gngh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block5" index="1" unique_id=1410214613]
-position = Vector2(-342.5, 2)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Plant" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=952569118 instance=ExtResource("2_5khlg")]
-position = Vector2(-191, 189)
-
-[node name="PinJoint2D2" parent="Offset/Obstacles/Plant" index="0" unique_id=1955612199]
-position = Vector2(-23, -75)
-
-[node name="Leaf2" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="0" unique_id=1233958342]
-position = Vector2(29, -29)
-rotation = 3.1415927
-
-[node name="Branch" parent="Offset/Obstacles/Plant" index="2" unique_id=313482899]
-position = Vector2(-26, -71)
-rotation = -0.7853982
-
-[node name="Shape" parent="Offset/Obstacles/Plant/Branch" index="0" unique_id=2073908535]
-polygon = PackedVector2Array(0, 0, 10, 0, 10, 130, 0, 130)
-
-[node name="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Branch" index="1" unique_id=1107473172]
-position = Vector2(4.949768, 65.05383)
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
+position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="Branch2" parent="Offset/Obstacles/Plant" index="3" unique_id=911035486]
-position = Vector2(-119, -163)
-rotation = -0.7853982
-
-[node name="Shape" parent="Offset/Obstacles/Plant/Branch2" index="0" unique_id=746135046]
-polygon = PackedVector2Array(0, 0, 10, 0, 10, 130, 0, 130)
-
-[node name="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Branch2" index="1" unique_id=1088296710]
-position = Vector2(4.949768, 65.0538)
-shape = SubResource("RectangleShape2D_oug80")
-
-[node name="PinJoint2D3" type="PinJoint2D" parent="Offset/Obstacles/Plant" index="4" unique_id=249278760]
-position = Vector2(-114, -166)
-node_a = NodePath("../../Block")
-node_b = NodePath("../Branch2")
-
-[node name="PinJoint2D4" type="PinJoint2D" parent="Offset/Obstacles/Plant" index="5" unique_id=1376364263]
-position = Vector2(69.999985, 16.999908)
-node_a = NodePath("../../Block4")
-node_b = NodePath("../Branch")
-
-[editable path="Offset/Obstacles/Plant"]
+[editable path="Offset/Obstacles/Platform"]
