@@ -13,5 +13,6 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Down"):
 		if not is_platform: return
 		collision_shape_2d.disabled = true
-		await get_tree().create_timer(0.5).timeout
+	if Input.is_action_just_released("Down"):
+		if not is_platform: return
 		collision_shape_2d.disabled = false
