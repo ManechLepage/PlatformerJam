@@ -8,3 +8,10 @@ extends AnimatableBody2D
 
 func _ready() -> void:
 	if is_platform: collision_shape_2d.one_way_collision = true
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("Down"):
+		if not is_platform: return
+		collision_shape_2d.disabled = true
+		await get_tree().create_timer(0.5).timeout
+		collision_shape_2d.disabled = false

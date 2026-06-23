@@ -3,16 +3,47 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nwy7d"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="2_5khlg"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
+size = Vector2(42, 524)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(987, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oug80"]
+size = Vector2(257.5, 25.5)
+
 [node name="Room" unique_id=197990627 instance=ExtResource("1_nwy7d")]
 
-[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("2_5khlg")]
+[node name="Wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("2_5khlg")]
+position = Vector2(411, 0)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall" index="0" unique_id=1349571073]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1888718163 instance=ExtResource("2_5khlg")]
+position = Vector2(-407, -120)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall2" index="0" unique_id=1349571073]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1645739517 instance=ExtResource("2_5khlg")]
 position = Vector2(0, 247)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1356621709 instance=ExtResource("2_5khlg")]
+position = Vector2(254, 138)
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_oug80")
+
+[editable path="Offset/Obstacles/Wall"]
+[editable path="Offset/Obstacles/Wall2"]
 [editable path="Offset/Obstacles/Platform"]
+[editable path="Offset/Obstacles/Platform2"]
