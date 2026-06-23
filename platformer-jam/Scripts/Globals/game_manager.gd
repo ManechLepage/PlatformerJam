@@ -34,3 +34,7 @@ func start_meditation_animation():
 func _process(delta: float) -> void:
 	if lucidity > max_lucidity:
 		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
+
+func animate_object_displacement(object: Node2D, offset: Vector2) -> void:
+	var tween = create_tween()
+	tween.tween_property(object, "position", offset, 1.0).as_relative().set_ease(Tween.EASE_OUT)

@@ -112,7 +112,7 @@ wait_time = 0.1
 one_shot = true
 
 [node name="InputDelay" type="Timer" parent="StateMachine/Fall" unique_id=1688796664]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall")]

@@ -21,7 +21,7 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "tutorial_1"
+initial_room = "0"
 rooms = Dictionary[String, PackedScene]({
 "0": ExtResource("2_8gbba"),
 "1": ExtResource("3_jjvhh"),
