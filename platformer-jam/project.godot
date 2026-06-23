@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PlatformerJam"
-run/main_scene="uid://b1a3pis82gmoo"
+run/main_scene="uid://d1tq2x1lipe0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]
@@ -23,8 +23,8 @@ Game="*uid://ces3yepxa2r0n"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/sharp_corners=true
-window/size/window_width_override=1920
-window/size/window_height_override=1080
+window/size/window_width_override=960
+window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
@@ -74,6 +74,12 @@ Meditate={
 Interact={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+Down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

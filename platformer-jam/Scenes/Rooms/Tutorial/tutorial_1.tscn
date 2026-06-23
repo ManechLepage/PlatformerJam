@@ -1,120 +1,70 @@
 [gd_scene format=3 uid="uid://ccfcgttb2c4md"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
-[ext_resource type="PackedScene" uid="uid://dmscdkae8mbdb" path="res://Scenes/Circle.tscn" id="2_xq6d4"]
-[ext_resource type="PackedScene" uid="uid://cp1x4njfhgqbt" path="res://Scenes/Square.tscn" id="3_04iir"]
-[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/waterfall.tscn" id="4_8pykr"]
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Global_animations.gd" id="5_rwxj0"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="5_xq6d4"]
-[ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="7_04iir"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="6_04iir"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
 
-[sub_resource type="Animation" id="Animation_qumfl"]
-resource_name = "Lucidity"
-step = 0.0078125
+[sub_resource type="Animation" id="Animation_q44wt"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("T_obstacle_cir:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.205, 1.205), Vector2(0.396, 0.396)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("T_rot_floor:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.87266463, -0.34906584]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("T_obstacle_cir_2:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.55, 0.55), Vector2(1.595, 1.595)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("T_floor_2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.06981317, 0.06981317]
-}
-
-[sub_resource type="Animation" id="Animation_r08cw"]
-step = 0.0078125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("T_obstacle_cir:scale")
+tracks/0/path = NodePath("Offset/Obstacles/Door:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(58, -21)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("T_rot_floor:rotation")
+tracks/1/path = NodePath("Offset/Obstacles/Platform:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.34906584]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("T_obstacle_cir_2:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.55, 0.55)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("T_floor_2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.06981317]
+"values": [Vector2(107, 101)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_653nx"]
+[sub_resource type="Animation" id="Animation_etpyt"]
+resource_name = "lucidity"
+step = 0.0078125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-24, 24), Vector2(-16, -176.00002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(107, 101), Vector2(107, -25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xq6d4"]
 _data = {
-&"Lucidity": SubResource("Animation_qumfl"),
-&"RESET": SubResource("Animation_r08cw")
+&"RESET": SubResource("Animation_q44wt"),
+&"lucidity": SubResource("Animation_etpyt")
 }
 
 [sub_resource type="Gradient" id="Gradient_5r2ab"]
@@ -132,52 +82,51 @@ color_ramp = SubResource("Gradient_5r2ab")
 
 [node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
-libraries/ = SubResource("AnimationLibrary_653nx")
-autoplay = &"Lucidity"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=663951011]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_xq6d4")
 speed_scale = 0.0
 script = ExtResource("5_rwxj0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=237255790]
 texture = SubResource("NoiseTexture2D_rwxj0")
 
-[node name="T_ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=166165308 instance=ExtResource("2_xq6d4")]
-modulate = Color(0.1078, 0.16763999, 0.22, 1)
-position = Vector2(-309.00006, -106.00003)
-scale = Vector2(2.46, 2.46)
+[node name="Left_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("6_xq6d4")]
+position = Vector2(-277, 48.999973)
+rotation = -0.17453292
+scale = Vector2(4.76, 17.665)
 
-[node name="T_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=935573851 instance=ExtResource("3_04iir")]
-modulate = Color(0.1078, 0.16763999, 0.22, 1)
-position = Vector2(-333, 254)
-rotation = 0.034906585
-scale = Vector2(3.154, 0.675)
+[node name="Left_wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1649337812 instance=ExtResource("6_xq6d4")]
+position = Vector2(258.99997, -63.999996)
+rotation = -0.057595864
+scale = Vector2(4.76, 17.665)
 
-[node name="T_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1848413745 instance=ExtResource("3_04iir")]
-modulate = Color(0.147, 0.14, 0.2, 1)
-position = Vector2(-489, 72.00006)
-rotation = -0.16580628
-scale = Vector2(1, 3.62)
+[node name="Door" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
+position = Vector2(-24, 24)
+rotation = 0.05235988
+scale = Vector2(3.28, 7.435)
 
-[node name="T_floor_2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=24954910 instance=ExtResource("3_04iir")]
-modulate = Color(0.147, 0.14, 0.2, 1)
-position = Vector2(-17.999908, 262.00003)
-rotation = -0.06981317
-scale = Vector2(2.605, 0.48)
+[node name="Floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=928395927 instance=ExtResource("6_xq6d4")]
+position = Vector2(-137.00003, 119.000015)
+scale = Vector2(14.87, 3.015)
 
-[node name="T_obstacle_cir" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=471133740 instance=ExtResource("2_xq6d4")]
-modulate = Color(0.147, 0.14, 0.2, 1)
-position = Vector2(90, 100)
+[node name="Floor_right" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1506923564 instance=ExtResource("6_xq6d4")]
+position = Vector2(115.99997, 109.00001)
+rotation = -0.08726646
+scale = Vector2(14.87, 3.015)
 
-[node name="T_rot_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1461141849 instance=ExtResource("3_04iir")]
-modulate = Color(0.147, 0.14, 0.2, 1)
-position = Vector2(351, 246)
-rotation = 0.34906584
-scale = Vector2(3.82, 0.3)
+[node name="Ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=728658692 instance=ExtResource("6_xq6d4")]
+position = Vector2(-130.00003, -86)
+rotation = 0.08726646
+scale = Vector2(14.87, 3.015)
 
-[node name="T_obstacle_cir_2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1588937700 instance=ExtResource("2_xq6d4")]
-modulate = Color(0.1078, 0.16763999, 0.22, 1)
-position = Vector2(653, 177)
-scale = Vector2(0.55, 0.55)
+[node name="TextEdit" type="TextEdit" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=949010719]
+offset_left = 280.0
+offset_top = -234.0
+offset_right = 431.0
+offset_bottom = -186.0
+text = "MAX 20 lucidity
+"
 
 [node name="T_obstacle_sq_1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=616590500 instance=ExtResource("3_04iir")]
 modulate = Color(0.147, 0.14, 0.2, 1)
@@ -197,4 +146,15 @@ scale = Vector2(5, 5)
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1760792903 instance=ExtResource("5_xq6d4")]
 position = Vector2(18, 124)
 
-[node name="Player" parent="." index="3" unique_id=1898798850 instance=ExtResource("7_04iir")]
+[node name="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=681222939 instance=ExtResource("6_04iir")]
+position = Vector2(-369, 169)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1417861093]
+libraries/ = SubResource("AnimationLibrary_653nx")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("5_rwxj0")
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=506611079 instance=ExtResource("6_xq6d4")]
+position = Vector2(107, 101)
+rotation = 0.05235988
+scale = Vector2(3, 3)
