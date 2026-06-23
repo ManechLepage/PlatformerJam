@@ -7,9 +7,9 @@ extends Node
 
 var lucidity: float = 0:
 	set(value):
-		lucidity = value
+		lucidity = max(value, 0)
 		event_manager.lucidity_changed.emit(value)
-var max_lucidity: float = 80.0
+var max_lucidity: float = 20.0
 var camera: CameraManager
 var player: Player
 
