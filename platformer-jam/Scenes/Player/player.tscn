@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b8kew3elbwlo" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://p44sdkr4nqtu" path="res://Sprites/char_sheet.png" id="2_jhyir"]
 [ext_resource type="Script" uid="uid://covxk1e87jddg" path="res://Scripts/Player/StateMachine/state_machine.gd" id="2_xpcdj"]
+[ext_resource type="Script" uid="uid://dsyciksxffnvr" path="res://Scripts/Player/pusher.gd" id="3_74mp2"]
 [ext_resource type="Script" uid="uid://bm5o7y4tnpqcd" path="res://Scripts/Player/StateMachine/running.gd" id="3_xpcdj"]
 [ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
 [ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
@@ -62,10 +63,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
-size = Vector2(30, 40)
+size = Vector2(21, 38)
 
 [node name="Player" type="CharacterBody2D" unique_id=1898798850 groups=["Player"]]
 collision_layer = 3
+floor_max_angle = 0.9843657
 script = ExtResource("1_a3d8c")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
@@ -75,7 +77,11 @@ animation = &"running"
 autoplay = "running"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_dd0ac")
+
+[node name="Pusher" type="Node2D" parent="." unique_id=173058658]
+script = ExtResource("3_74mp2")
 
 [node name="StateMachine" type="Node" parent="." unique_id=482495664 node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_xpcdj")
@@ -114,6 +120,7 @@ script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
 run = NodePath("../Running")
 fall = NodePath("../Fall")
+jump_force = 400.0
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")

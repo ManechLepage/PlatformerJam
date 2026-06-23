@@ -1,11 +1,271 @@
 [gd_scene format=3 uid="uid://cjh22wy576j4w"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nwy7d"]
+[ext_resource type="PackedScene" uid="uid://7umuivegwpuf" path="res://Scenes/Objects/plant.tscn" id="2_5khlg"]
+
+[sub_resource type="Gradient" id="Gradient_nwy7d"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3gngh"]
+gradient = SubResource("Gradient_nwy7d")
+width = 256
+height = 256
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(75, 570)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+size = Vector2(10, 30)
 
 [node name="Room" unique_id=197990627 instance=ExtResource("1_nwy7d")]
 
-[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
-position = Vector2(530, 167)
-room_name = "1"
+[node name="Block" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=917085587]
 
-[editable path="Offset/RoomTriggers/RoomTrigger"]
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block" index="0" unique_id=350153690]
+position = Vector2(-342, 1.9999471)
+scale = Vector2(0.2890625, 2.2265623)
+texture = SubResource("GradientTexture2D_3gngh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block" index="1" unique_id=2140421830]
+position = Vector2(-342.5, 2)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Block2" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2050927830]
+position = Vector2(693, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block2" index="0" unique_id=1285160765]
+position = Vector2(-342, 1.9999471)
+scale = Vector2(0.2890625, 2.2265623)
+texture = SubResource("GradientTexture2D_3gngh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block2" index="1" unique_id=1352662910]
+position = Vector2(-342.5, 2)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Block3" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=480701157]
+position = Vector2(-227, 642.00006)
+rotation = 1.5707964
+scale = Vector2(1.1776402, 0.2683857)
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block3" index="0" unique_id=644252089]
+position = Vector2(-342, 1.9999471)
+scale = Vector2(0.2890625, 2.2265623)
+texture = SubResource("GradientTexture2D_3gngh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block3" index="1" unique_id=1438956339]
+position = Vector2(-342.5, 2)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Block4" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=431086557]
+position = Vector2(-72.00001, 654.00006)
+rotation = 1.5707964
+scale = Vector2(1.1776402, 0.2683857)
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block4" index="0" unique_id=615255477]
+position = Vector2(-342, 1.9999471)
+scale = Vector2(0.2890625, 2.2265623)
+texture = SubResource("GradientTexture2D_3gngh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block4" index="1" unique_id=2093265773]
+position = Vector2(-342.5, 2)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1376364263]
+position = Vector2(-121.000015, 205.99991)
+node_a = NodePath("../Block4")
+node_b = NodePath("../Plant/Branch")
+
+[node name="Block5" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1017189817]
+position = Vector2(237.00002, 634.00006)
+rotation = 1.5707964
+scale = Vector2(1.1776402, 0.2683857)
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Block5" index="0" unique_id=925669119]
+position = Vector2(-342, 1.9999471)
+scale = Vector2(0.2890625, 2.2265623)
+texture = SubResource("GradientTexture2D_3gngh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Block5" index="1" unique_id=1410214613]
+position = Vector2(-342.5, 2)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Plant" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=952569118 instance=ExtResource("2_5khlg")]
+position = Vector2(-191, 189)
+
+[node name="PinJoint2D" parent="Offset/Obstacles/Plant" index="0" unique_id=952926085]
+position = Vector2(76, -14)
+
+[node name="Leaf" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="0" unique_id=904895338]
+position = Vector2(144, -24)
+rotation = 3.1415927
+
+[node name="Leaf2" type="RigidBody2D" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="1" unique_id=836039293]
+position = Vector2(108, -67)
+rotation = 3.1415927
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf2" index="0" unique_id=1281356599]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf2" index="1" unique_id=879894164]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Offset/Obstacles/Plant/Leaves/Leaf2" index="2" unique_id=394810831]
+position = Vector2(68, -9.000006)
+node_a = NodePath("..")
+node_b = NodePath("../../../Branch3")
+
+[node name="Leaf3" type="RigidBody2D" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="2" unique_id=1995893263]
+position = Vector2(61, -98)
+rotation = 3.1415927
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf3" index="0" unique_id=471524620]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf3" index="1" unique_id=153619593]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Offset/Obstacles/Plant/Leaves/Leaf3" index="2" unique_id=1083261387]
+position = Vector2(68, -9.000006)
+node_a = NodePath("..")
+node_b = NodePath("../../../Branch5")
+
+[node name="Leaf4" type="RigidBody2D" parent="Offset/Obstacles/Plant/Leaves" parent_id_path=PackedInt32Array(952569118, 950709168) index="3" unique_id=1075876661]
+position = Vector2(-12, -131)
+rotation = 3.1415927
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf4" index="0" unique_id=1390981944]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Plant/Leaves/Leaf4" index="1" unique_id=400456528]
+polygon = PackedVector2Array(15, -18, 55, -34, 68, -27, 68, 2, 56, 7, 16, -9)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Offset/Obstacles/Plant/Leaves/Leaf4" index="2" unique_id=4543549]
+position = Vector2(68, -9.000006)
+node_a = NodePath("..")
+node_b = NodePath("../../../Branch8")
+
+[node name="Branch2" parent="Offset/Obstacles/Plant" index="3" unique_id=1929256917]
+position = Vector2(54, -40)
+rotation = -0.37350047
+
+[node name="Branch3" parent="Offset/Obstacles/Plant" index="4" unique_id=933108062]
+position = Vector2(31, -53)
+rotation = -1.012291
+
+[node name="Branch4" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="5" unique_id=614887091]
+position = Vector2(7, -73)
+rotation = -0.8517207
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/Branch4" index="0" unique_id=426438272]
+position = Vector2(4, 29)
+node_a = NodePath("../../Branch3")
+node_b = NodePath("..")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Branch4" index="1" unique_id=2078954184]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/Branch4" index="2" unique_id=1408569124]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Branch5" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="6" unique_id=1137376892]
+position = Vector2(-19, -84)
+rotation = -1.118756
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/Branch5" index="0" unique_id=1181456232]
+position = Vector2(4, 29)
+node_a = NodePath("../../Branch4")
+node_b = NodePath("..")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Branch5" index="1" unique_id=1773018102]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/Branch5" index="2" unique_id=964891809]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Branch6" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="7" unique_id=277883813]
+position = Vector2(-46, -96)
+rotation = -1.118756
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/Branch6" index="0" unique_id=1077059418]
+position = Vector2(4, 29)
+node_a = NodePath("../../Branch5")
+node_b = NodePath("..")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Branch6" index="1" unique_id=242205132]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/Branch6" index="2" unique_id=1325630229]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Branch7" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="8" unique_id=743899882]
+position = Vector2(-74, -107)
+rotation = -1.118756
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/Branch7" index="0" unique_id=703721488]
+position = Vector2(4, 29)
+node_a = NodePath("../../Branch6")
+node_b = NodePath("..")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Branch7" index="1" unique_id=640657716]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/Branch7" index="2" unique_id=541404914]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Branch8" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="9" unique_id=1524814282]
+position = Vector2(-92, -133)
+rotation = -0.5602507
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/Branch8" index="0" unique_id=1170000871]
+position = Vector2(4, 29)
+node_a = NodePath("..")
+node_b = NodePath("../../Branch7")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/Branch8" index="1" unique_id=408830032]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/Branch8" index="2" unique_id=1666443742]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="BranchLast" type="RigidBody2D" parent="Offset/Obstacles/Plant" index="10" unique_id=1809183451]
+position = Vector2(-117, -132)
+rotation = -1.3857914
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Offset/Obstacles/Plant/BranchLast" index="0" unique_id=515458703]
+position = Vector2(5.4707923, 29.581589)
+node_a = NodePath("../../Branch8")
+node_b = NodePath("..")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="Offset/Obstacles/Plant/BranchLast" index="1" unique_id=157596481]
+position = Vector2(5.466527, 2.0290413)
+node_a = NodePath("..")
+node_b = NodePath("../../../Block")
+
+[node name="Shape" type="Polygon2D" parent="Offset/Obstacles/Plant/BranchLast" index="2" unique_id=479952005]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 30, 0, 30)
+uv = PackedVector2Array(13, -17, 55, -34, 68, -27, 68, 2, 56, 7, 30.769867, 2.0413437)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Offset/Obstacles/Plant/BranchLast" index="3" unique_id=1853829768]
+position = Vector2(5, 15)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[editable path="Offset/Obstacles/Plant"]
