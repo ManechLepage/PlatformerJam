@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d1tq2x1lipe0"]
+
+[ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_7umeo"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="2_3coug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(982, 79)
+
+[node name="Node2D" type="Node2D" unique_id=90859387]
+
+[node name="Player" parent="." unique_id=1898798850 instance=ExtResource("1_7umeo")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=845250965]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=773268569]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1095175366]
+position = Vector2(481, 514.5)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Area" parent="." unique_id=1754253968 instance=ExtResource("2_3coug")]
+position = Vector2(683, 426)

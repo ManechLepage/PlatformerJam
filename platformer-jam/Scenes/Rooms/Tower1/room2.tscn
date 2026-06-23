@@ -269,7 +269,7 @@ radius = 38.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_x34c6"]
 radius = 53.084812
 
-[node name="Room" unique_id=197990627 instance=ExtResource("1_n4yhi")]
+[node name="Room2" unique_id=197990627 instance=ExtResource("1_n4yhi")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -327,7 +327,7 @@ disabled = true
 
 [node name="Plant2" parent="Offset/Obstacles/Plant1" index="1" unique_id=1543584035 instance=ExtResource("4_x34c6")]
 position = Vector2(-181.72774, 0.118163824)
-rotation = 0.13788101
+rotation = -0.31066862
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2" index="0" unique_id=1349571073]
@@ -376,7 +376,7 @@ position = Vector2(-23, 17.5)
 shape = SubResource("RectangleShape2D_iqsa4")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1606434563 instance=ExtResource("4_x34c6")]
-position = Vector2(209, 52)
+position = Vector2(269, 45)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]

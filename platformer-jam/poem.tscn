@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bl1oxp0rndhll"]
+
+[ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="1_dtwml"]
+[ext_resource type="Texture2D" uid="uid://dmh4lwxnbnlim" path="res://Sprites/papier parchemin.png" id="2_vdpff"]
+[ext_resource type="Texture2D" uid="uid://ygcmkwr85t25" path="res://Sprites/E.png" id="3_neamx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 9.535932
+
+[node name="Area" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("e_key", "poem_text")]
+script = ExtResource("1_dtwml")
+e_key = NodePath("EKey")
+poem_text = NodePath("PoemText")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
+scale = Vector2(4.825, 4.825)
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Parchemin" type="Sprite2D" parent="." unique_id=828331389]
+texture = ExtResource("2_vdpff")
+
+[node name="EKey" type="Sprite2D" parent="." unique_id=698910338]
+visible = false
+position = Vector2(0, -28)
+texture = ExtResource("3_neamx")
+
+[node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
+offset_left = -190.0
+offset_top = -78.0
+offset_right = 192.0
+offset_bottom = -27.0
+text = "Un chameau moins une bosse est un dromadaire
+Un dromadaire moins une bosse est mort de soif"
+scroll_active = false
+autowrap_trim_flags = 64
+visible_characters_behavior = 1
