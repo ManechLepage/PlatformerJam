@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b8kew3elbwlo" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://p44sdkr4nqtu" path="res://Sprites/char_sheet.png" id="2_jhyir"]
 [ext_resource type="Script" uid="uid://covxk1e87jddg" path="res://Scripts/Player/StateMachine/state_machine.gd" id="2_xpcdj"]
-[ext_resource type="Script" uid="uid://dsyciksxffnvr" path="res://Scripts/Player/pusher.gd" id="3_74mp2"]
 [ext_resource type="Script" uid="uid://bm5o7y4tnpqcd" path="res://Scripts/Player/StateMachine/running.gd" id="3_xpcdj"]
 [ext_resource type="Script" uid="uid://cbt0hbfm245pb" path="res://Scripts/Player/StateMachine/idle.gd" id="4_dd0ac"]
 [ext_resource type="Script" uid="uid://bmk15vkvjqfoa" path="res://Scripts/Player/StateMachine/fall.gd" id="5_0u5uq"]
@@ -161,9 +160,6 @@ autoplay = "idle"
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_dd0ac")
-
-[node name="Pusher" type="Node2D" parent="." unique_id=173058658]
-script = ExtResource("3_74mp2")
 
 [node name="Interact" type="Area2D" parent="." unique_id=2103578818]
 collision_mask = 4
