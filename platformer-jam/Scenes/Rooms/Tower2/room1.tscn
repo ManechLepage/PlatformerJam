@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://cfvrg3sjclkud"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_c51jx"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_ughlu"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_ewb4s"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_1078h"]
+
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(779, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ymx6"]
+size = Vector2(486, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj5ac"]
+size = Vector2(349, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+size = Vector2(218, 11)
+
+[node name="Room2" unique_id=197990627 instance=ExtResource("1_c51jx")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_ughlu")
+
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(-960, 0)
+
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-35, -294)
+script = ExtResource("3_ewb4s")
+room_name = "Tower2-01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=245909862]
+position = Vector2(-35, 313)
+script = ExtResource("3_ewb4s")
+room_name = "Entrance1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=36847418]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=657448745]
+visible = false
+position = Vector2(500, -154)
+rotation = 1.5707964
+script = ExtResource("3_ewb4s")
+room_name = "Tower1-01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
+visible = false
+position = Vector2(-509, -152)
+rotation = 1.5707964
+script = ExtResource("3_ewb4s")
+room_name = "Entrance2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_1078h")]
+position = Vector2(-4, 256)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
+position = Vector2(-296, 7)
+shape = SubResource("RectangleShape2D_8ymx6")
+
+[node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=238899813 instance=ExtResource("4_1078h")]
+position = Vector2(578, 272)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
+position = Vector2(-242.5, -8.5)
+shape = SubResource("RectangleShape2D_kj5ac")
+
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=209727397 instance=ExtResource("4_1078h")]
+position = Vector2(52, 257)
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
+shape = SubResource("RectangleShape2D_5khlg")
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
+
+[editable path="Offset/Obstacles/Platform6"]
+[editable path="Offset/Obstacles/Platform7"]
+[editable path="Offset/Obstacles/Platform5"]

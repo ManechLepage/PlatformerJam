@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
 [ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="7_d3ks8"]
 [ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="8_ru85a"]
+[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance3.tscn" id="9_h4d8c"]
 
 [node name="Main2" type="Node2D" unique_id=295821621]
 
@@ -32,5 +33,7 @@ position = Vector2(-2, -116)
 [node name="Room1" parent="Entrance" unique_id=2146997223 instance=ExtResource("7_d3ks8")]
 
 [node name="Room2" parent="Entrance" unique_id=2043376837 instance=ExtResource("8_ru85a")]
+
+[node name="Room3" parent="Entrance" unique_id=1034337161 instance=ExtResource("9_h4d8c")]
 
 [node name="Tower2" type="Node2D" parent="." unique_id=1310257112]
