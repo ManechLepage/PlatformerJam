@@ -16,6 +16,7 @@ var poem_collected: int = 0
 @onready var idle: State = $StateMachine/Idle
 @onready var jump: State = $StateMachine/Jump
 @onready var fall: State = $StateMachine/Fall
+@onready var interact: State = $StateMachine/Interact
 
 var ground_info: Node2D
 
