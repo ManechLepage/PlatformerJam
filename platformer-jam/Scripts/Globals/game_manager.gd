@@ -36,7 +36,6 @@ func start_meditation_animation():
 	camera_shake(2.0)
 
 func _process(delta: float) -> void:
-	print(str(max_lucidity)+"   "+str(lucidity))
 	if abs(lucidity - lucidity_target) > 0.05:
 		lucidity = lerpf(lucidity, lucidity_target, 5.0 * delta)
 	if lucidity_target > max_lucidity:
