@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dg2kkucvixfyt"]
+
+[ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="1_atr4m"]
+
+[sub_resource type="Curve" id="Curve_x34c6"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 1, Vector2(1, 0.5), 0.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_omffa"]
+
+[sub_resource type="Gradient" id="Gradient_x34c6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x34c6"]
+gradient = SubResource("Gradient_x34c6")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve2D" id="Curve2D_dsljk"]
+_data = {
+"points": PackedVector2Array(-157.09991, 94.66566, 157.09991, -94.66566, 2, 1, 37.90788, -21.105293, -37.90788, 21.105293, 48, 54, 69.94741, -10.443272, -69.94741, 10.443272, 100, 100)
+}
+point_count = 3
+
+[node name="PathFollow2D" type="Line2D" unique_id=901383637]
+texture_filter = 1
+rotation = -0.54231626
+width = 20.0
+width_curve = SubResource("Curve_x34c6")
+script = ExtResource("1_atr4m")
+grad = SubResource("Gradient_omffa")
+sample_count = 2.0
+texture_base = SubResource("GradientTexture2D_x34c6")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=545245425]
+position = Vector2(-1.1969098, -1.8887581)
+rotation = 0.54231626
+curve = SubResource("Curve2D_dsljk")

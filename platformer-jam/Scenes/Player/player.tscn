@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://d2y1dft21woiq" path="res://Scripts/Player/StateMachine/wash.gd" id="9_gk6dx"]
 [ext_resource type="AudioStream" uid="uid://dbhw814xcf2h5" path="res://Sound/jump.ogg" id="13_7g0yx"]
 [ext_resource type="AudioStream" uid="uid://daavuo4io6mbr" path="res://Sound/meditate.ogg" id="14_dey5f"]
+[ext_resource type="Script" uid="uid://fi7pvn2gl5p5" path="res://Scenes/Player/meditate_sound.gd" id="15_dey5f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06tpx"]
 atlas = ExtResource("2_jhyir")
@@ -312,10 +313,12 @@ stream = ExtResource("13_7g0yx")
 volume_db = -9.448
 max_polyphony = 2
 
-[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867]
+[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867 node_paths=PackedStringArray("meditation_state")]
 stream = ExtResource("14_dey5f")
 volume_db = -80.0
 parameters/looping = true
+script = ExtResource("15_dey5f")
+meditation_state = NodePath("../../StateMachine/MeditateIdle")
 
 [node name="lucid3" type="AudioStreamPlayer" parent="Sounds/meditate" unique_id=1227968001]
 
