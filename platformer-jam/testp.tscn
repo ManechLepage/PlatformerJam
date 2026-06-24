@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1tq2x1lipe0"]
 
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_7umeo"]
-[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="2_3coug"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="2_3coug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(982, 79)

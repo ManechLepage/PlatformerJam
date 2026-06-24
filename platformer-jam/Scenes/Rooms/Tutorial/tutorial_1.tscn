@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
-[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/yellow_ball.tscn" id="5_xq6d4"]
-[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://poem.tscn" id="6_04iir"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_xq6d4"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="6_04iir"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
 
 [sub_resource type="Animation" id="Animation_q44wt"]

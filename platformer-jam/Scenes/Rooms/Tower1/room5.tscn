@@ -1,0 +1,480 @@
+[gd_scene format=3 uid="uid://ceb2xwoshxi1q"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_vcqh3"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_cheee"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_pd6bw"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_kr4pd"]
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_42vub"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_nx8yr"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="7_vwbao"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="8_hpt3e"]
+
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17345417),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D/Wall3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.172),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0333085, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Path2D2/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.436),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.1514, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Path2D2/PathFollow2D/Wall3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.436),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5270894341022874, -5.234242426730994]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Path2D3/PathFollow2D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0632296, 0.27257082),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Obstacles/Path2D3/PathFollow2D/Wall3/CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06408405, 0.27513418),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-4.6198864, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Obstacles/Vine:progress")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Vine2:progress")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.22, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Yellowball:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2, 2)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Yellowball:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-243, 43), Vector2(-253, 45)]
+}
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D/Wall3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Path2D2/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Path2D2/PathFollow2D/Wall3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Path2D3/PathFollow2D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Obstacles/Path2D3/PathFollow2D/Wall3/CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-4.6198864]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Obstacles/Vine:progress")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Vine2:progress")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Yellowball:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Yellowball:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-243, 43)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(776, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
+size = Vector2(42, 116.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itnsy"]
+size = Vector2(42, 181.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqsa4"]
+size = Vector2(135, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42vub"]
+size = Vector2(86, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx8yr"]
+size = Vector2(71.70862, 6.3027344)
+
+[sub_resource type="Curve2D" id="Curve2D_42vub"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -405, 366, -25.244173, 124.41771, 25.244173, -124.41771, -510, 156, 0, 0, 0, 0, -335, 10)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_nx8yr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 138, 318, -94.94018, 196.04971, 94.94018, -196.04971, -219, 226, 0, 0, 0, 0, -335, 10)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k6h7"]
+size = Vector2(42, 145.75)
+
+[sub_resource type="Curve2D" id="Curve2D_itnsy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 212, 324, -107.757774, 178.03458, 107.757774, -178.03458, 87, 7, 0, 0, 0, 0, 539, -236)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwbao"]
+size = Vector2(84, 68)
+
+[sub_resource type="Curve" id="Curve_nx8yr"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 1, Vector2(1, 0.5), 0.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_vwbao"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 21.359497, -9.498169, 22.70713, 19.388664, -22.70713, -19.388664, -19.22754, -95.90405, 69.0004, -50.22853, -69.0004, 50.22853, -122.95471, -71.29321, 0, 0, 0, 0, -237.95679, -152.1853)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_hpt3e"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3.7000732, -38.42285, -2.1580744, -81.01201, 2.1580744, 81.01201, -61.49463, -51.676147, 0, 0, 0, 0, -84.48779, 32.230347)
+}
+point_count = 3
+
+[node name="Room" unique_id=197990627 instance=ExtResource("1_vcqh3")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_cheee")
+
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(1, -2127)
+
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-35, 297)
+script = ExtResource("3_pd6bw")
+room_name = "Tower1-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=932573967]
+position = Vector2(-35, -292)
+script = ExtResource("3_pd6bw")
+room_name = "Tower1-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="Wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_kr4pd")]
+position = Vector2(367, -35)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall" index="0" unique_id=1349571073]
+position = Vector2(-68, 257.25)
+shape = SubResource("RectangleShape2D_snhcn")
+
+[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1888718163 instance=ExtResource("4_kr4pd")]
+position = Vector2(-385, 282)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Wall2" index="0" unique_id=1349571073]
+position = Vector2(50, -90.25)
+shape = SubResource("RectangleShape2D_itnsy")
+
+[node name="Platform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1103251493 instance=ExtResource("4_kr4pd")]
+position = Vector2(-96, 263)
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform1" index="0" unique_id=1349571073]
+position = Vector2(58.5, 0)
+shape = SubResource("RectangleShape2D_iqsa4")
+
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=159886605 instance=ExtResource("4_kr4pd")]
+position = Vector2(152, 171)
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(83, 0)
+shape = SubResource("RectangleShape2D_42vub")
+
+[node name="Pillar1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=204589304 instance=ExtResource("4_kr4pd")]
+position = Vector2(228.99997, 204)
+rotation = 0.8552113
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Pillar1" index="0" unique_id=1349571073]
+position = Vector2(18.271044, -22.542658)
+shape = SubResource("RectangleShape2D_nx8yr")
+disabled = true
+
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=2020775106]
+curve = SubResource("Curve2D_42vub")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=896175470]
+position = Vector2(-335, 9.999999)
+progress = 490.63705
+rotates = false
+
+[node name="Wall3" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=643414568 instance=ExtResource("4_kr4pd")]
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Wall3" index="0" unique_id=1349571073]
+shape = SubResource("RectangleShape2D_itnsy")
+
+[node name="Path2D3" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=797505108]
+position = Vector2(634, 63)
+curve = SubResource("Curve2D_nx8yr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D3" index="0" unique_id=506953381]
+position = Vector2(-334.99997, 9.999999)
+progress = 758.76624
+rotates = false
+
+[node name="Wall3" parent="Offset/Obstacles/Path2D3/PathFollow2D" index="0" unique_id=864223752 instance=ExtResource("4_kr4pd")]
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Path2D3/PathFollow2D/Wall3" index="0" unique_id=1349571073]
+position = Vector2(-3.0517578e-05, 18)
+shape = SubResource("RectangleShape2D_3k6h7")
+
+[node name="Path2D2" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1533829528]
+curve = SubResource("Curve2D_itnsy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D2" index="0" unique_id=174621919]
+position = Vector2(392.78882, -195.64656)
+progress = 755.03253
+rotates = false
+
+[node name="Wall3" parent="Offset/Obstacles/Path2D2/PathFollow2D" index="0" unique_id=1960580640 instance=ExtResource("4_kr4pd")]
+rotation = -4.3057675
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Path2D2/PathFollow2D/Wall3" index="0" unique_id=1349571073]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_vwbao")
+
+[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("5_42vub")]
+position = Vector2(-37, 224)
+
+[node name="Vine" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=901383637 instance=ExtResource("6_nx8yr")]
+position = Vector2(-303, 88)
+rotation = -4.389503
+width_curve = SubResource("Curve_nx8yr")
+
+[node name="Path2D" parent="Offset/Obstacles/Vine" index="0" unique_id=545245425]
+curve = SubResource("Curve2D_vwbao")
+
+[node name="Vine2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=14962942 instance=ExtResource("6_nx8yr")]
+position = Vector2(-163.99997, 78)
+rotation = 0.0
+width_curve = SubResource("Curve_nx8yr")
+
+[node name="Path2D" parent="Offset/Obstacles/Vine2" index="0" unique_id=545245425]
+position = Vector2(-2.5629997e-05, -17.000086)
+curve = SubResource("Curve2D_hpt3e")
+
+[node name="Area" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1754253968 instance=ExtResource("7_vwbao")]
+position = Vector2(-232, 92)
+
+[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1760792903 instance=ExtResource("8_hpt3e")]
+position = Vector2(-253, 45)
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+
+[editable path="Offset/Obstacles/Wall"]
+[editable path="Offset/Obstacles/Wall2"]
+[editable path="Offset/Obstacles/Platform1"]
+[editable path="Offset/Obstacles/Platform2"]
+[editable path="Offset/Obstacles/Pillar1"]
+[editable path="Offset/Obstacles/Path2D/PathFollow2D/Wall3"]
+[editable path="Offset/Obstacles/Path2D3/PathFollow2D/Wall3"]
+[editable path="Offset/Obstacles/Path2D2/PathFollow2D/Wall3"]
+[editable path="Offset/Obstacles/Vine"]
+[editable path="Offset/Obstacles/Vine2"]
