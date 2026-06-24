@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="3_n7gr7"]
 [ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_t0v3l"]
 [ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="4_00wsg"]
-[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room4.tscn" id="5_nk8ps"]
+[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="5_nk8ps"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
 
 [node name="Main" type="Node2D" unique_id=295821621]
