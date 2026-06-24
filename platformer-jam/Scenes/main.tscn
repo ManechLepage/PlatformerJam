@@ -15,6 +15,15 @@
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
+[ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
+[ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
+[ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
+[ext_resource type="AudioStream" uid="uid://dlt34fjugysbg" path="res://Sound/pillar2_lucid1.ogg" id="19_1w6v2"]
+[ext_resource type="AudioStream" uid="uid://df3j1w0kr2nj0" path="res://Sound/pillar2_lucid2.ogg" id="20_ueoa1"]
+[ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
+[ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
+[ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
+[ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
 
@@ -92,7 +101,7 @@ sound_layers = {
 "lucid_4": NodePath("lucid4"),
 "noise": NodePath("noise")
 }
-sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k")])
+sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k"), ExtResource("16_3pmx8"), ExtResource("17_u50mg"), ExtResource("18_cbgmd"), ExtResource("19_1w6v2"), ExtResource("20_ueoa1"), ExtResource("21_6vcvc"), ExtResource("22_7k868"), ExtResource("23_hpc6h"), ExtResource("24_kltya")])
 
 [node name="noise" type="AudioStreamPlayer" parent="MusicManager" unique_id=129395444]
 stream = ExtResource("11_fdnlq")
@@ -101,17 +110,20 @@ autoplay = true
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
 stream = ExtResource("12_jkdf5")
 autoplay = true
+bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
-volume_db = -80.0
 autoplay = true
+bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
-volume_db = -80.0
+stream = ExtResource("16_3pmx8")
+bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
-volume_db = -80.0
+stream = ExtResource("17_u50mg")
+bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
-volume_db = -80.0
+bus = &"Music"
