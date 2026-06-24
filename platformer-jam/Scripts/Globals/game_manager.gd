@@ -36,11 +36,11 @@ func start_meditation_animation():
 	camera_shake(2.0)
 
 func _process(delta: float) -> void:
-	print(lucidity)
+	print(str(max_lucidity)+"   "+str(lucidity))
 	if abs(lucidity - lucidity_target) > 0.05:
 		lucidity = lerpf(lucidity, lucidity_target, 5.0 * delta)
-	if lucidity > max_lucidity:
-		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
+	if lucidity_target > max_lucidity:
+		lucidity_target = lerpf(lucidity_target, max_lucidity, delta * 6)
 
 func set_ground(node: Node2D) -> void:
 	if node is AnimationObject: node.is_ground = true

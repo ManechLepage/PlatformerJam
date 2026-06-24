@@ -5,12 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="2_344ge"]
 [ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="4_344ge"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room4.tscn" id="8_d1ilt"]
+[ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
+[ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
+[ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
+[ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
 
@@ -57,7 +60,7 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-02": ExtResource("3_jjvhh"),
 "Tower1-03": ExtResource("7_hptm8"),
 "Tower1-04": ExtResource("8_d1ilt"),
-"tutorial_1": ExtResource("4_344ge"),
+"tutorial_1": ExtResource("5_ynf5e"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
 
@@ -75,3 +78,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_21xkr")
+
+[node name="MusicManager" type="Node" parent="." unique_id=1233065578 node_paths=PackedStringArray("sound_layers")]
+script = ExtResource("11_jkdf5")
+sound_layers = {
+"base": NodePath("base"),
+"lucid_1": NodePath("lucid1"),
+"lucid_2": NodePath("lucid2"),
+"lucid_3": NodePath("lucid3"),
+"lucid_4": NodePath("lucid4"),
+"noise": NodePath("noise")
+}
+sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k")])
+
+[node name="noise" type="AudioStreamPlayer" parent="MusicManager" unique_id=129395444]
+stream = ExtResource("11_fdnlq")
+autoplay = true
+
+[node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
+stream = ExtResource("12_jkdf5")
+autoplay = true
+
+[node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
+stream = ExtResource("13_wsu2k")
+volume_db = -80.0
+autoplay = true
+
+[node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
+volume_db = -80.0
+
+[node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
+volume_db = -80.0
+
+[node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
+volume_db = -80.0
