@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="8_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="8_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="9_k12tt"]
+[ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="10_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
@@ -58,6 +60,8 @@ initial_room = "Tower1-01"
 rooms = Dictionary[String, PackedScene]({
 "": null,
 "1": SubResource("PackedScene_ynf5e"),
+"Entrance1": ExtResource("9_k12tt"),
+"Entrance2": ExtResource("10_h1bgf"),
 "Tower1-01": ExtResource("2_8gbba"),
 "Tower1-02": ExtResource("3_jjvhh"),
 "Tower1-03": ExtResource("7_hptm8"),

@@ -1105,8 +1105,9 @@ scale = Vector2(1.3359498, 1.2380294)
 curve = SubResource("Curve2D_487jx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Background/Parallax2D2/Path2D2" index="0" unique_id=626958911]
-position = Vector2(-306, 223)
+position = Vector2(268.83557, -213.05432)
 rotation = 0.08823648
+progress = 788.0829
 rotates = false
 
 [node name="DecorationPlatform5" parent="Offset/Background/Parallax2D2/Path2D2/PathFollow2D" index="0" unique_id=1128977835 instance=ExtResource("2_5khlg")]
@@ -1213,7 +1214,7 @@ debug_color = Color(0.6639343, 0.39276803, 0.84766656, 0.41960785)
 
 [node name="DecorationPlatform7" parent="Offset/Background/Parallax2D3/Path2D2/PathFollow2D" index="2" unique_id=1829776043 instance=ExtResource("2_5khlg")]
 position = Vector2(-25.051804, -206.7312)
-rotation = 5.2359877
+rotation = 1.7453293
 scale = Vector2(0.5, 0.7)
 collision_layer = 0
 collision_mask = 0
@@ -1229,6 +1230,17 @@ script = ExtResource("3_mhqpd")
 room_name = "Tower1-02"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=2096990041]
+position = Vector2(-513, -108)
+rotation = 1.5707964
+script = ExtResource("3_mhqpd")
+room_name = "Entrance1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=630776865]
 position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
@@ -1274,7 +1286,7 @@ shape = SubResource("RectangleShape2D_4il0d")
 position = Vector2(260, 93)
 
 [node name="Block2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1647798916 instance=ExtResource("2_5khlg")]
-position = Vector2(-240, 27)
+position = Vector2(-306, 23)
 sync_to_physics = false
 is_platform = true
 
@@ -1294,7 +1306,7 @@ disabled = true
 
 [node name="Plant2" parent="Offset/Obstacles/Plant1" index="1" unique_id=1543584035 instance=ExtResource("2_5khlg")]
 position = Vector2(-181.72774, 0.118163824)
-rotation = 0.13788101
+rotation = -0.31066862
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2" index="0" unique_id=1349571073]
@@ -1340,6 +1352,7 @@ sync_to_physics = false
 shape = SubResource("RectangleShape2D_mhqpd")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 
 [editable path="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform"]
 [editable path="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform2"]

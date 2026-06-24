@@ -6,19 +6,31 @@
 [ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="5_jea7g"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="5_nk8ps"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
+[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="7_d3ks8"]
+[ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="8_ru85a"]
 
-[node name="Main" type="Node2D" unique_id=295821621]
+[node name="Main2" type="Node2D" unique_id=295821621]
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("6_mypwg")]
 z_index = 2
 position = Vector2(-2, -116)
 
-[node name="Room" parent="." unique_id=197990627 instance=ExtResource("3_n7gr7")]
+[node name="Tower1" type="Node2D" parent="." unique_id=1644163659]
 
-[node name="Room2" parent="." unique_id=802061890 instance=ExtResource("3_t0v3l")]
+[node name="Room" parent="Tower1" unique_id=197990627 instance=ExtResource("3_n7gr7")]
 
-[node name="Room3" parent="." unique_id=2033122512 instance=ExtResource("4_00wsg")]
+[node name="Room2" parent="Tower1" unique_id=802061890 instance=ExtResource("3_t0v3l")]
 
-[node name="Room4" parent="." unique_id=1783685609 instance=ExtResource("5_jea7g")]
+[node name="Room3" parent="Tower1" unique_id=2033122512 instance=ExtResource("4_00wsg")]
 
-[node name="Room5" parent="." unique_id=870030527 instance=ExtResource("5_nk8ps")]
+[node name="Room4" parent="Tower1" unique_id=1783685609 instance=ExtResource("5_jea7g")]
+
+[node name="Room5" parent="Tower1" unique_id=870030527 instance=ExtResource("5_nk8ps")]
+
+[node name="Entrance" type="Node2D" parent="." unique_id=1764994515]
+
+[node name="Room1" parent="Entrance" unique_id=2146997223 instance=ExtResource("7_d3ks8")]
+
+[node name="Room2" parent="Entrance" unique_id=2043376837 instance=ExtResource("8_ru85a")]
+
+[node name="Tower2" type="Node2D" parent="." unique_id=1310257112]
