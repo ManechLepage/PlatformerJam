@@ -114,16 +114,20 @@ bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
+volume_db = -80.0
 autoplay = true
 bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
 stream = ExtResource("16_3pmx8")
+volume_db = -80.0
 bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
 stream = ExtResource("17_u50mg")
+volume_db = -80.0
 bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
+volume_db = -80.0
 bus = &"Music"
