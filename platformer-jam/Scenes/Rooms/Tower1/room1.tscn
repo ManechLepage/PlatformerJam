@@ -930,6 +930,9 @@ autoplay = &"Lucidity"
 speed_scale = 0.0
 script = ExtResource("2_snhcn")
 
+[node name="Background" parent="Offset" parent_id_path=PackedInt32Array(652906693) index="1" unique_id=1300832449]
+visible = false
+
 [node name="Path2D" type="Path2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1816005466]
 curve = SubResource("Curve2D_mhqpd")
 

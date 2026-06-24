@@ -4,6 +4,8 @@ extends Line2D
 @export var progress := 1.0
 @export var sample_count := 1.0
 @export var texture_base: Texture
+@export var has_hitbox: bool = false
+@export var hitbox_scene: PackedScene
 var follows := []
 
 @onready var path := $Path2D
@@ -20,10 +22,15 @@ func _ready():
 		sprite.texture = texture_base
 		sprite.scale = Vector2.ONE * ease(1-(i/(10*sample_count)),0.2)
 		
+		if not has_hitbox: return
+		var hitbox: VineHitbox = hitbox_scene.instantiate()
+		sprite.add_child(hitbox)
+		var rect: Rect2 = sprite.get_rect()
+		hitbox.load_hitbox(rect)
 
 
 func _process(delta):
-	print(progress)
+	#print(progress)
 	clear_points()
 	for i in range(len(follows)):
 		follows[i].progress_ratio = ease(float(i)/len(follows),0.7)*progress
