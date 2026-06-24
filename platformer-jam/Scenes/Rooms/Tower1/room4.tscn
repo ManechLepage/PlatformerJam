@@ -118,7 +118,7 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
-size = Vector2(776, 23)
+size = Vector2(503, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
 size = Vector2(42, 700)
@@ -136,16 +136,19 @@ size = Vector2(79, 117.625)
 size = Vector2(119, 18.3125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fvns0"]
-size = Vector2(80, 18.3125)
+size = Vector2(80, 11.15625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7cxg"]
-size = Vector2(119, 13.15625)
+size = Vector2(119, 7.578125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2ke"]
 size = Vector2(186.10059, 10.815491)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvax0"]
+size = Vector2(95.20386, 7.8067017)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ig0e"]
-size = Vector2(110.71289, 10.815491)
+size = Vector2(103.2583, 10.815491)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl278"]
 size = Vector2(79, 18.8125)
@@ -158,6 +161,9 @@ size = Vector2(8, 57.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8ydv"]
 size = Vector2(8, 45.361084)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqxqq"]
+size = Vector2(8, 66.45203)
 
 [node name="Room" unique_id=197990627 instance=ExtResource("1_vcqh3")]
 
@@ -187,7 +193,7 @@ script = ExtResource("3_pd6bw")
 room_name = "Tower1-05"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(35.5, -4.5)
+position = Vector2(194.5, -1)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -243,19 +249,19 @@ position = Vector2(-252, -142)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
-position = Vector2(-2, 9)
+position = Vector2(-3, 22.578125)
 shape = SubResource("RectangleShape2D_fvns0")
 
 [node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1982653546 instance=ExtResource("4_kr4pd")]
-position = Vector2(-23, -196)
+position = Vector2(-23, -194)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
-position = Vector2(25.5, 10)
+position = Vector2(26, 13)
 shape = SubResource("RectangleShape2D_n7cxg")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=188115391 instance=ExtResource("4_kr4pd")]
-position = Vector2(-23, -274)
+position = Vector2(-54, -274)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
@@ -275,25 +281,19 @@ disabled = true
 position = Vector2(-192, -158)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Pillar2" index="0" unique_id=1349571073]
-position = Vector2(-17, 78)
+position = Vector2(-16.590485, 85.05786)
 rotation = -1.8203784
 scale = Vector2(0.895, 0.895)
-shape = SubResource("RectangleShape2D_5ig0e")
+shape = SubResource("RectangleShape2D_xvax0")
 disabled = true
 
 [node name="Pillar3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=605851015 instance=ExtResource("4_kr4pd")]
 position = Vector2(-46, -242)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Pillar3" index="0" unique_id=1349571073]
-rotation = 1.5707964
-scale = Vector2(0.895, 0.895)
-shape = SubResource("RectangleShape2D_5ig0e")
-disabled = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Pillar3" index="1" unique_id=1568877137]
-position = Vector2(92, 0)
-rotation = 1.5707964
-scale = Vector2(0.895, 0.895)
+position = Vector2(27, 19)
+rotation = 1.0768682
+scale = Vector2(0.89500004, 0.89500004)
 shape = SubResource("RectangleShape2D_5ig0e")
 disabled = true
 
@@ -348,10 +348,10 @@ shape = SubResource("RectangleShape2D_pd6bw")
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/FlowerBranch2" index="1" unique_id=886158878]
-position = Vector2(-2, 16)
-rotation = 0.17453294
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_agpf0")
+position = Vector2(-2.7989578, 20.531128)
+rotation = 0.17453295
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_tqxqq")
 disabled = true
 
 [node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1652650217 instance=ExtResource("5_cheee")]
@@ -362,7 +362,7 @@ position = Vector2(-84, -32)
 scale = Vector2(1.2930291, 1.2930291)
 
 [node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="17" unique_id=1980369393 instance=ExtResource("6_pd6bw")]
-position = Vector2(-134, -177.00002)
+position = Vector2(-135, -168.00002)
 scale = Vector2(0.6470667, 0.6470667)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
