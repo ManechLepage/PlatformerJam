@@ -26,8 +26,8 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/mode=2
 window/size/sharp_corners=true
-window/size/window_width_override=960
-window/size/window_height_override=540
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="viewport"
 
 [file_customization]
@@ -93,6 +93,7 @@ Down={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
 textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/defaults/default_clear_color=Color(0.04501707, 0.045012996, 0.10019248, 1)

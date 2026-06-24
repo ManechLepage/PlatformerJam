@@ -12,6 +12,7 @@ func enter():
 	parent.velocity.y = -jump_force
 	parent.has_jumped = true
 	Game.player.sprite.play("jump")
+	$"../../Sounds/jump".play()
 	if not Input.is_action_pressed("Jump"):
 		return fall
 

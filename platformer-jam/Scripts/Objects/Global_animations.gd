@@ -2,7 +2,7 @@ extends AnimationPlayer
 
 func _ready() -> void:
 	Game.event_manager.lucidity_changed.connect(set_animation)
-	play("lucidity")
+	play("Lucidity")
 	await get_tree().create_timer(0.0).timeout
 	set_animation(Game.lucidity)
 

@@ -22,7 +22,8 @@ var ground_info: Node2D
 func _ready() -> void:
 	state_machine.init(self)
 	Game.event_manager.interactable_object_changed.connect(update_x_icon)
-
+	$Sounds/meditate.volume_linear = 0
+	
 func _physics_process(delta):
 	state_machine.process_physics(delta)
 

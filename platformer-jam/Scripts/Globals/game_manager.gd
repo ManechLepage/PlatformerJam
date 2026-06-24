@@ -9,7 +9,9 @@ var lucidity: float = 0:
 	set(value):
 		lucidity = max(value, 0)
 		event_manager.lucidity_changed.emit(value)
-var lucidity_target: float = 0.0
+var lucidity_target: float = 0.0:
+	set(value):
+		lucidity_target = max(value, -0.07)
 var max_lucidity: float = 20.0
 var camera: CameraManager
 var player: Player
@@ -34,10 +36,10 @@ func start_meditation_animation():
 	camera_shake(2.0)
 
 func _process(delta: float) -> void:
-	if abs(lucidity - lucidity_target) > 0.1:
+	if abs(lucidity - lucidity_target) > 0.05:
 		lucidity = lerpf(lucidity, lucidity_target, 5.0 * delta)
-	if lucidity > max_lucidity:
-		lucidity = lerpf(lucidity, max_lucidity, delta * 6)
+	if lucidity_target > max_lucidity:
+		lucidity_target = lerpf(lucidity_target, max_lucidity, delta * 6)
 
 func set_ground(node: Node2D) -> void:
 	if node is AnimationObject: node.is_ground = true
