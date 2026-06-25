@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://do8vo3o07f6ql"]
+
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="1_js68f"]
+[ext_resource type="Texture2D" uid="uid://b1tj3ksqps6se" path="res://Sprites/fountain.png" id="2_2fi52"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16o5y"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3gfv"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgq6l"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t7i6"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8u3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16o5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3gfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgq6l")
+}],
+"loop": 1,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t7i6")
+}],
+"loop": 1,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[node name="Fountain" unique_id=1652650217 instance=ExtResource("1_js68f")]
+
+[node name="fountain" type="AnimatedSprite2D" parent="." index="1" unique_id=551777104]
+sprite_frames = SubResource("SpriteFrames_k8u3x")
+animation = &"active"

@@ -24,9 +24,6 @@ func process_physics(delta):
 
 func wash(delta: float):
 	Game.event_manager.change_lucidity(-wash_power*delta)
-	if Game.event_manager.interactable_object:
-		if Game.lucidity < Game.event_manager.interactable_object.min_water:
-			Game.event_manager.set_lucidity(Game.event_manager.interactable_object.min_water)
 
 func interact() -> void:
 	if Game.event_manager.interactable_object is Water:

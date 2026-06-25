@@ -12,7 +12,7 @@ var lucidity: float = 0:
 var lucidity_target: float = 0.0:
 	set(value):
 		lucidity_target = max(value, -0.07)
-var max_lucidity: float = 20
+var max_lucidity: float = 40
 var camera: CameraManager
 var player: Player
 

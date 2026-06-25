@@ -330,6 +330,8 @@ script = ExtResource("9_gk6dx")
 wash_power = 4.0
 idle = NodePath("../Idle")
 
+[node name="Timer" type="Timer" parent="StateMachine/Interact" unique_id=22314059]
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=817910960]
 visible = false
 position = Vector2(-9.536743e-07, -29)
