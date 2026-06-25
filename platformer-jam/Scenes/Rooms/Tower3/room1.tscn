@@ -142,7 +142,7 @@ point_count = 4
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8nxr"]
 size = Vector2(123, 120.875)
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_svali")]
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_svali")]
 
 [node name="TimeAnimation" type="AnimationPlayer" parent="." index="0" unique_id=1188777491]
 libraries/ = SubResource("AnimationLibrary_p7mac")
@@ -156,8 +156,8 @@ speed_scale = 0.0
 script = ExtResource("2_nu0ib")
 
 [node name="Offset" parent="." index="2" unique_id=652906693]
-position = Vector2(-960, -540)
-offset = Vector2i(1, 1)
+position = Vector2(-1920, -540)
+offset = Vector2i(2, 1)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -194,7 +194,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-559, -152)
 rotation = 1.5707964
 script = ExtResource("3_o18ho")
-room_name = "Tower2-01"
+room_name = "Bridge1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
 position = Vector2(35.5, -4.5)

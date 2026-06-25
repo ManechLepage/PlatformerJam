@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="13_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="14_kltya"]
+[ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="15_kltya"]
 [ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
 [ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
@@ -86,9 +87,11 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-02"
-initial_player_pos = Vector2(0, -500)
+initial_room = "Tower2-01"
+initial_player_pos = Vector2(-3840, -540)
+initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
+"Bridge1": ExtResource("15_kltya"),
 "Entrance2": ExtResource("13_hpc6h"),
 "Entrance2_3": ExtResource("14_kltya"),
 "Entrance3": ExtResource("11_6vcvc"),

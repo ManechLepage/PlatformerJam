@@ -6,11 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="5_jea7g"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="5_nk8ps"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
+[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="7_d3ks8"]
 [ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="7_h4d8c"]
 [ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance_tower3.tscn" id="8_itxiy"]
 [ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="9_022hg"]
 [ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_022hg"]
 [ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="11_j5f30"]
+[ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="13_tabdy"]
 
 [node name="Main2" type="Node2D" unique_id=295821621]
 
@@ -38,6 +40,8 @@ position = Vector2(-2, -116)
 
 [node name="Room4" parent="Entrance" unique_id=209980947 instance=ExtResource("9_022hg")]
 
+[node name="Room5" parent="Entrance" unique_id=1153811738 instance=ExtResource("7_d3ks8")]
+
 [node name="Tower2" type="Node2D" parent="." unique_id=1310257112]
 
 [node name="Room1" parent="Tower2" unique_id=112665270 instance=ExtResource("10_022hg")]
@@ -45,3 +49,7 @@ position = Vector2(-2, -116)
 [node name="Tower3" type="Node2D" parent="." unique_id=1131946100]
 
 [node name="Room1" parent="Tower3" unique_id=290056632 instance=ExtResource("11_j5f30")]
+
+[node name="Bridges" type="Node2D" parent="." unique_id=1484474823]
+
+[node name="Room2" parent="Bridges" unique_id=118487425 instance=ExtResource("13_tabdy")]

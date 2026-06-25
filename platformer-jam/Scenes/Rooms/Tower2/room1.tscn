@@ -134,7 +134,7 @@ radius = 49.0306
 
 [sub_resource type="Curve2D" id="Curve2D_2fq3i"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 26.304516, 59.0251, -26.304516, -59.0251, -73.583496, -64.3692, 38.196632, 51.859116, -38.196632, -51.859116, -102.97046, -186.76367, 0, 0, 0, 0, -230.56055, -274.50055)
+"points": PackedVector2Array(12.05981, 45.37756, -12.05981, -45.37756, 309.21582, 1.6430664, 26.304516, 59.0251, -26.304516, -59.0251, 178.23242, -66.53662, 38.196632, 51.859116, -38.196632, -51.859116, 147.76929, -213.96777, 0, 0, 0, 0, 18.686035, -275.11963)
 }
 point_count = 4
 
@@ -148,8 +148,8 @@ speed_scale = 0.0
 script = ExtResource("2_ughlu")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(-2880, -540)
-offset = Vector2i(3, 1)
+position = Vector2(-3840, -540)
+offset = Vector2i(4, 1)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -175,7 +175,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(518, -154)
 rotation = 1.5707964
 script = ExtResource("3_ewb4s")
-room_name = "Tower3-01"
+room_name = "Bridge1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -257,7 +257,7 @@ position = Vector2(66, 26)
 shape = SubResource("RectangleShape2D_jvahp")
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=822347322 instance=ExtResource("4_1078h")]
-position = Vector2(-313, -110)
+position = Vector2(-107, -110)
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
@@ -288,16 +288,17 @@ position = Vector2(-7.430936e-07, -17)
 shape = SubResource("CircleShape2D_4sqie")
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=901383637 instance=ExtResource("5_1hgyl")]
-position = Vector2(246, 181)
 rotation = 0.0
-progress = 0.0
+progress = 0.2
 has_hitbox = false
+hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=545245425]
+position = Vector2(0, 0)
 curve = SubResource("Curve2D_2fq3i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=424054915]
-position = Vector2(-61.811756, -43.07433)
+position = Vector2(242.87761, -28.246803)
 rotation = -2.1676095
 progress = 77.345726
 rotates = false

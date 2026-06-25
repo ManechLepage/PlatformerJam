@@ -11,7 +11,12 @@ var follows := []
 
 @onready var path := $Path2D
 
+var global_pos: Vector2
+
 func _ready():
+	global_pos = global_position
+	global_position = Vector2.ZERO
+	
 	gradient = Gradient.new()
 	for i in 10*sample_count:
 		var new_follow = PathFollow2D.new()
@@ -32,7 +37,7 @@ func _process(delta):
 	clear_points()
 	for i in range(len(follows)):
 		follows[i].progress_ratio = ease(float(i)/len(follows),0.8)*progress
-		add_point(follows[i].global_position)
+		add_point(follows[i].global_position + global_pos)
 	
 	gradient.set_color(0, grad.sample(follows[0].progress_ratio))
 	gradient.set_color(1, grad.sample(follows[-1].progress_ratio))
