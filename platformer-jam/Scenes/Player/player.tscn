@@ -198,6 +198,7 @@ size = Vector2(20, 5)
 [node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite", "interact_area") groups=["Player"]]
 collision_layer = 3
 floor_max_angle = 0.9843657
+platform_on_leave = 2
 script = ExtResource("1_a3d8c")
 sprite = NodePath("Sprite")
 interact_area = NodePath("Interact")

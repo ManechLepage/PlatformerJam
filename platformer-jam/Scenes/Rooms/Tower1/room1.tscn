@@ -392,6 +392,54 @@ tracks/30/keys = {
 "update": 0,
 "values": [4.0, 80.0]
 }
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Offset/Obstacles/vine6:progress")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(0.51763254, 1),
+"update": 0,
+"values": [0.1, 1.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Offset/Obstacles/vine6:width")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(0.57434916, 1),
+"update": 0,
+"values": [4.0, 80.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Offset/Obstacles/vine7:progress")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(0.51763254, 1),
+"update": 0,
+"values": [0.1, 1.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Offset/Obstacles/vine7:width")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.17),
+"transitions": PackedFloat32Array(0.57434916, 1),
+"update": 0,
+"values": [4.0, 80.0]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 step = 0.0078125
@@ -767,6 +815,54 @@ tracks/30/keys = {
 "update": 0,
 "values": [0.09999999999999998]
 }
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Offset/Obstacles/vine6:progress")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.09999999999999998]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Offset/Obstacles/vine6:width")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Offset/Obstacles/vine7:width")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Offset/Obstacles/vine7:progress")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
@@ -861,14 +957,28 @@ point_count = 3
 [sub_resource type="Curve2D" id="Curve2D_0a7fl"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(-161.35458, 258.67993, 161.35458, -258.67993, -237, 332, -59.668274, 205.09322, 59.668274, -205.09322, -17, 262, -46, 77, 46, -77, 300, 166, 209.70908, -142.43051, -209.70908, 142.43051, 187, -20)
+"points": PackedVector2Array(-161.35458, 258.67993, 161.35458, -258.67993, -237, 332, -75.472115, 236.18773, 75.472115, -236.18773, -17, 262, -46, 77, 46, -77, 300, 166, 209.70908, -142.43051, -209.70908, 142.43051, 187, -20)
 }
 point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_ugaml"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(-248.7803, 521.6401, 248.7803, -521.6401, 219, 368, -56.668274, 170.09322, 56.668274, -170.09322, 51, 213, -42, 78, 42, -78, 329, 65, 47.709076, 143.56949, -47.709076, -143.56949, 321, -257)
+"points": PackedVector2Array(-270.7803, 499.64008, 270.7803, -499.64008, 219, 368, -51.88718, 144.82172, 51.88718, -144.82172, 26, 206, -53.979, 108.61301, 53.979, -108.61301, 329, 65, 47.709076, 143.56949, -47.709076, -143.56949, 321, -257)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_5diaa"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(93.23251, 181.59048, -93.23251, -181.59048, 427, 251, -62.482178, 144.66745, 62.482178, -144.66745, 68, 198, -48.61157, 142.4628, 48.61157, -142.4628, 329, 65, 47.709076, 143.56949, -47.709076, -143.56949, 321, -257)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_aeexq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(-35.767487, 280.59048, 35.767487, -280.59048, 17, 341, -90.48218, 12.66745, 90.48218, -12.66745, 160, 267, -119.61157, 90.4628, 119.61157, -90.4628, 186, 156, 131.39708, 546.5655, -131.39708, -546.5655, 289, -291)
 }
 point_count = 4
 
@@ -1360,7 +1470,7 @@ end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
 progress = 0.09999999999999998
-sample_count = 2.5
+sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1380,7 +1490,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
+progress = 0.1
 sample_count = 2.5
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1389,6 +1499,48 @@ hitbox_size = 22.0
 
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine5" index="0" unique_id=742034994]
 curve = SubResource("Curve2D_ugaml")
+
+[node name="vine6" type="Line2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1805944183]
+texture_filter = 1
+points = PackedVector2Array(0, 0)
+width = 4.0
+width_curve = SubResource("Curve_x34c6")
+default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("11_3r3i8")
+grad = SubResource("Gradient_omffa")
+progress = 0.1
+sample_count = 2.5
+texture_base = SubResource("GradientTexture2D_x34c6")
+has_hitbox = true
+hitbox_scene = ExtResource("12_7acu6")
+hitbox_size = 22.0
+
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine6" index="0" unique_id=1300983946]
+curve = SubResource("Curve2D_5diaa")
+
+[node name="vine7" type="Line2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=289618919]
+texture_filter = 1
+points = PackedVector2Array(0, 0)
+width = 4.0
+width_curve = SubResource("Curve_x34c6")
+default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("11_3r3i8")
+grad = SubResource("Gradient_omffa")
+progress = 0.1
+sample_count = 2.0
+texture_base = SubResource("GradientTexture2D_x34c6")
+has_hitbox = true
+hitbox_scene = ExtResource("12_7acu6")
+hitbox_size = 22.0
+
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine7" index="0" unique_id=1672302656]
+curve = SubResource("Curve2D_aeexq")
 
 [node name="Brick1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=687886059]
 position = Vector2(-337, 112)
