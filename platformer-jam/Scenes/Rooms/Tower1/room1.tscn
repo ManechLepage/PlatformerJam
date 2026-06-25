@@ -1325,6 +1325,17 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=2096990041]
+position = Vector2(-513, -108)
+rotation = 1.5707964
+script = ExtResource("3_mhqpd")
+room_name = "Entrance3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=630776865]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
 [node name="Wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1960679969 instance=ExtResource("2_5khlg")]
 position = Vector2(411, 0)
 
@@ -1386,7 +1397,7 @@ disabled = true
 
 [node name="Plant2" parent="Offset/Obstacles/Plant1" index="1" unique_id=1543584035 instance=ExtResource("2_5khlg")]
 position = Vector2(-181.72774, 0.118163824)
-rotation = 0.13788101
+rotation = -0.31066862
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant1/Plant2" index="0" unique_id=1349571073]
@@ -1710,6 +1721,7 @@ hitbox_scene = ExtResource("12_7acu6")
 curve = SubResource("Curve2D_dsljk")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 
 [editable path="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform"]
 [editable path="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform2"]

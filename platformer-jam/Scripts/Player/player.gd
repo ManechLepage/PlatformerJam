@@ -16,6 +16,7 @@ var poem_collected: int = 0
 @onready var idle: State = $StateMachine/Idle
 @onready var jump: State = $StateMachine/Jump
 @onready var fall: State = $StateMachine/Fall
+@onready var interact: State = $StateMachine/Interact
 
 var ground_info: Node2D
 
@@ -28,6 +29,7 @@ func _physics_process(delta):
 	state_machine.process_physics(delta)
 
 func _process(delta):
+	if interact.is_washing: interact.wash(delta)
 	state_machine.process_frame(delta)
 
 func _unhandled_input(event):
