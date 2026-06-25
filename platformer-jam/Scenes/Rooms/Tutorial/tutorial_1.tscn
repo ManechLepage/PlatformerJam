@@ -201,9 +201,5 @@ X: Meditate
 C: Interact"
 horizontal_alignment = 1
 vertical_alignment = 2
-[node name="chameau" parent="Area/PoemText" parent_id_path=PackedInt32Array(1754253968, 1098363463) index="2" unique_id=94185898]
-texture = ExtResource("8_8pykr")
+
 [editable path="Offset/Deco/tutorrial_text"]
-
-
-

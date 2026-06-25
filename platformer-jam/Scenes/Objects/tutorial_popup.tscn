@@ -30,6 +30,7 @@ scale = Vector2(4.825, 4.825)
 shape = SubResource("CircleShape2D_bhunq")
 
 [node name="Parchemin" type="CPUParticles2D" parent="." unique_id=2027513]
+position = Vector2(0, 29)
 amount = 32
 texture = SubResource("GradientTexture2D_e0tat")
 lifetime = 2.0
@@ -49,6 +50,7 @@ offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
 offset_bottom = -27.0
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
 text = "Un chameau moins une bosse est un dromadaire
 Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
