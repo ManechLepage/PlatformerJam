@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b2mdpfhxay5x2"]
+
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="1_7b3kl"]
+[ext_resource type="Script" uid="uid://f3vu0vn1e3yu" path="res://Scripts/Objects/fallwater.gd" id="2_e4jb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4jb5"]
+size = Vector2(66, 62)
+
+[node name="Waterfall" unique_id=1652650217 instance=ExtResource("1_7b3kl")]
+script = ExtResource("2_e4jb5")
+is_always_active = true
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=400528529]
+shape = SubResource("RectangleShape2D_e4jb5")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="1" unique_id=678994796]
+position = Vector2(0, -31)
+target_position = Vector2(0, 2000)

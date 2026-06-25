@@ -130,7 +130,7 @@ _data = {
 }
 point_count = 4
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_y1vax")]
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_y1vax")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -140,7 +140,8 @@ speed_scale = 0.0
 script = ExtResource("2_y7hdm")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(-1920, 0)
+position = Vector2(-3840, 0)
+offset = Vector2i(4, 0)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -156,7 +157,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_bjn7v")
-room_name = "Entrance3"
+room_name = "Entrance2_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -164,6 +165,7 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
+visible = false
 position = Vector2(-509, -152)
 rotation = 1.5707964
 script = ExtResource("3_bjn7v")
@@ -247,7 +249,10 @@ shape = SubResource("RectangleShape2D_y7hdm")
 [node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("5_y7hdm")]
 position = Vector2(-426, 196)
 
-[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=901383637 instance=ExtResource("6_7cprj")]
+[node name="Water2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1188546801 instance=ExtResource("5_y7hdm")]
+position = Vector2(-382, -60)
+
+[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=901383637 instance=ExtResource("6_7cprj")]
 position = Vector2(-144, -258)
 rotation = 0.0
 progress = 0.0
