@@ -1,8 +1,8 @@
 class_name Poem
 extends Area2D
-@export var e_key: Sprite2D
 @export var poem_text: RichTextLabel
 var has_been_found: bool = false
+@export var destroyable: bool = true
 var progress: float = 0.0
 var transparency: float = 0.0
 var activated: bool = false
@@ -36,5 +36,6 @@ func _on_body_exited(body):
 		Game.event_manager.interactable_object = null
 		
 func collect():
-	self.hide()
-	self.process_mode = Node.PROCESS_MODE_DISABLED
+	if destroyable:
+		self.hide()
+		self.process_mode = Node.PROCESS_MODE_DISABLED

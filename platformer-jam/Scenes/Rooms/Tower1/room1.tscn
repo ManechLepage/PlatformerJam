@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="2_5khlg"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_snhcn"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_mhqpd"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="3_oug80"]
 [ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="4_7acu6"]
 [ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="4_ki1o7"]
 [ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="5_ymjur"]
@@ -13,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="7_7hyjq"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="8_3r3i8"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="9_7acu6"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="9_ab2yi"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="10_i8h6m"]
 [ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="11_3r3i8"]
 [ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="12_7acu6"]
@@ -1708,7 +1708,9 @@ is_platform = true
 position = Vector2(-44.1875, -1)
 shape = SubResource("RectangleShape2D_oug80")
 
-[node name="Water" parent="Offset/Obstacles/Platform2" index="1" unique_id=1652650217 instance=ExtResource("3_oug80")]
+[node name="Fountain" parent="Offset/Obstacles/Platform2" index="1" unique_id=1652650217 instance=ExtResource("9_ab2yi")]
+z_index = -1
+position = Vector2(0, -43)
 
 [node name="Platform3" parent="Offset/Obstacles" index="4" unique_id=889086938 instance=ExtResource("2_5khlg")]
 position = Vector2(156, -257)

@@ -29,7 +29,7 @@ func interact() -> void:
 	if Game.event_manager.interactable_object is Water:
 		if Game.event_manager.interactable_object.is_always_active: return
 		is_washing = true
-	if Game.event_manager.interactable_object is Poem:
+	if Game.event_manager.interactable_object is Poem and Game.event_manager.interactable_object.destroyable:
 		parent.poem_collected += 1
 		Game.event_manager.interactable_object.collect()
 	if Game.event_manager.interactable_object is Lever:

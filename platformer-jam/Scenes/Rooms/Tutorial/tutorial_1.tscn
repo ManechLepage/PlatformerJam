@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
 [ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="3_xq6d4"]
-[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_8pykr"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_etpyt"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="4_8pykr"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
+[ext_resource type="PackedScene" uid="uid://fbv3k25te8ta" path="res://Scenes/Objects/tutorial_popup.tscn" id="6_04iir"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="7_04iir"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -92,19 +93,6 @@ _data = {
 &"RESET": SubResource("Animation_q44wt")
 }
 
-[sub_resource type="Gradient" id="Gradient_5r2ab"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.5120482)
-colors = PackedColorArray(0.021199998, 0.028093334, 0.04, 1, 1, 1, 1, 0)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_653nx"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rwxj0"]
-width = 1193
-height = 795
-noise = SubResource("FastNoiseLite_653nx")
-color_ramp = SubResource("Gradient_5r2ab")
-
 [node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=663951011]
@@ -112,9 +100,6 @@ reset_on_save = false
 libraries/ = SubResource("AnimationLibrary_xq6d4")
 speed_scale = 0.0
 script = ExtResource("5_rwxj0")
-
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=237255790]
-texture = SubResource("NoiseTexture2D_rwxj0")
 
 [node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("3_xq6d4")]
 position = Vector2(-189.00002, -254)
@@ -184,12 +169,7 @@ text = "MAX 20 lucidity
 "
 
 [node name="Waterfall" parent="Offset/Obstacles" index="11" unique_id=1257707682 instance=ExtResource("4_8pykr")]
-position = Vector2(174, -97.00001)
-scale = Vector2(3, 3)
-
-[node name="Node2D" parent="Offset/Obstacles/Waterfall" index="2" unique_id=1652650217 instance=ExtResource("5_etpyt")]
-position = Vector2(-0.6666641, -12.333332)
-scale = Vector2(0.33333334, 0.33333334)
+position = Vector2(174, -126)
 
 [node name="Pilar_1" parent="Offset/Obstacles" index="12" unique_id=883810348 instance=ExtResource("6_xq6d4")]
 position = Vector2(-235.99998, -171)
@@ -202,3 +182,24 @@ position = Vector2(-281, -131.00003)
 rotation = -0.05235988
 scale = Vector2(1, 7.235)
 is_platform = true
+
+[node name="tutorrial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1754253968 instance=ExtResource("6_04iir")]
+position = Vector2(-178, 189)
+scale = Vector2(0.6413263, 0.6413263)
+destroyable = false
+
+[node name="PoemText" parent="Offset/Deco/tutorrial_text" index="2" unique_id=1098363463]
+offset_left = -46.77806
+offset_top = -291.58325
+offset_right = 335.22192
+offset_bottom = -73.77806
+theme_override_fonts/normal_font = ExtResource("7_04iir")
+theme_override_font_sizes/normal_font_size = 32
+text = "Arrow Keys: Move
+Z: Jump
+X: Meditate
+C: Interact"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[editable path="Offset/Deco/tutorrial_text"]

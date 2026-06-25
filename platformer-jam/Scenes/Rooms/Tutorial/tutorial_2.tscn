@@ -4,8 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="2_l3fbw"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_l4vvy"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="3_0p57m"]
-[ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_hg02c"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_l4vvy"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="4_hg02c"]
 
 [sub_resource type="Animation" id="Animation_tu28n"]
 resource_name = "lucidity"
@@ -124,12 +123,7 @@ rotation = 1.4835298
 scale = Vector2(3.04, 22.68)
 
 [node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1257707682 instance=ExtResource("4_hg02c")]
-position = Vector2(44, 227)
-scale = Vector2(3, 3)
-
-[node name="Water2" parent="Offset/Obstacles/Waterfall" index="2" unique_id=1652650217 instance=ExtResource("5_l4vvy")]
-position = Vector2(-0.33333302, -13)
-scale = Vector2(0.33333334, 0.33333334)
+position = Vector2(44, 208)
 
 [node name="Rising_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1163463554 instance=ExtResource("3_0p57m")]
 position = Vector2(158, 214)

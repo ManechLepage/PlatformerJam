@@ -89,9 +89,8 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-01"
-initial_player_pos = Vector2(0, -540)
-initial_lucidity = 35.0
+initial_room = "tutorial_1"
+initial_player_pos = Vector2(-150, 200)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
@@ -112,7 +111,6 @@ rooms = Dictionary[String, PackedScene]({
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
 z_index = 2
-position = Vector2(-141, -72)
 
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
 layer = 2
