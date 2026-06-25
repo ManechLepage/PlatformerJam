@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8qim1g0nvgo2" path="res://Scripts/Room/room_manager.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="2_8gbba"]
-[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="2_344ge"]
-[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="3_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="4_344ge"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
@@ -20,32 +18,16 @@
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="13_hibaj"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7fk0y"]
-width = 100
-height = 100
-noise = SubResource("FastNoiseLite_57qmd")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7265"]
-size = Vector2(940, 53)
-
-[sub_resource type="PackedScene" id="PackedScene_ynf5e"]
-_bundled = {
-"base_scene": 0,
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [NodePath("Offset/RoomTriggers/RoomTrigger")],
-"id_paths": [PackedInt32Array(), PackedInt32Array(281844601), PackedInt32Array(457880380), PackedInt32Array(), PackedInt32Array()],
-"names": PackedStringArray("Room", "Offset", "position", "RoomTrigger", "position", "room_name", "StaticBody2D2", "StaticBody2D", "position", "scale", "Sprite", "Sprite2D", "position", "scale", "texture", "CollisionShape2D", "CollisionShape2D", "position", "shape"),
-"node_count": 6,
-"node_ids": PackedInt32Array(197990627, 652906693, 174834819, 1864443540, 1158180473, 1493925413),
-"node_paths": [NodePath("."), NodePath("./Offset/RoomTriggers"), NodePath("./Offset/Obstables"), NodePath("./Offset/Obstables/StaticBody2D2"), NodePath("./Offset/Obstables/StaticBody2D2")],
-"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0, 1073741825, -1, 2147483647, 262147, -1, 2, 4, 2, 5, 3, 0, 1073741826, 0, 7, 524294, -1, 2, 8, 4, 9, 5, 0, 1073741827, 0, 11, 262154, -1, 3, 12, 6, 13, 7, 14, 8, 0, 1073741828, 0, 16, 524303, -1, 2, 17, 9, 18, 10, 0),
-"variants": [ExtResource("2_344ge"), Vector2(961, 0), Vector2(-542, 167), "0", Vector2(-33.000004, -290.99997), Vector2(1.3599995, 1), Vector2(42.5, 22.5), Vector2(9.41, 0.55), SubResource("NoiseTexture2D_7fk0y"), Vector2(41, 23.5), SubResource("RectangleShape2D_x7265")],
-"version": 3
-}
+[ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
+[ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
+[ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
+[ext_resource type="AudioStream" uid="uid://dlt34fjugysbg" path="res://Sound/pillar2_lucid1.ogg" id="19_1w6v2"]
+[ext_resource type="AudioStream" uid="uid://df3j1w0kr2nj0" path="res://Sound/pillar2_lucid2.ogg" id="20_ueoa1"]
+[ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
+[ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
+[ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
+[ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
+[ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -55,37 +37,65 @@ shader_parameter/vignette_strength = 0.0
 shader_parameter/dither_strength = 0.05
 shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
+[sub_resource type="GDScript" id="GDScript_u50mg"]
+resource_name = "lucid_mist"
+script/source = "extends CanvasLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Game.event_manager.lucidity_changed.connect(update_lucidity)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",0)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",0)
+
+
+func update_lucidity(lucidity):
+	
+	$\"lucid bg\".material.set_shader_parameter(\"speed\",lucidity/200)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",lucidity/150)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	if lucidity == 0:
+		$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"time_offset\",Time.get_ticks_msec()/1000)
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.16, 0, 0.14933334, 1)
+shader_parameter/colorB = Color(0.1325, 0, 0.53, 1)
+shader_parameter/colorC = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999994
+shader_parameter/alpha = 1.0
+shader_parameter/time_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u50mg"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
+shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
+shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999994
+shader_parameter/alpha = 1.0
+shader_parameter/time_offset = 0.0
+
 [node name="Main" type="Node2D" unique_id=295821621]
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower2-01"
-initial_player_pos = Vector2(-1920, -338)
-initial_lucidity = 35.0
+initial_room = "tutorial_1"
 rooms = Dictionary[String, PackedScene]({
-"": null,
-"1": SubResource("PackedScene_ynf5e"),
-"Entrance1": ExtResource("9_k12tt"),
-"Entrance2": ExtResource("10_h1bgf"),
-"Entrance3": ExtResource("11_fevyy"),
-"Tower1-01": ExtResource("2_8gbba"),
-"Tower1-02": ExtResource("3_jjvhh"),
-"Tower1-03": ExtResource("7_hptm8"),
-"Tower1-04": ExtResource("8_d1ilt"),
-"Tower1-05": ExtResource("8_wsu2k"),
-"Tower2-01": ExtResource("12_hibaj"),
-"Tower3-01": ExtResource("13_hibaj"),
-"tutorial_1": ExtResource("5_ynf5e"),
+"tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
 z_index = 2
-position = Vector2(-2, -116)
+position = Vector2(-141, -72)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
 
-[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=609312635 groups=["Vignette"]]
+[node name="Vignette" type="ColorRect" parent="Overlay" unique_id=609312635 groups=["Vignette"]]
 material = SubResource("ShaderMaterial_g4v7s")
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,7 +114,7 @@ sound_layers = {
 "lucid_4": NodePath("lucid4"),
 "noise": NodePath("noise")
 }
-sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k")])
+sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5"), ExtResource("13_wsu2k"), ExtResource("16_3pmx8"), ExtResource("17_u50mg"), ExtResource("18_cbgmd"), ExtResource("19_1w6v2"), ExtResource("20_ueoa1"), ExtResource("21_6vcvc"), ExtResource("22_7k868"), ExtResource("23_hpc6h"), ExtResource("24_kltya")])
 
 [node name="noise" type="AudioStreamPlayer" parent="MusicManager" unique_id=129395444]
 stream = ExtResource("11_fdnlq")
@@ -113,17 +123,55 @@ autoplay = true
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
 stream = ExtResource("12_jkdf5")
 autoplay = true
+bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
 volume_db = -80.0
 autoplay = true
+bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
+stream = ExtResource("16_3pmx8")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
+stream = ExtResource("17_u50mg")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
+bus = &"Music"
+
+[node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
+layer = -50
+script = SubResource("GDScript_u50mg")
+
+[node name="lucid bg" type="ColorRect" parent="Lucid" unique_id=515437348]
+material = SubResource("ShaderMaterial_3pmx8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Overlay" type="CanvasLayer" parent="Lucid/lucid bg" unique_id=1205441728]
+layer = 50
+
+[node name="lucid overlay" type="ColorRect" parent="Lucid/lucid bg/Overlay" unique_id=25300080]
+material = SubResource("ShaderMaterial_u50mg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
