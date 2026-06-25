@@ -130,7 +130,7 @@ size = Vector2(142.875, 76.4375)
 size = Vector2(218, 11)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4sqie"]
-radius = 30.0
+radius = 49.0306
 
 [sub_resource type="Curve2D" id="Curve2D_2fq3i"]
 _data = {
@@ -275,7 +275,7 @@ position = Vector2(312, 145)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball1" index="0" unique_id=1349571073]
-position = Vector2(-7.430936e-07, -17)
+position = Vector2(2.999999, -21)
 shape = SubResource("CircleShape2D_4sqie")
 
 [node name="Ball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=942090950 instance=ExtResource("4_1078h")]
