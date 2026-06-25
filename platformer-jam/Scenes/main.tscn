@@ -24,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
+[ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
 
@@ -59,6 +60,48 @@ shader_parameter/vignette_strength = 0.0
 shader_parameter/dither_strength = 0.05
 shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
+[sub_resource type="GDScript" id="GDScript_u50mg"]
+resource_name = "lucid_mist"
+script/source = "extends CanvasLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Game.event_manager.lucidity_changed.connect(update_lucidity)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",0)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",0)
+
+
+func update_lucidity(lucidity):
+	
+	$\"lucid bg\".material.set_shader_parameter(\"speed\",lucidity/200)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",lucidity/150)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	if lucidity == 0:
+		$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"time_offset\",Time.get_ticks_msec()/1000)
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.16, 0, 0.14933334, 1)
+shader_parameter/colorB = Color(0.1325, 0, 0.53, 1)
+shader_parameter/colorC = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999994
+shader_parameter/alpha = 1.0
+shader_parameter/time_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u50mg"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
+shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
+shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999994
+shader_parameter/alpha = 1.0
+shader_parameter/time_offset = 0.0
+
 [node name="Main" type="Node2D" unique_id=295821621]
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
@@ -80,9 +123,9 @@ rooms = Dictionary[String, PackedScene]({
 z_index = 2
 position = Vector2(-2, -116)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
 
-[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=609312635 groups=["Vignette"]]
+[node name="Vignette" type="ColorRect" parent="Overlay" unique_id=609312635 groups=["Vignette"]]
 material = SubResource("ShaderMaterial_g4v7s")
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,3 +174,34 @@ bus = &"Music"
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
 bus = &"Music"
+
+[node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
+layer = -50
+script = SubResource("GDScript_u50mg")
+
+[node name="lucid bg" type="ColorRect" parent="Lucid" unique_id=515437348]
+material = SubResource("ShaderMaterial_3pmx8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Overlay" type="CanvasLayer" parent="Lucid/lucid bg" unique_id=1205441728]
+layer = 50
+
+[node name="lucid overlay" type="ColorRect" parent="Lucid/lucid bg/Overlay" unique_id=25300080]
+material = SubResource("ShaderMaterial_u50mg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2

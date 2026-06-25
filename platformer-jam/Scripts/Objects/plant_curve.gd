@@ -6,6 +6,7 @@ extends Line2D
 @export var texture_base: Texture
 @export var has_hitbox: bool = false
 @export var hitbox_scene: PackedScene
+@export var hitbox_size: float
 var follows := []
 
 @onready var path := $Path2D
@@ -22,7 +23,7 @@ func _ready():
 			var hitbox: VineHitbox = hitbox_scene.instantiate()
 			new_follow.add_child(hitbox)
 			var rect = CircleShape2D.new()
-			rect.radius =  15*ease(1-(i/(10*sample_count)),0.2)
+			rect.radius =  hitbox_size*ease(1-(i/(10*sample_count)),0.2)
 			hitbox.collision_shape_2d.shape = rect
 
 
