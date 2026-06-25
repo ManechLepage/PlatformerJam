@@ -283,7 +283,8 @@ speed_scale = 0.0
 script = ExtResource("2_dsljk")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(0, -528)
+position = Vector2(0, -540)
+offset = Vector2i(0, 1)
 
 [node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=432284204]
 position = Vector2(-17.366089, 239.09033)
