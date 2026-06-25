@@ -269,7 +269,7 @@ radius = 38.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_x34c6"]
 radius = 53.084812
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_n4yhi")]
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_n4yhi")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false

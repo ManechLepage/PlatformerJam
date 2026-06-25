@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dhw1q6w7xqwne"]
+
+[ext_resource type="Script" uid="uid://dbjbnq66cf82b" path="res://Scripts/Objects/vine_hitbox.gd" id="1_um3jo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_um3jo"]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=1709086711]
+sync_to_physics = false
+script = ExtResource("1_um3jo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=403003332]
+shape = SubResource("RectangleShape2D_um3jo")
+debug_color = Color(0.21095285, 0.6231013, 0.42664984, 0.41960785)

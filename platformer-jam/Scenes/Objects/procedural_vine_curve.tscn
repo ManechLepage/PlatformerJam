@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dg2kkucvixfyt"]
 
 [ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="1_atr4m"]
+[ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="2_jexgx"]
 
 [sub_resource type="Curve" id="Curve_x34c6"]
 _data = [Vector2(0, 0.5), 0.0, 0.0, 0, 1, Vector2(1, 0.5), 0.0, 0.0, 1, 0]
@@ -22,9 +23,9 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Curve2D" id="Curve2D_dsljk"]
 _data = {
-"points": PackedVector2Array(-157.09991, 94.66566, 157.09991, -94.66566, 2, 1, 37.90788, -21.105293, -37.90788, 21.105293, 48, 54, 69.94741, -10.443272, -69.94741, 10.443272, 100, 100)
+"points": PackedVector2Array(-14.554474, -28.970703, 14.554474, 28.970703, -156, 81, 0, 0, 0, 0, -81, 96, -79.91029, -40.01438, 79.91029, 40.01438, 43, 117, 0, 0, 0, 0, 146, 129, 69.94741, -10.443272, -69.94741, 10.443272, 206, 36)
 }
-point_count = 3
+point_count = 5
 
 [node name="PathFollow2D" type="Line2D" unique_id=901383637]
 texture_filter = 1
@@ -35,6 +36,8 @@ script = ExtResource("1_atr4m")
 grad = SubResource("Gradient_omffa")
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_x34c6")
+has_hitbox = true
+hitbox_scene = ExtResource("2_jexgx")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=545245425]
 position = Vector2(-1.1969098, -1.8887581)

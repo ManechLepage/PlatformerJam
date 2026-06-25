@@ -4,6 +4,8 @@ extends Line2D
 @export var progress := 1.0
 @export var sample_count := 1.0
 @export var texture_base: Texture
+@export var has_hitbox: bool = false
+@export var hitbox_scene: PackedScene
 var follows := []
 
 @onready var path := $Path2D
@@ -15,19 +17,21 @@ func _ready():
 		path.add_child(new_follow)
 		new_follow.progress_ratio = float(i*0.02/sample_count)
 		follows.append(new_follow)
-		var sprite = Sprite2D.new()
-		new_follow.add_child(sprite)
-		sprite.texture = texture_base
-		sprite.scale = Vector2.ONE * ease(1-(i/(10*sample_count)),0.2)
 		
+		if has_hitbox:
+			var hitbox: VineHitbox = hitbox_scene.instantiate()
+			new_follow.add_child(hitbox)
+			var rect = CircleShape2D.new()
+			rect.radius =  15*ease(1-(i/(10*sample_count)),0.2)
+			hitbox.collision_shape_2d.shape = rect
 
 
 func _process(delta):
-	print(progress)
+	#print(progress)
 	clear_points()
 	for i in range(len(follows)):
-		follows[i].progress_ratio = ease(float(i)/len(follows),0.7)*progress
+		follows[i].progress_ratio = ease(float(i)/len(follows),0.8)*progress
 		add_point(follows[i].global_position)
 	
-	gradient.colors[0] = grad.sample(follows[0].progress_ratio)
-	gradient.colors[1] = grad.sample(follows[-1].progress_ratio)
+	gradient.set_color(0, grad.sample(follows[0].progress_ratio))
+	gradient.set_color(1, grad.sample(follows[-1].progress_ratio))
