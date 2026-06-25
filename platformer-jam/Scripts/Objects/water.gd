@@ -1,6 +1,7 @@
 class_name Water
 extends Area2D
 
+@export var min_water: float = 0.0
 @export var is_always_active = false
 
 func _on_body_entered(body: Node2D) -> void:

@@ -204,7 +204,7 @@ position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_6i037")
 
 [node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1980273417 instance=ExtResource("4_74567")]
-position = Vector2(101, -117)
+position = Vector2(62, -92)
 rotation = -1.5707964
 is_platform = true
 
@@ -217,7 +217,7 @@ disabled = true
 position = Vector2(-122, 1)
 
 [node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1026579350 instance=ExtResource("4_74567")]
-position = Vector2(101, -117)
+position = Vector2(62, -92)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
@@ -232,6 +232,7 @@ shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1957311739 instance=ExtResource("4_74567")]
 position = Vector2(-382, 12)
+sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball1" index="0" unique_id=1349571073]
 shape = SubResource("CircleShape2D_y1vax")

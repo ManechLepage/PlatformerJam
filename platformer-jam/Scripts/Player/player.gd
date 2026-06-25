@@ -29,6 +29,7 @@ func _physics_process(delta):
 	state_machine.process_physics(delta)
 
 func _process(delta):
+	if interact.is_washing: interact.wash(delta)
 	state_machine.process_frame(delta)
 
 func _unhandled_input(event):
