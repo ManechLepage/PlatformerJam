@@ -27,10 +27,13 @@
 [ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="17_hdf80"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
 [ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
-[ext_resource type="PackedScene" uid="uid://dpqegr56hhpnh" path="res://Scenes/Rooms/Tower2/room2.tscn" id="18_jwpg7"]
+[ext_resource type="PackedScene" uid="uid://cjrnk2llrhgee" path="res://Scenes/Rooms/Tower2/room2.tscn" id="18_jwpg7"]
 [ext_resource type="AudioStream" uid="uid://dlt34fjugysbg" path="res://Sound/pillar2_lucid1.ogg" id="19_1w6v2"]
+[ext_resource type="PackedScene" uid="uid://b70mnpwhd1c3b" path="res://Scenes/Rooms/Tower3/room3.tscn" id="19_536cc"]
+[ext_resource type="PackedScene" uid="uid://cu88yf82xmmb4" path="res://Scenes/Rooms/Tower2/room3.tscn" id="20_aqgau"]
 [ext_resource type="AudioStream" uid="uid://df3j1w0kr2nj0" path="res://Sound/pillar2_lucid2.ogg" id="20_ueoa1"]
 [ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
+[ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="21_8cuat"]
 [ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
@@ -97,6 +100,7 @@ initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
+"Bridge3": ExtResource("21_8cuat"),
 "Entrance2": ExtResource("13_hpc6h"),
 "Entrance2_3": ExtResource("14_kltya"),
 "Entrance3": ExtResource("11_6vcvc"),
@@ -108,8 +112,10 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-05": ExtResource("8_1w6v2"),
 "Tower2-01": ExtResource("12_hibaj"),
 "Tower2-02": ExtResource("18_jwpg7"),
+"Tower2-03": ExtResource("20_aqgau"),
 "Tower3-01": ExtResource("13_hibaj"),
 "Tower3-02": ExtResource("17_hdf80"),
+"Tower3-03": ExtResource("19_536cc"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })

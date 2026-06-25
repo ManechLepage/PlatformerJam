@@ -12,10 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="9_022hg"]
 [ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_022hg"]
 [ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="11_j5f30"]
-[ext_resource type="PackedScene" uid="uid://dpqegr56hhpnh" path="res://Scenes/Rooms/Tower2/room2.tscn" id="12_ud6il"]
+[ext_resource type="PackedScene" uid="uid://cjrnk2llrhgee" path="res://Scenes/Rooms/Tower2/room2.tscn" id="12_ud6il"]
 [ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="13_jyhm8"]
 [ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="13_tabdy"]
+[ext_resource type="PackedScene" uid="uid://cu88yf82xmmb4" path="res://Scenes/Rooms/Tower2/room3.tscn" id="13_yp80c"]
 [ext_resource type="PackedScene" uid="uid://da4t2etmo8yxl" path="res://Scenes/Rooms/Bridges/bridge2.tscn" id="14_xqx70"]
+[ext_resource type="PackedScene" uid="uid://b70mnpwhd1c3b" path="res://Scenes/Rooms/Tower3/room3.tscn" id="16_5fmhj"]
+[ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="17_wob7x"]
 
 [node name="Main2" type="Node2D" unique_id=295821621]
 
@@ -51,14 +54,20 @@ position = Vector2(-2, -116)
 
 [node name="Room3" parent="Tower2" unique_id=1497488308 instance=ExtResource("12_ud6il")]
 
+[node name="Room4" parent="Tower2" unique_id=1898164478 instance=ExtResource("13_yp80c")]
+
 [node name="Tower3" type="Node2D" parent="." unique_id=1131946100]
 
 [node name="Room1" parent="Tower3" unique_id=290056632 instance=ExtResource("11_j5f30")]
 
 [node name="Room3" parent="Tower3" unique_id=1646357943 instance=ExtResource("13_jyhm8")]
 
+[node name="Room4" parent="Tower3" unique_id=989878266 instance=ExtResource("16_5fmhj")]
+
 [node name="Bridges" type="Node2D" parent="." unique_id=1484474823]
 
 [node name="Room2" parent="Bridges" unique_id=118487425 instance=ExtResource("13_tabdy")]
 
 [node name="Room3" parent="Bridges" unique_id=1711165973 instance=ExtResource("14_xqx70")]
+
+[node name="Room4" parent="Bridges" unique_id=662544857 instance=ExtResource("17_wob7x")]
