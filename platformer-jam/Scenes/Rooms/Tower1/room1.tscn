@@ -1377,7 +1377,7 @@ position = Vector2(-9.15625, -4)
 shape = SubResource("RectangleShape2D_4il0d")
 
 [node name="Block2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1647798916 instance=ExtResource("2_5khlg")]
-position = Vector2(-240, 27)
+position = Vector2(-306, 23)
 sync_to_physics = false
 is_platform = true
 
@@ -1440,7 +1440,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
+progress = 0.09999999999999998
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1460,7 +1460,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
+progress = 0.09999999999999998
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1472,7 +1472,7 @@ curve = SubResource("Curve2D_ki1o7")
 [node name="vine4" type="Line2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=852055521]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 80.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1480,7 +1480,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1501,8 +1500,8 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
-sample_count = 2.5
+progress = 0.09999999999999998
+sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1522,8 +1521,8 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
-sample_count = 2.5
+progress = 0.09999999999999998
+sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1627,7 +1626,7 @@ texture = ExtResource("8_3r3i8")
 
 [node name="Brick10" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="16" unique_id=1705039424]
 position = Vector2(-342, -147)
-rotation = 4.888855
+rotation = 4.8888545
 texture = ExtResource("8_3r3i8")
 
 [node name="Brick11" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="17" unique_id=1087345458]
@@ -1704,7 +1703,7 @@ texture = ExtResource("10_i8h6m")
 [node name="vine" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="31" unique_id=901383637]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 40.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1712,7 +1711,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("12_7acu6")

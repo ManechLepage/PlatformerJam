@@ -314,52 +314,42 @@ scale = Vector2(0.99616855, 1)
 texture = ExtResource("4_clcak")
 flip_h = true
 
-[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="6" unique_id=1605893567]
-position = Vector2(-44.36609, 82.09033)
-scale = Vector2(0.99616855, 1)
-texture = ExtResource("5_kj8ay")
-
-[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="7" unique_id=1540885525]
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="6" unique_id=1540885525]
 position = Vector2(80.63391, 81.09033)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("4_clcak")
 flip_h = true
 
-[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="8" unique_id=1894786885]
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="7" unique_id=1894786885]
 position = Vector2(165.63391, 140.09033)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("6_4ea6w")
 flip_h = true
 
-[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="9" unique_id=1328998892]
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="8" unique_id=1328998892]
 position = Vector2(153.63391, 261.09033)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("6_4ea6w")
 
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="10" unique_id=246833100]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="9" unique_id=246833100]
 position = Vector2(-114.3661, -41.909676)
 scale = Vector2(1.052997, 0.74390244)
 texture = ExtResource("6_4ea6w")
 flip_h = true
 
-[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="11" unique_id=1243858117]
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="10" unique_id=1243858117]
 position = Vector2(131.63391, -31.909668)
 scale = Vector2(1.142519, 1.2015345)
 texture = ExtResource("4_clcak")
 flip_h = true
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="12" unique_id=679858897]
-position = Vector2(-165.36609, -145.90967)
-scale = Vector2(0.97482866, 1.1927235)
-texture = ExtResource("5_kj8ay")
-
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="13" unique_id=2108236215]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="11" unique_id=2108236215]
 position = Vector2(145.63391, -182.90967)
 scale = Vector2(0.99616855, 1.3884163)
 texture = ExtResource("5_kj8ay")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="14" unique_id=944714722]
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="12" unique_id=944714722]
 position = Vector2(-5, -288)
 texture = ExtResource("3_nhq4j")
 
@@ -422,93 +412,62 @@ position = Vector2(250.49207, -37)
 scale = Vector2(1.245364, 1)
 texture = ExtResource("6_4ea6w")
 
-[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="10" unique_id=551063262]
-position = Vector2(203.49207, -109)
-scale = Vector2(1.245364, 1)
-texture = ExtResource("5_kj8ay")
-flip_h = true
-
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="11" unique_id=572048931]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="10" unique_id=572048931]
 position = Vector2(194.49207, 55)
 scale = Vector2(1.1245407, 1)
 texture = ExtResource("5_kj8ay")
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="12" unique_id=1559623382]
-position = Vector2(200.49207, -198)
-scale = Vector2(1.1245407, 1)
-texture = ExtResource("6_4ea6w")
-
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="13" unique_id=482465371]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="11" unique_id=482465371]
 position = Vector2(265.49207, -236)
 scale = Vector2(1.245364, 1)
 texture = ExtResource("4_clcak")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="14" unique_id=1348373101]
-position = Vector2(141.49207, -226)
-scale = Vector2(1.1245407, 1)
-texture = ExtResource("5_kj8ay")
-flip_h = true
-
-[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="15" unique_id=805409811]
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="12" unique_id=805409811]
 position = Vector2(-256.50793, 239)
 scale = Vector2(1.2144599, 1.0147722)
 texture = ExtResource("6_4ea6w")
 
-[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="16" unique_id=2044827708]
+[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="13" unique_id=2044827708]
 position = Vector2(-174.50793, 263)
 scale = Vector2(1.0323238, 1.0326381)
 texture = ExtResource("4_clcak")
 
-[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="17" unique_id=1484730341]
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="14" unique_id=1484730341]
 position = Vector2(-254.50793, 149)
 scale = Vector2(1.0220652, 1.0917009)
 texture = ExtResource("5_kj8ay")
 
-[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="18" unique_id=1286656033]
+[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="15" unique_id=1286656033]
 position = Vector2(-284.50793, 95)
 scale = Vector2(1.1245407, 1)
 texture = ExtResource("4_clcak")
 
-[node name="BrickBg20" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="19" unique_id=466615170]
-position = Vector2(-188.50793, 77)
-scale = Vector2(1.1245407, 1)
-texture = ExtResource("6_4ea6w")
-
-[node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="20" unique_id=301382758]
+[node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="16" unique_id=301382758]
 position = Vector2(-239.50793, -115)
 scale = Vector2(1.0743293, 1.1868724)
 texture = ExtResource("5_kj8ay")
 
-[node name="BrickBg22" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="21" unique_id=899235008]
+[node name="BrickBg22" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="17" unique_id=899235008]
 position = Vector2(-198.50793, -62)
 scale = Vector2(1.1491925, 0.896057)
 texture = ExtResource("6_4ea6w")
 
-[node name="BrickBg23" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="22" unique_id=1381266966]
+[node name="BrickBg23" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="18" unique_id=1381266966]
 position = Vector2(-288.50793, -176)
 scale = Vector2(1.8059005, 0.7793465)
 texture = ExtResource("4_clcak")
 
-[node name="BrickBg24" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="23" unique_id=864497685]
-position = Vector2(-244.50793, -213)
-scale = Vector2(1.0049868, 1.2188869)
-texture = ExtResource("5_kj8ay")
-
-[node name="BrickBg25" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="24" unique_id=44122893]
+[node name="BrickBg25" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="19" unique_id=44122893]
 position = Vector2(-278.25, -289)
 scale = Vector2(1.8030303, 1)
 texture = ExtResource("4_clcak")
 
-[node name="BrickBg26" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="25" unique_id=90778594]
+[node name="BrickBg26" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="20" unique_id=90778594]
 position = Vector2(-198, -316)
 texture = ExtResource("6_4ea6w")
 
-[node name="BrickBg27" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="26" unique_id=2122817299]
-position = Vector2(202, -319)
-texture = ExtResource("6_4ea6w")
-
-[node name="BrickBg28" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="27" unique_id=361566600]
+[node name="BrickBg28" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="21" unique_id=361566600]
 position = Vector2(268, -308)
 texture = ExtResource("5_kj8ay")
 

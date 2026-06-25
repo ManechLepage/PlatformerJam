@@ -31,7 +31,7 @@ func _process(delta):
 	#print(progress)
 	clear_points()
 	for i in range(len(follows)):
-		follows[i].progress_ratio = ease(float(i)/len(follows),0.8)*progress
+		follows[i].progress_ratio = ease(float(i)/len(follows),0.7)*progress
 		add_point(follows[i].global_position)
 	
 	gradient.set_color(0, grad.sample(follows[0].progress_ratio))

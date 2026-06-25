@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 run/stretch/scale_mode="integer"
 run/size/mode=0
 
+[audio]
+
+buses/default_bus_layout="uid://bxo5p27e5q5w4"
+
 [autoload]
 
 Game="*uid://ces3yepxa2r0n"

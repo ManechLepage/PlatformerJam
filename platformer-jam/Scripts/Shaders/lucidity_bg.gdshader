@@ -99,7 +99,7 @@ void fragment() {
     
     res_color = res_color / max(max3(vec3(res_color.r,res_color.g,res_color.b)), 0.001);
     
-    res_color = (clamp((0.4 * pow(v, 3.0) + pow(v, 2.0) + 0.5 * v), 0.0, 1.0) * 0.9 + 0.1) * res_color;
+    //res_color = (clamp((0.4 * pow(v, 3.0) + pow(v, 2.0) + 0.5 * v), 0.0, 1.0) * 0.9 + 0.1) * res_color;
 
     COLOR = vec4(res_color)*vec4(1.0,1.0,1.0,alpha);
 }

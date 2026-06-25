@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
 [ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
+[ext_resource type="Environment" uid="uid://dgeb6y4eqbyj5" path="res://environnement.tres" id="26_cbgmd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -48,8 +49,8 @@ func _ready() -> void:
 
 func update_lucidity(lucidity):
 	
-	$\"lucid bg\".material.set_shader_parameter(\"speed\",lucidity/200)
-	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",lucidity/150)
+	$\"lucid bg\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*5)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*6)
 	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
 	if lucidity == 0:
@@ -97,6 +98,7 @@ z_index = 2
 position = Vector2(-141, -72)
 
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
+layer = 2
 
 [node name="Vignette" type="ColorRect" parent="Overlay" unique_id=609312635 groups=["Vignette"]]
 material = SubResource("ShaderMaterial_g4v7s")
@@ -178,3 +180,6 @@ offset_right = 158.0
 offset_bottom = 97.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1438021251]
+environment = ExtResource("26_cbgmd")

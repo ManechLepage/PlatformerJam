@@ -282,7 +282,7 @@ one_shot = true
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")
-meditation_power = 2.0
+meditation_power = 10.0
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
 meditate_running = NodePath("../MeditateRunning")
