@@ -114,7 +114,7 @@ resource_local_to_scene = true
 size = Vector2(779, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d3qk"]
-size = Vector2(31, 454)
+size = Vector2(31, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63yqf"]
 size = Vector2(242, 21.5)
@@ -194,7 +194,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-767, -11)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall1" index="0" unique_id=1349571073]
-position = Vector2(391, -65)
+position = Vector2(391, 53)
 shape = SubResource("RectangleShape2D_1d3qk")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2078653204 instance=ExtResource("4_g6egx")]
@@ -203,6 +203,10 @@ rotation = -3.1415925
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
 position = Vector2(0.9999763, -155)
+shape = SubResource("RectangleShape2D_63yqf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="1" unique_id=1490580718]
+position = Vector2(12.000046, 147)
 shape = SubResource("RectangleShape2D_63yqf")
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=450566103 instance=ExtResource("4_g6egx")]
@@ -248,7 +252,6 @@ update_scale = false
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=324144790 instance=ExtResource("4_g6egx")]
 position = Vector2(150, 250)
-rotation = -3.1415925
 sync_to_physics = false
 is_platform = true
 
@@ -257,7 +260,6 @@ shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1273539671 instance=ExtResource("4_g6egx")]
 position = Vector2(-150, 250.00006)
-rotation = -3.1415925
 sync_to_physics = false
 is_platform = true
 
