@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_8pykr"]
 [ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_etpyt"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="6_04iir"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
+[ext_resource type="Texture2D" uid="uid://ba2qnmp5ps58h" path="res://Sprites/4594548.png" id="8_8pykr"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -202,3 +204,11 @@ position = Vector2(-281, -131.00003)
 rotation = -0.05235988
 scale = Vector2(1, 7.235)
 is_platform = true
+
+[node name="Area" parent="." index="2" unique_id=1754253968 instance=ExtResource("6_04iir")]
+position = Vector2(-87, -75)
+
+[node name="chameau" parent="Area/PoemText" parent_id_path=PackedInt32Array(1754253968, 1098363463) index="2" unique_id=94185898]
+texture = ExtResource("8_8pykr")
+
+[editable path="Area"]

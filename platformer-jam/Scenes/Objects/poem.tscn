@@ -7,6 +7,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
 radius = 9.535932
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_m3tp1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g4v7s"]
+noise = SubResource("FastNoiseLite_m3tp1")
+
 [node name="Area" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("e_key", "poem_text")]
 script = ExtResource("1_dtwml")
 e_key = NodePath("EKey")
@@ -25,6 +30,7 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
+clip_contents = false
 offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
@@ -34,3 +40,8 @@ Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
 autowrap_trim_flags = 64
 visible_characters_behavior = 1
+
+[node name="chameau" type="Sprite2D" parent="PoemText" unique_id=94185898]
+position = Vector2(473, -34)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("NoiseTexture2D_g4v7s")
