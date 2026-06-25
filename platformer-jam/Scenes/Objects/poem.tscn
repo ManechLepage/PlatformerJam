@@ -52,6 +52,7 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
+clip_contents = false
 offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
@@ -61,3 +62,8 @@ Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
 autowrap_trim_flags = 64
 visible_characters_behavior = 1
+
+[node name="chameau" type="Sprite2D" parent="PoemText" unique_id=94185898]
+position = Vector2(473, -34)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("NoiseTexture2D_g4v7s")
