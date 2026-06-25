@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://b8qim1g0nvgo2" path="res://Scripts/Room/room_manager.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="4_344ge"]
+[ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="4_pdsj5"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
+[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="5_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="6_u50mg"]
+[ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="7_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="8_1w6v2"]
 [ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
@@ -75,8 +80,14 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "tutorial_1"
+initial_room = "Tower1-02"
+initial_player_pos = Vector2(0, -500)
 rooms = Dictionary[String, PackedScene]({
+"Tower1-01": ExtResource("4_pdsj5"),
+"Tower1-02": ExtResource("5_ee4r6"),
+"Tower1-03": ExtResource("6_u50mg"),
+"Tower1-04": ExtResource("7_cbgmd"),
+"Tower1-05": ExtResource("8_1w6v2"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
@@ -115,22 +126,27 @@ autoplay = true
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
 stream = ExtResource("12_jkdf5")
 autoplay = true
+bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
 volume_db = -80.0
 autoplay = true
+bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
 stream = ExtResource("16_3pmx8")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
 stream = ExtResource("17_u50mg")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
+bus = &"Music"
 
 [node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
 layer = -50
