@@ -204,6 +204,7 @@ sprite = NodePath("Sprite")
 interact_area = NodePath("Interact")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
+z_index = 5
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"meditation_idle"
@@ -282,7 +283,7 @@ one_shot = true
 
 [node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
 script = ExtResource("7_0u5uq")
-meditation_power = 10.0
+meditation_power = 5.0
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
 meditate_running = NodePath("../MeditateRunning")
