@@ -64,7 +64,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-509, -152)
 rotation = 1.5707964
 script = ExtResource("3_o7sgk")
-room_name = "Entrance1"
+room_name = "Entrance3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
 position = Vector2(35.5, -4.5)

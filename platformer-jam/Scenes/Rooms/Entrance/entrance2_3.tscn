@@ -25,7 +25,7 @@ size = Vector2(779, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(987, 45)
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_kvkyy")]
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_kvkyy")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -53,7 +53,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_usw26")
-room_name = "Tower1-01"
+room_name = "Entrance3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -64,7 +64,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-509, -152)
 rotation = 1.5707964
 script = ExtResource("3_usw26")
-room_name = "Entrance1"
+room_name = "Entrance2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
 position = Vector2(35.5, -4.5)
