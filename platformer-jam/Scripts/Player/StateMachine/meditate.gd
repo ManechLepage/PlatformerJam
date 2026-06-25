@@ -6,6 +6,7 @@ extends State
 @export var fall: State
 @export var meditate_running: State
 
+
 func enter():
 	super()
 	Game.start_meditation_animation()
@@ -24,6 +25,8 @@ func process_inputs(event):
 	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
 		return meditate_running
 	return null
+
+	
 
 func process_physics(delta):
 	Game.event_manager.change_lucidity(meditation_power*delta)
