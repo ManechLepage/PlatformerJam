@@ -11,9 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="8_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="8_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="9_k12tt"]
+[ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="10_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance3.tscn" id="11_fevyy"]
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="12_hibaj"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="13_hibaj"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
 [ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
@@ -63,15 +68,22 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-01"
+initial_room = "Tower2-01"
+initial_player_pos = Vector2(-1920, -338)
+initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
 "": null,
 "1": SubResource("PackedScene_ynf5e"),
+"Entrance1": ExtResource("9_k12tt"),
+"Entrance2": ExtResource("10_h1bgf"),
+"Entrance3": ExtResource("11_fevyy"),
 "Tower1-01": ExtResource("2_8gbba"),
 "Tower1-02": ExtResource("3_jjvhh"),
 "Tower1-03": ExtResource("7_hptm8"),
 "Tower1-04": ExtResource("8_d1ilt"),
 "Tower1-05": ExtResource("8_wsu2k"),
+"Tower2-01": ExtResource("12_hibaj"),
+"Tower3-01": ExtResource("13_hibaj"),
 "tutorial_1": ExtResource("5_ynf5e"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
