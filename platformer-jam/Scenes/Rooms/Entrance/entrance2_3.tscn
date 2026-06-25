@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://b4koflqtngqsf"]
+[gd_scene format=3 uid="uid://bmm8jr3f7q3in"]
 
-[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_c23hg"]
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_u4i7n"]
-[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_yd4fh"]
-[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_jhipd"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_isgy4"]
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_kvkyy"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_tm7n3"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_usw26"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_vciox"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -26,26 +25,23 @@ size = Vector2(779, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(987, 45)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5mk5"]
-size = Vector2(185, 10.5)
-
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_c23hg")]
+[node name="Room2" unique_id=197990627 instance=ExtResource("1_kvkyy")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
 libraries/ = SubResource("AnimationLibrary_mhqpd")
 autoplay = &"Lucidity"
 speed_scale = 0.0
-script = ExtResource("2_u4i7n")
+script = ExtResource("2_tm7n3")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(-3840, 0)
-offset = Vector2i(4, 0)
+position = Vector2(-2880, 0)
+offset = Vector2i(3, 0)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 visible = false
 position = Vector2(-35, -294)
-script = ExtResource("3_yd4fh")
+script = ExtResource("3_usw26")
 room_name = "Tower2-01"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
@@ -56,8 +52,8 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 [node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=657448745]
 position = Vector2(500, -154)
 rotation = 1.5707964
-script = ExtResource("3_yd4fh")
-room_name = "Entrance1"
+script = ExtResource("3_usw26")
+room_name = "Tower1-01"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -65,36 +61,25 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
-visible = false
 position = Vector2(-509, -152)
 rotation = 1.5707964
-script = ExtResource("3_yd4fh")
-room_name = "Entrance2"
+script = ExtResource("3_usw26")
+room_name = "Entrance1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
 position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_jhipd")]
+[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_vciox")]
 position = Vector2(0, 247)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_jhipd")]
-position = Vector2(388, -1)
-
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
-shape = SubResource("RectangleShape2D_d5mk5")
-
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1652650217 instance=ExtResource("5_isgy4")]
-position = Vector2(386, -38)
-
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Platform"]
-[editable path="Offset/Obstacles/Platform2"]

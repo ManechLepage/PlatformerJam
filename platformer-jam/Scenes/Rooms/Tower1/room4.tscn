@@ -175,7 +175,8 @@ speed_scale = 0.0
 script = ExtResource("2_cheee")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(1, -1597)
+position = Vector2(0, -1620)
+offset = Vector2i(0, 3)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -228,8 +229,8 @@ position = Vector2(24.875, 1)
 shape = SubResource("RectangleShape2D_vcqh3")
 
 [node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=925413476 instance=ExtResource("4_kr4pd")]
-position = Vector2(78, 197.655)
-rotation = 0.30153155
+position = Vector2(78, 325)
+rotation = -0.67718774
 scale = Vector2(0.735, 0.735)
 sync_to_physics = false
 
@@ -359,11 +360,11 @@ position = Vector2(-256, 129)
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=1760792903 instance=ExtResource("6_pd6bw")]
 position = Vector2(-84, -32)
-scale = Vector2(1.2930291, 1.2930291)
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="17" unique_id=1980369393 instance=ExtResource("6_pd6bw")]
 position = Vector2(-135, -168.00002)
-scale = Vector2(0.6470667, 0.6470667)
+scale = Vector2(1e-05, 1e-05)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

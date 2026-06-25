@@ -138,7 +138,7 @@ _data = {
 }
 point_count = 4
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_c51jx")]
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_c51jx")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -148,7 +148,8 @@ speed_scale = 0.0
 script = ExtResource("2_ughlu")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(-1920, -530)
+position = Vector2(-2880, -540)
+offset = Vector2i(3, 1)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -256,7 +257,7 @@ position = Vector2(66, 26)
 shape = SubResource("RectangleShape2D_jvahp")
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=822347322 instance=ExtResource("4_1078h")]
-position = Vector2(-107, -110)
+position = Vector2(-313, -110)
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
@@ -289,7 +290,7 @@ shape = SubResource("CircleShape2D_4sqie")
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=901383637 instance=ExtResource("5_1hgyl")]
 position = Vector2(246, 181)
 rotation = 0.0
-progress = 0.2
+progress = 0.0
 has_hitbox = false
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=545245425]

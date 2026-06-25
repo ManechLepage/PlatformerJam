@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="5_jea7g"]
 [ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="5_nk8ps"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
-[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="7_d3ks8"]
-[ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="8_ru85a"]
-[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance3.tscn" id="9_h4d8c"]
+[ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="7_h4d8c"]
+[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance_tower3.tscn" id="8_itxiy"]
+[ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="9_022hg"]
 [ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_022hg"]
 [ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="11_j5f30"]
 
@@ -32,11 +32,11 @@ position = Vector2(-2, -116)
 
 [node name="Entrance" type="Node2D" parent="." unique_id=1764994515]
 
-[node name="Room1" parent="Entrance" unique_id=2146997223 instance=ExtResource("7_d3ks8")]
+[node name="Room2" parent="Entrance" unique_id=1593457388 instance=ExtResource("7_h4d8c")]
 
-[node name="Room2" parent="Entrance" unique_id=2043376837 instance=ExtResource("8_ru85a")]
+[node name="Room3" parent="Entrance" unique_id=1717273348 instance=ExtResource("8_itxiy")]
 
-[node name="Room3" parent="Entrance" unique_id=1034337161 instance=ExtResource("9_h4d8c")]
+[node name="Room4" parent="Entrance" unique_id=209980947 instance=ExtResource("9_022hg")]
 
 [node name="Tower2" type="Node2D" parent="." unique_id=1310257112]
 

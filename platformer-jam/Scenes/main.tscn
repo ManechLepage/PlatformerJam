@@ -6,17 +6,9 @@
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
-[ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="7_hptm8"]
-[ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="8_d1ilt"]
-[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="8_wsu2k"]
-[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance1.tscn" id="9_k12tt"]
-[ext_resource type="PackedScene" uid="uid://b4koflqtngqsf" path="res://Scenes/Rooms/Entrance/entrance2.tscn" id="10_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
-[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance3.tscn" id="11_fevyy"]
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
-[ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="12_hibaj"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
-[ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="13_hibaj"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
 [ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
@@ -65,7 +57,7 @@ shader_parameter/colorA = Color(0.16, 0, 0.14933334, 1)
 shader_parameter/colorB = Color(0.1325, 0, 0.53, 1)
 shader_parameter/colorC = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
 shader_parameter/discomode = false
-shader_parameter/speed = 0.20000010449999994
+shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
 shader_parameter/time_offset = 0.0
 
@@ -75,7 +67,7 @@ shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
 shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
 shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
 shader_parameter/discomode = false
-shader_parameter/speed = 0.20000010449999994
+shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
 shader_parameter/time_offset = 0.0
 
@@ -123,27 +115,22 @@ autoplay = true
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
 stream = ExtResource("12_jkdf5")
 autoplay = true
-bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
 volume_db = -80.0
 autoplay = true
-bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
 stream = ExtResource("16_3pmx8")
 volume_db = -80.0
-bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
 stream = ExtResource("17_u50mg")
 volume_db = -80.0
-bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
-bus = &"Music"
 
 [node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
 layer = -50

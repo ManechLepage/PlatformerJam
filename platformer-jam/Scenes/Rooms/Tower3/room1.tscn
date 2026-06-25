@@ -135,7 +135,7 @@ size = Vector2(31, 357.31247)
 
 [sub_resource type="Curve2D" id="Curve2D_ihfaw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -248, 362, -97.85601, 76.824005, 97.85601, -76.824005, -129, 194, 6.7760005, 93.896, -6.7760005, -93.896, -87, -12, 0, 0, 0, 0, 17, -152)
+"points": PackedVector2Array(0, 0, 0, 0, -248, 362, -97.85601, 76.824005, 97.85601, -76.824005, -147, 194, -58.678543, 90.986916, 58.678543, -90.986916, -81, 10, 0, 0, 0, 0, 49, -93)
 }
 point_count = 4
 
@@ -156,7 +156,8 @@ speed_scale = 0.0
 script = ExtResource("2_nu0ib")
 
 [node name="Offset" parent="." index="2" unique_id=652906693]
-position = Vector2(-930, -530)
+position = Vector2(-960, -540)
+offset = Vector2i(1, 1)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -270,12 +271,12 @@ shape = SubResource("RectangleShape2D_5hlo2")
 curve = SubResource("Curve2D_ihfaw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=291190242]
-position = Vector2(-158.84264, 219.98405)
-progress = 169.55518
+position = Vector2(49, -93.000015)
+progress = 620.1898
 rotates = false
 
 [node name="Platform10" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=458503422 instance=ExtResource("4_xuur6")]
-rotation = 0.12483504
+rotation = 1.3843433
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform10" index="0" unique_id=1349571073]
