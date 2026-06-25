@@ -7,7 +7,7 @@ var is_washing: bool = false
 
 func enter():
 	super()
-	Game.player.sprite.play("idle")
+	Game.player.sprite.play("wash")
 	if Game.event_manager.interactable_object: interact()
 
 func exit():
