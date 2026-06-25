@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_erquw"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_vc6g3"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_g6egx"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_dhyn8"]
 
 [sub_resource type="Animation" id="Animation_ihfaw"]
 length = 0.001
@@ -14,6 +15,18 @@ tracks/0/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D2:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -36,6 +49,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0, 1.0, 0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D2:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p7mac"]
 _data = {
@@ -46,9 +71,33 @@ _data = {
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
 step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Path2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.15, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 2.7), Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Path2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
@@ -175,6 +224,7 @@ shape = SubResource("RectangleShape2D_5hlo2")
 
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=503811652]
 position = Vector2(150, 250)
+scale = Vector2(1, 2.7)
 curve = SubResource("Curve2D_guonm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=6416233]
@@ -185,6 +235,17 @@ remote_path = NodePath("../../../MovingPlatform1")
 update_rotation = false
 update_scale = false
 
+[node name="PathFollow2D2" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="1" unique_id=227889422]
+rotation = -1.5707964
+
+[node name="Node2D" type="Node2D" parent="Offset/Obstacles/Path2D/PathFollow2D2" index="0" unique_id=1622079195]
+position = Vector2(0, -300)
+
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Offset/Obstacles/Path2D/PathFollow2D2/Node2D" index="0" unique_id=1220994921]
+remote_path = NodePath("../../../../MovingPlatform2")
+update_rotation = false
+update_scale = false
+
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=324144790 instance=ExtResource("4_g6egx")]
 position = Vector2(150, 250)
 rotation = -3.1415925
@@ -192,8 +253,21 @@ sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform1" index="0" unique_id=1349571073]
-position = Vector2(-26.5, 3.375)
 shape = SubResource("RectangleShape2D_ticnr")
+
+[node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1273539671 instance=ExtResource("4_g6egx")]
+position = Vector2(-150, 250.00006)
+rotation = -3.1415925
+sync_to_physics = false
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform2" index="0" unique_id=1349571073]
+shape = SubResource("RectangleShape2D_ticnr")
+
+[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1760792903 instance=ExtResource("5_dhyn8")]
+position = Vector2(-3, 135)
+rotation = -1.5707964
+scale = Vector2(3, 3)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
@@ -205,3 +279,4 @@ shape = SubResource("RectangleShape2D_ticnr")
 [editable path="Offset/Obstacles/Platform11"]
 [editable path="Offset/Obstacles/Wall2"]
 [editable path="Offset/Obstacles/MovingPlatform1"]
+[editable path="Offset/Obstacles/MovingPlatform2"]

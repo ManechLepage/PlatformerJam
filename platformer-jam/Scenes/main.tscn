@@ -24,8 +24,10 @@
 [ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="15_kltya"]
 [ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://da4t2etmo8yxl" path="res://Scenes/Rooms/Bridges/bridge2.tscn" id="16_e08e2"]
+[ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="17_hdf80"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
 [ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://dpqegr56hhpnh" path="res://Scenes/Rooms/Tower2/room2.tscn" id="18_jwpg7"]
 [ext_resource type="AudioStream" uid="uid://dlt34fjugysbg" path="res://Sound/pillar2_lucid1.ogg" id="19_1w6v2"]
 [ext_resource type="AudioStream" uid="uid://df3j1w0kr2nj0" path="res://Sound/pillar2_lucid2.ogg" id="20_ueoa1"]
 [ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
@@ -89,8 +91,8 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower2-01"
-initial_player_pos = Vector2(-3840, -540)
+initial_room = "Tower2-02"
+initial_player_pos = Vector2(-3518, -839)
 initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
@@ -105,7 +107,9 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-04": ExtResource("7_cbgmd"),
 "Tower1-05": ExtResource("8_1w6v2"),
 "Tower2-01": ExtResource("12_hibaj"),
+"Tower2-02": ExtResource("18_jwpg7"),
 "Tower3-01": ExtResource("13_hibaj"),
+"Tower3-02": ExtResource("17_hdf80"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
