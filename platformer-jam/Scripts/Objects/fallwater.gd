@@ -14,3 +14,7 @@ func on_lucidity_changed(value) -> void:
 		var height: float = ray_cast_2d.get_collision_point().y
 		collision_shape_2d.shape.size.y = height - global_position.y
 		collision_shape_2d.position.y = collision_shape_2d.shape.size.y / 2
+
+func active_changed(value):
+	if active: $AnimatedSprite2D.play("active")
+	else: $AnimatedSprite2D.play("inactive")
