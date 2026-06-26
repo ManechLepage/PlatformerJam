@@ -53,7 +53,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_shpkm")
-room_name = "Entrance3"
+room_name = "Entrance3_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -73,9 +73,11 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_w2y4j")]
 position = Vector2(0, 247)
+is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
+scale = Vector2(3.4, 1)
 shape = SubResource("RectangleShape2D_5khlg")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]

@@ -100,12 +100,15 @@ libraries/ = SubResource("AnimationLibrary_xq6d4")
 speed_scale = 0.0
 script = ExtResource("5_rwxj0")
 
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(-1587, 1377)
+
 [node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("3_xq6d4")]
 position = Vector2(-189.00002, -254)
 scale = Vector2(15.63, 1)
 room_name = "tutorial_2"
 
-[node name="Obstacles" parent="Offset" parent_id_path=PackedInt32Array(652906693) index="3" unique_id=457880380]
+[node name="Obstacles" parent="Offset" index="3" unique_id=457880380]
 position = Vector2(-5, 140)
 
 [node name="Left_wall" parent="Offset/Obstacles" index="0" unique_id=2119178859 instance=ExtResource("6_xq6d4")]

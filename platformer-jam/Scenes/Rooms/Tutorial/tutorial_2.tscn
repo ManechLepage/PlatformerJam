@@ -75,7 +75,7 @@ speed_scale = 0.0
 script = ExtResource("2_l4vvy")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(3, -539)
+position = Vector2(-1507, 841)
 
 [node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("2_l3fbw")]
 position = Vector2(-296, 353)
@@ -85,7 +85,7 @@ room_name = "tutorial_1"
 [node name="RoomTrigger2" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=304015578 instance=ExtResource("2_l3fbw")]
 position = Vector2(-288, -252)
 scale = Vector2(19.31, 1)
-room_name = "Entrance3"
+room_name = "tutorial_3"
 
 [node name="Enter_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("3_0p57m")]
 position = Vector2(-299, 255)

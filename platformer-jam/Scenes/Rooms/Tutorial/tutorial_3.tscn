@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bqanx6lfy322q"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_heam4"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_607u1"]
+[ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="3_n45qp"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_5syek"]
+
+[sub_resource type="Animation" id="Animation_tu28n"]
+resource_name = "lucidity"
+step = 0.0078125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.4835298, 0.7853982]
+}
+
+[sub_resource type="Animation" id="Animation_2w047"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a4cir"]
+_data = {
+&"Lucidity": SubResource("Animation_tu28n"),
+&"RESET": SubResource("Animation_2w047")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+
+[node name="Tutorial_3" unique_id=197990627 instance=ExtResource("1_heam4")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1932419129]
+libraries/ = SubResource("AnimationLibrary_a4cir")
+speed_scale = 0.0
+script = ExtResource("2_607u1")
+
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(-1922, 310)
+
+[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("3_n45qp")]
+position = Vector2(-2, 330)
+scale = Vector2(6.5725517, 1)
+room_name = "tutorial_2"
+
+[node name="RoomTrigger2" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=304015578 instance=ExtResource("3_n45qp")]
+position = Vector2(-3.0000002, -74.999985)
+scale = Vector2(19.31, 1)
+room_name = "Entrance3"
+
+[node name="Enter_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_5syek")]
+position = Vector2(-299, 255)
+scale = Vector2(14.13, 1)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Enter_floor" index="0" unique_id=1349571073]
+position = Vector2(20.948338, 0)
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Enter_floor" index="1" unique_id=1045368347]
+position = Vector2(20.948338, 0)
+shape = SubResource("RectangleShape2D_5khlg")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Enter_floor" index="2" unique_id=243275921]
+position = Vector2(20.948338, -120)
+shape = SubResource("RectangleShape2D_5khlg")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Enter_floor" index="3" unique_id=47695636]
+position = Vector2(20.948338, -234)
+shape = SubResource("RectangleShape2D_5khlg")
+one_way_collision = true
+
+[node name="Left_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1418715656 instance=ExtResource("4_5syek")]
+position = Vector2(-103.000015, 92)
+rotation = -0.01246132
+scale = Vector2(3.6887693, 27.970491)
+
+[node name="Middle_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=533953051 instance=ExtResource("4_5syek")]
+position = Vector2(86.000015, 37)
+rotation = 3.1386843
+scale = Vector2(3.074961, 33.88842)
+
+[node name="Fall_pilar_rot" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1108675869]
+position = Vector2(-94.00001, -217)
+
+[editable path="Offset/Obstacles/Enter_floor"]

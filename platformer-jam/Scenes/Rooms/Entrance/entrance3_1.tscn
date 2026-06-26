@@ -76,6 +76,7 @@ position = Vector2(0, 247)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
+scale = Vector2(1.8399987, 1)
 shape = SubResource("RectangleShape2D_5khlg")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
