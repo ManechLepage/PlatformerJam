@@ -97,12 +97,12 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Offset/Obstacles/Platform13:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.15, 1),
+"times": PackedFloat32Array(0.15, 0.884),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-3.1415927, 12.217305]
@@ -110,26 +110,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Offset/Obstacles/Platform13/Gear2:rotation")
+tracks/2/path = NodePath("Offset/Deco/Gear3:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.15, 1),
+"times": PackedFloat32Array(0.152, 0.884),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [24.434609527920614, -3.141592653589793]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Offset/Obstacles/Platform13/Gear:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.15200001, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-3.1415927, 12.217304763960307]
+"values": [12.479104151759456, -2.8797932657906435]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -161,26 +149,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Offset/Obstacles/Platform13/Gear2:rotation")
+tracks/2/path = NodePath("Offset/Deco/Gear3:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Offset/Obstacles/Platform13/Gear:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"values": [-1.7484557e-07]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -215,8 +191,16 @@ size = Vector2(120.75, 18.75)
 [sub_resource type="CircleShape2D" id="CircleShape2D_dhyn8"]
 radius = 66.007576
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hsyyw"]
-radius = 39.012817
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hr2r"]
+
+[sub_resource type="Gradient" id="Gradient_7hr2r"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.20784314, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_7hr2r")
+width = 20
+height = 20
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hlo2"]
 size = Vector2(33.5, 612.3125)
@@ -230,7 +214,7 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_dhyn8"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.5652985)
-colors = PackedColorArray(0.20784314, 0.0627451, 0.0627451, 1, 0.13725491, 0.06666667, 0.09411765, 1)
+colors = PackedColorArray(0.13725491, 0.06666667, 0.09411765, 1, 0.043137256, 0.043137256, 0.09803922, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dhyn8"]
 gradient = SubResource("Gradient_dhyn8")
@@ -619,21 +603,32 @@ position = Vector2(-16.000004, -19.000002)
 shape = SubResource("CircleShape2D_dhyn8")
 
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=862128788 instance=ExtResource("4_g6egx")]
+z_index = 1
 position = Vector2(324, -39)
-rotation = 5.640083
+rotation = 3.8473344
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
 position = Vector2(-52.000042, -86.999954)
-shape = SubResource("CircleShape2D_hsyyw")
+rotation = -0.51714826
+scale = Vector2(2.0089989, 5.134911)
+shape = SubResource("RectangleShape2D_7hr2r")
 
-[node name="Gear" parent="Offset/Obstacles/Platform13" index="1" unique_id=1353983551 instance=ExtResource("10_7hr2r")]
-rotation = 4.320514
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Platform13/CollisionShape2D" index="0" unique_id=2034942555]
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="1" unique_id=995133289]
+position = Vector2(-28.730469, -84.51959)
+rotation = -0.8175873
+scale = Vector2(2.0290651, 6.180323)
+shape = SubResource("RectangleShape2D_7hr2r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Platform13/CollisionShape2D2" index="0" unique_id=2098114634]
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Gear" parent="Offset/Obstacles/Platform13" index="2" unique_id=1353983551 instance=ExtResource("10_7hr2r")]
+rotation = -3.033177
 scale = Vector2(1.4849975, 1.4849975)
-
-[node name="Gear2" parent="Offset/Obstacles/Platform13" index="2" unique_id=1507073625 instance=ExtResource("10_7hr2r")]
-position = Vector2(-51.999992, -87.00001)
-rotation = 11.003376
-scale = Vector2(0.96745455, 0.96745455)
+enabled = false
 
 [node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=558900713 instance=ExtResource("4_g6egx")]
 position = Vector2(389, -83)
@@ -665,6 +660,30 @@ position = Vector2(0, -300)
 remote_path = NodePath("../../../../MovingPlatform2")
 update_rotation = false
 update_scale = false
+
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Path2D" index="2" unique_id=1735160631]
+z_index = -4
+position = Vector2(-150, -92.59259)
+scale = Vector2(1, 0.37037036)
+points = PackedVector2Array(150, 252, 150, -149.6001)
+width = 30.0
+texture = SubResource("GradientTexture2D_dhyn8")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="belt2" type="Line2D" parent="Offset/Obstacles/Path2D" index="3" unique_id=697316648]
+z_index = -4
+position = Vector2(-450, -92.59259)
+scale = Vector2(1, 0.37037036)
+points = PackedVector2Array(150, 252, 150, -152.30005)
+width = 30.0
+texture = SubResource("GradientTexture2D_dhyn8")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_g6egx")]
 position = Vector2(150, 250)
@@ -722,17 +741,7 @@ offset_bottom = 5.9134045
 rotation = 0.62499976
 scale = Vector2(0.6677345, 0.6677345)
 
-[node name="belt" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1735160631]
-z_index = -4
-points = PackedVector2Array(150, 252, 150, -163)
-width = 30.0
-texture = SubResource("GradientTexture2D_dhyn8")
-texture_mode = 1
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="vine9" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1109752582]
+[node name="vine9" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1109752582]
 z_index = -10
 z_as_relative = false
 texture_filter = 1
@@ -752,7 +761,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Deco/vine9" index="0" unique_id=260208440]
 curve = SubResource("Curve2D_a4cos")
 
-[node name="vine10" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=655808219]
+[node name="vine10" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=655808219]
 z_index = -6
 z_as_relative = false
 texture_filter = 1
@@ -772,7 +781,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Deco/vine10" index="0" unique_id=645665872]
 curve = SubResource("Curve2D_rul0w")
 
-[node name="vine11" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=2129984111]
+[node name="vine11" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=2129984111]
 z_index = -6
 z_as_relative = false
 texture_filter = 1
@@ -791,6 +800,19 @@ hitbox_size = 22.0
 
 [node name="Path2D" type="Path2D" parent="Offset/Deco/vine11" index="0" unique_id=1716064591]
 curve = SubResource("Curve2D_yyqtu")
+
+[node name="Gear3" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1064850394 instance=ExtResource("10_7hr2r")]
+position = Vector2(429, -10)
+rotation = 5.5130463
+scale = Vector2(1.1574174, 1.1574174)
+enabled = false
+
+[node name="Gear2" parent="Offset/Deco/Gear3" index="1" unique_id=957530669 instance=ExtResource("10_7hr2r")]
+modulate = Color(0.46037364, 0.6375021, 0.74759805, 1)
+z_index = -6
+z_as_relative = false
+scale = Vector2(2.2867422, 2.2867422)
+enabled = false
 
 [node name="wall2" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=531829191]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
@@ -831,7 +853,6 @@ position = Vector2(325.94507, 30.681152)
 texture = ExtResource("15_cufyf")
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/wall2" index="6" unique_id=600000877]
-z_index = 3
 position = Vector2(338, -59)
 texture = ExtResource("15_cufyf")
 
@@ -848,14 +869,12 @@ rotation = -1.0479468
 texture = ExtResource("15_cufyf")
 
 [node name="Brick9" type="Sprite2D" parent="Offset/Deco/wall2" index="9" unique_id=995612963]
-z_index = 2
 position = Vector2(337.058, -244.82324)
 rotation = -0.8865926
 texture = ExtResource("15_cufyf")
 flip_h = true
 
 [node name="Brick10" type="Sprite2D" parent="Offset/Deco/wall2" index="10" unique_id=187759022]
-z_index = 2
 position = Vector2(332.05804, -225.82324)
 rotation = -1.1635176
 texture = ExtResource("12_kwe0e")
@@ -901,7 +920,6 @@ scale = Vector2(0.90147763, 1.4255314)
 texture = ExtResource("12_kwe0e")
 
 [node name="Brick18" type="Sprite2D" parent="Offset/Deco/wall2" index="18" unique_id=951719821]
-z_index = 3
 position = Vector2(325.94507, -22.318848)
 rotation = -0.13931891
 scale = Vector2(0.86329347, 1.2573338)
@@ -921,7 +939,6 @@ texture = ExtResource("13_7hr2r")
 flip_h = true
 
 [node name="Brick22" type="Sprite2D" parent="Offset/Deco/wall2" index="21" unique_id=1784160987]
-z_index = 3
 position = Vector2(339.94507, 9.681152)
 scale = Vector2(0.9809687, 1)
 texture = ExtResource("12_kwe0e")
@@ -944,7 +961,6 @@ scale = Vector2(1.0391108, 1)
 texture = ExtResource("12_kwe0e")
 
 [node name="Brick26" type="Sprite2D" parent="Offset/Deco/wall2" index="25" unique_id=505077861]
-z_index = 2
 position = Vector2(340.00003, -292)
 rotation = -1.1563461
 texture = ExtResource("12_kwe0e")
