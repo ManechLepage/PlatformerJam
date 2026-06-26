@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://bjamud22bcmlv"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_h6fht"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_keqoi"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_fsu8v"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="4_keqoi"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_m518m"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_r476u"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="6_84h4p"]
+
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.254, 0.57),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fountain:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.39248404, 0.40498966),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fountain:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v5si"]
+resource_local_to_scene = true
+size = Vector2(1015, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(779, 23)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fsu8v"]
+radius = 39.812057
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m518m"]
+radius = 30.016663
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qf00"]
+radius = 51.47826
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r476u"]
+radius = 99.74483
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_84h4p"]
+radius = 48.846775
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kaqui"]
+size = Vector2(105.72131, 20)
+
+[sub_resource type="Curve" id="Curve_00xgr"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_h6fht"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_ntg8m"]
+_data = {
+"points": PackedVector2Array(-224.23868, -146.53645, 224.23868, 146.53645, 56, -317, 45.709282, -134.78003, -45.709282, 134.78003, 274, 161)
+}
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_uab21"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_jnmc2"]
+_data = {
+"points": PackedVector2Array(-139.14778, -163.26373, 139.14778, 163.26373, -375, -80, -137.56343, -106.4164, 137.56343, 106.4164, 77, 142)
+}
+point_count = 2
+
+[node name="Room2" unique_id=197990627 instance=ExtResource("1_h6fht")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_keqoi")
+
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(-2880, -2160)
+offset = Vector2i(3, 4)
+
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-35, 297)
+script = ExtResource("3_fsu8v")
+room_name = "Bridge3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(27.5, -4.5)
+shape = SubResource("RectangleShape2D_1v5si")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=1620236547]
+position = Vector2(-34, -307)
+script = ExtResource("3_fsu8v")
+room_name = "Bridge5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=97477033]
+position = Vector2(27.5, -4.5)
+shape = SubResource("RectangleShape2D_1v5si")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=657448745]
+position = Vector2(500, -154)
+rotation = 1.5707964
+script = ExtResource("3_fsu8v")
+room_name = "Tower3-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
+position = Vector2(-509, -152)
+rotation = 1.5707964
+script = ExtResource("3_fsu8v")
+room_name = "Tower2-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="FlowerBounce" parent="Offset" index="3" unique_id=376175354 instance=ExtResource("4_keqoi")]
+position = Vector2(-197, 200)
+
+[node name="FlowerBounce2" parent="Offset" index="4" unique_id=2009898275 instance=ExtResource("4_keqoi")]
+position = Vector2(91, 181)
+
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_m518m")]
+position = Vector2(451, 248)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(-406, 20)
+shape = SubResource("CircleShape2D_fsu8v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=704423002]
+position = Vector2(-241, -62)
+shape = SubResource("CircleShape2D_m518m")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="2" unique_id=2063768797]
+position = Vector2(-340, 50.00006)
+rotation = -4.1067595
+shape = SubResource("CircleShape2D_5qf00")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="3" unique_id=89710977]
+position = Vector2(24.000036, -5.999939)
+rotation = -4.1067595
+shape = SubResource("CircleShape2D_r476u")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=120132861]
+position = Vector2(-71.99997, -37.999947)
+rotation = -4.1067595
+shape = SubResource("CircleShape2D_84h4p")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=571576516]
+position = Vector2(-135.99997, -248.99997)
+rotation = -4.1067595
+shape = SubResource("CircleShape2D_84h4p")
+
+[node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1915477303 instance=ExtResource("4_m518m")]
+position = Vector2(-426, 110)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_kaqui")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="1" unique_id=1056777383]
+position = Vector2(129, 47)
+rotation = 0.116937056
+shape = SubResource("RectangleShape2D_kaqui")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="2" unique_id=1207299727]
+position = Vector2(313, 128)
+rotation = 0.116937056
+shape = SubResource("RectangleShape2D_kaqui")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="3" unique_id=413811211]
+position = Vector2(898, -123)
+rotation = 0.116937056
+shape = SubResource("RectangleShape2D_kaqui")
+
+[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=790154690 instance=ExtResource("5_r476u")]
+width = 40.0
+width_curve = SubResource("Curve_00xgr")
+grad = SubResource("Gradient_h6fht")
+progress = 0.0
+has_hitbox = true
+hitbox_size = 20.0
+
+[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
+curve = SubResource("Curve2D_ntg8m")
+
+[node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=586076656 instance=ExtResource("5_r476u")]
+position = Vector2(-183, 84)
+width = 40.0
+width_curve = SubResource("Curve_00xgr")
+grad = SubResource("Gradient_uab21")
+progress = 1.0
+hitbox_size = 20.0
+
+[node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
+position = Vector2(-4, 12)
+curve = SubResource("Curve2D_jnmc2")
+
+[node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1652650217 instance=ExtResource("6_84h4p")]
+position = Vector2(-426, 77)
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
+
+[editable path="Offset/Obstacles/Platform2"]
+[editable path="Offset/Obstacles/Platform3"]
+[editable path="Offset/Obstacles/Plant2"]
+[editable path="Offset/Obstacles/Plant3"]

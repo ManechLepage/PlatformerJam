@@ -1,0 +1,318 @@
+[gd_scene format=3 uid="uid://pnbp6xkjfos6"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_lhuu4"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_8ib6j"]
+[ext_resource type="Script" uid="uid://bxbekjnbijb1o" path="res://Scripts/Room/lever_anim1.gd" id="2_xxnsr"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_xxnsr"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_3niuj"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_a6otp"]
+[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="6_lhuu4"]
+[ext_resource type="Script" uid="uid://cfe5cwxh4rnyh" path="res://Scripts/Objects/lever.gd" id="7_8ib6j"]
+
+[sub_resource type="Animation" id="Animation_xxnsr"]
+resource_name = "L2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.49999982, 1),
+"update": 0,
+"values": [Vector2(65, 1), Vector2(21, 129)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.3789291, 1),
+"update": 0,
+"values": [0.0, -0.55676]
+}
+
+[sub_resource type="Animation" id="Animation_o18ho"]
+resource_name = "LeverAnim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.49999982, 1),
+"update": 0,
+"values": [Vector2(65, 1), Vector2(21, 129)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.3789291, 1),
+"update": 0,
+"values": [0.0, -0.55676]
+}
+
+[sub_resource type="Animation" id="Animation_xuur6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(65, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3niuj"]
+_data = {
+&"L2": SubResource("Animation_xxnsr"),
+&"LeverAnim": SubResource("Animation_o18ho"),
+&"RESET": SubResource("Animation_xuur6")
+}
+
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.502),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v5si"]
+resource_local_to_scene = true
+size = Vector2(1015, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(779, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+size = Vector2(138.58473, 21.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6otp"]
+size = Vector2(148.01016, 21.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhuu4"]
+size = Vector2(153.58475, 28.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxnsr"]
+size = Vector2(153.58475, 151.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_up11p"]
+radius = 82.91798
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3niuj"]
+size = Vector2(80, 69)
+
+[sub_resource type="Curve" id="Curve_00xgr"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.8392283, 0.4551282), -1.0902444, -1.0902444, 0, 0, Vector2(1, 0.24999994), -1.834101, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_lhuu4"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_ntg8m"]
+_data = {
+"points": PackedVector2Array(-33.05416, -99.19896, 33.05416, 99.19896, -279, -147, 127.92575, 115.095856, -127.92575, -115.095856, -149, -159)
+}
+point_count = 2
+
+[node name="Room2" unique_id=197990627 instance=ExtResource("1_lhuu4")]
+
+[node name="LeverAnim" type="AnimationPlayer" parent="." index="0" unique_id=756163168]
+libraries/ = SubResource("AnimationLibrary_3niuj")
+script = ExtResource("2_xxnsr")
+lever_index = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_8ib6j")
+
+[node name="Offset" parent="." index="2" unique_id=652906693]
+position = Vector2(-960, -2160)
+offset = Vector2i(1, 4)
+
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
+position = Vector2(-35, 297)
+script = ExtResource("3_xxnsr")
+room_name = "BridgeR3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
+position = Vector2(27.5, -4.5)
+shape = SubResource("RectangleShape2D_1v5si")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=1620236547]
+position = Vector2(-34, -307)
+script = ExtResource("3_xxnsr")
+room_name = "BridgeR5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=97477033]
+position = Vector2(27, -31)
+shape = SubResource("RectangleShape2D_1v5si")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=657448745]
+visible = false
+position = Vector2(500, -154)
+rotation = 1.5707964
+script = ExtResource("3_xxnsr")
+room_name = "Tower3-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
+position = Vector2(-509, -152)
+rotation = 1.5707964
+script = ExtResource("3_xxnsr")
+room_name = "Tower3-04"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_3niuj")]
+position = Vector2(-466, -109)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(-3.2923584, 0)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=1922543963]
+position = Vector2(129, -20)
+rotation = -0.28972465
+shape = SubResource("RectangleShape2D_a6otp")
+
+[node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=834668060 instance=ExtResource("4_3niuj")]
+position = Vector2(-465, 215)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
+position = Vector2(4.2076416, -3.5625)
+shape = SubResource("RectangleShape2D_lhuu4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="1" unique_id=283308649]
+position = Vector2(221, -86)
+rotation = 0.35430184
+shape = SubResource("RectangleShape2D_lhuu4")
+
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2131455662 instance=ExtResource("4_3niuj")]
+position = Vector2(272, -61)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
+position = Vector2(4, 58)
+shape = SubResource("RectangleShape2D_xxnsr")
+
+[node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1181429540 instance=ExtResource("4_3niuj")]
+position = Vector2(65, 1)
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
+position = Vector2(4, -74)
+shape = SubResource("CircleShape2D_up11p")
+
+[node name="Lever" type="Area2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=415754532]
+position = Vector2(271, -88)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("7_8ib6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Lever" index="0" unique_id=1980596293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Lever" index="1" unique_id=171960460]
+position = Vector2(2, -23)
+shape = SubResource("RectangleShape2D_3niuj")
+debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
+
+[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=790154690 instance=ExtResource("5_a6otp")]
+width = 40.0
+width_curve = SubResource("Curve_00xgr")
+grad = SubResource("Gradient_lhuu4")
+progress = 1.0
+hitbox_size = 20.0
+
+[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
+curve = SubResource("Curve2D_ntg8m")
+
+[node name="FlowerBounce" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=376175354 instance=ExtResource("6_lhuu4")]
+position = Vector2(-150.56079, -148.48755)
+rotation = -2.501057
+progress = 0.0
+rotates = false
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
+[connection signal="area_entered" from="Offset/Obstacles/Lever" to="Offset/Obstacles/Lever" method="_on_area_entered"]
+[connection signal="area_exited" from="Offset/Obstacles/Lever" to="Offset/Obstacles/Lever" method="_on_area_exited"]
+[connection signal="on_activated" from="Offset/Obstacles/Lever" to="LeverAnim" method="_on_lever_on_activated"]
+
+[editable path="Offset/Obstacles/Platform2"]
+[editable path="Offset/Obstacles/Platform3"]
+[editable path="Offset/Obstacles/Platform5"]
+[editable path="Offset/Obstacles/Platform4"]
+[editable path="Offset/Obstacles/Plant2"]
