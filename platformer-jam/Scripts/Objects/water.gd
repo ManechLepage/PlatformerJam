@@ -9,8 +9,11 @@ extends Area2D
 @export var is_always_active = false
 
 @export var sprite: AnimatedSprite2D
+func _ready() -> void:
+	active_changed(active)
 
 func active_changed(value):
 	sprite.play("active" if value else "inactive")
+	$Area/Parchemin.visible = active
 	monitorable = value
 	monitoring = value

@@ -164,7 +164,7 @@ size = Vector2(77, 361)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgexx"]
 size = Vector2(68, 63)
 
-[node name="Room4" unique_id=197990627 instance=ExtResource("1_xuur6")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_xuur6")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ndrishhfm4jw"]
+
+[ext_resource type="Texture2D" uid="uid://c6n8qw01ot5ig" path="res://Sprites/gear.png" id="1_fm8hl"]
+
+[sub_resource type="GDScript" id="GDScript_g4v7s"]
+resource_name = "gear"
+script/source = "extends Node2D
+
+@export var enabled: bool = false
+@export var rpm: float = 2
+@onready var sprite := $Sprite2D
+var tween := 0.0
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if enabled:
+		tween = clamp(tween+ delta,0,1)
+		sprite.frame = 1
+	else:
+		sprite.frame = 0
+		tween = clamp(tween- delta,0,1)
+	rotation += tween * rpm*delta*60/360
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3vba"]
+atlas = ExtResource("1_fm8hl")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv45h"]
+atlas = ExtResource("1_fm8hl")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3vba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv45h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gear" type="Node2D" unique_id=1353983551]
+script = SubResource("GDScript_g4v7s")
+enabled = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=821858134]
+sprite_frames = SubResource("SpriteFrames_g4v7s")

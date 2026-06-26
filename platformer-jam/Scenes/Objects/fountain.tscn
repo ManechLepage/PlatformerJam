@@ -5,6 +5,25 @@
 [ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="3_k8u3x"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="4_vixhw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(66, 62)
+
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_b17am"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_16o5y"]
 atlas = ExtResource("2_2fi52")
 region = Rect2(64, 0, 64, 64)
@@ -46,34 +65,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(66, 62)
-
-[sub_resource type="Gradient" id="Gradient_b17am"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.65523463)
-colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
-gradient = SubResource("Gradient_b17am")
-width = 32
-height = 32
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="Curve" id="Curve_b17am"]
-_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[node name="Fountain" unique_id=1652650217 instance=ExtResource("1_js68f")]
+[node name="Fountain" unique_id=1652650217 node_paths=PackedStringArray("sprite") instance=ExtResource("1_js68f")]
 collision_layer = 8
 collision_mask = 8
+sprite = NodePath("fountain")
 
-[node name="fountain" type="AnimatedSprite2D" parent="." index="1" unique_id=551777104]
-sprite_frames = SubResource("SpriteFrames_k8u3x")
-animation = &"active"
-
-[node name="Area" type="Area2D" parent="." index="2" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
+[node name="Area" type="Area2D" parent="." index="1" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("3_k8u3x")
@@ -117,3 +114,8 @@ autowrap_trim_flags = 64
 horizontal_alignment = 1
 vertical_alignment = 2
 visible_characters_behavior = 1
+
+[node name="fountain" type="AnimatedSprite2D" parent="." index="2" unique_id=551777104]
+sprite_frames = SubResource("SpriteFrames_k8u3x")
+animation = &"active"
+autoplay = "active"

@@ -6,7 +6,7 @@ extends AnimatableBody2D
 @onready var hitbox: CollisionShape2D = find_child("CollisionShape2D")
 
 func _ready() -> void:
-	if is_platform and hitbox: hitbox.one_way_collision = true
+	if is_platform and hitbox != null: hitbox.one_way_collision = true
 	Game.event_manager.lucidity_changed.connect(change_lucidity)
 	
 func change_lucidity(val):
