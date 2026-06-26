@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_nu0ib"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_o18ho"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_xuur6"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_ihfaw"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="6_p7mac"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_w0k5t"]
 
 [sub_resource type="Animation" id="Animation_ihfaw"]
@@ -181,7 +181,7 @@ size = Vector2(123, 120.875)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_w0k5t"]
+[sub_resource type="Gradient" id="Gradient_63yqf"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -211,7 +211,7 @@ offset = Vector2i(2, 1)
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
 script = ExtResource("3_o18ho")
-room_name = "Tower2-02"
+room_name = "Tower3-02"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
 position = Vector2(321, -15)
@@ -321,11 +321,7 @@ rotation = -3.1415925
 position = Vector2(34, 2)
 shape = SubResource("RectangleShape2D_p7mac")
 
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("5_ihfaw")]
-position = Vector2(306, 219)
-min_water = 15.0
-
-[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=558900713 instance=ExtResource("4_xuur6")]
+[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=558900713 instance=ExtResource("4_xuur6")]
 position = Vector2(389, -83)
 rotation = -3.1415925
 
@@ -333,31 +329,33 @@ rotation = -3.1415925
 position = Vector2(16, 80.65631)
 shape = SubResource("RectangleShape2D_5hlo2")
 
-[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=121051307]
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=121051307]
 curve = SubResource("Curve2D_ihfaw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=291190242]
-position = Vector2(49, -93.000015)
-progress = 577.80066
+position = Vector2(-248, 362)
 rotates = false
 
 [node name="Platform10" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=458503422 instance=ExtResource("4_xuur6")]
-rotation = 1.3962634
+rotation = -0.34906584
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform10" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_g8nxr")
 
-[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=901383637 instance=ExtResource("6_w0k5t")]
+[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=901383637 instance=ExtResource("6_w0k5t")]
 rotation = 0.0
 width = 30.0
 width_curve = SubResource("Curve_w0k5t")
-grad = SubResource("Gradient_w0k5t")
+grad = SubResource("Gradient_63yqf")
 hitbox_size = 10.0
 
 [node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=545245425]
 rotation = 0.0
 curve = SubResource("Curve2D_w0k5t")
+
+[node name="Fountain" parent="." index="3" unique_id=1652650217 instance=ExtResource("6_p7mac")]
+position = Vector2(-1616, -313)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]

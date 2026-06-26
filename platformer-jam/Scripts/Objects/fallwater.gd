@@ -9,6 +9,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.03).timeout
 	on_lucidity_changed(0.0)
 
+
 func on_lucidity_changed(value) -> void:
 	if ray_cast_2d.is_colliding():
 		var height: float = ray_cast_2d.get_collision_point().y

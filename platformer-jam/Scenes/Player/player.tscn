@@ -267,6 +267,7 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_dd0ac")
 
 [node name="WashStepper" type="Timer" parent="." unique_id=1674172203]
+one_shot = true
 
 [node name="FloorInfo" type="Area2D" parent="." unique_id=1566830747]
 

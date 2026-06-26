@@ -218,6 +218,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Wall1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=957174898 instance=ExtResource("5_g1b11")]
 position = Vector2(6, -12)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall1" index="0" unique_id=1349571073]
 position = Vector2(391, 33)
@@ -271,6 +272,7 @@ shape = SubResource("CircleShape2D_xuur6")
 
 [node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=209727397 instance=ExtResource("5_g1b11")]
 position = Vector2(52, 261)
+collision_layer = 33
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
@@ -291,6 +293,7 @@ shape = SubResource("RectangleShape2D_5ecxw")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1988025770 instance=ExtResource("5_g1b11")]
 position = Vector2(202, -203)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
 position = Vector2(-14, 6)

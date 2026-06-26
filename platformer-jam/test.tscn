@@ -126,6 +126,7 @@ expand_mode = 2
 [node name="Tutorial_1" parent="." unique_id=197990627 instance=ExtResource("4_ppyta")]
 
 [node name="Room4" parent="." unique_id=505538054 instance=ExtResource("5_ehkex")]
+visible = false
 
 [node name="Room5" parent="." unique_id=456793496 instance=ExtResource("6_xersf")]
 

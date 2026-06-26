@@ -95,8 +95,8 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "tutorial_1"
-initial_player_pos = Vector2(-1750, 1575)
+initial_room = "Entrance2"
+initial_player_pos = Vector2(-4000, 0)
 initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),

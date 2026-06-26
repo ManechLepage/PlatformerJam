@@ -18,7 +18,6 @@ func enter():
 func process_inputs(event):
 	if Input.is_action_just_released("Jump"):
 		return fall
-
 func process_physics(delta):
 	if not Input.is_action_pressed("Jump"):
 		return fall
