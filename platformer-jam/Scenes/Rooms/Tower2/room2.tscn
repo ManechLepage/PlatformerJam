@@ -218,6 +218,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Wall1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=957174898 instance=ExtResource("4_5ecxw")]
 position = Vector2(6, -12)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall1" index="0" unique_id=1349571073]
 position = Vector2(391, 33)
@@ -281,7 +282,20 @@ shape = SubResource("RectangleShape2D_5khlg")
 position = Vector2(-134, 3)
 shape = SubResource("CircleShape2D_rv12o")
 
-[node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=805369778 instance=ExtResource("4_5ecxw")]
+[node name="Platform9" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=636678653 instance=ExtResource("4_5ecxw")]
+position = Vector2(-134, 361)
+collision_layer = 33
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="0" unique_id=1349571073]
+position = Vector2(-202, 7)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="1" unique_id=1055547669]
+position = Vector2(-134, 3)
+shape = SubResource("CircleShape2D_rv12o")
+
+[node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=805369778 instance=ExtResource("4_5ecxw")]
 position = Vector2(36, 261)
 is_platform = true
 
@@ -289,30 +303,29 @@ is_platform = true
 position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_5ecxw")
 
-[node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1988025770 instance=ExtResource("4_5ecxw")]
+[node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1988025770 instance=ExtResource("4_5ecxw")]
 position = Vector2(202, -203)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
 position = Vector2(-14, 6)
 shape = SubResource("RectangleShape2D_rv12o")
 
-[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("7_g3f8u")]
+[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1652650217 instance=ExtResource("7_g3f8u")]
 position = Vector2(-340, 102)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall" index="0" unique_id=400528529]
 position = Vector2(0, 94.5)
 shape = SubResource("RectangleShape2D_nu0ib")
 
-[node name="Waterfall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1200005425 instance=ExtResource("7_g3f8u")]
+[node name="Waterfall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1200005425 instance=ExtResource("7_g3f8u")]
 position = Vector2(292, -218)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall2" index="0" unique_id=400528529]
 position = Vector2(0, 149.5)
 shape = SubResource("RectangleShape2D_o18ho")
 
-[node name="Lever" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=415754532 instance=ExtResource("6_o18ho")]
+[node name="Lever" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=415754532 instance=ExtResource("6_o18ho")]
 position = Vector2(322, 241)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Lever" index="1" unique_id=171960460]
@@ -332,6 +345,7 @@ shape = SubResource("RectangleShape2D_lgexx")
 [editable path="Offset/Obstacles/Platform13"]
 [editable path="Offset/Obstacles/Platform12"]
 [editable path="Offset/Obstacles/Platform5"]
+[editable path="Offset/Obstacles/Platform9"]
 [editable path="Offset/Obstacles/Platform6"]
 [editable path="Offset/Obstacles/Platform8"]
 [editable path="Offset/Obstacles/Waterfall"]

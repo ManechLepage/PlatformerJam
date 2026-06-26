@@ -311,7 +311,7 @@ update_rotation = false
 update_scale = false
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_g6egx")]
-position = Vector2(150, -59.754395)
+position = Vector2(150, 250)
 sync_to_physics = false
 is_platform = true
 
@@ -319,7 +319,7 @@ is_platform = true
 shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1273539671 instance=ExtResource("4_g6egx")]
-position = Vector2(-150, -59.754395)
+position = Vector2(-150, 250.00006)
 sync_to_physics = false
 is_platform = true
 

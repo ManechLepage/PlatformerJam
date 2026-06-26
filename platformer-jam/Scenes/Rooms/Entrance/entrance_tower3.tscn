@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_wtw1x"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_shpkm"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_w2y4j"]
+[ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="5_wtw1x"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -53,7 +54,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_shpkm")
-room_name = "Entrance3"
+room_name = "Entrance3_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(35.5, -4.5)
@@ -72,11 +73,34 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_w2y4j")]
+visible = false
 position = Vector2(0, 247)
+collision_layer = 0
+collision_mask = 0
+is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
+scale = Vector2(3.4, 1)
 shape = SubResource("RectangleShape2D_5khlg")
+disabled = true
+
+[node name="Platform2" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1944901352]
+position = Vector2(960, 247)
+script = ExtResource("5_wtw1x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1874336960]
+position = Vector2(-119, 31)
+polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
+
+[node name="Platform3" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1001651166]
+position = Vector2(960, 247)
+script = ExtResource("5_wtw1x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1934415225]
+position = Vector2(-119, 31)
+polygon = PackedVector2Array(-352, -29, -1173, -61, -1358, -52, -1387, 37, -367, 67)
+one_way_collision = true
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

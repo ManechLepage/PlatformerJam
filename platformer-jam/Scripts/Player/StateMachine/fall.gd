@@ -15,7 +15,7 @@ func enter():
 	Game.player.velocity.y = max(Game.player.velocity.y, -130) #quick release makes u instant fall
 	timer.start()
 	super()
-	if Game.player.sprite.animation == "jump":
+	if not (Game.player.sprite.animation in ["jump","running"]):
 		Game.player.sprite.play("fall")
 
 func exit():
@@ -23,9 +23,10 @@ func exit():
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
+		return jump
 		if timer.time_left > 0 and !parent.has_jumped:
-			flip_character(Input.get_axis("Left", "Right"))
-			return jump
+			pass
+		
 		elif Game.player.interact_area.get_overlapping_areas():
 			return double_jump
 		else:

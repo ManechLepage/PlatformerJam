@@ -21,22 +21,30 @@ float smoothnoise(vec4 p) {
     
     f = f*f*(3. - 2.*f);
     
-    return mix(mix(mix(mix(rand(i + e.xxxx),
-                           rand(i + e.yxxx), f.x),
-                       mix(rand(i + e.xyxx),
-                           rand(i + e.yyxx), f.x), f.y),
-                   mix(mix(rand(i + e.xxyx),
-                           rand(i + e.yxyx), f.x),
-                       mix(rand(i + e.xyyx),
-                           rand(i + e.yyyx), f.x), f.y), f.z),
-               mix(mix(mix(rand(i + e.xxxy),
-                           rand(i + e.yxxy), f.x),
-                       mix(rand(i + e.xyxy),
-                           rand(i + e.yyxy), f.x), f.y),
-                   mix(mix(rand(i + e.xxyy),
-                           rand(i + e.yxyy), f.x),
-                       mix(rand(i + e.xyyy),
-                           rand(i + e.yyyy), f.x), f.y), f.z), f.w);
+    return 
+	mix(
+		mix(
+			mix(
+				mix(	rand(i + e.xxxx),rand(i + e.yxxx)	, f.x),
+                mix(rand(i + e.xyxx),	rand(i + e.yyxx), f.x),
+				f.y),
+        	mix(
+				mix(rand(i + e.xxyx),rand(i + e.yxyx), f.x),
+                mix(rand(i + e.xyyx),rand(i + e.yyyx), f.x), 
+				f.y), 
+			f.z)
+			,
+      	mix(
+			mix(
+				mix(rand(i + e.xxxy),rand(i + e.yxxy), f.x),
+                mix(rand(i + e.xyxy),rand(i + e.yyxy), f.x), 
+				f.y),
+            mix(
+				mix(rand(i + e.xxyy),rand(i + e.yxyy), f.x),
+                mix(rand(i + e.xyyy),rand(i + e.yyyy), f.x), 
+				f.y), 
+			f.z), 
+		f.w);
 }
 
 float fbm(vec3 x) {

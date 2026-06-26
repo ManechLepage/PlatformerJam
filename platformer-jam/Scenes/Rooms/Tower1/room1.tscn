@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="2_5khlg"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_snhcn"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_mhqpd"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="3_oug80"]
 [ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="4_7acu6"]
 [ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="4_ki1o7"]
 [ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="5_ymjur"]
@@ -13,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="7_7hyjq"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="8_3r3i8"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="9_7acu6"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="9_ab2yi"]
+[ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="9_aor2i"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="10_i8h6m"]
 [ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="11_3r3i8"]
 [ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="12_7acu6"]
@@ -1669,12 +1670,15 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-513, -108)
 rotation = 1.5707964
 script = ExtResource("3_mhqpd")
-room_name = "Entrance3"
+room_name = "Entrance3_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=630776865]
 position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="Platform" type="AnimatableBody2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1651509183]
+script = ExtResource("9_aor2i")
 
 [node name="Obstacles" parent="Offset" parent_id_path=PackedInt32Array(652906693) index="3" unique_id=457880380]
 z_index = 10
@@ -1708,10 +1712,20 @@ is_platform = true
 position = Vector2(-44.1875, -1)
 shape = SubResource("RectangleShape2D_oug80")
 
-[node name="Water" parent="Offset/Obstacles/Platform2" index="1" unique_id=1652650217 instance=ExtResource("3_oug80")]
-position = Vector2(6, -45)
+[node name="Fountain" parent="Offset/Obstacles/Platform2" index="1" unique_id=1652650217 instance=ExtResource("9_ab2yi")]
+z_index = -1
+position = Vector2(0, -43)
+scale = Vector2(1.0017401, 1)
 
-[node name="Platform3" parent="Offset/Obstacles" index="4" unique_id=889086938 instance=ExtResource("2_5khlg")]
+[node name="Platform4" type="AnimatableBody2D" parent="Offset/Obstacles" index="4" unique_id=548385452]
+position = Vector2(-960, 247)
+script = ExtResource("9_aor2i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=6921160]
+position = Vector2(-119, 31)
+polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
+
+[node name="Platform3" parent="Offset/Obstacles" index="5" unique_id=889086938 instance=ExtResource("2_5khlg")]
 position = Vector2(156, -257)
 is_platform = true
 
@@ -1719,7 +1733,7 @@ is_platform = true
 position = Vector2(-9.15625, -4)
 shape = SubResource("RectangleShape2D_4il0d")
 
-[node name="Block2" parent="Offset/Obstacles" index="5" unique_id=1647798916 instance=ExtResource("2_5khlg")]
+[node name="Block2" parent="Offset/Obstacles" index="6" unique_id=1647798916 instance=ExtResource("2_5khlg")]
 position = Vector2(-240, 27)
 sync_to_physics = false
 is_platform = true
@@ -1746,7 +1760,7 @@ position = Vector2(12.378983, -14.5781555)
 scale = Vector2(1.7607323, 1)
 texture = ExtResource("9_7acu6")
 
-[node name="vine2" type="Line2D" parent="Offset/Obstacles" index="6" unique_id=1323222840]
+[node name="vine2" type="Line2D" parent="Offset/Obstacles" index="7" unique_id=1323222840]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 15.0
@@ -1766,7 +1780,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine2" index="0" unique_id=963478316]
 curve = SubResource("Curve2D_3r3i8")
 
-[node name="vine3" type="Line2D" parent="Offset/Obstacles" index="7" unique_id=1793787206]
+[node name="vine3" type="Line2D" parent="Offset/Obstacles" index="8" unique_id=1793787206]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -1786,7 +1800,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine3" index="0" unique_id=462271414]
 curve = SubResource("Curve2D_ki1o7")
 
-[node name="vine4" type="Line2D" parent="Offset/Obstacles" index="8" unique_id=852055521]
+[node name="vine4" type="Line2D" parent="Offset/Obstacles" index="9" unique_id=852055521]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -1807,7 +1821,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine4" index="0" unique_id=110737289]
 curve = SubResource("Curve2D_0a7fl")
 
-[node name="vine5" type="Line2D" parent="Offset/Obstacles" index="9" unique_id=2010550358]
+[node name="vine5" type="Line2D" parent="Offset/Obstacles" index="10" unique_id=2010550358]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -1828,7 +1842,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine5" index="0" unique_id=742034994]
 curve = SubResource("Curve2D_ugaml")
 
-[node name="vine6" type="Line2D" parent="Offset/Obstacles" index="10" unique_id=1805944183]
+[node name="vine6" type="Line2D" parent="Offset/Obstacles" index="11" unique_id=1805944183]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -1849,7 +1863,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine6" index="0" unique_id=1300983946]
 curve = SubResource("Curve2D_5diaa")
 
-[node name="vine7" type="Line2D" parent="Offset/Obstacles" index="11" unique_id=289618919]
+[node name="vine7" type="Line2D" parent="Offset/Obstacles" index="12" unique_id=289618919]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -1870,7 +1884,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine7" index="0" unique_id=1672302656]
 curve = SubResource("Curve2D_aeexq")
 
-[node name="platform" type="Node2D" parent="Offset/Obstacles" index="12" unique_id=1955422583]
+[node name="platform" type="Node2D" parent="Offset/Obstacles" index="13" unique_id=1955422583]
 z_index = -1
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/platform" index="0" unique_id=810378075]

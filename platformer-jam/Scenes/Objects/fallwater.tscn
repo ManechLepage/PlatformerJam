@@ -2,11 +2,43 @@
 
 [ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="1_7b3kl"]
 [ext_resource type="Script" uid="uid://f3vu0vn1e3yu" path="res://Scripts/Objects/fallwater.gd" id="2_e4jb5"]
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="3_x111f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4jb5"]
 size = Vector2(66, 62)
 
-[node name="Waterfall" unique_id=1652650217 instance=ExtResource("1_7b3kl")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_16o5y"]
+atlas = ExtResource("3_x111f")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3gfv"]
+atlas = ExtResource("3_x111f")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgq6l"]
+atlas = ExtResource("3_x111f")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4jb5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16o5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3gfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgq6l")
+}],
+"loop": 1,
+"name": &"active",
+"speed": 5.0
+}]
+
+[node name="FallWater" unique_id=1652650217 instance=ExtResource("1_7b3kl")]
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("2_e4jb5")
 is_always_active = true
 
@@ -16,3 +48,8 @@ shape = SubResource("RectangleShape2D_e4jb5")
 [node name="RayCast2D" type="RayCast2D" parent="." index="1" unique_id=678994796]
 position = Vector2(0, -31)
 target_position = Vector2(0, 2000)
+collision_mask = 32
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2" unique_id=1622195148]
+sprite_frames = SubResource("SpriteFrames_e4jb5")
+animation = &"active"

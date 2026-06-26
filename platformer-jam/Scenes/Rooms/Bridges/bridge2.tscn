@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_1d1jq"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_ysw6c"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_ntg8m"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="6_00xgr"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="7_00xgr"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="7_1d1jq"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
@@ -105,11 +105,11 @@ radius = 41.34002
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_00xgr"]
+[sub_resource type="Gradient" id="Gradient_1d1jq"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Gradient" id="Gradient_1d1jq"]
+[sub_resource type="Gradient" id="Gradient_ysw6c"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -220,20 +220,15 @@ position = Vector2(-48, -106)
 [node name="Yellowball3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=548659445 instance=ExtResource("5_ntg8m")]
 position = Vector2(50, -67)
 
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1652650217 instance=ExtResource("6_00xgr")]
-position = Vector2(-429, -111)
-
-[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1716700021]
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1716700021]
 curve = SubResource("Curve2D_ysw6c")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=1476336356]
-position = Vector2(-211.61479, -47.121906)
+position = Vector2(-268, 236)
 rotation = -2.179916
-progress = 354.29715
 rotates = false
 
 [node name="Platform3" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=1359846352 instance=ExtResource("4_ysw6c")]
-rotation = 6.9423127
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform3" index="0" unique_id=1349571073]
@@ -246,20 +241,23 @@ rotation = 1.6859877
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_a3ta5")
 
-[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=901383637 instance=ExtResource("7_1d1jq")]
-rotation = 0.0
-width = 40.0
-width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_00xgr")
-
-[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=790154690 instance=ExtResource("7_1d1jq")]
+[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=901383637 instance=ExtResource("7_1d1jq")]
 rotation = 0.0
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_1d1jq")
 
+[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=790154690 instance=ExtResource("7_1d1jq")]
+rotation = 0.0
+width = 40.0
+width_curve = SubResource("Curve_00xgr")
+grad = SubResource("Gradient_ysw6c")
+
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=545245425]
 curve = SubResource("Curve2D_ntg8m")
+
+[node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("7_00xgr")]
+position = Vector2(-3327, -1182)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

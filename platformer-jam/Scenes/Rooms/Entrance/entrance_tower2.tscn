@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_bjn7v"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_74567"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_8ymx6"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_y7hdm"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_7cprj"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="8_ypfkq"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -207,7 +207,7 @@ shape = SubResource("RectangleShape2D_6i037")
 
 [node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1980273417 instance=ExtResource("4_74567")]
 position = Vector2(62, -92)
-rotation = -1.5707964
+rotation = 0.418879
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/DecoPlatform1" index="0" unique_id=1349571073]
@@ -241,24 +241,25 @@ shape = SubResource("CircleShape2D_y1vax")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=2142497465 instance=ExtResource("4_74567")]
 position = Vector2(-31, 226)
+rotation = 0.20943956
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 position = Vector2(-155, 0)
 shape = SubResource("RectangleShape2D_y7hdm")
 
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("5_y7hdm")]
-position = Vector2(-426, 196)
-
-[node name="Water2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1188546801 instance=ExtResource("5_y7hdm")]
-position = Vector2(-382, -60)
-
-[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=901383637 instance=ExtResource("6_7cprj")]
+[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=901383637 instance=ExtResource("6_7cprj")]
 position = Vector2(-144, -258)
 rotation = 0.0
-progress = 0.0
+progress = 0.356293
 
 [node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=545245425]
 curve = SubResource("Curve2D_8ymx6")
+
+[node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("8_ypfkq")]
+position = Vector2(-3565, 203)
+
+[node name="Fountain2" parent="." index="3" unique_id=2131712417 instance=ExtResource("8_ypfkq")]
+position = Vector2(-4222, -62)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

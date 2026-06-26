@@ -5,6 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 
 [node name="Lever" type="Area2D" unique_id=415754532]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_f1e1e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980596293]
@@ -13,5 +15,5 @@ script = ExtResource("1_f1e1e")
 shape = SubResource("RectangleShape2D_yf5fn")
 debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
