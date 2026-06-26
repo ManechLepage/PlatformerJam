@@ -81,6 +81,7 @@ script = ExtResource("2_e4jb5")
 is_always_active = true
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=400528529]
+z_index = 1
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_e4jb5")
 
@@ -101,7 +102,7 @@ position = Vector2(0, -32)
 texture = ExtResource("3_x111f")
 hframes = 3
 region_enabled = true
-region_rect = Rect2(0, 0, 189, 64)
+region_rect = Rect2(0, 0, 192, 64)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1412752901]
 libraries/ = SubResource("AnimationLibrary_16o5y")
