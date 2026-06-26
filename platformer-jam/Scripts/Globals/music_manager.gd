@@ -9,6 +9,11 @@ var bridge_tween_value := 0.0
 func _ready() -> void:
 	set_pillar_3()
 	Game.event_manager.lucidity_changed.connect(update_vol)
+	set_bridge_effects(0)
+	$"../Areas/BridgeArea1".body_entered.connect(func (_body): set_bridge(1))
+	$"../Areas/BridgeArea1".body_exited.connect(func (_body): set_bridge(0))
+	$"../Areas/BridgeArea2".body_entered.connect(func (_body): set_bridge(1))
+	$"../Areas/BridgeArea2".body_exited.connect(func (_body): set_bridge(0))
 #func clear_sound():
 	#
 func play_at_corrrect_time():
@@ -40,14 +45,18 @@ func set_pillar_3():
 	sound_layers["lucid_4"].stream = null
 	play_at_corrrect_time()
 
-func set_bridge():
+func set_bridge(val: float):
 	if bridge_tween: bridge_tween.kill()
 	bridge_tween = create_tween()
-	bridge_tween.tween_method(set_bridge_effects,bridge_tween_value,1.,2)
+	bridge_tween.tween_method(set_bridge_effects,bridge_tween_value,val,2)
 
 func set_bridge_effects(val):
-	var rev : AudioEffect = AudioServer.get_bus_effect(2,0)
-	rev.wet = val
+	bridge_tween_value = val
+	var rev : AudioEffectReverb = AudioServer.get_bus_effect(2,0)
+	var lowpass : AudioEffectLowPassFilter = AudioServer.get_bus_effect(2,1)
+	rev.wet = float(val)/5
+	rev.dry = 1-val
+	lowpass.cutoff_hz = remap(val,0,1,20500,1000)
 
 func update_vol(lucidity):
 	var ease_vol = func (x): return ease(x,0.3)

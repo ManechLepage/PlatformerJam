@@ -123,13 +123,11 @@ func change_colors(name: String):
 			$\"../MusicManager\".set_pillar_3()
 		\"4\":
 			c = [area_4_color1,area_4_color2,area_4_color3]
-			$\"../MusicManager\".set_pillar_4()
+			$\"../MusicManager\".set_pillar_1()
 		\"bridge1\":
 			c = [area_bridge1_color1,area_bridge1_color2,area_bridge1_color3]
-			$\"../MusicManager\".set_brigde()
 		\"bridge2\":
 			c = [area_bridge2_color1,area_bridge2_color2,area_bridge2_color3]
-			$\"../MusicManager\".set_brigde()
 	for i in [$\"lucid bg\",$\"lucid bg/Overlay/lucid overlay\"]:
 		tweenA = create_tween()
 		tweenA.tween_method(set_shader_colorA,$\"lucid bg\".material.get_shader_parameter(\"colorA\"),c[0],2)
@@ -265,26 +263,32 @@ sound_lib = Array[AudioStream]([ExtResource("11_fdnlq"), ExtResource("12_jkdf5")
 [node name="noise" type="AudioStreamPlayer" parent="MusicManager" unique_id=129395444]
 stream = ExtResource("11_fdnlq")
 autoplay = true
+bus = &"music+amb"
 
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
 stream = ExtResource("12_jkdf5")
 autoplay = true
+bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
 stream = ExtResource("13_wsu2k")
 volume_db = -80.0
 autoplay = true
+bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
 stream = ExtResource("16_3pmx8")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
 stream = ExtResource("17_u50mg")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
+bus = &"Music"
 
 [node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
 layer = -50
