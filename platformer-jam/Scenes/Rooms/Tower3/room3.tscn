@@ -186,11 +186,10 @@ shape = SubResource("RectangleShape2D_63yqf")
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=450566103 instance=ExtResource("4_eib1a")]
 position = Vector2(287, 264)
-rotation = -3.1415925
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
-position = Vector2(-26.5, 3.375)
+position = Vector2(17, -3)
 shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="Platform14" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1141081812 instance=ExtResource("4_eib1a")]
@@ -237,7 +236,7 @@ update_rotation = false
 update_scale = false
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=324144790 instance=ExtResource("4_eib1a")]
-position = Vector2(-103.61694, 250)
+position = Vector2(144.72717, -50)
 sync_to_physics = false
 is_platform = true
 

@@ -187,10 +187,10 @@ offset = Vector2i(2, 2)
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
 script = ExtResource("3_vc6g3")
-room_name = "Tower2-03"
+room_name = "Tower3-03"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(33.1875, 2)
+position = Vector2(32, -6)
 shape = SubResource("RectangleShape2D_tc3ch")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -258,7 +258,7 @@ position = Vector2(288, -257)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform14" index="0" unique_id=1349571073]
-position = Vector2(-14.25, -4)
+position = Vector2(-14, -3)
 shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=379484454 instance=ExtResource("4_g6egx")]
@@ -274,7 +274,7 @@ position = Vector2(324, -39)
 rotation = -3.1415927
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
-position = Vector2(-45.72636, -76.41402)
+position = Vector2(-52.000042, -86.999954)
 shape = SubResource("CircleShape2D_hsyyw")
 
 [node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=558900713 instance=ExtResource("4_g6egx")]

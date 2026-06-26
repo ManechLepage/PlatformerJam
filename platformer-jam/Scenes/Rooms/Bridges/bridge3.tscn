@@ -17,7 +17,7 @@ tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.3),
+"times": PackedFloat32Array(0.2, 0.502),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -74,9 +74,9 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(153.69539, -93.77849, -153.69539, 93.77849, 457.3518, 12.65564, 31.918108, 25.960629, -31.918108, -25.960629, 278.70142, 39.74829, 0, 0, 0, 0, 116.467285, 41.770996)
+"points": PackedVector2Array(153.69539, -93.77849, -153.69539, 93.77849, 457.3518, 12.65564, 31.918108, 25.960629, -31.918108, -25.960629, 278.70142, 39.74829, 34.900356, 9.470459, -34.900356, -9.470459, 112.85449, 35.77539, -182.72433, 139.30011, 182.72433, -139.30011, 181.61523, -150.43127)
 }
-point_count = 3
+point_count = 4
 
 [node name="Room2" unique_id=197990627 instance=ExtResource("1_nnmsu")]
 
@@ -101,7 +101,17 @@ position = Vector2(27.5, -4.5)
 shape = SubResource("RectangleShape2D_1v5si")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=657448745]
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=1620236547]
+position = Vector2(-34, -307)
+script = ExtResource("3_cunyf")
+room_name = "Bridge4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=97477033]
+position = Vector2(27.5, -4.5)
+shape = SubResource("RectangleShape2D_1v5si")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=657448745]
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_cunyf")
@@ -112,7 +122,7 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
 position = Vector2(-509, -152)
 rotation = 1.5707964
 script = ExtResource("3_cunyf")
@@ -163,7 +173,7 @@ rotation = 0.0
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_vci7n")
-progress = 0.0
+progress = 0.006668369
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=545245425]
@@ -173,6 +183,7 @@ curve = SubResource("Curve2D_ntg8m")
 position = Vector2(108, 215)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
