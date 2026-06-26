@@ -226,7 +226,7 @@ size = Vector2(21, 38)
 size = Vector2(20, 5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1898798850 node_paths=PackedStringArray("sprite", "interact_area", "wash_area", "wash_no_consent_area", "wash_timer") groups=["Player"]]
-collision_layer = 3
+collision_layer = 67
 floor_max_angle = 0.9843657
 platform_on_leave = 2
 script = ExtResource("1_a3d8c")
@@ -246,6 +246,8 @@ frame = 1
 frame_progress = 0.7181494
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
+z_index = 10
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_5fmhj")
 
 [node name="Interact" type="Area2D" parent="." unique_id=2103578818]

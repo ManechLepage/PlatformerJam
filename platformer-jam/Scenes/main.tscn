@@ -53,33 +53,96 @@ shader_parameter/vignette_color = Color(0, 0, 0, 1)
 resource_name = "lucid_mist"
 script/source = "extends CanvasLayer
 
+@export var area_start_color1: Color
+@export var area_start_color2: Color
+@export var area_start_color3: Color
+@export var area_1_color1: Color
+@export var area_1_color2: Color
+@export var area_1_color3: Color
+@export var area_2_color1: Color
+@export var area_2_color2: Color
+@export var area_2_color3: Color
+@export var area_3_color1: Color
+@export var area_3_color2: Color
+@export var area_3_color3: Color
+@export var area_4_color1: Color
+@export var area_4_color2: Color
+@export var area_4_color3: Color
+@export var area_bridge1_color1: Color
+@export var area_bridge1_color2: Color
+@export var area_bridge1_color3: Color
+@export var area_bridge2_color1: Color
+@export var area_bridge2_color2: Color
+@export var area_bridge2_color3: Color
+
+var tweenA: Tween
+var tweenB: Tween
+var tweenC: Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Game.event_manager.lucidity_changed.connect(update_lucidity)
 	$\"lucid bg\".material.set_shader_parameter(\"alpha\",0)
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",0)
+	$\"../Areas/Tower1Area\".body_entered.connect(func(_body):change_colors(\"1\"))
+	$\"../Areas/Tower2Area\".body_entered.connect(func(_body):change_colors(\"2\"))
+	$\"../Areas/Tower3Area\".body_entered.connect(func(_body):change_colors(\"3\"))
+	$\"../Areas/Tower4Area\".body_entered.connect(func(_body):change_colors(\"4\"))
+	$\"../Areas/BridgeArea1\".body_entered.connect(func(_body):change_colors(\"bridge1\"))
+	$\"../Areas/BridgeArea2\".body_entered.connect(func(_body):change_colors(\"bridge2\"))
+	
 
+func change_colors(name: String):
+	print(1)
+	var c:Array[Color] = []
+	for tween in [tweenA,tweenB,tweenC]:
+		if tween: tween.kill()
+	match name:
+		\"1\":
+			c = [area_1_color1,area_1_color2,area_1_color3]
+		\"2\":
+			c = [area_2_color1,area_2_color2,area_2_color3]
+		\"3\":
+			c = [area_3_color1,area_3_color2,area_3_color3]
+		\"4\":
+			c = [area_4_color1,area_4_color2,area_4_color3]
+		\"bridge1\":
+			c = [area_bridge1_color1,area_bridge1_color2,area_bridge1_color3]
+		\"bridge2\":
+			c = [area_bridge2_color1,area_bridge2_color2,area_bridge2_color3]
+	for i in [$\"lucid bg\",$\"lucid bg/Overlay/lucid overlay\"]:
+		tweenA = create_tween()
+		tweenA.tween_method(set_shader_colorA,$\"lucid bg\".material.get_shader_parameter(\"colorA\"),c[0],2)
+		tweenB = create_tween()
+		tweenB.tween_method(set_shader_colorB,$\"lucid bg\".material.get_shader_parameter(\"colorB\"),c[1],2)
+		tweenC = create_tween()
+		tweenC.tween_method(set_shader_colorC,$\"lucid bg\".material.get_shader_parameter(\"colorC\"),c[2],2)
+	
+func set_shader_colorA(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorA\",val)
 
+func set_shader_colorB(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorB\",val)
+
+func set_shader_colorC(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorC\",val)
+	
 func update_lucidity(lucidity):
 	
 	$\"lucid bg\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*5)
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*6)
 	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
-	if lucidity == 0:
-		$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"time_offset\",Time.get_ticks_msec()/1000)
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
 shader = ExtResource("25_u50mg")
-shader_parameter/colorA = Color(0.16, 0, 0.14933334, 1)
-shader_parameter/colorB = Color(0.1325, 0, 0.53, 1)
-shader_parameter/colorC = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+shader_parameter/colorA = Color(0.16, 0.1264, 0.14376, 1)
+shader_parameter/colorB = Color(0.53, 0.074023336, 0.058300003, 1)
+shader_parameter/colorC = Color(4.243727, 2.573132, 2.573132, 1)
 shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
-shader_parameter/time_offset = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u50mg"]
 shader = ExtResource("25_u50mg")
@@ -89,7 +152,24 @@ shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
 shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
-shader_parameter/time_offset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8k8"]
+size = Vector2(934.5, 3011)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqgau"]
+size = Vector2(1010.5, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1aky"]
+size = Vector2(934.5, 3398)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cuat"]
+size = Vector2(933, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwxat"]
+size = Vector2(931, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqrg6"]
+size = Vector2(934.5, 3011)
 
 [node name="Main" type="Node2D" unique_id=295821621]
 
@@ -177,6 +257,27 @@ volume_db = -80.0
 [node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
 layer = -50
 script = SubResource("GDScript_u50mg")
+area_start_color1 = Color(0.5473538, 0.040273357, 0.45604515, 0.67058825)
+area_start_color2 = Color(1, 1, 1, 0.5529412)
+area_start_color3 = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+area_1_color1 = Color(0.16, 0, 0.14933334, 1)
+area_1_color2 = Color(0.1325, 0, 0.53, 1)
+area_1_color3 = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+area_2_color1 = Color(0.10966679, 0, 0.94, 1)
+area_2_color2 = Color(2.1396377, 3.934858, 8.47571, 1)
+area_2_color3 = Color(1.790464e-05, 0.27583578, 0.7781118, 1)
+area_3_color1 = Color(1, 0, 0.16666698, 0.20392157)
+area_3_color2 = Color(1, 0, 0, 1)
+area_3_color3 = Color(0.47113067, 0.28528103, 0.21180561, 0.6627451)
+area_4_color1 = Color(0.98, 0, 0.60433346, 0.20392157)
+area_4_color2 = Color(0.6947816, 0.2799235, 1, 1)
+area_4_color3 = Color(0.00022928286, 0.059608556, 0.31022134, 0.6627451)
+area_bridge1_color1 = Color(0.16, 0.1264, 0.15776, 1)
+area_bridge1_color2 = Color(0.5019608, 0.49411765, 0.5294118, 1)
+area_bridge1_color3 = Color(2.305155, 2.9797177, 2.57498, 1)
+area_bridge2_color1 = Color(0.16, 0.1264, 0.14376, 1)
+area_bridge2_color2 = Color(0.53, 0.074023336, 0.058300003, 1)
+area_bridge2_color3 = Color(4.243727, 2.573132, 2.573132, 1)
 
 [node name="lucid bg" type="ColorRect" parent="Lucid" unique_id=515437348]
 material = SubResource("ShaderMaterial_3pmx8")
@@ -194,6 +295,7 @@ grow_vertical = 2
 layer = 50
 
 [node name="lucid overlay" type="ColorRect" parent="Lucid/lucid bg/Overlay" unique_id=25300080]
+visible = false
 material = SubResource("ShaderMaterial_u50mg")
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,3 +309,70 @@ grow_vertical = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1438021251]
 environment = ExtResource("26_cbgmd")
+
+[node name="Areas" type="Node2D" parent="." unique_id=379803689]
+
+[node name="Tower1Area" type="Area2D" parent="Areas" unique_id=512105487]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower1Area" unique_id=1974261894]
+position = Vector2(-2134, -924.5)
+shape = SubResource("RectangleShape2D_aa8k8")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower2Area" type="Area2D" parent="Areas" unique_id=2007027104]
+z_index = -50
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower2Area" unique_id=1210504008]
+position = Vector2(-3878.25, -1290)
+shape = SubResource("RectangleShape2D_aqgau")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower3Area" type="Area2D" parent="Areas" unique_id=1602650380]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower3Area" unique_id=723410420]
+position = Vector2(-4055.25, -1454)
+shape = SubResource("RectangleShape2D_o1aky")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="BridgeArea2" type="Area2D" parent="Areas" unique_id=320141715]
+z_index = -50
+position = Vector2(1099, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea2" unique_id=474334365]
+position = Vector2(-3981.5, -1290)
+shape = SubResource("RectangleShape2D_8cuat")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="BridgeArea1" type="Area2D" parent="Areas" unique_id=123807223]
+z_index = -50
+position = Vector2(1099, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea1" unique_id=1996013334]
+position = Vector2(-2060.5, -1290)
+shape = SubResource("RectangleShape2D_kwxat")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower4Area" type="Area2D" parent="Areas" unique_id=321724665]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower4Area" unique_id=1625391712]
+position = Vector2(-2134, -3978)
+shape = SubResource("RectangleShape2D_kqrg6")
+debug_color = Color(0.5110002, 0, 0.73, 0)
