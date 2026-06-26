@@ -190,7 +190,7 @@ size = Vector2(123, 120.875)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_g8nxr"]
+[sub_resource type="Gradient" id="Gradient_wcuyr"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -655,7 +655,7 @@ rpm = 50.0
 [node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=901383637 instance=ExtResource("6_w0k5t")]
 width = 30.0
 width_curve = SubResource("Curve_w0k5t")
-grad = SubResource("Gradient_g8nxr")
+grad = SubResource("Gradient_wcuyr")
 hitbox_size = 10.0
 
 [node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=2105629789]
