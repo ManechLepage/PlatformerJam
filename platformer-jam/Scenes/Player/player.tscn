@@ -215,6 +215,10 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fmhj"]
+radius = 10.5
+height = 38.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0ac"]
 size = Vector2(21, 38)
 
@@ -242,8 +246,7 @@ frame = 1
 frame_progress = 0.7181494
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
-position = Vector2(1.5, 0)
-shape = SubResource("RectangleShape2D_dd0ac")
+shape = SubResource("CapsuleShape2D_5fmhj")
 
 [node name="Interact" type="Area2D" parent="." unique_id=2103578818]
 collision_layer = 4
