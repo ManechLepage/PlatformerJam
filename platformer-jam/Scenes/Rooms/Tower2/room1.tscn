@@ -147,6 +147,18 @@ point_count = 3
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
+[sub_resource type="Gradient" id="Gradient_x34c6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x34c6"]
+gradient = SubResource("Gradient_x34c6")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="Curve2D" id="Curve2D_xbu1k"]
 _data = {
 "points": PackedVector2Array(-73.8355, 76.201836, 73.8355, -76.201836, 277, 88, -123.223145, 73.183464, 123.223145, -73.183464, 182, -400, 0, 0, 0, 0, 214, -303)
@@ -313,23 +325,20 @@ shape = SubResource("CircleShape2D_4sqie")
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=901383637 instance=ExtResource("5_1hgyl")]
 position = Vector2(-28, 188)
-rotation = 0.0
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_xbu1k")
-progress = 0.9768115520477296
-has_hitbox = false
+progress = 0.0
+texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_size = 20.0
 
-[node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=545245425]
-position = Vector2(0, 0)
-rotation = 0.0
+[node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_xbu1k")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=424054915]
-position = Vector2(221.41269, -317.81897)
+position = Vector2(261.7685, -46.82983)
 rotation = -2.1676095
-progress = 694.11426
+progress = 142.11838
 rotates = false
 
 [node name="Yellowball" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1760792903 instance=ExtResource("6_2fq3i")]
