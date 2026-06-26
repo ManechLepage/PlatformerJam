@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ckah8su0aqt2t"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_hreh4"]
+[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_iamco"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_ucgji"]
+
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
+resource_local_to_scene = true
+size = Vector2(1046, 23)
+
+[node name="Room3" unique_id=197990627 instance=ExtResource("1_hreh4")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_iamco")
+
+[node name="Offset" parent="." index="1" unique_id=652906693]
+position = Vector2(-960, -1080)
+offset = Vector2i(1, 2)
+
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=245909862]
+position = Vector2(-35, 313)
+script = ExtResource("3_ucgji")
+room_name = "BridgeR1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=36847418]
+position = Vector2(33, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=657448745]
+visible = false
+position = Vector2(518, -154)
+rotation = 1.5707964
+script = ExtResource("3_ucgji")
+room_name = "Bridge5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
+visible = false
+position = Vector2(36, 16)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
+visible = false
+position = Vector2(-509, -152)
+rotation = 1.5707964
+script = ExtResource("3_ucgji")
+room_name = "Entrance2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
+position = Vector2(35.5, -4.5)
+shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
