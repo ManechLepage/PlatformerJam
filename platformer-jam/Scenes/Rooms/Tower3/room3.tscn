@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_icutt"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_a373y"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_eib1a"]
-[ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_6rcpm"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="5_s7bb6"]
 
 [sub_resource type="Animation" id="Animation_ihfaw"]
 length = 0.001
@@ -15,18 +15,6 @@ tracks/0/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D2:progress_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -44,22 +32,10 @@ tracks/0/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Path2D/PathFollow2D2:progress_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 0.0]
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p7mac"]
@@ -81,19 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.15, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 2.7), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform13:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.15, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-3.1415927, 12.217305]
+"values": [Vector2(2, 2), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -109,18 +73,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform13:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-3.1415927]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -138,31 +90,25 @@ resource_local_to_scene = true
 size = Vector2(779, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d3qk"]
-size = Vector2(31, 218)
+size = Vector2(31, 456)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63yqf"]
-size = Vector2(242, 21.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhyn8"]
-size = Vector2(291, 21.5)
+size = Vector2(295, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ticnr"]
 size = Vector2(127, 18.75)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dhyn8"]
-radius = 66.007576
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hsyyw"]
-radius = 39.012817
+[sub_resource type="CircleShape2D" id="CircleShape2D_icutt"]
+radius = 75.77539
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hlo2"]
 size = Vector2(33.5, 612.3125)
 
 [sub_resource type="Curve2D" id="Curve2D_guonm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -150)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -150, 0, 0, 0, 0, -200, -150, 0, 0, 0, 0, -200, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 2
+point_count = 5
 
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_s7bb6")]
 
@@ -219,7 +165,7 @@ script = ExtResource("3_a373y")
 room_name = "Bridge3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
+position = Vector2(54, -52)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -227,7 +173,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 position = Vector2(-767, -11)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall1" index="0" unique_id=1349571073]
-position = Vector2(391, 53)
+position = Vector2(391, -66)
 shape = SubResource("RectangleShape2D_1d3qk")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2078653204 instance=ExtResource("4_eib1a")]
@@ -235,50 +181,26 @@ position = Vector2(-446, 87)
 rotation = -3.1415925
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
-position = Vector2(0.9999763, -155)
+position = Vector2(-25.5, -155)
 shape = SubResource("RectangleShape2D_63yqf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="1" unique_id=1490580718]
-position = Vector2(-12.5, 147)
-shape = SubResource("RectangleShape2D_dhyn8")
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=450566103 instance=ExtResource("4_eib1a")]
 position = Vector2(287, 264)
-rotation = -3.1415925
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
-position = Vector2(-26.5, 3.375)
+position = Vector2(17, -3)
 shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="Platform14" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1141081812 instance=ExtResource("4_eib1a")]
-position = Vector2(288, -257)
+position = Vector2(-14, -60)
 rotation = -3.1415925
-is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform14" index="0" unique_id=1349571073]
-position = Vector2(-4.5, 3.375)
-shape = SubResource("RectangleShape2D_ticnr")
+position = Vector2(0, 56.8125)
+shape = SubResource("CircleShape2D_icutt")
 
-[node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=379484454 instance=ExtResource("4_eib1a")]
-position = Vector2(309, -57)
-rotation = -3.1415925
-is_platform = true
-
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
-position = Vector2(-16.000004, -19.000002)
-shape = SubResource("CircleShape2D_dhyn8")
-
-[node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=862128788 instance=ExtResource("4_eib1a")]
-position = Vector2(324, -39)
-rotation = -3.1415927
-is_platform = true
-
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
-position = Vector2(-45.72636, -76.41402)
-shape = SubResource("CircleShape2D_hsyyw")
-
-[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=558900713 instance=ExtResource("4_eib1a")]
+[node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=558900713 instance=ExtResource("4_eib1a")]
 position = Vector2(389, -83)
 rotation = -3.1415925
 
@@ -286,13 +208,14 @@ rotation = -3.1415925
 position = Vector2(17.25, -46.84375)
 shape = SubResource("RectangleShape2D_5hlo2")
 
-[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=503811652]
-position = Vector2(150, 250)
-scale = Vector2(1, 2.7)
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=503811652]
+position = Vector2(182, 250)
+scale = Vector2(2, 2)
 curve = SubResource("Curve2D_guonm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=6416233]
 rotation = -1.5707964
+rotates = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=31397610]
 remote_path = NodePath("../../../MovingPlatform1")
@@ -300,41 +223,31 @@ update_rotation = false
 update_scale = false
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="1" unique_id=227889422]
+position = Vector2(-200, -96.71441)
 rotation = -1.5707964
+progress = 403.28967
+rotates = false
 
 [node name="Node2D" type="Node2D" parent="Offset/Obstacles/Path2D/PathFollow2D2" index="0" unique_id=1622079195]
 position = Vector2(0, -300)
 
 [node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Offset/Obstacles/Path2D/PathFollow2D2/Node2D" index="0" unique_id=1220994921]
-remote_path = NodePath("../../../../MovingPlatform2")
 update_rotation = false
 update_scale = false
 
-[node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_eib1a")]
-position = Vector2(150, 250)
+[node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=324144790 instance=ExtResource("4_eib1a")]
+position = Vector2(144.72717, -50)
 sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform1" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_ticnr")
 
-[node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1273539671 instance=ExtResource("4_eib1a")]
-position = Vector2(-150, 250)
-sync_to_physics = false
-is_platform = true
+[node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1652650217 instance=ExtResource("5_s7bb6")]
+position = Vector2(339, 227)
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform2" index="0" unique_id=1349571073]
-shape = SubResource("RectangleShape2D_ticnr")
-
-[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1760792903 instance=ExtResource("5_6rcpm")]
-position = Vector2(-3, 135)
-rotation = -1.5707964
-scale = Vector2(3, 3)
-
-[node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1295309871 instance=ExtResource("5_6rcpm")]
-position = Vector2(-3, -116)
-rotation = -1.5707964
-scale = Vector2(3, 3)
+[node name="fountain" parent="Offset/Obstacles/Fountain" index="1" unique_id=551777104]
+flip_h = true
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
@@ -345,8 +258,6 @@ scale = Vector2(3, 3)
 [editable path="Offset/Obstacles/Platform8"]
 [editable path="Offset/Obstacles/Platform11"]
 [editable path="Offset/Obstacles/Platform14"]
-[editable path="Offset/Obstacles/Platform12"]
-[editable path="Offset/Obstacles/Platform13"]
 [editable path="Offset/Obstacles/Wall2"]
 [editable path="Offset/Obstacles/MovingPlatform1"]
-[editable path="Offset/Obstacles/MovingPlatform2"]
+[editable path="Offset/Obstacles/Fountain"]
