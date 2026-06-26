@@ -74,7 +74,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(153.69539, -93.77849, -153.69539, 93.77849, 457.3518, 12.65564, 31.918108, 25.960629, -31.918108, -25.960629, 278.70142, 39.74829, 34.900356, 9.470459, -34.900356, -9.470459, 112.85449, 35.77539, -182.72433, 139.30011, 182.72433, -139.30011, 181.61523, -150.43127)
+"points": PackedVector2Array(178.53224, -6.623726, -178.53224, 6.623726, 378, 245, 31.918108, 25.960629, -31.918108, -25.960629, 184, 193, 67.86563, 19.856777, -67.86563, -19.856777, 96, 107, -259.0412, 66.59588, 259.0412, -66.59588, 244, -50)
 }
 point_count = 4
 
@@ -169,14 +169,13 @@ rotation = -0.101229094
 shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=790154690 instance=ExtResource("7_ovd7s")]
-rotation = 0.0
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_vci7n")
 progress = 0.006668369
 hitbox_size = 20.0
 
-[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=545245425]
+[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_ntg8m")
 
 [node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1652650217 instance=ExtResource("7_nnmsu")]
