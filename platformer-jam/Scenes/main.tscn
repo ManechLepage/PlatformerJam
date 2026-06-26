@@ -57,12 +57,13 @@ func _ready() -> void:
 
 func update_lucidity(lucidity):
 	
-	$\"lucid bg\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*5)
-	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*6)
-	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
-	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
-	if lucidity == 0:
+	$\"lucid bg\".material.set_shader_parameter(\"speed\",ease(lucidity/100,3)*5)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,3)*6)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,1.5))
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,1.5))
+	if lucidity == 0 or lucidity >= 60:
 		$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"time_offset\",Time.get_ticks_msec()/1000)
+	
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
@@ -91,6 +92,7 @@ shader_parameter/time_offset = 0.0
 script = ExtResource("1_8gbba")
 initial_room = "tutorial_1"
 initial_player_pos = Vector2(-150, 200)
+initial_lucidity = 20.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),

@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://fbv3k25te8ta" path="res://Scenes/Objects/tutorial_popup.tscn" id="6_04iir"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
-[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="7_04iir"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -193,13 +192,10 @@ offset_left = -46.77806
 offset_top = -291.58325
 offset_right = 335.22192
 offset_bottom = -73.77806
-theme_override_fonts/normal_font = ExtResource("7_04iir")
 theme_override_font_sizes/normal_font_size = 32
 text = "Arrow Keys: Move
 Z: Jump
 X: Meditate
 C: Interact"
-horizontal_alignment = 1
-vertical_alignment = 2
 
 [editable path="Offset/Deco/tutorrial_text"]

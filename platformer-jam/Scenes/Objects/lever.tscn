@@ -13,6 +13,8 @@ _data = {
 }
 
 [node name="Lever" type="Area2D" unique_id=415754532]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_f1e1e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980596293]
@@ -24,5 +26,5 @@ debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1454759670]
 libraries/ = SubResource("AnimationLibrary_m12dp")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

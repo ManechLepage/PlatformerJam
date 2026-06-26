@@ -22,9 +22,10 @@ fill_from = Vector2(0.5, 0.5)
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("e_key", "poem_text")]
+[node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_dtwml")
-e_key = NodePath("EKey")
 poem_text = NodePath("PoemText")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
@@ -52,7 +53,6 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
-clip_contents = false
 offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
@@ -62,8 +62,3 @@ Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
 autowrap_trim_flags = 64
 visible_characters_behavior = 1
-
-[node name="chameau" type="Sprite2D" parent="PoemText" unique_id=94185898]
-position = Vector2(473, -34)
-scale = Vector2(0.3, 0.3)
-texture = SubResource("NoiseTexture2D_g4v7s")

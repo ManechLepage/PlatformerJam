@@ -6,11 +6,11 @@ signal on_activated
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-func _on_body_entered(body: Node2D) -> void:
-	if body is Player: Game.event_manager.interactable_object = self
+func _on_area_entered(area: Node2D) -> void:
+	if area == Game.player.interact_area: Game.event_manager.interactable_object = self
 
-func _on_body_exited(body: Node2D) -> void:
-	if body is Player: Game.event_manager.interactable_object = null
+func _on_area_exited(area: Node2D) -> void:
+	if area == Game.player.interact_area: Game.event_manager.interactable_object = null
 
 func activate():
 	activated = true

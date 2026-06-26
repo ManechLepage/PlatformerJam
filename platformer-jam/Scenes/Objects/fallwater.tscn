@@ -37,6 +37,8 @@ animations = [{
 }]
 
 [node name="FallWater" unique_id=1652650217 instance=ExtResource("1_7b3kl")]
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("2_e4jb5")
 is_always_active = true
 

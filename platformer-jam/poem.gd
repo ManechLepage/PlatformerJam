@@ -9,8 +9,8 @@ var activated: bool = false
 var collecting: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.body_entered.connect(_on_body_entered)
-	self.body_exited.connect(_on_body_exited)
+	area_entered.connect(_on_area_entered)
+	area_exited.connect(_on_area_exited)
 	poem_text.modulate.a = 0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,14 +28,15 @@ func _process(delta: float) -> void:
 			poem_text.modulate.a -= delta*3
 
 		
-func _on_body_entered(body):
-	if body.name == "Player":
+func _on_area_entered(body):
+	print(body)
+	if body == Game.player.interact_area:
 		activated = true
 		
 		
 		
-func _on_body_exited(body):
-	if body.name == "Player":
+func _on_area_exited(body):
+	if body == Game.player.interact_area:
 		activated = false
 		Game.event_manager.interactable_object = null
 		
