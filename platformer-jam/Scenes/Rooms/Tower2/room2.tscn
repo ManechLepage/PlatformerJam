@@ -8,67 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://b3bbg1ec8gyf4" path="res://Scenes/Objects/lever.tscn" id="6_o18ho"]
 [ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="7_g3f8u"]
 
-[sub_resource type="Animation" id="Animation_snhcn"]
-resource_name = "Lucidity"
-step = 0.001953125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform6:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.15, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(36, 261), Vector2(36, -70)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform13:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.35, 0.48),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(397, -129), Vector2(397, -225)]
-}
-
-[sub_resource type="Animation" id="Animation_mhqpd"]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform6:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(36, 261)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform13:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(397, -129)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
-_data = {
-&"Lucidity": SubResource("Animation_snhcn"),
-&"RESET": SubResource("Animation_mhqpd")
-}
-
 [sub_resource type="Animation" id="Animation_o18ho"]
 resource_name = "LeverAnim"
 tracks/0/type = "value"
@@ -157,20 +96,74 @@ size = Vector2(66, 361)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgexx"]
 size = Vector2(68, 63)
 
+[sub_resource type="Animation" id="Animation_snhcn"]
+resource_name = "Lucidity"
+step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Platform6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.15, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(36, 261), Vector2(36, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform13:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.35, 0.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(397, -129), Vector2(397, -225)]
+}
+
+[sub_resource type="Animation" id="Animation_mhqpd"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Platform6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36, 261)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Platform13:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(397, -129)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
+_data = {
+&"Lucidity": SubResource("Animation_snhcn"),
+&"RESET": SubResource("Animation_mhqpd")
+}
+
 [node name="Room4" unique_id=197990627 instance=ExtResource("1_xuur6")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
-reset_on_save = false
-libraries/ = SubResource("AnimationLibrary_mhqpd")
-autoplay = &"Lucidity"
-speed_scale = 0.0
-script = ExtResource("2_okid0")
-
-[node name="LeverAnim" type="AnimationPlayer" parent="." index="1" unique_id=1975828132]
+[node name="LeverAnim" type="AnimationPlayer" parent="." index="0" unique_id=1975828132]
 libraries/ = SubResource("AnimationLibrary_xuur6")
 script = ExtResource("3_xuur6")
 
-[node name="Offset" parent="." index="2" unique_id=652906693]
+[node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-3840, -1080)
 offset = Vector2i(4, 2)
 
@@ -298,7 +291,6 @@ shape = SubResource("RectangleShape2D_rv12o")
 
 [node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("7_g3f8u")]
 position = Vector2(-340, 102)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall" index="0" unique_id=400528529]
 position = Vector2(0, 94.5)
@@ -306,7 +298,6 @@ shape = SubResource("RectangleShape2D_nu0ib")
 
 [node name="Waterfall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1200005425 instance=ExtResource("7_g3f8u")]
 position = Vector2(292, -218)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall2" index="0" unique_id=400528529]
 position = Vector2(0, 149.5)
@@ -318,6 +309,14 @@ position = Vector2(322, 241)
 [node name="CollisionShape2D" parent="Offset/Obstacles/Lever" index="1" unique_id=171960460]
 position = Vector2(7, -21.5)
 shape = SubResource("RectangleShape2D_lgexx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Obstacles/Lever" index="2" unique_id=1601315926]
+reset_on_save = false
+root_node = NodePath("../../../..")
+libraries/ = SubResource("AnimationLibrary_mhqpd")
+autoplay = &"Lucidity"
+speed_scale = 0.0
+script = ExtResource("2_okid0")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]

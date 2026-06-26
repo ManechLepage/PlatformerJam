@@ -76,7 +76,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Offset/Obstacles/Platform8:position")
 tracks/0/interp = 2
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.594604, 1),
@@ -298,7 +298,6 @@ shape = SubResource("RectangleShape2D_rv12o")
 
 [node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("6_dcvk8")]
 position = Vector2(-340, 102)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall" index="0" unique_id=400528529]
 position = Vector2(0, 94.5)
@@ -306,7 +305,6 @@ shape = SubResource("RectangleShape2D_nu0ib")
 
 [node name="Waterfall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1200005425 instance=ExtResource("6_dcvk8")]
 position = Vector2(292, -218)
-min_water = 15.0
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall2" index="0" unique_id=400528529]
 position = Vector2(0, 149.5)

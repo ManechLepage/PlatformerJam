@@ -12,11 +12,11 @@ func enter():
 		Game.player.sprite.play("wash")
 		Game.player.is_washing = true
 	else: 
-		for i in [Game.player.interact_area.get_overlapping_areas()]:
+		for i in Game.player.interact_area.get_overlapping_areas():
 			if i is Poem:
 				Game.player.poem_collected += 1
 				i.collect()
-			if i is Lever:
+			elif i is Lever:
 				i.activate()
 			return idle
 	
