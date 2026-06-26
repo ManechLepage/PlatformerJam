@@ -29,7 +29,6 @@ func _process(delta: float) -> void:
 
 		
 func _on_area_entered(body):
-	print(body)
 	if body == Game.player.interact_area:
 		activated = true
 		

@@ -29,7 +29,6 @@ var ground_info: Node2D
 func _ready() -> void:
 	state_machine.init(self)
 	$Sounds/meditate.volume_linear = 0
-	#Game.player.wash_timer.timeout.connect(func(): Game.event_manager.change_lucidity(-10))
 	
 func _physics_process(delta):
 	state_machine.process_physics(delta)
