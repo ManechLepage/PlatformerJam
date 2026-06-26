@@ -64,10 +64,10 @@ size = Vector2(74, 25)
 size = Vector2(32, 194)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jt7r"]
-size = Vector2(66, 412)
+size = Vector2(64, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4uck2"]
-size = Vector2(66, 308)
+size = Vector2(64, 1)
 
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_4uck2")]
 
@@ -127,6 +127,7 @@ shape = SubResource("RectangleShape2D_10rd1")
 
 [node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=238899813 instance=ExtResource("5_g1b11")]
 position = Vector2(578, 272)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
 position = Vector2(-149, -164)
@@ -152,14 +153,12 @@ shape = SubResource("RectangleShape2D_snekd")
 position = Vector2(158, -145)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/FallWater" index="0" unique_id=400528529]
-position = Vector2(0, 175)
 shape = SubResource("RectangleShape2D_5jt7r")
 
 [node name="FallWater2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=405955086 instance=ExtResource("6_dcvk8")]
 position = Vector2(-128, -146)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/FallWater2" index="0" unique_id=400528529]
-position = Vector2(0, 123)
 shape = SubResource("RectangleShape2D_4uck2")
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1760792903 instance=ExtResource("6_5jt7r")]

@@ -82,11 +82,9 @@ is_always_active = true
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=400528529]
 z_index = 1
-position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_e4jb5")
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="1" unique_id=678994796]
-position = Vector2(0, -31)
 target_position = Vector2(0, 2000)
 collision_mask = 32
 
@@ -98,7 +96,6 @@ animation = &"active"
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3" unique_id=2037187427]
 texture_repeat = 2
-position = Vector2(0, -32)
 texture = ExtResource("3_x111f")
 hframes = 3
 region_enabled = true

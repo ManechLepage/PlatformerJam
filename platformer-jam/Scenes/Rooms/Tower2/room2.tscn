@@ -156,10 +156,10 @@ size = Vector2(88, 11)
 size = Vector2(136, 23.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu0ib"]
-size = Vector2(66, 276)
+size = Vector2(64, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o18ho"]
-size = Vector2(77, 361)
+size = Vector2(64, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgexx"]
 size = Vector2(68, 63)
@@ -331,14 +331,12 @@ shape = SubResource("RectangleShape2D_rv12o")
 position = Vector2(-340, 102)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall" index="0" unique_id=400528529]
-position = Vector2(0, 94.5)
 shape = SubResource("RectangleShape2D_nu0ib")
 
 [node name="Waterfall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1200005425 instance=ExtResource("7_g3f8u")]
 position = Vector2(292, -218)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Waterfall2" index="0" unique_id=400528529]
-position = Vector2(5.5, 149.5)
 shape = SubResource("RectangleShape2D_o18ho")
 
 [node name="Lever" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=415754532 instance=ExtResource("6_o18ho")]
