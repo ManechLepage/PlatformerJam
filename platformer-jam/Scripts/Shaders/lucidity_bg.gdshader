@@ -6,9 +6,8 @@ uniform vec4 colorC : source_color = vec4(1.0, 0.2, 0.4,1.0);
 uniform bool discomode = false;
 uniform float speed : hint_range(-2.0, 2.0) = 1.0;
 uniform float alpha : hint_range(0., 1.) = 1.0;
-uniform float time_offset;
 
-#define iTime ((TIME+200.f - time_offset) * speed)
+#define iTime ((TIME*0.5)+(200.f * speed))
 
 float rand(vec4 p) {
     return fract(sin(p.x*1234. + p.y*2345. + p.z*3456. + p.w*4567.) * 5678.);

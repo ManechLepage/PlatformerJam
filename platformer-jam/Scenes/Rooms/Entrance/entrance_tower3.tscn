@@ -26,6 +26,9 @@ size = Vector2(779, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(987, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtw1x"]
+size = Vector2(462, 193)
+
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_osvg5")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
@@ -101,6 +104,14 @@ script = ExtResource("5_wtw1x")
 position = Vector2(-119, 31)
 polygon = PackedVector2Array(-352, -29, -1173, -61, -1358, -52, -1387, 37, -367, 67)
 one_way_collision = true
+
+[node name="Platform4" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=2014530456]
+position = Vector2(960, 247)
+script = ExtResource("5_wtw1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=553444437]
+position = Vector2(-1589, 70)
+shape = SubResource("RectangleShape2D_wtw1x")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
