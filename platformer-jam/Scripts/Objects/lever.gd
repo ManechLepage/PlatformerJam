@@ -12,6 +12,6 @@ func _on_area_entered(area: Node2D) -> void:
 func _on_area_exited(area: Node2D) -> void:
 	if area == Game.player.interact_area: Game.event_manager.interactable_object = null
 
-func activate():
+func interact():
 	activated = true
 	on_activated.emit()
