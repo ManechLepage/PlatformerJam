@@ -3,9 +3,10 @@ extends AnimatableBody2D
 
 @export var is_platform: bool = false
 
-@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var collision_shape_2d: CollisionShape2D
 
 func _ready() -> void:
+	if $CollisionShape2D: collision_shape_2d = $CollisionShape2D
 	if is_platform: collision_shape_2d.one_way_collision = true
 
 func _input(event: InputEvent) -> void:

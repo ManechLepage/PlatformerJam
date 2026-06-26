@@ -24,7 +24,8 @@ func process_physics(delta):
 	flip_character(direction)
 	
 	if direction != 0:
-		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed, acceleration * delta)
+		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed*(3 if Input.is_action_pressed("run") else 1), acceleration * delta)
+		
 	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()

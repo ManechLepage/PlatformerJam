@@ -1699,12 +1699,21 @@ shape = SubResource("RectangleShape2D_snhcn")
 
 [node name="Platform" parent="Offset/Obstacles" index="2" unique_id=1645739517 instance=ExtResource("2_5khlg")]
 position = Vector2(0, 247)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="Platform2" parent="Offset/Obstacles" index="3" unique_id=1356621709 instance=ExtResource("2_5khlg")]
+[node name="Platform5" parent="Offset/Obstacles" index="3" unique_id=837017146 instance=ExtResource("2_5khlg")]
+position = Vector2(0, 122)
+collision_layer = 33
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
+position = Vector2(-2.5, 1.5)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Platform2" parent="Offset/Obstacles" index="4" unique_id=1356621709 instance=ExtResource("2_5khlg")]
 position = Vector2(254, 63)
 is_platform = true
 
@@ -1717,7 +1726,7 @@ z_index = -1
 position = Vector2(0, -43)
 scale = Vector2(1.0017401, 1)
 
-[node name="Platform4" type="AnimatableBody2D" parent="Offset/Obstacles" index="4" unique_id=548385452]
+[node name="Platform4" type="AnimatableBody2D" parent="Offset/Obstacles" index="5" unique_id=548385452]
 position = Vector2(-960, 247)
 script = ExtResource("9_aor2i")
 
@@ -1725,7 +1734,7 @@ script = ExtResource("9_aor2i")
 position = Vector2(-119, 31)
 polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
 
-[node name="Platform3" parent="Offset/Obstacles" index="5" unique_id=889086938 instance=ExtResource("2_5khlg")]
+[node name="Platform3" parent="Offset/Obstacles" index="6" unique_id=889086938 instance=ExtResource("2_5khlg")]
 position = Vector2(156, -257)
 is_platform = true
 
@@ -1733,8 +1742,8 @@ is_platform = true
 position = Vector2(-9.15625, -4)
 shape = SubResource("RectangleShape2D_4il0d")
 
-[node name="Block2" parent="Offset/Obstacles" index="6" unique_id=1647798916 instance=ExtResource("2_5khlg")]
-position = Vector2(-240, 27)
+[node name="Block2" parent="Offset/Obstacles" index="7" unique_id=1647798916 instance=ExtResource("2_5khlg")]
+position = Vector2(-306, 23)
 sync_to_physics = false
 is_platform = true
 
@@ -1747,7 +1756,7 @@ position = Vector2(1, -3.5)
 shape = SubResource("RectangleShape2D_lrn1a")
 
 [node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Block2" index="2" unique_id=2082362994]
-position = Vector2(-21.999985, -21)
+position = Vector2(-23.621017, -9.5781555)
 texture = ExtResource("7_7hyjq")
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Block2" index="3" unique_id=779525641]
@@ -1760,10 +1769,10 @@ position = Vector2(12.378983, -14.5781555)
 scale = Vector2(1.7607323, 1)
 texture = ExtResource("9_7acu6")
 
-[node name="vine2" type="Line2D" parent="Offset/Obstacles" index="7" unique_id=1323222840]
+[node name="vine2" type="Line2D" parent="Offset/Obstacles" index="8" unique_id=1323222840]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 15.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1771,7 +1780,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.0
+progress = 0.09999999999999998
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1780,10 +1789,10 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine2" index="0" unique_id=963478316]
 curve = SubResource("Curve2D_3r3i8")
 
-[node name="vine3" type="Line2D" parent="Offset/Obstacles" index="8" unique_id=1793787206]
+[node name="vine3" type="Line2D" parent="Offset/Obstacles" index="9" unique_id=1793787206]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 0.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1791,7 +1800,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
+progress = 0.09999999999999998
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1800,10 +1809,30 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine3" index="0" unique_id=462271414]
 curve = SubResource("Curve2D_ki1o7")
 
-[node name="vine4" type="Line2D" parent="Offset/Obstacles" index="9" unique_id=852055521]
+[node name="vine4" type="Line2D" parent="Offset/Obstacles" index="10" unique_id=852055521]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 0.0
+width = 80.0
+width_curve = SubResource("Curve_x34c6")
+default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("11_3r3i8")
+grad = SubResource("Gradient_omffa")
+sample_count = 3.0
+texture_base = SubResource("GradientTexture2D_x34c6")
+has_hitbox = true
+hitbox_scene = ExtResource("12_7acu6")
+hitbox_size = 22.0
+
+[node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine4" index="0" unique_id=110737289]
+curve = SubResource("Curve2D_0a7fl")
+
+[node name="vine5" type="Line2D" parent="Offset/Obstacles" index="11" unique_id=2010550358]
+texture_filter = 1
+points = PackedVector2Array(0, 0)
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1818,34 +1847,13 @@ has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
 hitbox_size = 22.0
 
-[node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine4" index="0" unique_id=110737289]
-curve = SubResource("Curve2D_0a7fl")
-
-[node name="vine5" type="Line2D" parent="Offset/Obstacles" index="10" unique_id=2010550358]
-texture_filter = 1
-points = PackedVector2Array(0, 0)
-width = 0.0
-width_curve = SubResource("Curve_x34c6")
-default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-script = ExtResource("11_3r3i8")
-grad = SubResource("Gradient_omffa")
-progress = 0.1
-sample_count = 3.0
-texture_base = SubResource("GradientTexture2D_x34c6")
-has_hitbox = true
-hitbox_scene = ExtResource("12_7acu6")
-hitbox_size = 22.0
-
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine5" index="0" unique_id=742034994]
 curve = SubResource("Curve2D_ugaml")
 
-[node name="vine6" type="Line2D" parent="Offset/Obstacles" index="11" unique_id=1805944183]
+[node name="vine6" type="Line2D" parent="Offset/Obstacles" index="12" unique_id=1805944183]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 0.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1853,7 +1861,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.1
+progress = 0.09999999999999998
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1863,10 +1871,10 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine6" index="0" unique_id=1300983946]
 curve = SubResource("Curve2D_5diaa")
 
-[node name="vine7" type="Line2D" parent="Offset/Obstacles" index="12" unique_id=289618919]
+[node name="vine7" type="Line2D" parent="Offset/Obstacles" index="13" unique_id=289618919]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 0.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1884,7 +1892,7 @@ hitbox_size = 22.0
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles/vine7" index="0" unique_id=1672302656]
 curve = SubResource("Curve2D_aeexq")
 
-[node name="platform" type="Node2D" parent="Offset/Obstacles" index="13" unique_id=1955422583]
+[node name="platform" type="Node2D" parent="Offset/Obstacles" index="14" unique_id=1955422583]
 z_index = -1
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/platform" index="0" unique_id=810378075]
@@ -2159,7 +2167,7 @@ texture = ExtResource("8_3r3i8")
 
 [node name="Brick10" type="Sprite2D" parent="Offset/Deco/wall" index="14" unique_id=1705039424]
 position = Vector2(-342, -147)
-rotation = 4.888855
+rotation = 4.8888545
 texture = ExtResource("8_3r3i8")
 
 [node name="Brick11" type="Sprite2D" parent="Offset/Deco/wall" index="15" unique_id=1087345458]
@@ -2237,7 +2245,6 @@ texture = ExtResource("10_i8h6m")
 [node name="Leaf1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=61374778]
 position = Vector2(-31, -68)
 rotation = 0.10382633
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("17_5diaa")
 
 [node name="Plantplat1" parent="Offset/Deco/Leaf1" index="0" unique_id=204660041 instance=ExtResource("2_5khlg")]
@@ -2262,7 +2269,6 @@ flip_h = true
 [node name="Leaf4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1186905792]
 position = Vector2(28, 49)
 rotation = 0.2714164
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("18_aeexq")
 
 [node name="Plantplat1" parent="Offset/Deco/Leaf4" index="0" unique_id=496334771 instance=ExtResource("2_5khlg")]
@@ -2286,25 +2292,24 @@ flip_h = true
 [node name="Leaf5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=525021691]
 position = Vector2(-32, -135)
 rotation = 1.3441105
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_fig8b")
 
 [node name="Leaf6" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=1927232801]
 position = Vector2(14, -19)
 rotation = 0.23959897
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.3574546, 0.16263826)
 texture = ExtResource("18_aeexq")
 
 [node name="Leaf7" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=363876438]
 position = Vector2(-75, -120)
 rotation = -1.7314351
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(1.5779955, 1)
 texture = ExtResource("19_fig8b")
 
 [node name="vine" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="8" unique_id=901383637]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 40.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -2312,7 +2317,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("12_7acu6")
@@ -2323,14 +2327,13 @@ curve = SubResource("Curve2D_dsljk")
 [node name="Leaf8" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="9" unique_id=983725492]
 position = Vector2(78, -219)
 rotation = 1.1922011
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_fig8b")
 
 [node name="vine8" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="10" unique_id=333113396]
 z_index = -2
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 0.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -2360,7 +2363,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_ki1o7")
-progress = 0.0
+progress = 0.1
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("12_7acu6")
@@ -2384,6 +2387,7 @@ curve = SubResource("Curve2D_ab2yi")
 [editable path="Offset/Obstacles/Wall"]
 [editable path="Offset/Obstacles/Wall2"]
 [editable path="Offset/Obstacles/Platform"]
+[editable path="Offset/Obstacles/Platform5"]
 [editable path="Offset/Obstacles/Platform2"]
 [editable path="Offset/Obstacles/Platform3"]
 [editable path="Offset/Obstacles/Block2"]

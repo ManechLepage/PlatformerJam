@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="3_x111f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4jb5"]
-size = Vector2(66, 62)
+size = Vector2(64, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16o5y"]
 atlas = ExtResource("3_x111f")
@@ -36,6 +36,44 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_16o5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_x111f"]
+resource_name = "fallwater"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16o5y"]
+_data = {
+&"RESET": SubResource("Animation_16o5y"),
+&"fallwater": SubResource("Animation_x111f")
+}
+
 [node name="FallWater" unique_id=1652650217 instance=ExtResource("1_7b3kl")]
 collision_layer = 16
 collision_mask = 16
@@ -43,6 +81,7 @@ script = ExtResource("2_e4jb5")
 is_always_active = true
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=400528529]
+position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_e4jb5")
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="1" unique_id=678994796]
@@ -51,5 +90,19 @@ target_position = Vector2(0, 2000)
 collision_mask = 32
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2" unique_id=1622195148]
+visible = false
+texture_repeat = 2
 sprite_frames = SubResource("SpriteFrames_e4jb5")
 animation = &"active"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3" unique_id=2037187427]
+texture_repeat = 2
+position = Vector2(0, -32)
+texture = ExtResource("3_x111f")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 189, 64)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1412752901]
+libraries/ = SubResource("AnimationLibrary_16o5y")
+autoplay = &"fallwater"
