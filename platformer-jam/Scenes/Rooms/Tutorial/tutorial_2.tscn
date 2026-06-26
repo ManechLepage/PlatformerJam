@@ -83,8 +83,8 @@ scale = Vector2(10.83, 1)
 room_name = "tutorial_1"
 
 [node name="RoomTrigger2" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=304015578 instance=ExtResource("2_l3fbw")]
-position = Vector2(-288, -252)
-scale = Vector2(19.31, 1)
+position = Vector2(-417, -276)
+scale = Vector2(7.2699976, 1)
 room_name = "tutorial_3"
 
 [node name="Enter_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("3_0p57m")]
@@ -110,7 +110,7 @@ scale = Vector2(1.135, 17.035)
 [node name="Right_ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1874509105 instance=ExtResource("3_0p57m")]
 position = Vector2(95.99999, -151.99997)
 rotation = 1.8709929
-scale = Vector2(3.04, 19.645)
+scale = Vector2(2.9928472, 47.414444)
 
 [node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=721685211 instance=ExtResource("3_0p57m")]
 position = Vector2(282, 54)

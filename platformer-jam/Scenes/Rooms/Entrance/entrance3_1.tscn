@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_s75va"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_5tk1n"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_o7sgk"]
-[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_d1m4r"]
+[ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="4_s75va"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="5_5tk1n"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -21,9 +22,6 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
-size = Vector2(987, 45)
 
 [node name="Room2" unique_id=197990627 instance=ExtResource("1_s75va")]
 
@@ -71,16 +69,17 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_d1m4r")]
+[node name="Platform" type="AnimatableBody2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517]
 position = Vector2(0, 247)
+script = ExtResource("4_s75va")
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
-position = Vector2(-2.5, 1.5)
-scale = Vector2(1.8399987, 1)
-shape = SubResource("RectangleShape2D_5khlg")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1173306898]
+position = Vector2(-119, 31)
+polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
+
+[node name="Fountain" parent="Offset" index="5" unique_id=1652650217 instance=ExtResource("5_5tk1n")]
+position = Vector2(372, 170)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
-
-[editable path="Offset/Obstacles/Platform"]
