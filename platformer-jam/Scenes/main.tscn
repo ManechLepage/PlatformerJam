@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
 [ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="21_8cuat"]
 [ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
+[ext_resource type="PackedScene" uid="uid://bqanx6lfy322q" path="res://Scenes/Rooms/Tutorial/tutorial_3.tscn" id="22_aqgau"]
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
 [ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
@@ -94,8 +95,8 @@ shader_parameter/time_offset = 0.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower2-02"
-initial_player_pos = Vector2(-3518, -839)
+initial_room = "tutorial_1"
+initial_player_pos = Vector2(-1750, 1575)
 initial_lucidity = 35.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
@@ -117,7 +118,8 @@ rooms = Dictionary[String, PackedScene]({
 "Tower3-02": ExtResource("17_hdf80"),
 "Tower3-03": ExtResource("19_536cc"),
 "tutorial_1": ExtResource("4_344ge"),
-"tutorial_2": ExtResource("5_ynf5e")
+"tutorial_2": ExtResource("5_ynf5e"),
+"tutorial_3": ExtResource("22_aqgau")
 })
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]

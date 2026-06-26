@@ -9,6 +9,19 @@
 [ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="7_00tp4"]
 [ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="8_77dp3"]
 [ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="9_xersf"]
+[ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_pdf00"]
+[ext_resource type="PackedScene" uid="uid://cjrnk2llrhgee" path="res://Scenes/Rooms/Tower2/room2.tscn" id="11_a6gra"]
+[ext_resource type="PackedScene" uid="uid://cu88yf82xmmb4" path="res://Scenes/Rooms/Tower2/room3.tscn" id="12_dwqlq"]
+[ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="13_15c7i"]
+[ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="14_xpeyw"]
+[ext_resource type="PackedScene" uid="uid://b70mnpwhd1c3b" path="res://Scenes/Rooms/Tower3/room3.tscn" id="15_dpmuy"]
+[ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="16_yww54"]
+[ext_resource type="PackedScene" uid="uid://da4t2etmo8yxl" path="res://Scenes/Rooms/Bridges/bridge2.tscn" id="17_j75vh"]
+[ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="18_rrpoi"]
+[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="19_34fux"]
+[ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="20_ppv7d"]
+[ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="21_naet1"]
+[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="22_6qlrc"]
 
 [sub_resource type="Gradient" id="Gradient_mf4mk"]
 interpolation_mode = 1
@@ -20,75 +33,75 @@ offsets = PackedFloat32Array(0, 0.4759036)
 noise = SubResource("FastNoiseLite_37kl0")
 color_ramp = SubResource("Gradient_mf4mk")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xersf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdf00"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
 
-[sub_resource type="Gradient" id="Gradient_00tp4"]
+[sub_resource type="Gradient" id="Gradient_a6gra"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_77dp3"]
+[sub_resource type="Curve2D" id="Curve2D_dwqlq"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-78.72921, 64.74469, 78.72921, -64.74469, -471, 250, 14.93474, 77.40556, -14.93474, -77.40556, -315, 169, -18.26706, 146.42989, 18.26706, -146.42989, -368, 39)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_5tkv4"]
+[sub_resource type="Curve2D" id="Curve2D_15c7i"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(48.645416, 109.67993, -48.645416, -109.67993, -175, 315, -9.668274, 57.093216, 9.668274, -57.093216, -353, 174, 25.709076, 159.56949, -25.709076, -159.56949, -306, 31)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_0m0f1"]
+[sub_resource type="Curve2D" id="Curve2D_xpeyw"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-161.35458, 258.67993, 161.35458, -258.67993, -237, 332, -75.472115, 236.18773, 75.472115, -236.18773, -17, 262, -46, 77, 46, -77, 300, 166, 209.70908, -142.43051, -209.70908, 142.43051, 187, -20)
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_b0q6j"]
+[sub_resource type="Curve2D" id="Curve2D_dpmuy"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-270.7803, 499.64008, 270.7803, -499.64008, 219, 368, -51.88718, 144.82172, 51.88718, -144.82172, 26, 206, -53.979, 108.61301, 53.979, -108.61301, 329, 65, 47.709076, 143.56949, -47.709076, -143.56949, 321, -257)
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_mhym6"]
+[sub_resource type="Curve2D" id="Curve2D_yww54"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(93.23251, 181.59048, -93.23251, -181.59048, 427, 251, -62.482178, 144.66745, 62.482178, -144.66745, 68, 198, -48.61157, 142.4628, 48.61157, -142.4628, 329, 65, 47.709076, 143.56949, -47.709076, -143.56949, 321, -257)
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_a3se8"]
+[sub_resource type="Curve2D" id="Curve2D_j75vh"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-35.767487, 280.59048, 35.767487, -280.59048, 17, 341, -90.48218, 12.66745, 90.48218, -12.66745, 160, 267, -119.61157, 90.4628, 119.61157, -90.4628, 186, 156, 131.39708, 546.5655, -131.39708, -546.5655, 289, -291)
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_uty7l"]
+[sub_resource type="Curve2D" id="Curve2D_rrpoi"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-22.554474, 29.029297, 22.554474, -29.029297, -318, 124, -55.910294, 76.98562, 55.910294, -76.98562, -339, -3.000001, 5, 44, -5, -44, -310, -108, 7.9474106, 21.556728, -7.9474106, -21.556728, -294, -201)
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_45l4g"]
+[sub_resource type="Gradient" id="Gradient_34fux"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_4uo0j"]
+[sub_resource type="Curve2D" id="Curve2D_ppv7d"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(172.74529, 237.71869, -172.74529, -237.71869, 343, -324, 61.51779, -131.53766, -61.51779, 131.53766, -54, -365, 61.87045, 180.1038, -61.87045, -180.1038, 57, -227, -311.06427, -47.844612, 311.06427, 47.844612, 128, 67)
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_vxl6d"]
+[sub_resource type="Curve2D" id="Curve2D_naet1"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(172.74529, 237.71869, -172.74529, -237.71869, -149, 396, -1.2921104, 113.25988, 1.2921104, -113.25988, 143, -29, 137.56442, -77.577835, -137.56442, 77.577835, -223, -266, -280.46457, 403.09827, 280.46457, -403.09827, 246, -200)
@@ -125,64 +138,90 @@ expand_mode = 2
 [node name="Room3" parent="." unique_id=1192215833 instance=ExtResource("9_xersf")]
 
 [node name="CollisionShape2D" parent="Room3/Offset/RoomTriggers/RoomTrigger" parent_id_path=PackedInt32Array(1192215833, 174834819) index="0" unique_id=449186360]
-shape = SubResource("RectangleShape2D_xersf")
+shape = SubResource("RectangleShape2D_pdf00")
 
 [node name="CollisionShape2D" parent="Room3/Offset/RoomTriggers/RoomTrigger2" parent_id_path=PackedInt32Array(1192215833, 2096990041) index="0" unique_id=630776865]
-shape = SubResource("RectangleShape2D_xersf")
+shape = SubResource("RectangleShape2D_pdf00")
 
 [node name="vine2" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="7" unique_id=1323222840]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine2" index="0" unique_id=963478316]
-curve = SubResource("Curve2D_77dp3")
+curve = SubResource("Curve2D_dwqlq")
 
 [node name="vine3" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="8" unique_id=1793787206]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine3" index="0" unique_id=462271414]
-curve = SubResource("Curve2D_5tkv4")
+curve = SubResource("Curve2D_15c7i")
 
 [node name="vine4" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="9" unique_id=852055521]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine4" index="0" unique_id=110737289]
-curve = SubResource("Curve2D_0m0f1")
+curve = SubResource("Curve2D_xpeyw")
 
 [node name="vine5" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="10" unique_id=2010550358]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine5" index="0" unique_id=742034994]
-curve = SubResource("Curve2D_b0q6j")
+curve = SubResource("Curve2D_dpmuy")
 
 [node name="vine6" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="11" unique_id=1805944183]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine6" index="0" unique_id=1300983946]
-curve = SubResource("Curve2D_mhym6")
+curve = SubResource("Curve2D_yww54")
 
 [node name="vine7" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="12" unique_id=289618919]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine7" index="0" unique_id=1672302656]
-curve = SubResource("Curve2D_a3se8")
+curve = SubResource("Curve2D_j75vh")
 
 [node name="vine" parent="Room3/Offset/Deco" parent_id_path=PackedInt32Array(1192215833, 102725464) index="8" unique_id=901383637]
-grad = SubResource("Gradient_00tp4")
+grad = SubResource("Gradient_a6gra")
 
 [node name="Path2D" parent="Room3/Offset/Deco/vine" index="0" unique_id=545245425]
-curve = SubResource("Curve2D_uty7l")
+curve = SubResource("Curve2D_rrpoi")
 
 [node name="vine8" parent="Room3/Offset/Deco" parent_id_path=PackedInt32Array(1192215833, 102725464) index="10" unique_id=333113396]
-grad = SubResource("Gradient_45l4g")
+grad = SubResource("Gradient_34fux")
 
 [node name="Path2D" parent="Room3/Offset/Deco/vine8" index="0" unique_id=368567434]
-curve = SubResource("Curve2D_4uo0j")
+curve = SubResource("Curve2D_ppv7d")
 
 [node name="vine9" parent="Room3/Offset/Deco" parent_id_path=PackedInt32Array(1192215833, 102725464) index="11" unique_id=722074932]
-grad = SubResource("Gradient_45l4g")
+grad = SubResource("Gradient_34fux")
 
 [node name="Path2D" parent="Room3/Offset/Deco/vine9" index="0" unique_id=695691212]
-curve = SubResource("Curve2D_vxl6d")
+curve = SubResource("Curve2D_naet1")
+
+[node name="Room8" parent="." unique_id=1775097023 instance=ExtResource("10_pdf00")]
+
+[node name="Room9" parent="." unique_id=1131576403 instance=ExtResource("11_a6gra")]
+
+[node name="Room10" parent="." unique_id=1017972457 instance=ExtResource("12_dwqlq")]
+
+[node name="Room11" parent="." unique_id=1746664058 instance=ExtResource("13_15c7i")]
+
+[node name="Room12" parent="." unique_id=1525000192 instance=ExtResource("14_xpeyw")]
+
+[node name="Room13" parent="." unique_id=1749141743 instance=ExtResource("15_dpmuy")]
+
+[node name="Room14" parent="." unique_id=49315948 instance=ExtResource("16_yww54")]
+
+[node name="Room15" parent="." unique_id=507764788 instance=ExtResource("17_j75vh")]
+
+[node name="Room16" parent="." unique_id=1334218086 instance=ExtResource("18_rrpoi")]
+
+[node name="Room17" parent="." unique_id=223881153 instance=ExtResource("19_34fux")]
+
+[node name="Room" parent="." unique_id=543560047 instance=ExtResource("20_ppv7d")]
+
+[node name="Room18" parent="." unique_id=1334847982 instance=ExtResource("21_naet1")]
+
+[node name="Room19" parent="." unique_id=1767600996 instance=ExtResource("22_6qlrc")]
 
 [editable path="Tutorial_2"]
 [editable path="Tutorial_3"]
