@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://do8vo3o07f6ql"]
+
+[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="1_js68f"]
+[ext_resource type="Texture2D" uid="uid://b1tj3ksqps6se" path="res://Sprites/fountain.png" id="2_2fi52"]
+[ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="3_k8u3x"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="4_vixhw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16o5y"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3gfv"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgq6l"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t7i6"]
+atlas = ExtResource("2_2fi52")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8u3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16o5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3gfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgq6l")
+}],
+"loop": 1,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t7i6")
+}],
+"loop": 1,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(66, 62)
+
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_b17am"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Fountain" unique_id=1652650217 instance=ExtResource("1_js68f")]
+collision_layer = 8
+collision_mask = 8
+
+[node name="fountain" type="AnimatedSprite2D" parent="." index="1" unique_id=551777104]
+sprite_frames = SubResource("SpriteFrames_k8u3x")
+animation = &"active"
+
+[node name="Area" type="Area2D" parent="." index="2" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("3_k8u3x")
+poem_text = NodePath("PoemText")
+destroyable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" index="0" unique_id=774410109]
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.7948995, 0.37901923, 0.5154127, 0.41960785)
+
+[node name="Parchemin" type="CPUParticles2D" parent="Area" index="1" unique_id=2027513]
+position = Vector2(0, 8.999998)
+scale = Vector2(0.5900765, 0.5900765)
+amount = 32
+texture = SubResource("GradientTexture2D_e0tat")
+lifetime = 2.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(8, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+damping_min = 30.0
+damping_max = 30.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_b17am")
+
+[node name="PoemText" type="RichTextLabel" parent="Area" index="2" unique_id=1098363463]
+offset_left = -25.0
+offset_top = -73.0
+offset_right = 25.0
+offset_bottom = -47.0
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("4_vixhw")
+theme_override_font_sizes/normal_font_size = 16
+text = "[C]"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1

@@ -331,7 +331,8 @@ speed_scale = 0.0
 script = ExtResource("2_cheee")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
-position = Vector2(1, -2127)
+position = Vector2(0, -2160)
+offset = Vector2i(0, 4)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -421,18 +422,17 @@ sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D3/PathFollow2D/Wall3" index="0" unique_id=1349571073]
 position = Vector2(-3.0517578e-05, 18)
+rotation = -4.6198864
 shape = SubResource("RectangleShape2D_3k6h7")
 
 [node name="Path2D2" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1533829528]
 curve = SubResource("Curve2D_itnsy")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D2" index="0" unique_id=174621919]
-position = Vector2(392.78882, -195.64656)
-progress = 755.03253
+position = Vector2(212, 324)
 rotates = false
 
 [node name="Wall3" parent="Offset/Obstacles/Path2D2/PathFollow2D" index="0" unique_id=1960580640 instance=ExtResource("4_kr4pd")]
-rotation = -4.3057675
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D2/PathFollow2D/Wall3" index="0" unique_id=1349571073]
@@ -446,6 +446,7 @@ position = Vector2(-37, 224)
 position = Vector2(-303, 88)
 rotation = -4.389503
 width_curve = SubResource("Curve_nx8yr")
+progress = 0.0
 
 [node name="Path2D" parent="Offset/Obstacles/Vine" index="0" unique_id=545245425]
 curve = SubResource("Curve2D_vwbao")
@@ -454,6 +455,7 @@ curve = SubResource("Curve2D_vwbao")
 position = Vector2(-163.99997, 78)
 rotation = 0.0
 width_curve = SubResource("Curve_nx8yr")
+progress = 0.0
 
 [node name="Path2D" parent="Offset/Obstacles/Vine2" index="0" unique_id=545245425]
 position = Vector2(-2.5629997e-05, -17.000086)
@@ -463,7 +465,8 @@ curve = SubResource("Curve2D_hpt3e")
 position = Vector2(-232, 92)
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1760792903 instance=ExtResource("8_hpt3e")]
-position = Vector2(-253, 45)
+position = Vector2(-243, 43)
+scale = Vector2(1e-05, 1e-05)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

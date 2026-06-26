@@ -22,7 +22,8 @@ func process_inputs(event):
 	if Input.is_action_just_pressed("Meditate"):
 		return meditate_idle
 	if Input.is_action_just_pressed("Interact"):
-		return interact
+		if Game.player.interact_area.get_overlapping_areas() or Game.player.wash_area.get_overlapping_areas():
+			return interact
 	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():
 		return jump
 	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):

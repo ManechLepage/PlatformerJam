@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b3bbg1ec8gyf4"]
+
+[ext_resource type="Script" uid="uid://cfe5cwxh4rnyh" path="res://Scripts/Objects/lever.gd" id="1_f1e1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+
+[node name="Lever" type="Area2D" unique_id=415754532]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_f1e1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980596293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=171960460]
+shape = SubResource("RectangleShape2D_yf5fn")
+debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

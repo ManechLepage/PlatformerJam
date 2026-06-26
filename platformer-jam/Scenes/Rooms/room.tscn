@@ -2,26 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cdpq4m5itvhvc" path="res://Scripts/Room/room.gd" id="1_7fk0y"]
 [ext_resource type="Script" uid="uid://7j6kmuhpbc3h" path="res://Scripts/camera.gd" id="2_dyxu8"]
-[ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_g3m34"]
+[ext_resource type="Script" uid="uid://b62xt51lgmhsi" path="res://Scripts/Room/offset.gd" id="2_g3m34"]
 [ext_resource type="Script" uid="uid://lyi0yeqjiv4d" path="res://Scripts/Room/parallax_background.gd" id="3_g3m34"]
-
-[sub_resource type="Animation" id="Animation_g3m34"]
-resource_name = "lucidity"
-length = 100.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_c2haw"]
-_data = {
-&"lucidity": SubResource("Animation_g3m34")
-}
 
 [node name="Room" type="Node2D" unique_id=197990627]
 script = ExtResource("1_7fk0y")
 
-[node name="LucidityAnimator" type="AnimationPlayer" parent="." unique_id=1159320151]
-libraries/ = SubResource("AnimationLibrary_c2haw")
-script = ExtResource("2_g3m34")
-
 [node name="Offset" type="Node2D" parent="." unique_id=652906693]
+script = ExtResource("2_g3m34")
 
 [node name="Camera2D" type="Camera2D" parent="Offset" unique_id=946351804 groups=["Camera"]]
 script = ExtResource("2_dyxu8")
@@ -47,3 +35,5 @@ ignore_camera_scroll = true
 [node name="RoomTriggers" type="Node2D" parent="Offset" unique_id=281844601]
 
 [node name="Obstacles" type="Node2D" parent="Offset" unique_id=457880380]
+
+[node name="Deco" type="Node2D" parent="Offset" unique_id=102725464]

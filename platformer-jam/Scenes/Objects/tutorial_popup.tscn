@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://fbv3k25te8ta"]
+
+[ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="1_3svsb"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="2_e0tat"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 9.535932
+
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_b17am"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Area" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_3svsb")
+poem_text = NodePath("PoemText")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
+scale = Vector2(4.825, 4.825)
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Parchemin" type="CPUParticles2D" parent="." unique_id=2027513]
+position = Vector2(0, 29)
+amount = 32
+texture = SubResource("GradientTexture2D_e0tat")
+lifetime = 2.0
+local_coords = true
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+damping_min = 30.0
+damping_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_b17am")
+
+[node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
+offset_left = -81.0
+offset_top = -351.0
+offset_right = 81.0
+offset_bottom = -47.0
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("2_e0tat")
+theme_override_font_sizes/normal_font_size = 16
+text = "Un chameau moins une bosse est un dromadaire
+Un dromadaire moins une bosse est mort de soif"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1

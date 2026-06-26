@@ -1,20 +1,126 @@
 [gd_scene format=3 uid="uid://d08qp6wyfg55j"]
 
 [ext_resource type="Script" uid="uid://drmplgba2oyv7" path="res://Scripts/Objects/yellow_ball.gd" id="1_1ytvh"]
-[ext_resource type="Texture2D" uid="uid://cai7dkna6mm4v" path="res://Sprites/boulejaune.png" id="1_426vg"]
+[ext_resource type="Texture2D" uid="uid://cplc83eisqsbv" path="res://Sprites/flower.png" id="2_yqdh1"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="3_2k2cl"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xntc"]
 radius = 7.0
 
-[node name="Yellowball" type="Node2D" unique_id=1760792903]
-scale = Vector2(2, 2)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc07u"]
+atlas = ExtResource("2_yqdh1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xntc"]
+atlas = ExtResource("2_yqdh1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58cu4"]
+atlas = ExtResource("2_yqdh1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1fp3"]
+atlas = ExtResource("2_yqdh1")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gep6u"]
+atlas = ExtResource("2_yqdh1")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc07u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xntc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58cu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1fp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gep6u")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_b17am"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="FlowerBounce" type="PathFollow2D" unique_id=376175354 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
+rotation = -2.6776013
+progress = 129.73083
 script = ExtResource("1_1ytvh")
+poem_text = NodePath("AnimatedSprite2D/PoemText")
+particles = NodePath("AnimatedSprite2D/Parchemin")
+sprite = NodePath("AnimatedSprite2D")
 
-[node name="Area" type="Area2D" parent="." unique_id=1068528286]
+[node name="Area" type="Area2D" parent="." unique_id=221360279]
+position = Vector2(6.84587, 11.0965805)
+rotation = 2.5024214
 collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1615720275]
-shape = SubResource("CircleShape2D_bhunq")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1149559205]
+scale = Vector2(3.0204842, 3.0204842)
+shape = SubResource("CircleShape2D_0xntc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226457427]
-texture = ExtResource("1_426vg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1602848246]
+position = Vector2(9.84314, 12.965881)
+rotation = 2.5024214
+scale = Vector2(0.99999994, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+speed_scale = 0.0
+
+[node name="Parchemin" type="CPUParticles2D" parent="AnimatedSprite2D" unique_id=1465008559]
+z_index = -1
+position = Vector2(-0.17434692, 0.9847717)
+scale = Vector2(0.69135666, 0.69135666)
+amount = 32
+texture = SubResource("GradientTexture2D_e0tat")
+lifetime = 2.0
+local_coords = true
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+damping_min = 30.0
+damping_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_b17am")
+
+[node name="PoemText" type="RichTextLabel" parent="AnimatedSprite2D" unique_id=1692101542]
+offset_left = -61.042404
+offset_top = -28.068336
+offset_right = -23.20848
+offset_bottom = -5.5404434
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("3_2k2cl")
+theme_override_font_sizes/normal_font_size = 16
+text = "[Z]"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1

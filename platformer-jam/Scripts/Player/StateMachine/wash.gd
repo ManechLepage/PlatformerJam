@@ -1,31 +1,34 @@
 extends State
 
 @export var wash_power = 0.02
-
 @export var idle: State
-var is_washing: bool = false
+
+
+
 
 func enter():
 	super()
-	Game.player.sprite.play("idle")
-	if Game.event_manager.interactable_object: interact()
+	if Game.player.wash_area.get_overlapping_areas():
+		Game.player.sprite.play("wash")
+		Game.player.is_washing = true
+	else: 
+		for i in Game.player.interact_area.get_overlapping_areas():
+			if i is Poem:
+				Game.player.poem_collected += 1
+				i.collect()
+			elif i is Lever:
+				i.activate()
+			return idle
+	
 
 func exit():
 	super()
-	is_washing = false
 
 func process_inputs(event):
 	if Input.is_action_just_released("Interact"):
+		Game.player.is_washing = false
 		return idle
 	return null
 
-func process_physics(delta):
-	if is_washing: Game.event_manager.change_lucidity(-wash_power*delta)
-	return null
 
-func interact() -> void:
-	if Game.event_manager.interactable_object is Water:
-		is_washing = true
-	if Game.event_manager.interactable_object is Poem:
-		parent.poem_collected += 1
-		Game.event_manager.interactable_object.collect()
+	
