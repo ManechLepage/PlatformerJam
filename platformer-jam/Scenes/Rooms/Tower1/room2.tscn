@@ -1375,6 +1375,7 @@ position = Vector2(283.55472, 167.344)
 rotation = 0.110904805
 scale = Vector2(6.7477736, 1.1125658)
 sync_to_physics = false
+is_platform = true
 
 [node name="Leaf3" type="Sprite2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=2108948881]
 z_index = 3
