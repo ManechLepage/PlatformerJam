@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
 [ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="7_d3ks8"]
 [ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="7_h4d8c"]
+[ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="7_k5wgr"]
 [ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance_tower3.tscn" id="8_itxiy"]
 [ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="9_022hg"]
 [ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_022hg"]
@@ -48,6 +49,8 @@ position = Vector2(-2, -116)
 [node name="Room4" parent="Tower1" unique_id=1783685609 instance=ExtResource("5_jea7g")]
 
 [node name="Room5" parent="Tower1" unique_id=870030527 instance=ExtResource("5_nk8ps")]
+
+[node name="Room6" parent="Tower1" unique_id=288465503 instance=ExtResource("7_k5wgr")]
 
 [node name="Entrance" type="Node2D" parent="." unique_id=1764994515]
 
