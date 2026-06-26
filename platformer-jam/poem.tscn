@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bl1oxp0rndhll"]
+[gd_scene format=3 uid="uid://ts207tomw1sn"]
 
 [ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="1_dtwml"]
 [ext_resource type="Texture2D" uid="uid://dmh4lwxnbnlim" path="res://Sprites/papier parchemin.png" id="2_vdpff"]

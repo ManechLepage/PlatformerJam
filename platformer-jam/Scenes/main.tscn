@@ -90,7 +90,7 @@ func _ready() -> void:
 	$\"../Areas/Tower4Area\".body_entered.connect(func(_body):change_colors(\"4\"))
 	$\"../Areas/BridgeArea1\".body_entered.connect(func(_body):change_colors(\"bridge1\"))
 	$\"../Areas/BridgeArea2\".body_entered.connect(func(_body):change_colors(\"bridge2\"))
-	
+	change_colors(\"start\")
 
 func change_colors(name: String):
 	print(1)
@@ -98,18 +98,26 @@ func change_colors(name: String):
 	for tween in [tweenA,tweenB,tweenC]:
 		if tween: tween.kill()
 	match name:
+		\"start\":
+			c = [area_start_color1,area_start_color2,area_start_color3]
 		\"1\":
 			c = [area_1_color1,area_1_color2,area_1_color3]
+			$\"../MusicManager\".set_pillar_1()
 		\"2\":
 			c = [area_2_color1,area_2_color2,area_2_color3]
+			$\"../MusicManager\".set_pillar_2()
 		\"3\":
 			c = [area_3_color1,area_3_color2,area_3_color3]
+			$\"../MusicManager\".set_pillar_3()
 		\"4\":
 			c = [area_4_color1,area_4_color2,area_4_color3]
+			$\"../MusicManager\".set_pillar_4()
 		\"bridge1\":
 			c = [area_bridge1_color1,area_bridge1_color2,area_bridge1_color3]
+			$\"../MusicManager\".set_brigde()
 		\"bridge2\":
 			c = [area_bridge2_color1,area_bridge2_color2,area_bridge2_color3]
+			$\"../MusicManager\".set_brigde()
 	for i in [$\"lucid bg\",$\"lucid bg/Overlay/lucid overlay\"]:
 		tweenA = create_tween()
 		tweenA.tween_method(set_shader_colorA,$\"lucid bg\".material.get_shader_parameter(\"colorA\"),c[0],2)

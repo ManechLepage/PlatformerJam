@@ -2,6 +2,9 @@ extends Node
 
 @export var sound_layers : Dictionary[String,AudioStreamPlayer]
 @export var sound_lib: Array[AudioStream]
+
+var bridge_tween: Tween
+var bridge_tween_value := 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_pillar_3()
@@ -36,6 +39,15 @@ func set_pillar_3():
 	sound_layers["lucid_3"].stream = sound_lib[11]
 	sound_layers["lucid_4"].stream = null
 	play_at_corrrect_time()
+
+func set_bridge():
+	if bridge_tween: bridge_tween.kill()
+	bridge_tween = create_tween()
+	bridge_tween.tween_method(set_bridge_effects,bridge_tween_value,1.,2)
+
+func set_bridge_effects(val):
+	var rev : AudioEffect = AudioServer.get_bus_effect(2,0)
+	rev.wet = val
 
 func update_vol(lucidity):
 	var ease_vol = func (x): return ease(x,0.3)
