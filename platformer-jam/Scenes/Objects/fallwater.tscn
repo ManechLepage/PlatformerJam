@@ -51,5 +51,6 @@ target_position = Vector2(0, 2000)
 collision_mask = 32
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2" unique_id=1622195148]
+texture_repeat = 2
 sprite_frames = SubResource("SpriteFrames_e4jb5")
 animation = &"active"

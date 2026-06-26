@@ -154,7 +154,7 @@ size = Vector2(31, 136)
 size = Vector2(242, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mixt2"]
-size = Vector2(186, 18.75)
+size = Vector2(108, 18.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ticnr"]
 size = Vector2(78, 18.75)
@@ -282,11 +282,10 @@ shape = SubResource("RectangleShape2D_63yqf")
 
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1239807902 instance=ExtResource("4_xuur6")]
 position = Vector2(238, -257)
-rotation = -3.1415925
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
-position = Vector2(-27, 3.375)
+position = Vector2(66, -3)
 shape = SubResource("RectangleShape2D_mixt2")
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=450566103 instance=ExtResource("4_xuur6")]
@@ -351,6 +350,7 @@ grad = SubResource("Gradient_w0k5t")
 hitbox_size = 10.0
 
 [node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=545245425]
+position = Vector2(0, 0)
 rotation = 0.0
 curve = SubResource("Curve2D_w0k5t")
 
