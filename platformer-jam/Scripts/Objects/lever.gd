@@ -15,4 +15,3 @@ func _on_area_exited(area: Node2D) -> void:
 func activate():
 	activated = true
 	on_activated.emit()
-	animation_player.play("Activate")

@@ -130,6 +130,9 @@ size = Vector2(102.5, 78.875)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1b78x"]
 size = Vector2(142.875, 76.4375)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oan5f"]
+size = Vector2(142.875, 13)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(218, 11)
 
@@ -150,7 +153,7 @@ _data = {
 }
 point_count = 3
 
-[node name="Room3" unique_id=197990627 instance=ExtResource("1_c51jx")]
+[node name="Room4" unique_id=197990627 instance=ExtResource("1_c51jx")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -164,9 +167,9 @@ position = Vector2(-3840, -540)
 offset = Vector2i(4, 1)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
-position = Vector2(-35, -294)
+position = Vector2(-35, -282)
 script = ExtResource("3_ewb4s")
-room_name = "Tower2-01"
+room_name = "Tower2-02"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
 position = Vector2(35.5, -4.5)
@@ -281,14 +284,23 @@ sync_to_physics = false
 position = Vector2(9.5625, -42.78125)
 shape = SubResource("RectangleShape2D_1b78x")
 
-[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=209727397 instance=ExtResource("4_1078h")]
+[node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1631572820 instance=ExtResource("4_1078h")]
+position = Vector2(-163.99997, -188)
+sync_to_physics = false
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
+position = Vector2(9.5625, -74.5)
+shape = SubResource("RectangleShape2D_oan5f")
+
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=209727397 instance=ExtResource("4_1078h")]
 position = Vector2(52, 257)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1669258282 instance=ExtResource("4_1078h")]
+[node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1669258282 instance=ExtResource("4_1078h")]
 position = Vector2(312, 145)
 rotation = 1.5707964
 
@@ -296,7 +308,7 @@ rotation = 1.5707964
 position = Vector2(2.999999, -21)
 shape = SubResource("CircleShape2D_4sqie")
 
-[node name="Ball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=942090950 instance=ExtResource("4_1078h")]
+[node name="Ball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=942090950 instance=ExtResource("4_1078h")]
 position = Vector2(239, 208)
 rotation = 1.5707964
 
@@ -304,7 +316,7 @@ rotation = 1.5707964
 position = Vector2(-7.430936e-07, -17)
 shape = SubResource("CircleShape2D_4sqie")
 
-[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=901383637 instance=ExtResource("5_1hgyl")]
+[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=901383637 instance=ExtResource("5_1hgyl")]
 position = Vector2(-28, 188)
 rotation = 0.0
 width = 40.0
@@ -327,7 +339,7 @@ rotates = false
 
 [node name="Yellowball" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1760792903 instance=ExtResource("6_2fq3i")]
 
-[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1652650217 instance=ExtResource("7_xbu1k")]
+[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="14" unique_id=1652650217 instance=ExtResource("7_xbu1k")]
 position = Vector2(-340, -239)
 min_water = 15.0
 
@@ -345,6 +357,7 @@ min_water = 15.0
 [editable path="Offset/Obstacles/Platform11"]
 [editable path="Offset/Obstacles/Platform10"]
 [editable path="Offset/Obstacles/Platform12"]
+[editable path="Offset/Obstacles/Platform13"]
 [editable path="Offset/Obstacles/Platform5"]
 [editable path="Offset/Obstacles/Ball1"]
 [editable path="Offset/Obstacles/Ball2"]
