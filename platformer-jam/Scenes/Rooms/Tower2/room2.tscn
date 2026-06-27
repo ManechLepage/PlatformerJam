@@ -689,7 +689,7 @@ script = ExtResource("3_lgexx")
 room_name = "Tower2-01"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger4" index="0" unique_id=36847418]
-position = Vector2(35.5, -4.5)
+position = Vector2(35.5, 19)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 

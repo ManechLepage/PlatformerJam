@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_cheee"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_pd6bw"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_kr4pd"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_42vub"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_nx8yr"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="7_vwbao"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="8_3k6h7"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="8_hpt3e"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
@@ -309,11 +309,19 @@ size = Vector2(84, 68)
 _data = [Vector2(0, 0.5), 0.0, 0.0, 0, 1, Vector2(1, 0.5), 0.0, 0.0, 1, 0]
 point_count = 2
 
+[sub_resource type="Gradient" id="Gradient_hpt3e"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
 [sub_resource type="Curve2D" id="Curve2D_vwbao"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 21.359497, -9.498169, 22.70713, 19.388664, -22.70713, -19.388664, -19.22754, -95.90405, 69.0004, -50.22853, -69.0004, 50.22853, -122.95471, -71.29321, 0, 0, 0, 0, -237.95679, -152.1853)
 }
 point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_3k6h7"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_hpt3e"]
 _data = {
@@ -345,7 +353,7 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=932573967]
-position = Vector2(-35, -292)
+position = Vector2(-27, -292)
 script = ExtResource("3_pd6bw")
 room_name = "Tower1-04"
 
@@ -439,34 +447,35 @@ sync_to_physics = false
 position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_vwbao")
 
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("5_42vub")]
-position = Vector2(-37, 224)
-
-[node name="Vine" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=901383637 instance=ExtResource("6_nx8yr")]
+[node name="Vine" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=901383637 instance=ExtResource("6_nx8yr")]
 position = Vector2(-303, 88)
 rotation = -4.389503
 width_curve = SubResource("Curve_nx8yr")
+grad = SubResource("Gradient_hpt3e")
 progress = 0.0
 
-[node name="Path2D" parent="Offset/Obstacles/Vine" index="0" unique_id=545245425]
+[node name="Path2D" parent="Offset/Obstacles/Vine" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_vwbao")
 
-[node name="Vine2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=14962942 instance=ExtResource("6_nx8yr")]
+[node name="Vine2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=14962942 instance=ExtResource("6_nx8yr")]
 position = Vector2(-163.99997, 78)
-rotation = 0.0
 width_curve = SubResource("Curve_nx8yr")
+grad = SubResource("Gradient_3k6h7")
 progress = 0.0
 
-[node name="Path2D" parent="Offset/Obstacles/Vine2" index="0" unique_id=545245425]
+[node name="Path2D" parent="Offset/Obstacles/Vine2" index="0" unique_id=2105629789]
 position = Vector2(-2.5629997e-05, -17.000086)
 curve = SubResource("Curve2D_hpt3e")
 
-[node name="Area" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1754253968 instance=ExtResource("7_vwbao")]
+[node name="Area" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1754253968 instance=ExtResource("7_vwbao")]
 position = Vector2(-232, 92)
 
-[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1760792903 instance=ExtResource("8_hpt3e")]
+[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1760792903 instance=ExtResource("8_hpt3e")]
 position = Vector2(-243, 43)
 scale = Vector2(1e-05, 1e-05)
+
+[node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("8_3k6h7")]
+position = Vector2(-45, -1928)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
