@@ -211,13 +211,13 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_dhyn8"]
+[sub_resource type="Gradient" id="Gradient_088u0"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.5652985)
 colors = PackedColorArray(0.13725491, 0.06666667, 0.09411765, 1, 0.043137256, 0.043137256, 0.09803922, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dhyn8"]
-gradient = SubResource("Gradient_dhyn8")
+gradient = SubResource("Gradient_088u0")
 fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
@@ -605,7 +605,7 @@ shape = SubResource("CircleShape2D_dhyn8")
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=862128788 instance=ExtResource("4_g6egx")]
 z_index = 1
 position = Vector2(324, -39)
-rotation = 3.8473344
+rotation = -3.1415927
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
 position = Vector2(-52.000042, -86.999954)
@@ -803,7 +803,6 @@ curve = SubResource("Curve2D_yyqtu")
 
 [node name="Gear3" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1064850394 instance=ExtResource("10_7hr2r")]
 position = Vector2(429, -10)
-rotation = 5.5130463
 scale = Vector2(1.1574174, 1.1574174)
 enabled = false
 
