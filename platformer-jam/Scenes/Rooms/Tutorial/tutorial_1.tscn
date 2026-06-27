@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="13_ny1y2"]
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="14_43664"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="15_2s322"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="16_2s322"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -1096,19 +1097,34 @@ script/source = "extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if Game.seen_intro: 
+		hide()
+	else:
+		Game.seen_intro = true
+		Game.player.process_mode = Node.PROCESS_MODE_DISABLED
+		animation.animation_finished.connect(anim_done)
+	
+func anim_done(anim):
+	match anim:
+		\"start\":
+			animation.play(\"start_loop\")
+		\"start_2\":
+			animation.play(\"start_loop_2\")
+		\"start_3\":
+			animation.play(\"start_loop_3\")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed(\"intro_continue\"):
 		match animation.current_animation:
-			\"start\":
+			\"start_loop\":
 				animation.play(\"start_2\")
-			\"start_2\":
+			\"start_loop_2\":
 				animation.play(\"start_3\")
-			\"start_3\":
+			\"start_loop_3\":
 				animation.play(\"start_4\")
+				Game.player.process_mode = Node.PROCESS_MODE_INHERIT
 "
 
 [sub_resource type="Animation" id="Animation_04iir"]
@@ -1164,7 +1180,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_xq6d4"]
 resource_name = "start"
-length = 3.996
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1216,7 +1232,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_8pykr"]
 resource_name = "start_2"
-length = 3.996
+length = 0.76666665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1268,7 +1284,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_rwxj0"]
 resource_name = "start_3"
-length = 3.996
+length = 0.76666665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1320,7 +1336,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_653nx"]
 resource_name = "start_4"
-length = 3.996
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1370,13 +1386,175 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_2s322"]
+resource_name = "start_loop"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jo3ao"]
+resource_name = "start_loop_2"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_chp8k"]
+resource_name = "start_loop_3"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_04iir"]
 _data = {
 &"RESET": SubResource("Animation_04iir"),
 &"start": SubResource("Animation_xq6d4"),
 &"start_2": SubResource("Animation_8pykr"),
 &"start_3": SubResource("Animation_rwxj0"),
-&"start_4": SubResource("Animation_653nx")
+&"start_4": SubResource("Animation_653nx"),
+&"start_loop": SubResource("Animation_2s322"),
+&"start_loop_2": SubResource("Animation_jo3ao"),
+&"start_loop_3": SubResource("Animation_chp8k")
 }
 
 [node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
@@ -1612,31 +1790,28 @@ is_platform = true
 
 [node name="Left_ledge" parent="Offset/Obstacles" index="4" unique_id=1274042356 instance=ExtResource("6_xq6d4")]
 modulate = Color(0.11650665, 0.115600005, 0.17, 1)
-position = Vector2(184.00003, -4.9999957)
+position = Vector2(400, -13.999996)
 rotation = -0.057595864
 scale = Vector2(4.52, 0.968)
 is_platform = true
 
-[node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="0" unique_id=181153798]
-position = Vector2(-5.4414988, -3.502288)
-rotation = 0.26300067
-scale = Vector2(0.22873735, 1.0314234)
-skew = -0.2506529
-texture = ExtResource("13_ny1y2")
-
-[node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="2" unique_id=1892343820]
-position = Vector2(-0.23360038, 0.97184277)
-scale = Vector2(0.25154597, 1.0548043)
-texture = ExtResource("14_43664")
-
-[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="3" unique_id=1692040124]
+[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="1" unique_id=1692040124]
 position = Vector2(4.7911463, -11.127368)
 scale = Vector2(0.25154597, 1.0548043)
 texture = ExtResource("14_43664")
 flip_h = true
 
+[node name="Platform1" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="2" unique_id=2063536663]
+z_index = 2
+position = Vector2(1.0661405, 3.3914258)
+rotation = 0.26418424
+scale = Vector2(0.165, 1)
+skew = -0.2565634
+texture = ExtResource("16_2s322")
+flip_h = true
+
 [node name="Door" parent="Offset/Obstacles" index="5" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
-position = Vector2(-10, -12.999996)
+position = Vector2(7, -267)
 rotation = 0.05235988
 scale = Vector2(3.28, 12.27)
 
@@ -1677,7 +1852,7 @@ is_platform = true
 
 [node name="Pilar_2" parent="Offset/Obstacles" index="12" unique_id=1235958755 instance=ExtResource("6_xq6d4")]
 modulate = Color(0.126, 0.161, 0.21, 1)
-position = Vector2(-290.00003, -263)
+position = Vector2(-281, -131.00003)
 rotation = -0.05235988
 scale = Vector2(1, 7.235)
 is_platform = true
@@ -1731,7 +1906,7 @@ offset_bottom = -73.77806
 theme_override_font_sizes/normal_font_size = 32
 text = "Arrow Keys: Move
 Z: Jump
-X: Meditate
+X: Forget Yourself
 C: Interact"
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=379381942]
@@ -2081,36 +2256,36 @@ texture = ExtResource("15_2s322")
 position = Vector2(-40, -268)
 texture = ExtResource("12_bl4lt")
 
-[node name="Brick77" type="Sprite2D" parent="Offset/Deco/wall" index="76" unique_id=1820905092]
-position = Vector2(158, 46)
-texture = ExtResource("14_43664")
-
-[node name="Brick78" type="Sprite2D" parent="Offset/Deco/wall" index="77" unique_id=105383239]
-position = Vector2(202, 59)
+[node name="Brick78" type="Sprite2D" parent="Offset/Deco/wall" index="76" unique_id=105383239]
+position = Vector2(215, 59)
 texture = ExtResource("11_jofkg")
 
-[node name="Brick79" type="Sprite2D" parent="Offset/Deco/wall" index="78" unique_id=1554660307]
+[node name="Brick79" type="Sprite2D" parent="Offset/Deco/wall" index="77" unique_id=1554660307]
 position = Vector2(-240, -64)
 rotation = -1.5136589
 texture = ExtResource("14_43664")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/wall" index="78" unique_id=900168195]
+z_index = 2
+position = Vector2(187, 48)
+texture = ExtResource("16_2s322")
 
 [node name="doors" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1945426363]
 modulate = Color(0.126, 0.161, 0.21, 1)
 z_index = 1
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/doors" index="0" unique_id=1868729369]
-position = Vector2(16, 231)
-rotation = 1.5707964
+position = Vector2(-8, 167)
 texture = ExtResource("11_jofkg")
 
 [node name="Brick15" type="Sprite2D" parent="Offset/Deco/doors" index="1" unique_id=1937065582]
-position = Vector2(-99, 223)
-rotation = -6.2236867
+position = Vector2(-42, 146)
+rotation = -2.9800525
 texture = ExtResource("13_ny1y2")
 
 [node name="Brick16" type="Sprite2D" parent="Offset/Deco/doors" index="2" unique_id=644039006]
-position = Vector2(59, 219)
-rotation = 3.9939373
+position = Vector2(-6, 133)
+rotation = -0.006729209
 texture = ExtResource("14_43664")
 flip_h = true
 
@@ -2123,84 +2298,85 @@ position = Vector2(1, 229)
 texture = ExtResource("15_2s322")
 
 [node name="Brick19" type="Sprite2D" parent="Offset/Deco/doors" index="5" unique_id=1294601794]
-position = Vector2(-54, 217)
-rotation = 0.074264914
+position = Vector2(-40, 214)
 texture = ExtResource("11_jofkg")
 
 [node name="Brick42" type="Sprite2D" parent="Offset/Deco/doors" index="6" unique_id=550175907]
-position = Vector2(44, 219)
+position = Vector2(21, 126)
 rotation = 0.25995588
 texture = ExtResource("15_2s322")
 
 [node name="start top" type="Sprite2D" parent="Offset/Deco/doors" index="7" unique_id=1864145313]
-position = Vector2(-65, -30)
+position = Vector2(2.9999695, -296.59778)
 texture = ExtResource("14_43664")
 
 [node name="Brick48" type="Sprite2D" parent="Offset/Deco/doors" index="8" unique_id=937932382]
-position = Vector2(-155, -41)
+position = Vector2(-150, -293)
 texture = ExtResource("15_2s322")
 
 [node name="Brick49" type="Sprite2D" parent="Offset/Deco/doors" index="9" unique_id=1373489115]
-position = Vector2(-5, -40)
+position = Vector2(14, -235)
+rotation = 0.7853982
 texture = ExtResource("11_jofkg")
 
 [node name="Brick50" type="Sprite2D" parent="Offset/Deco/doors" index="10" unique_id=204925882]
-position = Vector2(-17, -73)
+position = Vector2(50.99997, -339.59775)
+rotation = 2.3010855
 texture = ExtResource("13_ny1y2")
 
 [node name="Brick51" type="Sprite2D" parent="Offset/Deco/doors" index="11" unique_id=2077140612]
-position = Vector2(9.999996, -75)
-rotation = -2.2007825
+position = Vector2(7.9999695, -260.99997)
+rotation = -1.1793822
 texture = ExtResource("14_43664")
 
 [node name="Brick52" type="Sprite2D" parent="Offset/Deco/doors" index="12" unique_id=1494042580]
-position = Vector2(-33, -89)
+position = Vector2(34.99997, -355.59775)
 rotation = -1.2010133
 texture = ExtResource("12_bl4lt")
 
 [node name="Brick68" type="Sprite2D" parent="Offset/Deco/doors" index="13" unique_id=918302846]
-position = Vector2(-53, -63)
+position = Vector2(-35.00003, -336)
 texture = ExtResource("13_ny1y2")
 
 [node name="Brick69" type="Sprite2D" parent="Offset/Deco/doors" index="14" unique_id=952349205]
-position = Vector2(-65, -71)
+position = Vector2(2.9999695, -337.59778)
 texture = ExtResource("14_43664")
 
 [node name="Brick70" type="Sprite2D" parent="Offset/Deco/doors" index="15" unique_id=1989832581]
-position = Vector2(-37.037037, -125.93317)
-rotation = -2.145934
+position = Vector2(24.99997, -387.59775)
+rotation = -1.2010133
 texture = ExtResource("12_bl4lt")
 
 [node name="Brick73" type="Sprite2D" parent="Offset/Deco/doors" index="16" unique_id=218627311]
-position = Vector2(-98, -41)
+position = Vector2(-30.00003, -307.59778)
 texture = ExtResource("14_43664")
 
 [node name="Brick74" type="Sprite2D" parent="Offset/Deco/doors" index="17" unique_id=1416192030]
-position = Vector2(1.230227, -160.96182)
+position = Vector2(-18.00003, -366.99997)
 rotation = -1.2010133
 texture = ExtResource("12_bl4lt")
 
 [node name="Brick75" type="Sprite2D" parent="Offset/Deco/doors" index="18" unique_id=70886554]
-position = Vector2(-50, -30)
-rotation = 2.8577497
+position = Vector2(-43.999954, -302.99994)
+rotation = 0.86233133
 texture = ExtResource("13_ny1y2")
 
 [node name="Brick54" type="Sprite2D" parent="Offset/Deco/doors" index="19" unique_id=1036101498]
-position = Vector2(-8, -96)
+position = Vector2(16.99997, -318.99997)
 texture = ExtResource("15_2s322")
 
 [node name="Brick43" type="Sprite2D" parent="Offset/Deco/doors" index="20" unique_id=992092287]
-position = Vector2(-1, -126)
+position = Vector2(0.9999695, -396.99997)
 rotation = 1.6347545
 texture = ExtResource("13_ny1y2")
 
 [node name="Brick45" type="Sprite2D" parent="Offset/Deco/doors" index="21" unique_id=770999883]
-position = Vector2(-23, -100)
+position = Vector2(-19.00003, -410.99997)
 rotation = 0.2599559
 texture = ExtResource("12_bl4lt")
 
 [node name="Brick46" type="Sprite2D" parent="Offset/Deco/doors" index="22" unique_id=593476889]
-position = Vector2(14, -106)
+position = Vector2(16.99997, -367.99997)
 rotation = 1.6347545
 texture = ExtResource("13_ny1y2")
 
@@ -2356,7 +2532,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_04iir")
 theme_override_font_sizes/normal_font_size = 32
-text = "For a little over an uncountable number of years, your soul has been confined to a small room, no more than 260 square feet. You've almost forgotten who you are...
+text = "For a little over an uncountable number of years, your soul has been confined to a small room, no more than 260 square feet.
 
 [Press X to continue]"
 horizontal_alignment = 1

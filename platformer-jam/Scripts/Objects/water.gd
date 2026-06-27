@@ -37,10 +37,10 @@ func _process(delta: float) -> void:
 			poem_text.modulate.a -= delta*3
 
 func _on_area_entered(body):
-	if body == Game.player.interact_area:
+	if body == Game.player.wash_area:
 		activated = true
 		
 func _on_area_exited(body):
-	if body == Game.player.interact_area:
+	if body == Game.player.wash_area:
 		activated = false
 		Game.event_manager.interactable_object = null

@@ -5,6 +5,8 @@ extends Node
 @onready var event_manager: EventManager = $EventManager
 @onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
 
+var seen_intro: bool = false
+
 var lucidity: float = 0:
 	set(value):
 		lucidity = max(value, 0)
