@@ -164,7 +164,7 @@ size = Vector2(80, 69)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.8392283, 0.4551282), -1.0902444, -1.0902444, 0, 0, Vector2(1, 0.24999994), -1.834101, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_lhuu4"]
+[sub_resource type="Gradient" id="Gradient_xxnsr"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -290,7 +290,7 @@ debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=790154690 instance=ExtResource("5_a6otp")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_lhuu4")
+grad = SubResource("Gradient_xxnsr")
 progress = 1.0
 hitbox_size = 20.0
 

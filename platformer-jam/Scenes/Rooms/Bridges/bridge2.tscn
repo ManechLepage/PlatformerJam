@@ -220,11 +220,20 @@ shape = SubResource("RectangleShape2D_5khlg")
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1760792903 instance=ExtResource("5_ntg8m")]
 position = Vector2(-152, 126)
 
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Yellowball" index="1" unique_id=1602848246]
+frame = 4
+
 [node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1458446482 instance=ExtResource("5_ntg8m")]
 position = Vector2(-48, -106)
 
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Yellowball2" index="1" unique_id=1602848246]
+frame = 4
+
 [node name="Yellowball3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=548659445 instance=ExtResource("5_ntg8m")]
 position = Vector2(50, -67)
+
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Yellowball3" index="1" unique_id=1602848246]
+frame = 4
 
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1716700021]
 curve = SubResource("Curve2D_ysw6c")
@@ -274,6 +283,9 @@ position = Vector2(-3327, -1182)
 
 [editable path="Offset/Obstacles/Platform"]
 [editable path="Offset/Obstacles/Platform2"]
+[editable path="Offset/Obstacles/Yellowball"]
+[editable path="Offset/Obstacles/Yellowball2"]
+[editable path="Offset/Obstacles/Yellowball3"]
 [editable path="Offset/Obstacles/Path2D/PathFollow2D/Platform3"]
 [editable path="Offset/Obstacles/Plant1"]
 [editable path="Offset/Obstacles/Plant2"]
