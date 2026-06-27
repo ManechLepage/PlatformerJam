@@ -21,8 +21,8 @@ func _ready() -> void:
 	area_exited.connect(_on_area_exited)
 
 func active_changed(value):
-	sprite.play("active" if value else "inactive")
-	$Parchemin.emitting = active
+	if sprite: sprite.play("active" if value else "inactive")
+	if $Parchemin: $Parchemin.emitting = active
 	monitorable = value
 	monitoring = value
 
@@ -32,10 +32,10 @@ func _process(delta: float) -> void:
 		poem_text.visible_characters = int(progress*20)
 		if poem_text.modulate.a < 1:
 			poem_text.modulate.a += delta*3
-	else: 
+	elif poem_text:
 		if poem_text.modulate.a > 0:
 			poem_text.modulate.a -= delta*3
-			
+
 func _on_area_entered(body):
 	if body == Game.player.interact_area:
 		activated = true

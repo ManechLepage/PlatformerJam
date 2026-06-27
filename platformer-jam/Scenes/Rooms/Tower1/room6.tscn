@@ -19,7 +19,7 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
-size = Vector2(776, 23)
+size = Vector2(843, 30)
 
 [node name="Room" unique_id=197990627 instance=ExtResource("1_nxdaq")]
 
@@ -40,7 +40,7 @@ script = ExtResource("3_2a6c1")
 room_name = "Tower1-05"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(35.5, -4.5)
+position = Vector2(44, -1)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -50,7 +50,7 @@ script = ExtResource("3_2a6c1")
 room_name = "Tower1-04"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(35.5, -4.5)
+position = Vector2(150.5, -7)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 

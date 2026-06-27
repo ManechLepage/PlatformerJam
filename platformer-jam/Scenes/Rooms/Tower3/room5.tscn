@@ -140,10 +140,6 @@ _data = {
 &"RESET": SubResource("Animation_mhqpd")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tc3ch"]
-resource_local_to_scene = true
-size = Vector2(718.375, 23)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
@@ -445,18 +441,7 @@ position = Vector2(-303, 25)
 scale = Vector2(0.8936865, 1.2188869)
 texture = ExtResource("5_l4ek7")
 
-[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
-visible = false
-position = Vector2(-35, -294)
-script = ExtResource("3_5m33w")
-room_name = "Tower3-05"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(33.1875, 2)
-shape = SubResource("RectangleShape2D_tc3ch")
-debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
-
-[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=245909862]
+[node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=245909862]
 position = Vector2(-35, 313)
 script = ExtResource("3_5m33w")
 room_name = "Tower3-04"
@@ -466,7 +451,7 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=657448745]
+[node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=657448745]
 position = Vector2(500, -154)
 rotation = 1.5707964
 script = ExtResource("3_5m33w")
@@ -477,7 +462,7 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
 position = Vector2(-559, -152)
 rotation = 1.5707964
 script = ExtResource("3_5m33w")
@@ -540,7 +525,7 @@ scale = Vector2(1.1461935, 1.1461935)
 texture = ExtResource("14_3ef1n")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1245923025 instance=ExtResource("4_psknp")]
-position = Vector2(139, -39)
+position = Vector2(141, -207)
 rotation = -3.1415925
 sync_to_physics = false
 
@@ -1161,7 +1146,6 @@ rotation = 1.469001
 scale = Vector2(1.6070784, 2.1159863)
 texture = ExtResource("12_2d8oo")
 
-[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
