@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_8pykr"]
 [ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_etpyt"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="6_04iir"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
+[ext_resource type="Texture2D" uid="uid://ba2qnmp5ps58h" path="res://Sprites/4594548.png" id="8_8pykr"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -29,10 +31,10 @@ tracks/1/path = NodePath("Offset/Obstacles/Left_ledge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(316.94, -14), Vector2(184.00003, -4.9999957)]
+"values": [Vector2(400, -13.999996), Vector2(184.00003, -4.9999957)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -146,13 +148,13 @@ scale = Vector2(3.665, 0.798)
 is_platform = true
 
 [node name="Left_ledge" parent="Offset/Obstacles" index="4" unique_id=1274042356 instance=ExtResource("6_xq6d4")]
-position = Vector2(316.94, -14)
+position = Vector2(263, -8.999996)
 rotation = -0.057595864
 scale = Vector2(4.52, 0.968)
 is_platform = true
 
 [node name="Door" parent="Offset/Obstacles" index="5" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
-position = Vector2(-10, -12.999996)
+position = Vector2(58, -21)
 rotation = 0.05235988
 scale = Vector2(3.28, 12.27)
 
@@ -202,3 +204,11 @@ position = Vector2(-281, -131.00003)
 rotation = -0.05235988
 scale = Vector2(1, 7.235)
 is_platform = true
+
+[node name="Area" parent="." index="2" unique_id=1754253968 instance=ExtResource("6_04iir")]
+position = Vector2(-87, -75)
+
+[node name="chameau" parent="Area/PoemText" parent_id_path=PackedInt32Array(1754253968, 1098363463) index="2" unique_id=94185898]
+texture = ExtResource("8_8pykr")
+
+[editable path="Area"]

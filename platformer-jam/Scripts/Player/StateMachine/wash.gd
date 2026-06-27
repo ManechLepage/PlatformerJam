@@ -1,8 +1,8 @@
 extends State
 
 @export var wash_power = 0.02
-
 @export var idle: State
+
 var is_washing: bool = false
 
 func enter():
@@ -20,12 +20,20 @@ func process_inputs(event):
 	return null
 
 func process_physics(delta):
-	if is_washing: Game.event_manager.change_lucidity(-wash_power*delta)
 	return null
+
+func wash(delta: float):
+	Game.event_manager.change_lucidity(-wash_power*delta)
+	if Game.event_manager.interactable_object:
+		if Game.lucidity < Game.event_manager.interactable_object.min_water:
+			Game.event_manager.set_lucidity(Game.event_manager.interactable_object.min_water)
 
 func interact() -> void:
 	if Game.event_manager.interactable_object is Water:
+		if Game.event_manager.interactable_object.is_always_active: return
 		is_washing = true
 	if Game.event_manager.interactable_object is Poem:
 		parent.poem_collected += 1
 		Game.event_manager.interactable_object.collect()
+	if Game.event_manager.interactable_object is Lever:
+		Game.event_manager.interactable_object.activate()

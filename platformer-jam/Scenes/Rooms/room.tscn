@@ -33,3 +33,5 @@ ignore_camera_scroll = true
 [node name="RoomTriggers" type="Node2D" parent="Offset" unique_id=281844601]
 
 [node name="Obstacles" type="Node2D" parent="Offset" unique_id=457880380]
+
+[node name="Deco" type="Node2D" parent="Offset" unique_id=102725464]

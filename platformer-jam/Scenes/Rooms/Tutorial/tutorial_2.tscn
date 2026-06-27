@@ -83,9 +83,10 @@ position = Vector2(-296, 353)
 scale = Vector2(10.83, 1)
 room_name = "tutorial_1"
 
-[node name="Leave" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=1710646959 instance=ExtResource("2_l3fbw")]
-position = Vector2(-384, -254)
-scale = Vector2(8.505, 1)
+[node name="RoomTrigger2" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=304015578 instance=ExtResource("2_l3fbw")]
+position = Vector2(-288, -252)
+scale = Vector2(19.31, 1)
+room_name = "entrence3"
 
 [node name="Enter_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("3_0p57m")]
 position = Vector2(-299, 255)
@@ -102,22 +103,27 @@ position = Vector2(-390.99997, 105)
 rotation = 0.2617994
 scale = Vector2(3.04, 17.035)
 
-[node name="Right_ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1874509105 instance=ExtResource("3_0p57m")]
+[node name="Left_wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=801557481 instance=ExtResource("3_0p57m")]
+position = Vector2(-449.00003, -104.000015)
+rotation = -0.26005405
+scale = Vector2(1.135, 17.035)
+
+[node name="Right_ceiling" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1874509105 instance=ExtResource("3_0p57m")]
 position = Vector2(95.99999, -151.99997)
 rotation = 1.8709929
 scale = Vector2(3.04, 19.645)
 
-[node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=721685211 instance=ExtResource("3_0p57m")]
+[node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=721685211 instance=ExtResource("3_0p57m")]
 position = Vector2(282, 54)
 rotation = -0.06632251
 scale = Vector2(3.04, 17.035)
 
-[node name="Middle_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=533953051 instance=ExtResource("3_0p57m")]
+[node name="Middle_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=533953051 instance=ExtResource("3_0p57m")]
 position = Vector2(49, 259)
 rotation = 1.4835298
 scale = Vector2(3.04, 22.68)
 
-[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1257707682 instance=ExtResource("4_hg02c")]
+[node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1257707682 instance=ExtResource("4_hg02c")]
 position = Vector2(44, 227)
 scale = Vector2(3, 3)
 
@@ -125,19 +131,30 @@ scale = Vector2(3, 3)
 position = Vector2(-0.33333302, -13)
 scale = Vector2(0.33333334, 0.33333334)
 
-[node name="Rising_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1163463554 instance=ExtResource("3_0p57m")]
+[node name="Rising_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1163463554 instance=ExtResource("3_0p57m")]
 position = Vector2(158, 214)
 rotation = -0.05235988
 scale = Vector2(4.82, 1)
 is_platform = true
 
-[node name="Fall_pilar_rot" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1108675869]
+[node name="Rising_floor2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1765234121 instance=ExtResource("3_0p57m")]
+position = Vector2(-414, -165.99998)
+rotation = -0.05235988
+scale = Vector2(4.82, 1)
+is_platform = true
+
+[node name="Rising_floor3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=812262736 instance=ExtResource("3_0p57m")]
+position = Vector2(-390, -9.999985)
+rotation = -1.9181168
+scale = Vector2(4.82, 3.6)
+
+[node name="Fall_pilar_rot" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1108675869]
 position = Vector2(-94.00001, -217)
 
 [node name="Falling_pilar" parent="Offset/Obstacles/Fall_pilar_rot" index="0" unique_id=1749484715 instance=ExtResource("3_0p57m")]
 position = Vector2(-27.192528, 129.45488)
 rotation = 0.26179937
-scale = Vector2(3.04, 17.035)
+scale = Vector2(1.1, 15.57)
 sync_to_physics = false
 
 [node name="Left_up_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=966486540 instance=ExtResource("3_0p57m")]
