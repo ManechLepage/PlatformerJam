@@ -3,23 +3,55 @@
 [ext_resource type="Script" uid="uid://b8qim1g0nvgo2" path="res://Scripts/Room/room_manager.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://ccfcgttb2c4md" path="res://Scenes/Rooms/Tutorial/tutorial_1.tscn" id="4_344ge"]
+[ext_resource type="PackedScene" uid="uid://cjh22wy576j4w" path="res://Scenes/Rooms/Tower1/room1.tscn" id="4_pdsj5"]
 [ext_resource type="Shader" uid="uid://c3ur6tmhoam4y" path="res://Scripts/Shaders/vignette2.gdshader" id="5_21xkr"]
+[ext_resource type="PackedScene" uid="uid://qhvhw4i0ygvc" path="res://Scenes/Rooms/Tower1/room2.tscn" id="5_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://beq8da56mgnib" path="res://Scenes/Rooms/Tutorial/tutorial_2.tscn" id="5_ynf5e"]
 [ext_resource type="Script" uid="uid://c4jgluyjdtn64" path="res://Scripts/Shaders/vignette.gd" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://chk3dmt1or7c0" path="res://Scenes/Rooms/Tower1/room3.tscn" id="6_u50mg"]
+[ext_resource type="PackedScene" uid="uid://cryndbcliobgo" path="res://Scenes/Rooms/Tower1/room4.tscn" id="7_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://ceb2xwoshxi1q" path="res://Scenes/Rooms/Tower1/room5.tscn" id="8_1w6v2"]
+[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance_tower3.tscn" id="11_6vcvc"]
 [ext_resource type="AudioStream" uid="uid://q5ycr4st5dci" path="res://Sound/noise.ogg" id="11_fdnlq"]
-[ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance3.tscn" id="11_fevyy"]
 [ext_resource type="Script" uid="uid://b13yvw0bepp48" path="res://Scripts/Globals/music_manager.gd" id="11_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="12_7k868"]
+[ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="12_hibaj"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="12_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="13_hibaj"]
+[ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="13_hpc6h"]
 [ext_resource type="AudioStream" uid="uid://bu4ww5aae0dsg" path="res://Sound/pillar1_lucid.ogg" id="13_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="14_kltya"]
+[ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="15_kltya"]
 [ext_resource type="AudioStream" uid="uid://bgy5vnjoiws1m" path="res://Sound/pillar1_lucid2.ogg" id="16_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://da4t2etmo8yxl" path="res://Scenes/Rooms/Bridges/bridge2.tscn" id="16_e08e2"]
+[ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="17_hdf80"]
 [ext_resource type="AudioStream" uid="uid://m1kkemo2b4a6" path="res://Sound/pillar1_lucid3.ogg" id="17_u50mg"]
 [ext_resource type="AudioStream" uid="uid://cr1p8r8idikqg" path="res://Sound/pillar2_base.ogg" id="18_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://cjrnk2llrhgee" path="res://Scenes/Rooms/Tower2/room2.tscn" id="18_jwpg7"]
 [ext_resource type="AudioStream" uid="uid://dlt34fjugysbg" path="res://Sound/pillar2_lucid1.ogg" id="19_1w6v2"]
+[ext_resource type="PackedScene" uid="uid://b70mnpwhd1c3b" path="res://Scenes/Rooms/Tower3/room3.tscn" id="19_536cc"]
+[ext_resource type="PackedScene" uid="uid://cu88yf82xmmb4" path="res://Scenes/Rooms/Tower2/room3.tscn" id="20_aqgau"]
 [ext_resource type="AudioStream" uid="uid://df3j1w0kr2nj0" path="res://Sound/pillar2_lucid2.ogg" id="20_ueoa1"]
 [ext_resource type="AudioStream" uid="uid://c1g3nl2007cxr" path="res://Sound/pillar3_base.ogg" id="21_6vcvc"]
+[ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="21_8cuat"]
 [ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
+[ext_resource type="PackedScene" uid="uid://bqanx6lfy322q" path="res://Scenes/Rooms/Tutorial/tutorial_3.tscn" id="22_aqgau"]
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
+[ext_resource type="PackedScene" uid="uid://bjamud22bcmlv" path="res://Scenes/Rooms/Bridges/bridge4.tscn" id="23_xdkp6"]
+[ext_resource type="PackedScene" uid="uid://b5r1jiqvxkq5m" path="res://Scenes/Rooms/Bridges/bridge5.tscn" id="24_54nrm"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
+[ext_resource type="PackedScene" uid="uid://b0rufvavtsfs5" path="res://Scenes/Rooms/Bridges/bridgeR1.tscn" id="25_55jeb"]
+[ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
+[ext_resource type="Environment" uid="uid://dgeb6y4eqbyj5" path="res://environnement.tres" id="26_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://ckah8su0aqt2t" path="res://Scenes/Rooms/Bridges/bridgeR2.tscn" id="26_gsvbx"]
+[ext_resource type="PackedScene" uid="uid://b5lmyl8wwr838" path="res://Scenes/Rooms/Bridges/bridgeR3.tscn" id="27_bv80c"]
+[ext_resource type="PackedScene" uid="uid://pnbp6xkjfos6" path="res://Scenes/Rooms/Bridges/bridgeR4.tscn" id="28_ptfg5"]
+[ext_resource type="PackedScene" uid="uid://qxiyy2iok2fw" path="res://Scenes/Rooms/Bridges/bridgeR5.tscn" id="29_2daye"]
+[ext_resource type="PackedScene" uid="uid://cr1ifiscmdqlg" path="res://Scenes/Rooms/Tower2/room4.tscn" id="30_1semv"]
+[ext_resource type="PackedScene" uid="uid://gfmoxsm2bfp" path="res://Scenes/Rooms/Tower2/room5.tscn" id="31_2060n"]
+[ext_resource type="PackedScene" uid="uid://dp2p0qobxd46k" path="res://Scenes/Rooms/Tower3/room4.tscn" id="32_6ml46"]
+[ext_resource type="PackedScene" uid="uid://mjldhp11465j" path="res://Scenes/Rooms/Tower3/room5.tscn" id="33_qax2n"]
+[ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="34_54nrm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -29,24 +61,185 @@ shader_parameter/vignette_strength = 0.0
 shader_parameter/dither_strength = 0.05
 shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
+[sub_resource type="GDScript" id="GDScript_u50mg"]
+resource_name = "lucid_mist"
+script/source = "extends CanvasLayer
+
+@export var area_start_color1: Color
+@export var area_start_color2: Color
+@export var area_start_color3: Color
+@export var area_1_color1: Color
+@export var area_1_color2: Color
+@export var area_1_color3: Color
+@export var area_2_color1: Color
+@export var area_2_color2: Color
+@export var area_2_color3: Color
+@export var area_3_color1: Color
+@export var area_3_color2: Color
+@export var area_3_color3: Color
+@export var area_4_color1: Color
+@export var area_4_color2: Color
+@export var area_4_color3: Color
+@export var area_bridge1_color1: Color
+@export var area_bridge1_color2: Color
+@export var area_bridge1_color3: Color
+@export var area_bridge2_color1: Color
+@export var area_bridge2_color2: Color
+@export var area_bridge2_color3: Color
+
+var tweenA: Tween
+var tweenB: Tween
+var tweenC: Tween
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Game.event_manager.lucidity_changed.connect(update_lucidity)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",0)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",0)
+	$\"../Areas/Tower1Area\".body_entered.connect(func(_body):change_colors(\"1\"))
+	$\"../Areas/Tower2Area\".body_entered.connect(func(_body):change_colors(\"2\"))
+	$\"../Areas/Tower3Area\".body_entered.connect(func(_body):change_colors(\"3\"))
+	$\"../Areas/Tower4Area\".body_entered.connect(func(_body):change_colors(\"4\"))
+	$\"../Areas/BridgeArea1\".body_entered.connect(func(_body):change_colors(\"bridge1\"))
+	$\"../Areas/BridgeArea2\".body_entered.connect(func(_body):change_colors(\"bridge2\"))
+	change_colors(\"start\")
+
+func change_colors(name: String):
+	print(1)
+	var c:Array[Color] = []
+	for tween in [tweenA,tweenB,tweenC]:
+		if tween: tween.kill()
+	match name:
+		\"start\":
+			c = [area_start_color1,area_start_color2,area_start_color3]
+		\"1\":
+			c = [area_1_color1,area_1_color2,area_1_color3]
+			$\"../MusicManager\".set_pillar_1()
+		\"2\":
+			c = [area_2_color1,area_2_color2,area_2_color3]
+			$\"../MusicManager\".set_pillar_2()
+		\"3\":
+			c = [area_3_color1,area_3_color2,area_3_color3]
+			$\"../MusicManager\".set_pillar_3()
+		\"4\":
+			c = [area_4_color1,area_4_color2,area_4_color3]
+			$\"../MusicManager\".set_pillar_1()
+		\"bridge1\":
+			c = [area_bridge1_color1,area_bridge1_color2,area_bridge1_color3]
+		\"bridge2\":
+			c = [area_bridge2_color1,area_bridge2_color2,area_bridge2_color3]
+	for i in [$\"lucid bg\",$\"lucid bg/Overlay/lucid overlay\"]:
+		tweenA = create_tween()
+		tweenA.tween_method(set_shader_colorA,$\"lucid bg\".material.get_shader_parameter(\"colorA\"),c[0],2)
+		tweenB = create_tween()
+		tweenB.tween_method(set_shader_colorB,$\"lucid bg\".material.get_shader_parameter(\"colorB\"),c[1],2)
+		tweenC = create_tween()
+		tweenC.tween_method(set_shader_colorC,$\"lucid bg\".material.get_shader_parameter(\"colorC\"),c[2],2)
+	
+func set_shader_colorA(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorA\",val)
+
+func set_shader_colorB(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorB\",val)
+
+func set_shader_colorC(val):
+	$\"lucid bg\".material.set_shader_parameter(\"colorC\",val)
+	
+func update_lucidity(lucidity):
+	
+	$\"lucid bg\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*5)
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*6)
+	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.16, 0.1264, 0.14376, 1)
+shader_parameter/colorB = Color(0.53, 0.074023336, 0.058300003, 1)
+shader_parameter/colorC = Color(4.243727, 2.573132, 2.573132, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999991
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u50mg"]
+shader = ExtResource("25_u50mg")
+shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
+shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
+shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999991
+shader_parameter/alpha = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8k8"]
+size = Vector2(934.5, 3011)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqgau"]
+size = Vector2(1010.5, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1aky"]
+size = Vector2(934.5, 3398)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cuat"]
+size = Vector2(933, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwxat"]
+size = Vector2(931, 3734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqrg6"]
+size = Vector2(934.5, 3011)
+
 [node name="Main" type="Node2D" unique_id=295821621]
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "tutorial_1"
+initial_room = "Tower3-01"
+initial_player_pos = Vector2(-1920, -540)
+initial_lucidity = 40.0
 rooms = Dictionary[String, PackedScene]({
-"entrence3": ExtResource("11_fevyy"),
+"Bridge1": ExtResource("15_kltya"),
+"Bridge2": ExtResource("16_e08e2"),
+"Bridge3": ExtResource("21_8cuat"),
+"Bridge4": ExtResource("23_xdkp6"),
+"Bridge5": ExtResource("24_54nrm"),
+"BridgeR1": ExtResource("25_55jeb"),
+"BridgeR2": ExtResource("26_gsvbx"),
+"BridgeR3": ExtResource("27_bv80c"),
+"BridgeR4": ExtResource("28_ptfg5"),
+"BridgeR5": ExtResource("29_2daye"),
+"Entrance2": ExtResource("13_hpc6h"),
+"Entrance2_3": ExtResource("14_kltya"),
+"Entrance3": ExtResource("11_6vcvc"),
+"Entrance3_1": ExtResource("12_7k868"),
+"Tower1-01": ExtResource("4_pdsj5"),
+"Tower1-02": ExtResource("5_ee4r6"),
+"Tower1-03": ExtResource("6_u50mg"),
+"Tower1-04": ExtResource("7_cbgmd"),
+"Tower1-05": ExtResource("8_1w6v2"),
+"Tower1-06": ExtResource("34_54nrm"),
+"Tower2-01": ExtResource("12_hibaj"),
+"Tower2-02": ExtResource("18_jwpg7"),
+"Tower2-03": ExtResource("20_aqgau"),
+"Tower2-04": ExtResource("30_1semv"),
+"Tower2-05": ExtResource("31_2060n"),
+"Tower3-01": ExtResource("13_hibaj"),
+"Tower3-02": ExtResource("17_hdf80"),
+"Tower3-03": ExtResource("19_536cc"),
+"Tower3-04": ExtResource("32_6ml46"),
+"Tower3-05": ExtResource("33_qax2n"),
 "tutorial_1": ExtResource("4_344ge"),
-"tutorial_2": ExtResource("5_ynf5e")
+"tutorial_2": ExtResource("5_ynf5e"),
+"tutorial_3": ExtResource("22_aqgau")
 })
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
 z_index = 2
 position = Vector2(-141, -72)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1822106909]
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
+layer = 2
 
-[node name="Vignette" type="ColorRect" parent="CanvasLayer" unique_id=609312635 groups=["Vignette"]]
+[node name="Vignette" type="ColorRect" parent="Overlay" unique_id=609312635 groups=["Vignette"]]
 material = SubResource("ShaderMaterial_g4v7s")
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,3 +288,126 @@ bus = &"Music"
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
 bus = &"Music"
+
+[node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
+layer = -50
+script = SubResource("GDScript_u50mg")
+area_start_color1 = Color(0.5473538, 0.040273357, 0.45604515, 0.67058825)
+area_start_color2 = Color(1, 1, 1, 0.5529412)
+area_start_color3 = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+area_1_color1 = Color(0.16, 0, 0.14933334, 1)
+area_1_color2 = Color(0.1325, 0, 0.53, 1)
+area_1_color3 = Color(1.2032688e-06, 0.6868695, 0.2774872, 1)
+area_2_color1 = Color(0.10966679, 0, 0.94, 1)
+area_2_color2 = Color(2.1396377, 3.934858, 8.47571, 1)
+area_2_color3 = Color(1.790464e-05, 0.27583578, 0.7781118, 1)
+area_3_color1 = Color(1, 0, 0.16666698, 0.20392157)
+area_3_color2 = Color(1, 0, 0, 1)
+area_3_color3 = Color(0.47113067, 0.28528103, 0.21180561, 0.6627451)
+area_4_color1 = Color(0.98, 0, 0.60433346, 0.20392157)
+area_4_color2 = Color(0.6947816, 0.2799235, 1, 1)
+area_4_color3 = Color(0.00022928286, 0.059608556, 0.31022134, 0.6627451)
+area_bridge1_color1 = Color(0.16, 0.1264, 0.15776, 1)
+area_bridge1_color2 = Color(0.5019608, 0.49411765, 0.5294118, 1)
+area_bridge1_color3 = Color(2.305155, 2.9797177, 2.57498, 1)
+area_bridge2_color1 = Color(0.16, 0.1264, 0.14376, 1)
+area_bridge2_color2 = Color(0.53, 0.074023336, 0.058300003, 1)
+area_bridge2_color3 = Color(4.243727, 2.573132, 2.573132, 1)
+
+[node name="lucid bg" type="ColorRect" parent="Lucid" unique_id=515437348]
+material = SubResource("ShaderMaterial_3pmx8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Overlay" type="CanvasLayer" parent="Lucid/lucid bg" unique_id=1205441728]
+layer = 50
+
+[node name="lucid overlay" type="ColorRect" parent="Lucid/lucid bg/Overlay" unique_id=25300080]
+visible = false
+material = SubResource("ShaderMaterial_u50mg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1438021251]
+environment = ExtResource("26_cbgmd")
+
+[node name="Areas" type="Node2D" parent="." unique_id=379803689]
+
+[node name="Tower1Area" type="Area2D" parent="Areas" unique_id=512105487]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower1Area" unique_id=1974261894]
+position = Vector2(-2134, -924.5)
+shape = SubResource("RectangleShape2D_aa8k8")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower2Area" type="Area2D" parent="Areas" unique_id=2007027104]
+z_index = -50
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower2Area" unique_id=1210504008]
+position = Vector2(-3878.25, -1290)
+shape = SubResource("RectangleShape2D_aqgau")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower3Area" type="Area2D" parent="Areas" unique_id=1602650380]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower3Area" unique_id=723410420]
+position = Vector2(-4055.25, -1454)
+shape = SubResource("RectangleShape2D_o1aky")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="BridgeArea2" type="Area2D" parent="Areas" unique_id=320141715]
+z_index = -50
+position = Vector2(1099, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea2" unique_id=474334365]
+position = Vector2(-3981.5, -1290)
+shape = SubResource("RectangleShape2D_8cuat")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="BridgeArea1" type="Area2D" parent="Areas" unique_id=123807223]
+z_index = -50
+position = Vector2(1099, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea1" unique_id=1996013334]
+position = Vector2(-2060.5, -1290)
+shape = SubResource("RectangleShape2D_kwxat")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="Tower4Area" type="Area2D" parent="Areas" unique_id=321724665]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower4Area" unique_id=1625391712]
+position = Vector2(-2134, -3978)
+shape = SubResource("RectangleShape2D_kqrg6")
+debug_color = Color(0.5110002, 0, 0.73, 0)

@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cdpq4m5itvhvc" path="res://Scripts/Room/room.gd" id="1_7fk0y"]
 [ext_resource type="Script" uid="uid://7j6kmuhpbc3h" path="res://Scripts/camera.gd" id="2_dyxu8"]
+[ext_resource type="Script" uid="uid://b62xt51lgmhsi" path="res://Scripts/Room/offset.gd" id="2_g3m34"]
 [ext_resource type="Script" uid="uid://lyi0yeqjiv4d" path="res://Scripts/Room/parallax_background.gd" id="3_g3m34"]
 
 [node name="Room" type="Node2D" unique_id=197990627]
 script = ExtResource("1_7fk0y")
 
 [node name="Offset" type="Node2D" parent="." unique_id=652906693]
+script = ExtResource("2_g3m34")
 
 [node name="Camera2D" type="Camera2D" parent="Offset" unique_id=946351804 groups=["Camera"]]
 script = ExtResource("2_dyxu8")
@@ -16,16 +18,19 @@ script = ExtResource("2_dyxu8")
 script = ExtResource("3_g3m34")
 
 [node name="Parallax2D" type="Parallax2D" parent="Offset/Background" unique_id=739467125]
+z_index = -10
 scroll_scale = Vector2(0.15, 0.15)
 follow_viewport = false
 ignore_camera_scroll = true
 
 [node name="Parallax2D2" type="Parallax2D" parent="Offset/Background" unique_id=1426022184]
+z_index = -7
 scroll_scale = Vector2(0.3, 0.3)
 follow_viewport = false
 ignore_camera_scroll = true
 
 [node name="Parallax2D3" type="Parallax2D" parent="Offset/Background" unique_id=1988134974]
+z_index = -5
 scroll_scale = Vector2(0.6, 0.6)
 follow_viewport = false
 ignore_camera_scroll = true

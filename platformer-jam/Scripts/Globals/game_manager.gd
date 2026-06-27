@@ -12,9 +12,10 @@ var lucidity: float = 0:
 var lucidity_target: float = 0.0:
 	set(value):
 		lucidity_target = max(value, -0.07)
-var max_lucidity: float = 40.0
+var max_lucidity: float = 80.0
 var camera: CameraManager
 var player: Player
+@export var lever_states: Array[bool]
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")

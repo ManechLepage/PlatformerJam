@@ -7,6 +7,7 @@
 
 [node name="GameManager" type="Node" unique_id=27191951]
 script = ExtResource("1_m2tc1")
+lever_states = Array[bool]([false, false])
 
 [node name="AudioManager" type="Node" parent="." unique_id=370862607]
 script = ExtResource("2_bwyv8")

@@ -1,28 +1,51 @@
 [gd_scene format=3 uid="uid://bl1oxp0rndhll"]
 
 [ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="1_dtwml"]
-[ext_resource type="Texture2D" uid="uid://dmh4lwxnbnlim" path="res://Sprites/papier parchemin.png" id="2_vdpff"]
 [ext_resource type="Texture2D" uid="uid://ygcmkwr85t25" path="res://Sprites/E.png" id="3_neamx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
 radius = 9.535932
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_m3tp1"]
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g4v7s"]
-noise = SubResource("FastNoiseLite_m3tp1")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k2f48"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
-[node name="Area" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("e_key", "poem_text")]
+[sub_resource type="Curve" id="Curve_m3tp1"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_dtwml")
-e_key = NodePath("EKey")
 poem_text = NodePath("PoemText")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
 scale = Vector2(4.825, 4.825)
 shape = SubResource("CircleShape2D_bhunq")
 
-[node name="Parchemin" type="Sprite2D" parent="." unique_id=828331389]
-texture = ExtResource("2_vdpff")
+[node name="Parchemin2" type="CPUParticles2D" parent="." unique_id=757408449]
+amount = 32
+texture = SubResource("GradientTexture2D_k2f48")
+lifetime = 2.0
+local_coords = true
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+damping_min = 30.0
+damping_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_m3tp1")
 
 [node name="EKey" type="Sprite2D" parent="." unique_id=698910338]
 visible = false
@@ -30,7 +53,6 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
-clip_contents = false
 offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
@@ -40,8 +62,3 @@ Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
 autowrap_trim_flags = 64
 visible_characters_behavior = 1
-
-[node name="chameau" type="Sprite2D" parent="PoemText" unique_id=94185898]
-position = Vector2(473, -34)
-scale = Vector2(0.3, 0.3)
-texture = SubResource("NoiseTexture2D_g4v7s")

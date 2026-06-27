@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://iqvejs3kipon"]
+
+[ext_resource type="Texture2D" uid="uid://bkcwasrx6sqj5" path="res://Sprites/brick_bg.png" id="1_twb3f"]
+
+[resource]
+atlas = ExtResource("1_twb3f")
+region = Rect2(303, 133, 129, 40)

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://ohk1ubqol7q5"]
+
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="1_gghuf"]
+
+[resource]
+atlas = ExtResource("1_gghuf")
+region = Rect2(64, 0, 64, 64)
