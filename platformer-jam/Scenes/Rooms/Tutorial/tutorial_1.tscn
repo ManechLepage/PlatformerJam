@@ -7,6 +7,46 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
 
+[sub_resource type="Animation" id="Animation_etpyt"]
+resource_name = "lucidity"
+step = 0.0078125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-9.999998, -12.999996), Vector2(7.000002, -267)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Left_ledge:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(316.94, -14), Vector2(184.00003, -4.9999957)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Pilar_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-281, -131.00003), Vector2(-290.00003, -263)]
+}
+
 [sub_resource type="Animation" id="Animation_q44wt"]
 length = 0.001
 tracks/0/type = "value"
@@ -46,50 +86,10 @@ tracks/2/keys = {
 "values": [Vector2(-281, -131.00003)]
 }
 
-[sub_resource type="Animation" id="Animation_etpyt"]
-resource_name = "lucidity"
-step = 0.0078125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Door:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-9.999998, -12.999996), Vector2(7.000002, -267)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Left_ledge:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(400, -13.999996), Vector2(184.00003, -4.9999957)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Offset/Obstacles/Pilar_2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-281, -131.00003), Vector2(-290.00003, -263)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xq6d4"]
 _data = {
-&"RESET": SubResource("Animation_q44wt"),
-&"lucidity": SubResource("Animation_etpyt")
+&"Lucidity": SubResource("Animation_etpyt"),
+&"RESET": SubResource("Animation_q44wt")
 }
 
 [sub_resource type="Gradient" id="Gradient_5r2ab"]
@@ -146,7 +146,7 @@ scale = Vector2(3.665, 0.798)
 is_platform = true
 
 [node name="Left_ledge" parent="Offset/Obstacles" index="4" unique_id=1274042356 instance=ExtResource("6_xq6d4")]
-position = Vector2(400, -13.999996)
+position = Vector2(316.94, -14)
 rotation = -0.057595864
 scale = Vector2(4.52, 0.968)
 is_platform = true

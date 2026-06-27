@@ -7,33 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dry82gupjq6pi" path="res://Scenes/Objects/waterfall.tscn" id="4_hg02c"]
 [ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_l4vvy"]
 
-[sub_resource type="Animation" id="Animation_2w047"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Rising_floor:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(158, 214)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="Animation" id="Animation_tu28n"]
 resource_name = "lucidity"
 step = 0.0078125
@@ -62,10 +35,37 @@ tracks/1/keys = {
 "values": [1.4835298, 0.7853982]
 }
 
+[sub_resource type="Animation" id="Animation_2w047"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Obstacles/Rising_floor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(158, 214)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fall_pilar_rot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a4cir"]
 _data = {
-&"RESET": SubResource("Animation_2w047"),
-&"lucidity": SubResource("Animation_tu28n")
+&"Lucidity": SubResource("Animation_tu28n"),
+&"RESET": SubResource("Animation_2w047")
 }
 
 [node name="Tutorial_2" unique_id=197990627 instance=ExtResource("1_l3fbw")]
@@ -78,10 +78,14 @@ script = ExtResource("2_l4vvy")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(3, -539)
 
-[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("2_l3fbw")]
+[node name="Enter" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("2_l3fbw")]
 position = Vector2(-296, 353)
 scale = Vector2(10.83, 1)
 room_name = "tutorial_1"
+
+[node name="Leave" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=1710646959 instance=ExtResource("2_l3fbw")]
+position = Vector2(-384, -254)
+scale = Vector2(8.505, 1)
 
 [node name="Enter_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("3_0p57m")]
 position = Vector2(-299, 255)
@@ -125,6 +129,7 @@ scale = Vector2(0.33333334, 0.33333334)
 position = Vector2(158, 214)
 rotation = -0.05235988
 scale = Vector2(4.82, 1)
+is_platform = true
 
 [node name="Fall_pilar_rot" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1108675869]
 position = Vector2(-94.00001, -217)
@@ -134,3 +139,19 @@ position = Vector2(-27.192528, 129.45488)
 rotation = 0.26179937
 scale = Vector2(3.04, 17.035)
 sync_to_physics = false
+
+[node name="Left_up_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=966486540 instance=ExtResource("3_0p57m")]
+position = Vector2(-482.99997, -173)
+rotation = -0.19198622
+scale = Vector2(2.67, 12.17)
+
+[node name="End_plat_2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=403927083 instance=ExtResource("3_0p57m")]
+position = Vector2(-422.00003, -172)
+rotation = -0.04886922
+scale = Vector2(4.425, 1)
+is_platform = true
+
+[node name="End_floor" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1117226677 instance=ExtResource("3_0p57m")]
+position = Vector2(-412.00003, -44)
+rotation = 0.08203048
+scale = Vector2(8.6, 1.7500001)

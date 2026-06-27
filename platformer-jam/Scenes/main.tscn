@@ -61,7 +61,7 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-02": ExtResource("3_jjvhh"),
 "Tower1-03": ExtResource("7_hptm8"),
 "Tower1-04": ExtResource("8_d1ilt"),
-"tutorial_1": ExtResource("5_ynf5e"),
+"tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e")
 })
 
