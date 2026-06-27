@@ -52,6 +52,8 @@
 [ext_resource type="PackedScene" uid="uid://dp2p0qobxd46k" path="res://Scenes/Rooms/Tower3/room4.tscn" id="32_6ml46"]
 [ext_resource type="PackedScene" uid="uid://mjldhp11465j" path="res://Scenes/Rooms/Tower3/room5.tscn" id="33_qax2n"]
 [ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="34_54nrm"]
+[ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
+[ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -193,9 +195,9 @@ size = Vector2(934.5, 3011)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower3-01"
-initial_player_pos = Vector2(-1920, -540)
-initial_lucidity = 40.0
+initial_room = "Tower1-06"
+initial_player_pos = Vector2(0, -2700)
+initial_lucidity = 60.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
@@ -217,6 +219,8 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-04": ExtResource("7_cbgmd"),
 "Tower1-05": ExtResource("8_1w6v2"),
 "Tower1-06": ExtResource("34_54nrm"),
+"Tower1-07": ExtResource("35_55jeb"),
+"Tower1-08": ExtResource("36_gsvbx"),
 "Tower2-01": ExtResource("12_hibaj"),
 "Tower2-02": ExtResource("18_jwpg7"),
 "Tower2-03": ExtResource("20_aqgau"),
