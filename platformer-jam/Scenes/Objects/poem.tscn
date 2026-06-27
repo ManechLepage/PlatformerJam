@@ -22,11 +22,16 @@ fill_from = Vector2(0.5, 0.5)
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yf5fn"]
+noise = SubResource("FastNoiseLite_57qmd")
+
 [node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_dtwml")
-poem_text = NodePath("PoemText")
+poem_text = NodePath("CanvasLayer/PoemText")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
 scale = Vector2(4.825, 4.825)
@@ -52,7 +57,10 @@ visible = false
 position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
-[node name="PoemText" type="RichTextLabel" parent="." unique_id=1098363463]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1989050324]
+layer = 2
+
+[node name="PoemText" type="RichTextLabel" parent="CanvasLayer" unique_id=1098363463]
 offset_left = -190.0
 offset_top = -78.0
 offset_right = 192.0
@@ -62,3 +70,8 @@ Un dromadaire moins une bosse est mort de soif"
 scroll_active = false
 autowrap_trim_flags = 64
 visible_characters_behavior = 1
+
+[node name="Image" type="Sprite2D" parent="CanvasLayer" unique_id=1753372658]
+position = Vector2(325, 14.000015)
+scale = Vector2(0.4, 0.4)
+texture = SubResource("NoiseTexture2D_yf5fn")

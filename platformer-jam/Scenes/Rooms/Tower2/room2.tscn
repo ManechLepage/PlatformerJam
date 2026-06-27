@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="15_nv8a4"]
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="16_cgwye"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="17_oipvh"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="19_cgwye"]
+[ext_resource type="Texture2D" uid="uid://cnqrrwk1wvmlk" path="res://Sprites/water_poem.png" id="20_oipvh"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -365,6 +367,8 @@ size = Vector2(64, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgexx"]
 size = Vector2(68, 63)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k2f48"]
 
 [sub_resource type="Gradient" id="Gradient_dhyn8"]
 interpolation_mode = 1
@@ -898,6 +902,42 @@ shape = SubResource("RectangleShape2D_lgexx")
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1754253968 instance=ExtResource("8_okid0")]
 position = Vector2(-306, -220)
 
+[node name="CanvasLayer" parent="Offset/Obstacles/Area2" index="3" unique_id=1989050324]
+layer = 0
+
+[node name="PoemText" parent="Offset/Obstacles/Area2/CanvasLayer" index="0" unique_id=1098363463]
+z_index = 6
+offset_left = 409.92508
+offset_top = 26.000092
+offset_right = 945.92505
+offset_bottom = 411.7501
+theme_override_fonts/normal_font = ExtResource("19_cgwye")
+text = "\"One day, on my way back from school, I saw a cyclist pass by, with a massive camera hanging from their neck.
+My eyes lingered on them  for a little while, for no particular reason, and I noticed them abruptly stop, point their lens off to the side, take a photo, and continue on their path.
+' I wonder what made them take that photo? '
+So I diverged off my usual trail, entranced by the curiosity, to see for myself what could've possibly been so captivating.
+I wasn't disappointed. It was beautiful.
+It was one of those scenes that seem out of a movie. A white scooter surrounded by pink leaves. The sun at the perfect angle, creating a fabulous sheen on the clean body of the scooter.
+I wonder what would've happened if I didn't notice the cyclist, or if I didn't let myself get carried by the current of coincidences. Maybe I don't want to know.
+I'll never forget this memory, it defines who I am.\"
+[Press X to forget]"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Offset/Obstacles/Area2/CanvasLayer/PoemText" index="2" unique_id=1524838630]
+layer = 0
+
+[node name="Back" type="Sprite2D" parent="Offset/Obstacles/Area2/CanvasLayer/PoemText/CanvasLayer2" index="0" unique_id=1572904487]
+modulate = Color(0, 0, 0, 0.92156863)
+position = Vector2(478.50003, 282.49997)
+scale = Vector2(997.00006, 576.99994)
+texture = SubResource("CanvasTexture_k2f48")
+
+[node name="Image" parent="Offset/Obstacles/Area2/CanvasLayer" index="1" unique_id=1753372658]
+z_index = 1
+position = Vector2(283.92484, 246.00009)
+texture = ExtResource("20_oipvh")
+
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=997318240]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 
@@ -1402,3 +1442,4 @@ texture = ExtResource("6_eikqt")
 [editable path="Offset/Obstacles/Waterfall"]
 [editable path="Offset/Obstacles/Waterfall2"]
 [editable path="Offset/Obstacles/Lever"]
+[editable path="Offset/Obstacles/Area2"]
