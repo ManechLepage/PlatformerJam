@@ -14,9 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="11_yyqtu"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="12_kwe0e"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="13_7hr2r"]
+[ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="13_rridl"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="14_088u0"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="14_lvo7a"]
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="15_cufyf"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="16_sb0sm"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="20_lilds"]
+[ext_resource type="Texture2D" uid="uid://u3agmklyjnwo" path="res://Sprites/leaf4.tres" id="21_fxf3v"]
+[ext_resource type="Texture2D" uid="uid://d3pwmreafgynk" path="res://Sprites/leaf2.tres" id="22_nymqh"]
 
 [sub_resource type="Animation" id="Animation_ihfaw"]
 length = 0.001
@@ -253,6 +258,20 @@ point_count = 2
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-44.475, 12.027626, 44.475, -12.027626, 5, -57, 36.739838, 13.998283, -36.739838, -13.998283, 10, -133)
+}
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_7pt6u"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_njeoj"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_lusqu"]
+_data = {
+"points": PackedVector2Array(-76.88206, 86.166855, 76.88206, -86.166855, -362, 292, -151.28888, 22.86322, 151.28888, -22.86322, -327, 78)
 }
 point_count = 2
 
@@ -493,7 +512,7 @@ position = Vector2(-189, 21)
 texture = ExtResource("6_yyqtu")
 
 [node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="29" unique_id=2137273434]
-position = Vector2(-240, -171)
+position = Vector2(-315, -164)
 scale = Vector2(0.9553494, 1.1868724)
 texture = ExtResource("5_rul0w")
 
@@ -695,9 +714,9 @@ shape = SubResource("RectangleShape2D_ticnr")
 
 [node name="Brick14" type="Sprite2D" parent="Offset/Obstacles/MovingPlatform1" index="1" unique_id=1362512215]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
-position = Vector2(-42, 4.7683716e-07)
+position = Vector2(-42, 0)
 rotation = 0.08943669
-scale = Vector2(1.0163399, 0.8689349)
+scale = Vector2(1.01634, 0.868935)
 texture = ExtResource("15_cufyf")
 
 [node name="Brick30" type="Sprite2D" parent="Offset/Obstacles/MovingPlatform1/Brick14" index="0" unique_id=1128471035]
@@ -722,9 +741,20 @@ scale = Vector2(0.5186615, 0.47116727)
 skew = 0.079102755
 texture = ExtResource("14_088u0")
 
-[node name="Gear" parent="Offset/Obstacles/MovingPlatform1" index="2" unique_id=1302979489 instance=ExtResource("10_7hr2r")]
+[node name="Leaf3" type="Sprite2D" parent="Offset/Obstacles/MovingPlatform1" index="2" unique_id=914023977]
+position = Vector2(58.999996, 0.9999994)
+rotation = -0.76737463
+scale = Vector2(0.54616874, 0.54616874)
+texture = ExtResource("13_rridl")
+
+[node name="Gear" parent="Offset/Obstacles/MovingPlatform1" index="3" unique_id=1302979489 instance=ExtResource("10_7hr2r")]
 scale = Vector2(0.49765098, 0.49765098)
 rpm = 20.0
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Obstacles/MovingPlatform1" index="4" unique_id=1809110215]
+position = Vector2(-51, -14)
+scale = Vector2(0.7509978, 0.7509978)
+texture = ExtResource("14_lvo7a")
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1273539671 instance=ExtResource("4_g6egx")]
 position = Vector2(-150, 250)
@@ -751,6 +781,10 @@ texture = ExtResource("15_cufyf")
 position = Vector2(0, -4)
 scale = Vector2(0.49765098, 0.49765098)
 rpm = 20.0
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Obstacles/MovingPlatform2" index="3" unique_id=345930758]
+position = Vector2(34, -22)
+texture = ExtResource("14_lvo7a")
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1760792903 instance=ExtResource("5_dhyn8")]
 position = Vector2(-3, 135)
@@ -1174,61 +1208,113 @@ scale = Vector2(2.5028286, 3.2953913)
 texture = ExtResource("13_7hr2r")
 
 [node name="Brick17" type="Sprite2D" parent="Offset/Deco/Wall" index="6" unique_id=108492406]
-position = Vector2(-366.29492, 44.754395)
+position = Vector2(-365, 45)
 rotation = -0.1569922
 texture = ExtResource("15_cufyf")
 flip_h = true
 
-[node name="Brick19" type="Sprite2D" parent="Offset/Deco/Wall" index="7" unique_id=2016901975]
+[node name="Brick25" type="Sprite2D" parent="Offset/Deco/Wall" index="7" unique_id=1900624960]
+z_index = 1
+position = Vector2(-383, 16)
+rotation = -0.1569922
+texture = ExtResource("15_cufyf")
+flip_h = true
+
+[node name="Brick19" type="Sprite2D" parent="Offset/Deco/Wall" index="8" unique_id=2016901975]
 position = Vector2(-349, -63)
 rotation = -0.1569922
 texture = ExtResource("15_cufyf")
 flip_h = true
 
-[node name="Brick18" type="Sprite2D" parent="Offset/Deco/Wall" index="8" unique_id=1309075078]
+[node name="Brick18" type="Sprite2D" parent="Offset/Deco/Wall" index="9" unique_id=1309075078]
 position = Vector2(-381, -41)
 rotation = -0.1569922
 texture = ExtResource("15_cufyf")
 flip_h = true
 
-[node name="Brick24" type="Sprite2D" parent="Offset/Deco/Wall" index="9" unique_id=2059751779]
+[node name="Brick24" type="Sprite2D" parent="Offset/Deco/Wall" index="10" unique_id=2059751779]
 position = Vector2(-536, -50)
 rotation = -0.1569922
 texture = ExtResource("15_cufyf")
 flip_h = true
 
-[node name="Brick20" type="Sprite2D" parent="Offset/Deco/Wall" index="10" unique_id=1520537669]
+[node name="Brick20" type="Sprite2D" parent="Offset/Deco/Wall" index="11" unique_id=1520537669]
 position = Vector2(-367.29492, 103.754456)
 rotation = -0.1569922
 texture = ExtResource("15_cufyf")
 flip_h = true
 
-[node name="Brick30" type="Sprite2D" parent="Offset/Deco/Wall" index="11" unique_id=1515754627]
+[node name="Brick30" type="Sprite2D" parent="Offset/Deco/Wall" index="12" unique_id=1515754627]
 position = Vector2(-387.29468, 83.754456)
 rotation = -0.26708055
 scale = Vector2(1.1974571, 1.1974571)
 texture = ExtResource("12_kwe0e")
 
-[node name="Brick21" type="Sprite2D" parent="Offset/Deco/Wall" index="12" unique_id=1053302532]
+[node name="Brick21" type="Sprite2D" parent="Offset/Deco/Wall" index="13" unique_id=1053302532]
 position = Vector2(-378.29443, 77.75452)
 rotation = -0.005771159
 scale = Vector2(0.97965336, 0.93850344)
 texture = ExtResource("14_088u0")
 flip_h = true
 
-[node name="Brick22" type="Sprite2D" parent="Offset/Deco/Wall" index="13" unique_id=957242820]
+[node name="Brick22" type="Sprite2D" parent="Offset/Deco/Wall" index="14" unique_id=957242820]
 position = Vector2(-480, -51.999985)
 rotation = -0.005771159
 scale = Vector2(0.97965336, 0.93850344)
 texture = ExtResource("14_088u0")
 flip_h = true
 
-[node name="Brick23" type="Sprite2D" parent="Offset/Deco/Wall" index="14" unique_id=2131646298]
+[node name="Brick23" type="Sprite2D" parent="Offset/Deco/Wall" index="15" unique_id=2131646298]
 position = Vector2(-375, -0.99998856)
 rotation = -0.005771159
 scale = Vector2(0.97965336, 0.93850344)
 texture = ExtResource("14_088u0")
 flip_h = true
+
+[node name="PathFollow2D2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=586076656 instance=ExtResource("20_lilds")]
+position = Vector2(748, 11)
+width = 30.0
+width_curve = SubResource("Curve_7pt6u")
+grad = SubResource("Gradient_njeoj")
+progress = 1.0
+hitbox_size = 10.0
+
+[node name="Path2D" parent="Offset/Deco/PathFollow2D2" index="0" unique_id=2105629789]
+curve = SubResource("Curve2D_lusqu")
+
+[node name="Leaves" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="8" unique_id=487002654]
+
+[node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Leaves" index="0" unique_id=1954770237]
+position = Vector2(-462, 228)
+texture = ExtResource("21_fxf3v")
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Leaves" index="1" unique_id=114568523]
+position = Vector2(-453, -82)
+texture = ExtResource("14_lvo7a")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Leaves" index="2" unique_id=1714613423]
+position = Vector2(-297, -81)
+rotation = -0.21590906
+scale = Vector2(0.64842045, 0.64842045)
+texture = ExtResource("14_lvo7a")
+
+[node name="Leaf2" type="Sprite2D" parent="Offset/Deco/Leaves" index="3" unique_id=1216965584]
+position = Vector2(-412, 34)
+rotation = 0.58406436
+scale = Vector2(0.4411599, 0.4411599)
+texture = ExtResource("22_nymqh")
+flip_h = true
+
+[node name="Leaf2" type="Sprite2D" parent="." index="3" unique_id=2072479527]
+position = Vector2(-1524.0001, -883.0002)
+rotation = -0.78796107
+scale = Vector2(0.52958506, 0.52958506)
+texture = ExtResource("22_nymqh")
+
+[node name="Leaf3" type="Sprite2D" parent="." index="4" unique_id=1279800485]
+position = Vector2(-1559.0001, -945)
+scale = Vector2(0.56240475, 0.56240475)
+texture = ExtResource("13_rridl")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
@@ -1246,3 +1332,4 @@ flip_h = true
 [editable path="Offset/Obstacles/MovingPlatform2"]
 [editable path="Offset/Obstacles/Yellowball"]
 [editable path="Offset/Obstacles/Yellowball2"]
+[editable path="Offset/Deco/PathFollow2D2"]

@@ -23,12 +23,8 @@ func exit():
 
 func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
-<<<<<<< Updated upstream
-		if Input.is_action_pressed("run"): return jump
-=======
 		return jump
 		print(Game.player.interact_area.get_overlapping_areas())
->>>>>>> Stashed changes
 		if timer.time_left > 0 and !parent.has_jumped:
 			return jump
 			#pass
