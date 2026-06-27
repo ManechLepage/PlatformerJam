@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="15_2eb28"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="16_65hum"]
 [ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="17_hiixa"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="18_2eb28"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -924,31 +925,11 @@ position = Vector2(-23, 257)
 scale = Vector2(1.6699927, 0.7869398)
 texture = ExtResource("12_4i05a")
 
-[node name="Brick39" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="0" unique_id=1439977118]
-position = Vector2(25.748577, 2.5414896)
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="0" unique_id=456755811]
+position = Vector2(59.88045, 8.895203)
 scale = Vector2(0.598805, 1.2707453)
-texture = ExtResource("15_2eb28")
-
-[node name="Brick5" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="1" unique_id=278113484]
-position = Vector2(47.305664, 0)
-rotation = -0.039743174
-scale = Vector2(0.48668662, 0.47780752)
-texture = ExtResource("13_aw7ws")
-
-[node name="Brick2" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="2" unique_id=1867329822]
-position = Vector2(71.25781, 1.270752)
-texture = ExtResource("15_2eb28")
+texture = ExtResource("18_2eb28")
 flip_h = true
-
-[node name="Brick3" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="3" unique_id=1170617246]
-position = Vector2(103.59326, -2.541504)
-scale = Vector2(1.2373712, 1.2373712)
-texture = ExtResource("14_hiixa")
-
-[node name="Brick6" type="Sprite2D" parent="Offset/Deco/wall/Brick38" index="4" unique_id=1505860369]
-position = Vector2(121.55747, 10.165964)
-scale = Vector2(0.58998734, 0.58998734)
-texture = ExtResource("13_aw7ws")
 
 [node name="Brick39" type="Sprite2D" parent="Offset/Deco/wall" index="34" unique_id=1724636008]
 position = Vector2(184, 282)
@@ -1355,6 +1336,18 @@ rpm = -20.0
 [node name="Gear2" parent="Offset" index="6" unique_id=245400764 instance=ExtResource("17_hiixa")]
 modulate = Color(2.5355003, 10.258124, 10.129414, 1)
 position = Vector2(256, 248)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = -10.0
+
+[node name="Gear3" parent="." index="2" unique_id=1121937348 instance=ExtResource("17_hiixa")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+position = Vector2(-3392, -329)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = 10.0
+
+[node name="Gear4" parent="." index="3" unique_id=1639775123 instance=ExtResource("17_hiixa")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+position = Vector2(-3251, -400)
 scale = Vector2(1.9296914, 1.9296914)
 rpm = -10.0
 

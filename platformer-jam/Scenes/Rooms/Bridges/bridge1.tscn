@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_jkcge"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_m704x"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_3yt2w"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="7_tcvbu"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -85,7 +86,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_6fshy"]
+[sub_resource type="Gradient" id="Gradient_1v5si"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -107,6 +108,47 @@ script = ExtResource("2_jdk3q")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, -540)
 offset = Vector2i(3, 1)
+
+[node name="Gear3" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("7_tcvbu")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+position = Vector2(-512, 211)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = 10.0
+
+[node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=1014710603 instance=ExtResource("7_tcvbu")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-371, 140)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = -10.0
+
+[node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=814133372 instance=ExtResource("7_tcvbu")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-154.99976, 33)
+scale = Vector2(3.86, 3.86)
+rpm = 5.0
+
+[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="3" unique_id=124945476 instance=ExtResource("7_tcvbu")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(148, 125)
+scale = Vector2(3.86, 3.86)
+rpm = -5.0
+
+[node name="Gear7" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="4" unique_id=213427352 instance=ExtResource("7_tcvbu")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(288, -148)
+scale = Vector2(3.86, 3.86)
+rpm = 5.0
+
+[node name="Gear8" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="5" unique_id=898641026 instance=ExtResource("7_tcvbu")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(491, -29)
+scale = Vector2(1.93, 1.93)
+rpm = 10.0
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -255,16 +297,12 @@ rotation = -1.9394525
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=901383637 instance=ExtResource("6_3yt2w")]
 position = Vector2(-362, 47)
-rotation = 0.0
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_tcvbu")
-has_hitbox = false
 hitbox_size = 20.0
 
-[node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=545245425]
-position = Vector2(0, 0)
-rotation = 0.0
+[node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_2fq3i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1346485319]
@@ -275,15 +313,11 @@ rotates = false
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1097771579 instance=ExtResource("6_3yt2w")]
 position = Vector2(-362, 47)
-rotation = 0.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_rbnie")
-has_hitbox = false
 hitbox_size = 20.0
 
-[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=545245425]
-position = Vector2(0, 0)
-rotation = 0.0
+[node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_1v5si")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant2/Path2D" index="0" unique_id=1456006216]
@@ -294,15 +328,11 @@ rotates = false
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="14" unique_id=1944685402 instance=ExtResource("6_3yt2w")]
 position = Vector2(-362, 47)
-rotation = 0.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_6fshy")
-has_hitbox = false
+grad = SubResource("Gradient_1v5si")
 hitbox_size = 20.0
 
-[node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=545245425]
-position = Vector2(0, 0)
-rotation = 0.0
+[node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_388lu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=1649162779]
