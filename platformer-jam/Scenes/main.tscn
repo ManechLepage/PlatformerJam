@@ -171,7 +171,7 @@ shader_parameter/alpha = 1.0
 shader = ExtResource("25_u50mg")
 shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
 shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
-shader_parameter/colorC = Color(1.6148783, 1.4038353, 0, 1)
+shader_parameter/colorC = Color(4.7454042, 2.0310392, 3.8406157, 1)
 shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
@@ -339,7 +339,6 @@ grow_vertical = 2
 layer = 50
 
 [node name="lucid overlay" type="ColorRect" parent="Lucid/lucid bg/Overlay" unique_id=25300080]
-visible = false
 material = SubResource("ShaderMaterial_u50mg")
 anchors_preset = 15
 anchor_right = 1.0
