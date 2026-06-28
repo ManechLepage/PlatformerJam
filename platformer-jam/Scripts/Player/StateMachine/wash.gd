@@ -14,7 +14,6 @@ func enter():
 	else: 
 		for i in Game.player.interact_area.get_overlapping_areas():
 			if i is Poem:
-				Game.player.poem_collected += 1
 				i.collect()
 			elif i is Lever:
 				i.activate()

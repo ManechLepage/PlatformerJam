@@ -5,10 +5,10 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_pd6bw"]
 [ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="4_5ig0e"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_kr4pd"]
-[ext_resource type="PackedScene" uid="uid://ev6wn4wsgyq2" path="res://Scenes/Objects/water.tscn" id="5_cheee"]
 [ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="5_nl278"]
 [ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="6_agpf0"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="6_pd6bw"]
+[ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="9_n7cxg"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -468,16 +468,16 @@ scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_tqxqq")
 disabled = true
 
-[node name="Water" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1652650217 instance=ExtResource("5_cheee")]
-position = Vector2(-256, 129)
-
-[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=1760792903 instance=ExtResource("6_pd6bw")]
+[node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1760792903 instance=ExtResource("6_pd6bw")]
 position = Vector2(-84, -32)
 scale = Vector2(1e-05, 1e-05)
 
-[node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="17" unique_id=1980369393 instance=ExtResource("6_pd6bw")]
+[node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=1980369393 instance=ExtResource("6_pd6bw")]
 position = Vector2(-135, -168.00002)
 scale = Vector2(1e-05, 1e-05)
+
+[node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("9_n7cxg")]
+position = Vector2(-257, -1484)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://ccfcgttb2c4md"]
 
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_etpyt"]
+[ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="3_653nx"]
 [ext_resource type="PackedScene" uid="uid://d3064a5ui58k2" path="res://Scenes/Rooms/room_trigger.tscn" id="3_xq6d4"]
+[ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="4_5r2ab"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="4_8pykr"]
+[ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="5_jofkg"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="5_rwxj0"]
 [ext_resource type="PackedScene" uid="uid://fbv3k25te8ta" path="res://Scenes/Objects/tutorial_popup.tscn" id="6_04iir"]
+[ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="6_5r2ab"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="6_xq6d4"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="7_04iir"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="11_jofkg"]
+[ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="12_bl4lt"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="13_ny1y2"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="14_43664"]
+[ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="15_2s322"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="16_2s322"]
 
 [sub_resource type="Animation" id="Animation_etpyt"]
 resource_name = "lucidity"
@@ -18,10 +28,10 @@ tracks/0/path = NodePath("Offset/Obstacles/Door:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.1953125),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-9.999998, -12.999996), Vector2(7.000002, -267)]
+"values": [Vector2(7.000002, -267), Vector2(-9.999998, -12.999996)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -46,6 +56,498 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-281, -131.00003), Vector2(-290.00003, -263)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Deco/doors/Brick42:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0546875, 0.1015625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(21, 126), Vector2(44, 219)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Deco/doors/Brick6:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.078125, 0.125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-8, 167), Vector2(16, 231)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Deco/doors/Brick16:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0859375, 0.1328125, 0.171875, 0.21875),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-6, 133), Vector2(16, 189), Vector2(39, 200), Vector2(59, 219)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Deco/doors/Brick16:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0859375, 0.1328125, 0.171875, 0.203125),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.006729209, 2.2105675, 3.5225577, 3.9939373]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Deco/doors/Brick6:rotation")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.078125, 0.125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5707964]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Deco/doors/Brick19:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.09375, 0.109375, 0.125),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-40, 214), Vector2(-57, 216), Vector2(-54, 217)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Deco/doors/Brick19:rotation")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.09375, 0.109375, 0.125),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.21968806, 0.074264914]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Offset/Deco/doors/Brick15:rotation")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.0859375, 0.1015625, 0.1171875, 0.15625),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-2.9800525, -2.2680593, -3.6142192, -6.2236867]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Offset/Deco/doors/Brick15:position")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.0859375, 0.1015625, 0.1171875, 0.15625),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-42, 146), Vector2(-51, 169.00003), Vector2(-72, 185), Vector2(-99, 223)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Offset/Deco/doors/start top:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.015625, 0.1015625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.9999695, -296.59778), Vector2(-65, -30)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Offset/Deco/doors/Brick48:position")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.1640625, 0.203125),
+"transitions": PackedFloat32Array(4.438277, 1, 1),
+"update": 0,
+"values": [Vector2(-150, -293), Vector2(-175.00003, -43.00006), Vector2(-155, -41)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Offset/Deco/doors/Brick49:position")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.09375, 0.1171875),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(14, -235), Vector2(11.000053, -54.000008), Vector2(-5, -40)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Offset/Deco/doors/Brick50:position")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.015625, 0.140625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(50.99997, -339.59775), Vector2(-17, -73)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Offset/Deco/doors/Brick51:position")
+tracks/16/interp = 2
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.015625, 0.140625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(7.9999695, -260.99997), Vector2(9.999996, -75)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Offset/Deco/doors/Brick52:position")
+tracks/17/interp = 2
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.0625, 0.203125),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(34.99997, -355.59775), Vector2(-33, -89)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Offset/Deco/doors/Brick68:position")
+tracks/18/interp = 2
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.015625, 0.125),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(-35.00003, -336), Vector2(-53, -63)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Offset/Deco/doors/Brick69:position")
+tracks/19/interp = 2
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.015625, 0.1640625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(2.9999695, -337.59778), Vector2(-65, -71)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Offset/Deco/doors/Brick70:position")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.1015625, 0.2890625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(24.99997, -387.59775), Vector2(-42, -105)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Offset/Deco/doors/Brick73:position")
+tracks/21/interp = 2
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.015625, 0.09375),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(-30.00003, -307.59778), Vector2(-98, -41)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Offset/Deco/doors/Brick74:position")
+tracks/22/interp = 2
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.078125, 0.296875),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-18.00003, -366.99997), Vector2(3, -142)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Offset/Deco/doors/Brick75:position")
+tracks/23/interp = 2
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.015625, 0.1171875),
+"transitions": PackedFloat32Array(2.3784144, 1),
+"update": 0,
+"values": [Vector2(-43.999954, -302.99994), Vector2(-50, -30)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Offset/Deco/doors/Brick54:position")
+tracks/24/interp = 2
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0.015625, 0.15625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(16.99997, -318.99997), Vector2(-8, -96)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Offset/Deco/doors/Brick43:position")
+tracks/25/interp = 2
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.046875, 0.171875),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(0.9999695, -396.99997), Vector2(-1, -126)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Offset/Deco/doors/Brick45:position")
+tracks/26/interp = 2
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0.015625, 0.1484375),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(-19.00003, -410.99997), Vector2(-23, -100)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Offset/Deco/doors/Brick46:position")
+tracks/27/interp = 2
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.0625, 0.203125),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [Vector2(16.99997, -367.99997), Vector2(14, -106)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Offset/Deco/doors/start top:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0.015625, 0.1015625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Offset/Deco/doors/Brick48:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.1640625, 0.203125),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.41141796, 0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Offset/Deco/doors/Brick49:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.09375, 0.1171875),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.7853982, 0.63684183, 0.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Offset/Deco/doors/Brick50:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0.015625, 0.140625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [2.3010855, 0.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Offset/Deco/doors/Brick51:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0.015625, 0.140625),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [-1.1793822, -2.2007825]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Offset/Deco/doors/Brick52:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0.0625, 0.203125),
+"transitions": PackedFloat32Array(2.070531, 1),
+"update": 0,
+"values": [-1.2010133, -1.2010133]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Offset/Deco/doors/Brick68:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0.015625, 0.125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Offset/Deco/doors/Brick69:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0.015625, 0.1640625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Offset/Deco/doors/Brick70:rotation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0.1015625, 0.2890625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.2010133, -2.3349183]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Offset/Deco/doors/Brick73:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0.015625, 0.09375),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Offset/Deco/doors/Brick74:rotation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0.078125, 0.296875),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.2010133, -1.2010133]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Offset/Deco/doors/Brick75:rotation")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0.015625, 0.1171875),
+"transitions": PackedFloat32Array(2.3784142, 1),
+"update": 0,
+"values": [0.86233133, 2.8577497]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Offset/Deco/doors/Brick54:rotation")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0.015625, 0.15625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Offset/Deco/doors/Brick43:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0.046875, 0.171875),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.6347545, 1.6347545]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Offset/Deco/doors/Brick45:rotation")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0.015625, 0.1484375),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.2599559, 0.2599559]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Offset/Deco/doors/Brick46:rotation")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0.0625, 0.203125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.6347545, 1.6347545]
 }
 
 [sub_resource type="Animation" id="Animation_q44wt"]
@@ -86,12 +588,506 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(-281, -131.00003)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Deco/doors/Brick42:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(21, 126)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Deco/doors/Brick6:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8, 167)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Deco/doors/Brick16:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6, 133)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Deco/doors/Brick16:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.006729209]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Deco/doors/Brick6:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Deco/doors/Brick19:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, 214)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Deco/doors/Brick19:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Offset/Deco/doors/Brick15:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.9800525]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Offset/Deco/doors/Brick15:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-42, 146)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Offset/Deco/doors/start top:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-65, -30)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Offset/Deco/doors/Brick48:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-155, -41)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Offset/Deco/doors/Brick49:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, -40)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Offset/Deco/doors/Brick50:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, -73)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Offset/Deco/doors/Brick51:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, -77)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Offset/Deco/doors/Brick52:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-33, -89)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Offset/Deco/doors/Brick68:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-53, -63)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Offset/Deco/doors/Brick69:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-65, -71)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Offset/Deco/doors/Brick70:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-43, -121)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Offset/Deco/doors/Brick73:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-98, -41)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Offset/Deco/doors/Brick74:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, -142)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Offset/Deco/doors/Brick75:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-42, -41)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Offset/Deco/doors/Brick54:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8, -96)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Offset/Deco/doors/Brick43:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -126)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Offset/Deco/doors/Brick45:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -100)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Offset/Deco/doors/Brick46:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(14, -106)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Offset/Deco/doors/start top:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Offset/Deco/doors/Brick48:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Offset/Deco/doors/Brick49:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Offset/Deco/doors/Brick50:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Offset/Deco/doors/Brick51:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.1793822]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Offset/Deco/doors/Brick52:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.2010133]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Offset/Deco/doors/Brick68:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Offset/Deco/doors/Brick69:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Offset/Deco/doors/Brick70:rotation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.2010133]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Offset/Deco/doors/Brick73:rotation")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Offset/Deco/doors/Brick74:rotation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.2010133]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Offset/Deco/doors/Brick75:rotation")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Offset/Deco/doors/Brick54:rotation")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Offset/Deco/doors/Brick43:rotation")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.6347545]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Offset/Deco/doors/Brick45:rotation")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.2599559]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Offset/Deco/doors/Brick46:rotation")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.6347545]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xq6d4"]
 _data = {
 &"Lucidity": SubResource("Animation_etpyt"),
 &"RESET": SubResource("Animation_q44wt")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 
 [sub_resource type="GDScript" id="GDScript_04iir"]
 resource_name = "intro_controller"
@@ -101,19 +1097,34 @@ script/source = "extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if Game.seen_intro: 
+		hide()
+	else:
+		Game.seen_intro = true
+		Game.player.process_mode = Node.PROCESS_MODE_DISABLED
+		animation.animation_finished.connect(anim_done)
+	
+func anim_done(anim):
+	match anim:
+		\"start\":
+			animation.play(\"start_loop\")
+		\"start_2\":
+			animation.play(\"start_loop_2\")
+		\"start_3\":
+			animation.play(\"start_loop_3\")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed(\"intro_continue\"):
 		match animation.current_animation:
-			\"start\":
+			\"start_loop\":
 				animation.play(\"start_2\")
-			\"start_2\":
+			\"start_loop_2\":
 				animation.play(\"start_3\")
-			\"start_3\":
+			\"start_loop_3\":
 				animation.play(\"start_4\")
+				Game.player.process_mode = Node.PROCESS_MODE_INHERIT
 "
 
 [sub_resource type="Animation" id="Animation_04iir"]
@@ -169,7 +1180,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_xq6d4"]
 resource_name = "start"
-length = 3.996
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -221,7 +1232,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_8pykr"]
 resource_name = "start_2"
-length = 3.996
+length = 0.76666665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -273,7 +1284,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_rwxj0"]
 resource_name = "start_3"
-length = 3.996
+length = 0.76666665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -325,7 +1336,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_653nx"]
 resource_name = "start_4"
-length = 3.996
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -375,13 +1386,175 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_2s322"]
+resource_name = "start_loop"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jo3ao"]
+resource_name = "start_loop_2"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_chp8k"]
+resource_name = "start_loop_3"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_04iir"]
 _data = {
 &"RESET": SubResource("Animation_04iir"),
 &"start": SubResource("Animation_xq6d4"),
 &"start_2": SubResource("Animation_8pykr"),
 &"start_3": SubResource("Animation_rwxj0"),
-&"start_4": SubResource("Animation_653nx")
+&"start_4": SubResource("Animation_653nx"),
+&"start_loop": SubResource("Animation_2s322"),
+&"start_loop_2": SubResource("Animation_jo3ao"),
+&"start_loop_3": SubResource("Animation_chp8k")
 }
 
 [node name="Tutorial_1" unique_id=197990627 instance=ExtResource("1_etpyt")]
@@ -394,6 +1567,197 @@ script = ExtResource("5_rwxj0")
 
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-1587, 1377)
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=338744828]
+position = Vector2(-225, 132)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=1363151143]
+position = Vector2(-201, 219)
+texture = ExtResource("4_5r2ab")
+flip_h = true
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=597116276]
+position = Vector2(-115, 133)
+texture = ExtResource("5_jofkg")
+flip_h = true
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="3" unique_id=529903833]
+position = Vector2(-98, 200)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="4" unique_id=919650742]
+position = Vector2(-109, 196)
+texture = ExtResource("3_653nx")
+flip_h = true
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="5" unique_id=1060543995]
+position = Vector2(31, 123)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="6" unique_id=810654117]
+position = Vector2(4, 204)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="7" unique_id=1976449017]
+position = Vector2(224, 203)
+scale = Vector2(1.7508986, 1.7508986)
+texture = ExtResource("4_5r2ab")
+flip_h = true
+
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="8" unique_id=1539301853]
+position = Vector2(125, 201)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="9" unique_id=95712857]
+position = Vector2(166, 117)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="10" unique_id=495879257]
+position = Vector2(40, 56)
+scale = Vector2(1.3778199, 1.3778199)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="11" unique_id=1585575928]
+position = Vector2(152, 27)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_jofkg")
+flip_h = true
+
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="12" unique_id=1199316305]
+position = Vector2(35.999878, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="13" unique_id=1022333645]
+position = Vector2(-87, -61)
+scale = Vector2(1.5473557, 1.5473557)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="14" unique_id=1920079998]
+position = Vector2(106, -81)
+scale = Vector2(1.3245915, 1.3245915)
+texture = ExtResource("5_jofkg")
+flip_h = true
+
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="15" unique_id=360051094]
+position = Vector2(114, -19)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_5r2ab")
+flip_h = true
+
+[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="16" unique_id=1031074425]
+position = Vector2(231, -38)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="17" unique_id=763731760]
+position = Vector2(67.99988, -175)
+scale = Vector2(1.2634635, 1.2634635)
+texture = ExtResource("3_653nx")
+flip_h = true
+
+[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="18" unique_id=318190026]
+position = Vector2(218, -180)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg20" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="19" unique_id=449248967]
+position = Vector2(233, -106)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_5r2ab")
+flip_h = true
+
+[node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="20" unique_id=102283435]
+position = Vector2(-263, -38)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg22" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="21" unique_id=2099644975]
+position = Vector2(-257, -135)
+scale = Vector2(2.0388534, 2.0388534)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg23" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="22" unique_id=417909497]
+position = Vector2(-100, -202)
+scale = Vector2(1.5020916, 1.5020916)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg24" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="23" unique_id=1773555930]
+position = Vector2(-280, -262)
+scale = Vector2(1.5536456, 1.5536456)
+texture = ExtResource("5_jofkg")
+flip_h = true
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=1876255704]
+position = Vector2(-66, 156)
+texture = ExtResource("6_5r2ab")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=2039413936]
+position = Vector2(218, 34)
+texture = ExtResource("6_5r2ab")
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="2" unique_id=2126653246]
+position = Vector2(33, -121)
+texture = ExtResource("6_5r2ab")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="3" unique_id=1134582503]
+position = Vector2(-298, -191)
+texture = ExtResource("6_5r2ab")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="4" unique_id=1859423001]
+modulate = Color(0.3256, 0.44, 0.43618667, 1)
+position = Vector2(131, -168)
+rotation = -2.384236
+scale = Vector2(4.4274793, 4.4274793)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="0" unique_id=214612198]
+position = Vector2(2.0989869, -103.31326)
+rotation = 3.575148
+scale = Vector2(0.7722868, 0.7722868)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="1" unique_id=316288855]
+position = Vector2(-15.474148, -91.98309)
+rotation = 0.5675377
+texture = ExtResource("11_jofkg")
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="2" unique_id=529615738]
+position = Vector2(-49.492554, -58.266857)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick4" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="3" unique_id=1708298756]
+position = Vector2(-27.255817, -30.801533)
+rotation = -2.9632275
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick7" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="4" unique_id=962221354]
+position = Vector2(25.621597, -59.035828)
+rotation = 1.6428288
+texture = ExtResource("11_jofkg")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="5" unique_id=1127082258]
+position = Vector2(-6.272135, -27.017536)
+rotation = -0.66371685
+texture = ExtResource("14_43664")
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="6" unique_id=1471168863]
+position = Vector2(1.0536709, -26.172962)
+rotation = -1.940843
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick8" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="7" unique_id=493767551]
+position = Vector2(27.369934, -30.227966)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick9" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="8" unique_id=1433107177]
+position = Vector2(74.54782, -54.627876)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick10" type="Sprite2D" parent="Offset/Background/Parallax2D2/Brick2" index="9" unique_id=548279469]
+position = Vector2(56.610424, -24.614643)
+rotation = -0.52207744
+texture = ExtResource("14_43664")
 
 [node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("3_xq6d4")]
 position = Vector2(-189.00002, -254)
@@ -425,15 +1789,38 @@ scale = Vector2(3.665, 0.798)
 is_platform = true
 
 [node name="Left_ledge" parent="Offset/Obstacles" index="4" unique_id=1274042356 instance=ExtResource("6_xq6d4")]
-position = Vector2(263, -8.999996)
+modulate = Color(0.11650665, 0.115600005, 0.17, 1)
+position = Vector2(400, -13.999996)
 rotation = -0.057595864
 scale = Vector2(4.52, 0.968)
 is_platform = true
 
+[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="1" unique_id=1692040124]
+position = Vector2(4.7911463, -11.127368)
+scale = Vector2(0.25154597, 1.0548043)
+texture = ExtResource("14_43664")
+flip_h = true
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Obstacles/Left_ledge" index="2" unique_id=2063536663]
+z_index = 2
+position = Vector2(1.0661405, 3.3914258)
+rotation = 0.26418424
+scale = Vector2(0.165, 1)
+skew = -0.2565634
+texture = ExtResource("16_2s322")
+flip_h = true
+
 [node name="Door" parent="Offset/Obstacles" index="5" unique_id=1123764671 instance=ExtResource("6_xq6d4")]
-position = Vector2(58, -21)
+position = Vector2(7, -267)
 rotation = 0.05235988
 scale = Vector2(3.28, 12.27)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Door" index="0" unique_id=1349571073]
+position = Vector2(-0.1151557, 22.771206)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Door" index="1" unique_id=276782358]
+position = Vector2(-0.60684204, -13.99602)
+shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="Floor" parent="Offset/Obstacles" index="6" unique_id=928395927 instance=ExtResource("6_xq6d4")]
 position = Vector2(-137.00003, 119.000015)
@@ -454,28 +1841,56 @@ position = Vector2(131, -369)
 rotation = 0.08726646
 scale = Vector2(17.06, 3.845)
 
-[node name="TextEdit" type="TextEdit" parent="Offset/Obstacles" index="10" unique_id=949010719]
-offset_left = 280.0
-offset_top = -234.0
-offset_right = 431.0
-offset_bottom = -186.0
-text = "MAX 20 lucidity
-"
-
-[node name="Waterfall" parent="Offset/Obstacles" index="11" unique_id=1257707682 instance=ExtResource("4_8pykr")]
+[node name="Waterfall" parent="Offset/Obstacles" index="10" unique_id=1257707682 instance=ExtResource("4_8pykr")]
 position = Vector2(174, -126)
 
-[node name="Pilar_1" parent="Offset/Obstacles" index="12" unique_id=883810348 instance=ExtResource("6_xq6d4")]
+[node name="Pilar_1" parent="Offset/Obstacles" index="11" unique_id=883810348 instance=ExtResource("6_xq6d4")]
 position = Vector2(-235.99998, -171)
 rotation = 0.05235988
 scale = Vector2(1, 4.045)
 is_platform = true
 
-[node name="Pilar_2" parent="Offset/Obstacles" index="13" unique_id=1235958755 instance=ExtResource("6_xq6d4")]
+[node name="Pilar_2" parent="Offset/Obstacles" index="12" unique_id=1235958755 instance=ExtResource("6_xq6d4")]
+modulate = Color(0.126, 0.161, 0.21, 1)
 position = Vector2(-281, -131.00003)
 rotation = -0.05235988
 scale = Vector2(1, 7.235)
 is_platform = true
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Pilar_2" index="1" unique_id=1996261255]
+position = Vector2(-9.445961, 9.066419)
+rotation = 0.0072435196
+scale = Vector2(0.9986558, 0.14761662)
+skew = 0.35517812
+texture = ExtResource("11_jofkg")
+
+[node name="Brick4" type="Sprite2D" parent="Offset/Obstacles/Pilar_2" index="2" unique_id=1996231665]
+position = Vector2(5.0498047, 2.527893)
+rotation = 0.0072435196
+scale = Vector2(0.9986558, 0.14761662)
+skew = 0.35517812
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Pilar_2" index="3" unique_id=1533715747]
+position = Vector2(0.94628906, 0.14526367)
+rotation = 0.44475493
+scale = Vector2(0.3085452, 0.96119916)
+skew = 1.0859793
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Pilar_2" index="4" unique_id=490136935]
+position = Vector2(4.56604, -4.1191254)
+rotation = 0.0072435196
+scale = Vector2(0.9986558, 0.14761662)
+skew = 0.35517812
+texture = ExtResource("15_2s322")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Pilar_2" index="5" unique_id=812575934]
+position = Vector2(1.7229004, -7.184662)
+rotation = 1.6711383
+scale = Vector2(0.13890229, 0.99990505)
+skew = -0.09841871
+texture = ExtResource("14_43664")
 
 [node name="tutorrial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1754253968 instance=ExtResource("6_04iir")]
 position = Vector2(-178, 189)
@@ -483,6 +1898,7 @@ scale = Vector2(0.6413263, 0.6413263)
 destroyable = false
 
 [node name="PoemText" parent="Offset/Deco/tutorrial_text" index="2" unique_id=1098363463]
+z_index = 5
 offset_left = -46.77806
 offset_top = -291.58325
 offset_right = 335.22192
@@ -490,8 +1906,603 @@ offset_bottom = -73.77806
 theme_override_font_sizes/normal_font_size = 32
 text = "Arrow Keys: Move
 Z: Jump
-X: Meditate
+X: Forget Yourself
 C: Interact"
+
+[node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=379381942]
+modulate = Color(0.126, 0.161, 0.21, 1)
+z_index = 2
+
+[node name="Brick7" type="Sprite2D" parent="Offset/Deco/wall" index="0" unique_id=1864172278]
+position = Vector2(-253, 185)
+rotation = -0.22785778
+scale = Vector2(2.1307993, 2.1307993)
+texture = ExtResource("12_bl4lt")
+flip_h = true
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/wall" index="1" unique_id=341371009]
+position = Vector2(-259, 254)
+scale = Vector2(1.5658832, 1.5658832)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick4" type="Sprite2D" parent="Offset/Deco/wall" index="2" unique_id=1221271505]
+position = Vector2(-205, 248)
+rotation = 0.80903107
+scale = Vector2(1.7163532, 1.7163532)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/wall" index="3" unique_id=1600557459]
+position = Vector2(-169, 236)
+rotation = -0.006729209
+texture = ExtResource("13_ny1y2")
+flip_h = true
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Deco/wall" index="4" unique_id=299519168]
+position = Vector2(-133, 234)
+texture = ExtResource("14_43664")
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Deco/wall" index="5" unique_id=1579767225]
+position = Vector2(-101, 233)
+texture = ExtResource("15_2s322")
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/wall" index="6" unique_id=1782184645]
+position = Vector2(-71, 247)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick8" type="Sprite2D" parent="Offset/Deco/wall" index="7" unique_id=2019404900]
+position = Vector2(-249, 136)
+rotation = 1.0823017
+texture = ExtResource("14_43664")
+flip_h = true
+
+[node name="Brick9" type="Sprite2D" parent="Offset/Deco/wall" index="8" unique_id=271670303]
+position = Vector2(-259, 108)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick10" type="Sprite2D" parent="Offset/Deco/wall" index="9" unique_id=904269922]
+position = Vector2(-225, 104)
+rotation = -0.61316127
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick11" type="Sprite2D" parent="Offset/Deco/wall" index="10" unique_id=437252905]
+position = Vector2(-206, 90)
+rotation = -0.006729209
+scale = Vector2(1.895986, 1.895986)
+texture = ExtResource("15_2s322")
+flip_h = true
+
+[node name="Brick12" type="Sprite2D" parent="Offset/Deco/wall" index="11" unique_id=1773389200]
+position = Vector2(-158, 111)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick13" type="Sprite2D" parent="Offset/Deco/wall" index="12" unique_id=26853548]
+position = Vector2(-119, 107)
+rotation = -0.52751327
+texture = ExtResource("14_43664")
+
+[node name="Brick14" type="Sprite2D" parent="Offset/Deco/wall" index="13" unique_id=1911713924]
+position = Vector2(-85, 109)
+rotation = 2.9287622
+texture = ExtResource("11_jofkg")
+flip_h = true
+
+[node name="Brick15" type="Sprite2D" parent="Offset/Deco/wall" index="14" unique_id=1097636324]
+position = Vector2(-40, 121)
+rotation = -2.9800525
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick16" type="Sprite2D" parent="Offset/Deco/wall" index="15" unique_id=1563534844]
+position = Vector2(-4, 124)
+rotation = -0.006729209
+texture = ExtResource("14_43664")
+flip_h = true
+
+[node name="Brick17" type="Sprite2D" parent="Offset/Deco/wall" index="16" unique_id=1172057132]
+position = Vector2(-29, 238)
+texture = ExtResource("14_43664")
+
+[node name="Brick18" type="Sprite2D" parent="Offset/Deco/wall" index="17" unique_id=1534196389]
+position = Vector2(1, 229)
+texture = ExtResource("15_2s322")
+
+[node name="Brick19" type="Sprite2D" parent="Offset/Deco/wall" index="18" unique_id=1013955484]
+position = Vector2(28, 244)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick20" type="Sprite2D" parent="Offset/Deco/wall" index="19" unique_id=2007129078]
+position = Vector2(77, 220)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick21" type="Sprite2D" parent="Offset/Deco/wall" index="20" unique_id=498642483]
+position = Vector2(116, 224)
+texture = ExtResource("14_43664")
+
+[node name="Brick22" type="Sprite2D" parent="Offset/Deco/wall" index="21" unique_id=635879395]
+position = Vector2(144, 230)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick23" type="Sprite2D" parent="Offset/Deco/wall" index="22" unique_id=591122302]
+position = Vector2(168, 213)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick24" type="Sprite2D" parent="Offset/Deco/wall" index="23" unique_id=1484277714]
+position = Vector2(202, 210)
+texture = ExtResource("15_2s322")
+
+[node name="Brick47" type="Sprite2D" parent="Offset/Deco/wall" index="24" unique_id=1542710384]
+position = Vector2(-195, -32)
+texture = ExtResource("14_43664")
+
+[node name="Brick48" type="Sprite2D" parent="Offset/Deco/wall" index="25" unique_id=604993130]
+position = Vector2(-167, -37)
+texture = ExtResource("15_2s322")
+
+[node name="Brick49" type="Sprite2D" parent="Offset/Deco/wall" index="26" unique_id=679330575]
+position = Vector2(-139, -16)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick50" type="Sprite2D" parent="Offset/Deco/wall" index="27" unique_id=637512284]
+position = Vector2(-94, -28)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick51" type="Sprite2D" parent="Offset/Deco/wall" index="28" unique_id=2133671239]
+position = Vector2(-64, -29)
+texture = ExtResource("14_43664")
+
+[node name="Brick52" type="Sprite2D" parent="Offset/Deco/wall" index="29" unique_id=2120127137]
+position = Vector2(-35, -25)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick53" type="Sprite2D" parent="Offset/Deco/wall" index="30" unique_id=113981520]
+position = Vector2(2, -27)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick68" type="Sprite2D" parent="Offset/Deco/wall" index="31" unique_id=586222950]
+position = Vector2(70, -199.59778)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick69" type="Sprite2D" parent="Offset/Deco/wall" index="32" unique_id=546622093]
+position = Vector2(100, -200.59778)
+texture = ExtResource("14_43664")
+
+[node name="Brick70" type="Sprite2D" parent="Offset/Deco/wall" index="33" unique_id=325310932]
+position = Vector2(129, -196.59778)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick71" type="Sprite2D" parent="Offset/Deco/wall" index="34" unique_id=1056826916]
+position = Vector2(166, -198.59778)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick72" type="Sprite2D" parent="Offset/Deco/wall" index="35" unique_id=344206078]
+position = Vector2(-47, -226)
+rotation = 1.8916208
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick73" type="Sprite2D" parent="Offset/Deco/wall" index="36" unique_id=669169090]
+position = Vector2(-37, -208.59778)
+texture = ExtResource("14_43664")
+
+[node name="Brick74" type="Sprite2D" parent="Offset/Deco/wall" index="37" unique_id=2014082730]
+position = Vector2(-8, -204.59778)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick75" type="Sprite2D" parent="Offset/Deco/wall" index="38" unique_id=2071858715]
+position = Vector2(29, -206.59778)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick54" type="Sprite2D" parent="Offset/Deco/wall" index="39" unique_id=643776672]
+position = Vector2(31, -18)
+texture = ExtResource("15_2s322")
+
+[node name="Brick25" type="Sprite2D" parent="Offset/Deco/wall" index="40" unique_id=1388011487]
+position = Vector2(228, 212)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick26" type="Sprite2D" parent="Offset/Deco/wall" index="41" unique_id=203369514]
+position = Vector2(214, 176)
+texture = ExtResource("15_2s322")
+
+[node name="Brick27" type="Sprite2D" parent="Offset/Deco/wall" index="42" unique_id=1238772227]
+position = Vector2(212.61914, 153.61914)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick28" type="Sprite2D" parent="Offset/Deco/wall" index="43" unique_id=115403346]
+position = Vector2(211, 111)
+texture = ExtResource("15_2s322")
+
+[node name="Brick29" type="Sprite2D" parent="Offset/Deco/wall" index="44" unique_id=1815953885]
+position = Vector2(214, 125)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick30" type="Sprite2D" parent="Offset/Deco/wall" index="45" unique_id=1027986292]
+position = Vector2(209.61914, 83.61914)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick32" type="Sprite2D" parent="Offset/Deco/wall" index="46" unique_id=37834600]
+position = Vector2(205, 11)
+texture = ExtResource("15_2s322")
+
+[node name="Brick33" type="Sprite2D" parent="Offset/Deco/wall" index="47" unique_id=1422191794]
+position = Vector2(203.61914, -11.380859)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick34" type="Sprite2D" parent="Offset/Deco/wall" index="48" unique_id=518092533]
+position = Vector2(202, -54)
+texture = ExtResource("15_2s322")
+
+[node name="Brick35" type="Sprite2D" parent="Offset/Deco/wall" index="49" unique_id=597353170]
+position = Vector2(205, -40)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick36" type="Sprite2D" parent="Offset/Deco/wall" index="50" unique_id=122056844]
+position = Vector2(200.61914, -81.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick37" type="Sprite2D" parent="Offset/Deco/wall" index="51" unique_id=1596583152]
+position = Vector2(196, -111)
+texture = ExtResource("15_2s322")
+
+[node name="Brick38" type="Sprite2D" parent="Offset/Deco/wall" index="52" unique_id=2121365890]
+position = Vector2(194.61914, -133.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick39" type="Sprite2D" parent="Offset/Deco/wall" index="53" unique_id=904911264]
+position = Vector2(193, -176)
+texture = ExtResource("15_2s322")
+
+[node name="Brick40" type="Sprite2D" parent="Offset/Deco/wall" index="54" unique_id=1450578517]
+position = Vector2(196, -162)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick41" type="Sprite2D" parent="Offset/Deco/wall" index="55" unique_id=815382270]
+position = Vector2(191.61914, -203.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick60" type="Sprite2D" parent="Offset/Deco/wall" index="56" unique_id=1731185922]
+position = Vector2(-327, -92)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick61" type="Sprite2D" parent="Offset/Deco/wall" index="57" unique_id=1076066933]
+position = Vector2(-331.38086, -133.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick62" type="Sprite2D" parent="Offset/Deco/wall" index="58" unique_id=783904196]
+position = Vector2(-336, -163)
+texture = ExtResource("15_2s322")
+
+[node name="Brick63" type="Sprite2D" parent="Offset/Deco/wall" index="59" unique_id=1932589727]
+position = Vector2(-337.38086, -185.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick64" type="Sprite2D" parent="Offset/Deco/wall" index="60" unique_id=998955501]
+position = Vector2(-336, -214)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick65" type="Sprite2D" parent="Offset/Deco/wall" index="61" unique_id=1577704565]
+position = Vector2(-340.38086, -255.38086)
+rotation = 1.3747987
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick42" type="Sprite2D" parent="Offset/Deco/wall" index="62" unique_id=245830579]
+position = Vector2(28.150024, 107.36072)
+rotation = 0.2599559
+texture = ExtResource("15_2s322")
+
+[node name="Brick43" type="Sprite2D" parent="Offset/Deco/wall" index="63" unique_id=1829389697]
+position = Vector2(26.769165, 84.97986)
+rotation = 1.6347545
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick44" type="Sprite2D" parent="Offset/Deco/wall" index="64" unique_id=1122396028]
+position = Vector2(25.150024, 42.360718)
+rotation = 0.2599559
+texture = ExtResource("15_2s322")
+
+[node name="Brick45" type="Sprite2D" parent="Offset/Deco/wall" index="65" unique_id=1502773310]
+position = Vector2(28.150024, 56.360718)
+rotation = 0.2599559
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick46" type="Sprite2D" parent="Offset/Deco/wall" index="66" unique_id=620835111]
+position = Vector2(23.769165, 14.979858)
+rotation = 1.6347545
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick31" type="Sprite2D" parent="Offset/Deco/wall" index="67" unique_id=1316233053]
+position = Vector2(220, 44)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick55" type="Sprite2D" parent="Offset/Deco/wall" index="68" unique_id=395469062]
+position = Vector2(-242, -28)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick56" type="Sprite2D" parent="Offset/Deco/wall" index="69" unique_id=257569942]
+position = Vector2(-275, -46)
+rotation = -1.1756613
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick57" type="Sprite2D" parent="Offset/Deco/wall" index="70" unique_id=350732706]
+position = Vector2(-322, -47)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick58" type="Sprite2D" parent="Offset/Deco/wall" index="71" unique_id=836289915]
+position = Vector2(-290, -42)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick59" type="Sprite2D" parent="Offset/Deco/wall" index="72" unique_id=1151337662]
+position = Vector2(-269, -25)
+texture = ExtResource("14_43664")
+
+[node name="Brick66" type="Sprite2D" parent="Offset/Deco/wall" index="73" unique_id=1784440143]
+position = Vector2(-328, -115)
+texture = ExtResource("15_2s322")
+
+[node name="Brick67" type="Sprite2D" parent="Offset/Deco/wall" index="74" unique_id=1175450403]
+position = Vector2(-341, -236)
+texture = ExtResource("15_2s322")
+
+[node name="Brick76" type="Sprite2D" parent="Offset/Deco/wall" index="75" unique_id=981796116]
+position = Vector2(-40, -268)
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick78" type="Sprite2D" parent="Offset/Deco/wall" index="76" unique_id=105383239]
+position = Vector2(215, 59)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick79" type="Sprite2D" parent="Offset/Deco/wall" index="77" unique_id=1554660307]
+position = Vector2(-240, -64)
+rotation = -1.5136589
+texture = ExtResource("14_43664")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/wall" index="78" unique_id=900168195]
+z_index = 2
+position = Vector2(187, 48)
+texture = ExtResource("16_2s322")
+
+[node name="doors" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1945426363]
+modulate = Color(0.126, 0.161, 0.21, 1)
+z_index = 1
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/doors" index="0" unique_id=1868729369]
+position = Vector2(-8, 167)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick15" type="Sprite2D" parent="Offset/Deco/doors" index="1" unique_id=1937065582]
+position = Vector2(-42, 146)
+rotation = -2.9800525
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick16" type="Sprite2D" parent="Offset/Deco/doors" index="2" unique_id=644039006]
+position = Vector2(-6, 133)
+rotation = -0.006729209
+texture = ExtResource("14_43664")
+flip_h = true
+
+[node name="Brick17" type="Sprite2D" parent="Offset/Deco/doors" index="3" unique_id=397072444]
+position = Vector2(-29, 238)
+texture = ExtResource("14_43664")
+
+[node name="Brick18" type="Sprite2D" parent="Offset/Deco/doors" index="4" unique_id=1264975662]
+position = Vector2(1, 229)
+texture = ExtResource("15_2s322")
+
+[node name="Brick19" type="Sprite2D" parent="Offset/Deco/doors" index="5" unique_id=1294601794]
+position = Vector2(-40, 214)
+texture = ExtResource("11_jofkg")
+
+[node name="Brick42" type="Sprite2D" parent="Offset/Deco/doors" index="6" unique_id=550175907]
+position = Vector2(21, 126)
+rotation = 0.25995588
+texture = ExtResource("15_2s322")
+
+[node name="start top" type="Sprite2D" parent="Offset/Deco/doors" index="7" unique_id=1864145313]
+position = Vector2(2.9999695, -296.59778)
+texture = ExtResource("14_43664")
+
+[node name="Brick48" type="Sprite2D" parent="Offset/Deco/doors" index="8" unique_id=937932382]
+position = Vector2(-150, -293)
+texture = ExtResource("15_2s322")
+
+[node name="Brick49" type="Sprite2D" parent="Offset/Deco/doors" index="9" unique_id=1373489115]
+position = Vector2(14, -235)
+rotation = 0.7853982
+texture = ExtResource("11_jofkg")
+
+[node name="Brick50" type="Sprite2D" parent="Offset/Deco/doors" index="10" unique_id=204925882]
+position = Vector2(50.99997, -339.59775)
+rotation = 2.3010855
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick51" type="Sprite2D" parent="Offset/Deco/doors" index="11" unique_id=2077140612]
+position = Vector2(7.9999695, -260.99997)
+rotation = -1.1793822
+texture = ExtResource("14_43664")
+
+[node name="Brick52" type="Sprite2D" parent="Offset/Deco/doors" index="12" unique_id=1494042580]
+position = Vector2(34.99997, -355.59775)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick68" type="Sprite2D" parent="Offset/Deco/doors" index="13" unique_id=918302846]
+position = Vector2(-35.00003, -336)
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick69" type="Sprite2D" parent="Offset/Deco/doors" index="14" unique_id=952349205]
+position = Vector2(2.9999695, -337.59778)
+texture = ExtResource("14_43664")
+
+[node name="Brick70" type="Sprite2D" parent="Offset/Deco/doors" index="15" unique_id=1989832581]
+position = Vector2(24.99997, -387.59775)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick73" type="Sprite2D" parent="Offset/Deco/doors" index="16" unique_id=218627311]
+position = Vector2(-30.00003, -307.59778)
+texture = ExtResource("14_43664")
+
+[node name="Brick74" type="Sprite2D" parent="Offset/Deco/doors" index="17" unique_id=1416192030]
+position = Vector2(-18.00003, -366.99997)
+rotation = -1.2010133
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick75" type="Sprite2D" parent="Offset/Deco/doors" index="18" unique_id=70886554]
+position = Vector2(-43.999954, -302.99994)
+rotation = 0.86233133
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick54" type="Sprite2D" parent="Offset/Deco/doors" index="19" unique_id=1036101498]
+position = Vector2(16.99997, -318.99997)
+texture = ExtResource("15_2s322")
+
+[node name="Brick43" type="Sprite2D" parent="Offset/Deco/doors" index="20" unique_id=992092287]
+position = Vector2(0.9999695, -396.99997)
+rotation = 1.6347545
+texture = ExtResource("13_ny1y2")
+
+[node name="Brick45" type="Sprite2D" parent="Offset/Deco/doors" index="21" unique_id=770999883]
+position = Vector2(-19.00003, -410.99997)
+rotation = 0.2599559
+texture = ExtResource("12_bl4lt")
+
+[node name="Brick46" type="Sprite2D" parent="Offset/Deco/doors" index="22" unique_id=593476889]
+position = Vector2(16.99997, -367.99997)
+rotation = 1.6347545
+texture = ExtResource("13_ny1y2")
+
+[node name="black" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=991141588]
+modulate = Color(0, 0, 0, 1)
+z_index = 3
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Deco/black" index="0" unique_id=1675496772]
+position = Vector2(-358, 257)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Deco/black" index="1" unique_id=1931138771]
+position = Vector2(-222, 295)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Deco/black" index="2" unique_id=655385558]
+position = Vector2(-105, 291)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Deco/black" index="3" unique_id=1056568350]
+position = Vector2(-1, 271)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Deco/black" index="4" unique_id=1143088874]
+position = Vector2(96, 261)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Deco/black" index="5" unique_id=997239542]
+position = Vector2(212, 253)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Deco/black" index="6" unique_id=570921676]
+position = Vector2(256, 207)
+scale = Vector2(1.6339133, 1.6339133)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Deco/black" index="7" unique_id=1785525820]
+position = Vector2(281, 104)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Deco/black" index="8" unique_id=277811784]
+position = Vector2(271, -2)
+rotation = -0.44190642
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Deco/black" index="9" unique_id=1526276146]
+position = Vector2(234, -106)
+rotation = 1.5561538
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Deco/black" index="10" unique_id=1981713899]
+position = Vector2(222, -207)
+rotation = 0.13322131
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Deco/black" index="11" unique_id=831718820]
+position = Vector2(15, -249)
+scale = Vector2(1.3730652, 1.1206931)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Deco/black" index="12" unique_id=2127404480]
+position = Vector2(107, -234)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Deco/black" index="13" unique_id=971070023]
+position = Vector2(94, -309)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Deco/black" index="14" unique_id=1968595545]
+position = Vector2(228, -285)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Deco/black" index="15" unique_id=268965892]
+position = Vector2(418, -158)
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg17" type="Sprite2D" parent="Offset/Deco/black" index="16" unique_id=288437248]
+position = Vector2(418, 65.999985)
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Deco/black" index="17" unique_id=742507928]
+position = Vector2(418, 200.99997)
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg19" type="Sprite2D" parent="Offset/Deco/black" index="18" unique_id=773298950]
+position = Vector2(-428.99994, 200.99997)
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg20" type="Sprite2D" parent="Offset/Deco/black" index="19" unique_id=678321981]
+position = Vector2(-501.99994, -22.000015)
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg21" type="Sprite2D" parent="Offset/Deco/black" index="20" unique_id=308228594]
+position = Vector2(-511.99994, -204)
+rotation = 3.0424533
+scale = Vector2(2.486424, 2.486424)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg22" type="Sprite2D" parent="Offset/Deco/black" index="21" unique_id=1204826152]
+position = Vector2(-291, 57)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg23" type="Sprite2D" parent="Offset/Deco/black" index="22" unique_id=606463010]
+position = Vector2(-16, 89)
+texture = ExtResource("4_5r2ab")
+
+[node name="BrickBg24" type="Sprite2D" parent="Offset/Deco/black" index="23" unique_id=1831819370]
+position = Vector2(-245, 3)
+texture = ExtResource("5_jofkg")
+
+[node name="BrickBg25" type="Sprite2D" parent="Offset/Deco/black" index="24" unique_id=1798383783]
+position = Vector2(-146, 54)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg26" type="Sprite2D" parent="Offset/Deco/black" index="25" unique_id=781724006]
+position = Vector2(-41, 35)
+texture = ExtResource("3_653nx")
+
+[node name="BrickBg27" type="Sprite2D" parent="Offset/Deco/black" index="26" unique_id=752712330]
+position = Vector2(-105, 11)
+texture = ExtResource("4_5r2ab")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2" unique_id=379203944 node_paths=PackedStringArray("animation")]
 layer = 100
@@ -521,7 +2532,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_04iir")
 theme_override_font_sizes/normal_font_size = 32
-text = "For a little over an uncountable number of years, your soul has been confined to a small room, no more than 260 square feet. You've almost forgotten who you are...
+text = "For a little over an uncountable number of years, your soul has been confined to a small room, no more than 260 square feet.
 
 [Press X to continue]"
 horizontal_alignment = 1
@@ -563,4 +2574,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 1
 
+[editable path="Offset/Obstacles/Door"]
 [editable path="Offset/Deco/tutorrial_text"]

@@ -18,16 +18,19 @@ script = ExtResource("2_dyxu8")
 script = ExtResource("3_g3m34")
 
 [node name="Parallax2D" type="Parallax2D" parent="Offset/Background" unique_id=739467125]
+z_index = -10
 scroll_scale = Vector2(0.15, 0.15)
 follow_viewport = false
 ignore_camera_scroll = true
 
 [node name="Parallax2D2" type="Parallax2D" parent="Offset/Background" unique_id=1426022184]
+z_index = -7
 scroll_scale = Vector2(0.3, 0.3)
 follow_viewport = false
 ignore_camera_scroll = true
 
 [node name="Parallax2D3" type="Parallax2D" parent="Offset/Background" unique_id=1988134974]
+z_index = -5
 scroll_scale = Vector2(0.6, 0.6)
 follow_viewport = false
 ignore_camera_scroll = true

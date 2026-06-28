@@ -8,17 +8,31 @@
 [ext_resource type="PackedScene" uid="uid://jus0vffp4nem" path="res://Scenes/Player/player.tscn" id="6_mypwg"]
 [ext_resource type="PackedScene" uid="uid://cbyc54jotc8da" path="res://Scenes/Rooms/Entrance/entrance_tower2.tscn" id="7_d3ks8"]
 [ext_resource type="PackedScene" uid="uid://ctdrn4j2b46yo" path="res://Scenes/Rooms/Entrance/entrance3_1.tscn" id="7_h4d8c"]
+[ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="7_k5wgr"]
 [ext_resource type="PackedScene" uid="uid://2eynnpk88h3t" path="res://Scenes/Rooms/Entrance/entrance_tower3.tscn" id="8_itxiy"]
+[ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="8_oxddv"]
 [ext_resource type="PackedScene" uid="uid://bmm8jr3f7q3in" path="res://Scenes/Rooms/Entrance/entrance2_3.tscn" id="9_022hg"]
+[ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="9_w8m0m"]
 [ext_resource type="PackedScene" uid="uid://cfvrg3sjclkud" path="res://Scenes/Rooms/Tower2/room1.tscn" id="10_022hg"]
 [ext_resource type="PackedScene" uid="uid://b56c6hhg35oev" path="res://Scenes/Rooms/Tower3/room1.tscn" id="11_j5f30"]
 [ext_resource type="PackedScene" uid="uid://cjrnk2llrhgee" path="res://Scenes/Rooms/Tower2/room2.tscn" id="12_ud6il"]
 [ext_resource type="PackedScene" uid="uid://6r0ck6dwtc3h" path="res://Scenes/Rooms/Tower3/room2.tscn" id="13_jyhm8"]
 [ext_resource type="PackedScene" uid="uid://dprvj1t8xbsbp" path="res://Scenes/Rooms/Bridges/bridge1.tscn" id="13_tabdy"]
 [ext_resource type="PackedScene" uid="uid://cu88yf82xmmb4" path="res://Scenes/Rooms/Tower2/room3.tscn" id="13_yp80c"]
+[ext_resource type="PackedScene" uid="uid://cr1ifiscmdqlg" path="res://Scenes/Rooms/Tower2/room4.tscn" id="14_76r0l"]
 [ext_resource type="PackedScene" uid="uid://da4t2etmo8yxl" path="res://Scenes/Rooms/Bridges/bridge2.tscn" id="14_xqx70"]
+[ext_resource type="PackedScene" uid="uid://gfmoxsm2bfp" path="res://Scenes/Rooms/Tower2/room5.tscn" id="15_wa87g"]
 [ext_resource type="PackedScene" uid="uid://b70mnpwhd1c3b" path="res://Scenes/Rooms/Tower3/room3.tscn" id="16_5fmhj"]
+[ext_resource type="PackedScene" uid="uid://dp2p0qobxd46k" path="res://Scenes/Rooms/Tower3/room4.tscn" id="17_275tu"]
 [ext_resource type="PackedScene" uid="uid://bco0g8r5y35pp" path="res://Scenes/Rooms/Bridges/bridge3.tscn" id="17_wob7x"]
+[ext_resource type="PackedScene" uid="uid://mjldhp11465j" path="res://Scenes/Rooms/Tower3/room5.tscn" id="20_k4r8o"]
+[ext_resource type="PackedScene" uid="uid://bjamud22bcmlv" path="res://Scenes/Rooms/Bridges/bridge4.tscn" id="21_vyvug"]
+[ext_resource type="PackedScene" uid="uid://b5r1jiqvxkq5m" path="res://Scenes/Rooms/Bridges/bridge5.tscn" id="24_wa87g"]
+[ext_resource type="PackedScene" uid="uid://pnbp6xkjfos6" path="res://Scenes/Rooms/Bridges/bridgeR4.tscn" id="26_ptpye"]
+[ext_resource type="PackedScene" uid="uid://qxiyy2iok2fw" path="res://Scenes/Rooms/Bridges/bridgeR5.tscn" id="27_ftvbx"]
+[ext_resource type="PackedScene" uid="uid://b0rufvavtsfs5" path="res://Scenes/Rooms/Bridges/bridgeR1.tscn" id="28_mp03p"]
+[ext_resource type="PackedScene" uid="uid://ckah8su0aqt2t" path="res://Scenes/Rooms/Bridges/bridgeR2.tscn" id="29_k5wgr"]
+[ext_resource type="PackedScene" uid="uid://b5lmyl8wwr838" path="res://Scenes/Rooms/Bridges/bridgeR3.tscn" id="30_oxddv"]
 
 [node name="Main2" type="Node2D" unique_id=295821621]
 
@@ -38,6 +52,12 @@ position = Vector2(-2, -116)
 
 [node name="Room5" parent="Tower1" unique_id=870030527 instance=ExtResource("5_nk8ps")]
 
+[node name="Room6" parent="Tower1" unique_id=288465503 instance=ExtResource("7_k5wgr")]
+
+[node name="Room7" parent="Tower1" unique_id=749037552 instance=ExtResource("8_oxddv")]
+
+[node name="Room8" parent="Tower1" unique_id=135714007 instance=ExtResource("9_w8m0m")]
+
 [node name="Entrance" type="Node2D" parent="." unique_id=1764994515]
 
 [node name="Room2" parent="Entrance" unique_id=1593457388 instance=ExtResource("7_h4d8c")]
@@ -56,6 +76,10 @@ position = Vector2(-2, -116)
 
 [node name="Room4" parent="Tower2" unique_id=1898164478 instance=ExtResource("13_yp80c")]
 
+[node name="Room5" parent="Tower2" unique_id=1957164586 instance=ExtResource("14_76r0l")]
+
+[node name="Room6" parent="Tower2" unique_id=1468313599 instance=ExtResource("15_wa87g")]
+
 [node name="Tower3" type="Node2D" parent="." unique_id=1131946100]
 
 [node name="Room1" parent="Tower3" unique_id=290056632 instance=ExtResource("11_j5f30")]
@@ -64,6 +88,10 @@ position = Vector2(-2, -116)
 
 [node name="Room4" parent="Tower3" unique_id=989878266 instance=ExtResource("16_5fmhj")]
 
+[node name="Room5" parent="Tower3" unique_id=341183491 instance=ExtResource("17_275tu")]
+
+[node name="Room6" parent="Tower3" unique_id=1012624484 instance=ExtResource("20_k4r8o")]
+
 [node name="Bridges" type="Node2D" parent="." unique_id=1484474823]
 
 [node name="Room2" parent="Bridges" unique_id=118487425 instance=ExtResource("13_tabdy")]
@@ -71,3 +99,19 @@ position = Vector2(-2, -116)
 [node name="Room3" parent="Bridges" unique_id=1711165973 instance=ExtResource("14_xqx70")]
 
 [node name="Room4" parent="Bridges" unique_id=662544857 instance=ExtResource("17_wob7x")]
+
+[node name="Room5" parent="Bridges" unique_id=1344055126 instance=ExtResource("21_vyvug")]
+
+[node name="Room6" parent="Bridges" unique_id=1277408586 instance=ExtResource("24_wa87g")]
+
+[node name="BridgeR" type="Node2D" parent="." unique_id=930714525]
+
+[node name="Room2" parent="BridgeR" unique_id=458844079 instance=ExtResource("26_ptpye")]
+
+[node name="Room3" parent="BridgeR" unique_id=439067484 instance=ExtResource("27_ftvbx")]
+
+[node name="Room4" parent="BridgeR" unique_id=1106608909 instance=ExtResource("28_mp03p")]
+
+[node name="Room5" parent="BridgeR" unique_id=839318981 instance=ExtResource("29_k5wgr")]
+
+[node name="Room6" parent="BridgeR" unique_id=441701192 instance=ExtResource("30_oxddv")]

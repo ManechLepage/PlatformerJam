@@ -5,6 +5,8 @@ extends Node
 @onready var event_manager: EventManager = $EventManager
 @onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
 
+var seen_intro: bool = false
+
 var lucidity: float = 0:
 	set(value):
 		lucidity = max(value, 0)
@@ -12,7 +14,7 @@ var lucidity: float = 0:
 var lucidity_target: float = 0.0:
 	set(value):
 		lucidity_target = max(value, -0.07)
-var max_lucidity: float = 40.0
+var max_lucidity: float = 80.0
 var camera: CameraManager
 var player: Player
 @export var lever_states: Array[bool]

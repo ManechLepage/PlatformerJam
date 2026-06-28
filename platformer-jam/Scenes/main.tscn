@@ -37,9 +37,23 @@
 [ext_resource type="AudioStream" uid="uid://cvaw7dr8pj8yv" path="res://Sound/pillar3_lucid1.ogg" id="22_7k868"]
 [ext_resource type="PackedScene" uid="uid://bqanx6lfy322q" path="res://Scenes/Rooms/Tutorial/tutorial_3.tscn" id="22_aqgau"]
 [ext_resource type="AudioStream" uid="uid://lwf4eo36wacj" path="res://Sound/pillar3_lucid2.ogg" id="23_hpc6h"]
+[ext_resource type="PackedScene" uid="uid://bjamud22bcmlv" path="res://Scenes/Rooms/Bridges/bridge4.tscn" id="23_xdkp6"]
+[ext_resource type="PackedScene" uid="uid://b5r1jiqvxkq5m" path="res://Scenes/Rooms/Bridges/bridge5.tscn" id="24_54nrm"]
 [ext_resource type="AudioStream" uid="uid://bh3q18ftdhj0h" path="res://Sound/pillar3_lucid3.ogg" id="24_kltya"]
+[ext_resource type="PackedScene" uid="uid://b0rufvavtsfs5" path="res://Scenes/Rooms/Bridges/bridgeR1.tscn" id="25_55jeb"]
 [ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="25_u50mg"]
 [ext_resource type="Environment" uid="uid://dgeb6y4eqbyj5" path="res://environnement.tres" id="26_cbgmd"]
+[ext_resource type="PackedScene" uid="uid://ckah8su0aqt2t" path="res://Scenes/Rooms/Bridges/bridgeR2.tscn" id="26_gsvbx"]
+[ext_resource type="PackedScene" uid="uid://b5lmyl8wwr838" path="res://Scenes/Rooms/Bridges/bridgeR3.tscn" id="27_bv80c"]
+[ext_resource type="PackedScene" uid="uid://pnbp6xkjfos6" path="res://Scenes/Rooms/Bridges/bridgeR4.tscn" id="28_ptfg5"]
+[ext_resource type="PackedScene" uid="uid://qxiyy2iok2fw" path="res://Scenes/Rooms/Bridges/bridgeR5.tscn" id="29_2daye"]
+[ext_resource type="PackedScene" uid="uid://cr1ifiscmdqlg" path="res://Scenes/Rooms/Tower2/room4.tscn" id="30_1semv"]
+[ext_resource type="PackedScene" uid="uid://gfmoxsm2bfp" path="res://Scenes/Rooms/Tower2/room5.tscn" id="31_2060n"]
+[ext_resource type="PackedScene" uid="uid://dp2p0qobxd46k" path="res://Scenes/Rooms/Tower3/room4.tscn" id="32_6ml46"]
+[ext_resource type="PackedScene" uid="uid://mjldhp11465j" path="res://Scenes/Rooms/Tower3/room5.tscn" id="33_qax2n"]
+[ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="34_54nrm"]
+[ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
+[ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -90,22 +104,27 @@ func _ready() -> void:
 	$\"../Areas/Tower4Area\".body_entered.connect(func(_body):change_colors(\"4\"))
 	$\"../Areas/BridgeArea1\".body_entered.connect(func(_body):change_colors(\"bridge1\"))
 	$\"../Areas/BridgeArea2\".body_entered.connect(func(_body):change_colors(\"bridge2\"))
-	
+	change_colors(\"start\")
 
-func change_colors(name: String):
-	print(1)
+func change_colors(color_name: String):
 	var c:Array[Color] = []
 	for tween in [tweenA,tweenB,tweenC]:
 		if tween: tween.kill()
-	match name:
+	match color_name:
+		\"start\":
+			c = [area_start_color1,area_start_color2,area_start_color3]
 		\"1\":
 			c = [area_1_color1,area_1_color2,area_1_color3]
+			$\"../MusicManager\".set_pillar_1()
 		\"2\":
 			c = [area_2_color1,area_2_color2,area_2_color3]
+			$\"../MusicManager\".set_pillar_2()
 		\"3\":
 			c = [area_3_color1,area_3_color2,area_3_color3]
+			$\"../MusicManager\".set_pillar_3()
 		\"4\":
 			c = [area_4_color1,area_4_color2,area_4_color3]
+			$\"../MusicManager\".set_pillar_1()
 		\"bridge1\":
 			c = [area_bridge1_color1,area_bridge1_color2,area_bridge1_color3]
 		\"bridge2\":
@@ -175,13 +194,20 @@ size = Vector2(934.5, 3011)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-02"
-initial_player_pos = Vector2(100, -400)
-initial_lucidity = 40.0
+initial_room = "Tower1-06"
+initial_player_pos = Vector2(0, -2700)
+initial_lucidity = 60.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
 "Bridge3": ExtResource("21_8cuat"),
+"Bridge4": ExtResource("23_xdkp6"),
+"Bridge5": ExtResource("24_54nrm"),
+"BridgeR1": ExtResource("25_55jeb"),
+"BridgeR2": ExtResource("26_gsvbx"),
+"BridgeR3": ExtResource("27_bv80c"),
+"BridgeR4": ExtResource("28_ptfg5"),
+"BridgeR5": ExtResource("29_2daye"),
 "Entrance2": ExtResource("13_hpc6h"),
 "Entrance2_3": ExtResource("14_kltya"),
 "Entrance3": ExtResource("11_6vcvc"),
@@ -191,12 +217,19 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-03": ExtResource("6_u50mg"),
 "Tower1-04": ExtResource("7_cbgmd"),
 "Tower1-05": ExtResource("8_1w6v2"),
+"Tower1-06": ExtResource("34_54nrm"),
+"Tower1-07": ExtResource("35_55jeb"),
+"Tower1-08": ExtResource("36_gsvbx"),
 "Tower2-01": ExtResource("12_hibaj"),
 "Tower2-02": ExtResource("18_jwpg7"),
 "Tower2-03": ExtResource("20_aqgau"),
+"Tower2-04": ExtResource("30_1semv"),
+"Tower2-05": ExtResource("31_2060n"),
 "Tower3-01": ExtResource("13_hibaj"),
 "Tower3-02": ExtResource("17_hdf80"),
 "Tower3-03": ExtResource("19_536cc"),
+"Tower3-04": ExtResource("32_6ml46"),
+"Tower3-05": ExtResource("33_qax2n"),
 "tutorial_1": ExtResource("4_344ge"),
 "tutorial_2": ExtResource("5_ynf5e"),
 "tutorial_3": ExtResource("22_aqgau")
@@ -235,24 +268,25 @@ stream = ExtResource("11_fdnlq")
 autoplay = true
 
 [node name="base" type="AudioStreamPlayer" parent="MusicManager" unique_id=1192331223]
-stream = ExtResource("12_jkdf5")
 autoplay = true
+bus = &"Music"
 
 [node name="lucid1" type="AudioStreamPlayer" parent="MusicManager" unique_id=749265922]
-stream = ExtResource("13_wsu2k")
 volume_db = -80.0
 autoplay = true
+bus = &"Music"
 
 [node name="lucid2" type="AudioStreamPlayer" parent="MusicManager" unique_id=349007846]
-stream = ExtResource("16_3pmx8")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid3" type="AudioStreamPlayer" parent="MusicManager" unique_id=2094167559]
-stream = ExtResource("17_u50mg")
 volume_db = -80.0
+bus = &"Music"
 
 [node name="lucid4" type="AudioStreamPlayer" parent="MusicManager" unique_id=1031577392]
 volume_db = -80.0
+bus = &"Music"
 
 [node name="Lucid" type="CanvasLayer" parent="." unique_id=1652626034]
 layer = -50

@@ -64,10 +64,10 @@ size = Vector2(74, 25)
 size = Vector2(32, 194)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jt7r"]
-size = Vector2(66, 412)
+size = Vector2(64, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4uck2"]
-size = Vector2(66, 308)
+size = Vector2(64, 1)
 
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_4uck2")]
 
@@ -127,6 +127,7 @@ shape = SubResource("RectangleShape2D_10rd1")
 
 [node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=238899813 instance=ExtResource("5_g1b11")]
 position = Vector2(578, 272)
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
 position = Vector2(-149, -164)
@@ -141,7 +142,7 @@ position = Vector2(-706, -135)
 shape = SubResource("RectangleShape2D_m3m6v")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2119178859 instance=ExtResource("5_g1b11")]
-position = Vector2(-155, 270)
+position = Vector2(-155, 80)
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
@@ -152,21 +153,25 @@ shape = SubResource("RectangleShape2D_snekd")
 position = Vector2(158, -145)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/FallWater" index="0" unique_id=400528529]
-position = Vector2(0, 175)
 shape = SubResource("RectangleShape2D_5jt7r")
 
 [node name="FallWater2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=405955086 instance=ExtResource("6_dcvk8")]
 position = Vector2(-128, -146)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/FallWater2" index="0" unique_id=400528529]
-position = Vector2(0, 123)
 shape = SubResource("RectangleShape2D_4uck2")
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1760792903 instance=ExtResource("6_5jt7r")]
 position = Vector2(47, 168)
 
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Yellowball" index="1" unique_id=1602848246]
+frame = 4
+
 [node name="Yellowball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1672914263 instance=ExtResource("6_5jt7r")]
 position = Vector2(-29, 109)
+
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Yellowball2" index="1" unique_id=1602848246]
+frame = 4
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
@@ -177,3 +182,5 @@ position = Vector2(-29, 109)
 [editable path="Offset/Obstacles/Platform8"]
 [editable path="Offset/Obstacles/FallWater"]
 [editable path="Offset/Obstacles/FallWater2"]
+[editable path="Offset/Obstacles/Yellowball"]
+[editable path="Offset/Obstacles/Yellowball2"]
