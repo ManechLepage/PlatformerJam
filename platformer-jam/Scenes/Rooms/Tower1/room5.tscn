@@ -426,18 +426,22 @@ shape = SubResource("RectangleShape2D_vwbao")
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1754253968 instance=ExtResource("7_vwbao")]
 position = Vector2(-229, 68)
 
+[node name="TextureRect" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="0" unique_id=140148495]
+offset_left = 1.0
+offset_right = 1.0
+
 [node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
-offset_left = 574.0
-offset_top = 61.0
-offset_right = 830.0
-offset_bottom = 317.0
+offset_left = 637.0
+offset_top = 260.0
+offset_right = 893.0
+offset_bottom = 516.0
 texture = ExtResource("6_hpt3e")
 
 [node name="PoemText" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
-offset_left = 44.0
-offset_top = 101.0
-offset_right = 573.5
-offset_bottom = 453.0
+offset_left = 126.0
+offset_top = -26.0
+offset_right = 667.0
+offset_bottom = 481.0
 grow_horizontal = 1
 grow_vertical = 1
 text = "\"When I got home after my 3-day vacation at the hospital for a
@@ -448,12 +452,16 @@ But they didn't feel like they belonged to me.
 What did I do to deserve flowers? If anything, the doctors and
 nurses should be getting bouquets.
 Flowers are for successful plays, performances and marriages...
-...But the longer I looked, the more I understood that support
-doesn't have to be a reward for hard work.
-Since then, I've never seen flowers the same way.
-I will never forget this memory, it defines who I am.\"
+I lingered with that, I felt like that logic was sound.
+I didn't consider for a long time that maybe support didn't need to be earned, and it took much longer to truly believe it.
+...But, since then, I've never seen flowers the same way.
 
+I will never forget this memory, it defines who I am.\"
 [Press C to forget]"
+
+[node name="upgrade" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="3" unique_id=939542970]
+offset_left = 1.0
+offset_right = 1.0
 
 [node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("8_3k6h7")]
 position = Vector2(-37, 233)
