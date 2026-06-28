@@ -27,7 +27,7 @@ func set_pillar_1():
 	sound_layers["lucid_2"].stream = sound_lib[3]
 	sound_layers["lucid_3"].stream = sound_lib[4]
 	sound_layers["lucid_4"].stream = null
-	
+	play_at_corrrect_time()
 
 func set_pillar_2():
 	sound_layers["base"].stream = sound_lib[5]
