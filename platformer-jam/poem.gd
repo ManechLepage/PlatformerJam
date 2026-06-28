@@ -70,7 +70,10 @@ func collect():
 		create_tween().tween_property(poem_text, "modulate", Color(5, 5, 5, 1), 2)
 		create_tween().tween_property(image, "modulate", Color(5, 5, 5, 0), 2)
 		create_tween().tween_property(bg, "modulate", Color(1, 1, 1, 2), 2)
+		create_tween().tween_property(AudioServer.get_bus_effect(2,2), "volume_linear", 0, 2)
 		get_tree().create_timer(2.5).timeout.connect(next)
+		Game.player.process_mode = Node.PROCESS_MODE_DISABLED
+
 		
 func next():
 	modulate.a = 0
@@ -83,5 +86,8 @@ func next_2():
 	upgrade_text = 2
 	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 2)
 	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 2)
+	create_tween().tween_property(AudioServer.get_bus_effect(2,2), "volume_linear", 1, 2)
+	Game.player.process_mode = Node.PROCESS_MODE_INHERIT
 	Game.max_lucidity += 20
+	if Game.max_lucidity == 80: Game.audio_manager.clear_audio()
 	

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nksja"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="2_ymlia"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="3_1f4pu"]
+[ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="4_bpnnk"]
+[ext_resource type="Texture2D" uid="uid://cqr84igv3ua2d" path="res://Sprites/poem_will.png" id="5_fjww1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f4pu"]
 resource_local_to_scene = true
@@ -40,12 +42,46 @@ one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=1706702273]
-position = Vector2(-2.9494324, 311.17102)
+position = Vector2(-2.9494324, 182.8683)
 shape = SubResource("RectangleShape2D_bpnnk")
 one_way_collision = true
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
+[node name="Area2" parent="." index="1" unique_id=1754253968 instance=ExtResource("4_bpnnk")]
+position = Vector2(0, -4227)
+
+[node name="TextureRect2" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
+offset_left = 586.0
+offset_top = 125.0
+offset_right = 842.0
+offset_bottom = 381.0
+texture = ExtResource("5_fjww1")
+
+[node name="PoemText" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
+offset_left = 9.0
+offset_top = -4.0
+offset_right = 456.0
+offset_bottom = 515.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "\"There is an assumption that memories are born from important moments, that your subconscious is competent at detecting what's worth remembering and what isn't. I'm not convinced.
+I remember a specific night, coming home from my summer job. I was walking back home. There was nothing different then compared to any other day; I've taken this route hundreds of times.
+I distinctly remember, however, that I enjoyed my day at work, and that I found worth in remembering it.
+I told myself: ' I'm going to remember this day! '
+And so, I did... but I don't remember anything about my shift. All I remember is the thought of remembering, this null pointer that lost its purpose shortly after it was created. But I still enjoy thinking about it. I still succeeded my goal, in a way.
+
+I'll never forget this memory; it defines who I am.\"
+[Press C to forget]"
+
+[node name="upgrade" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="3" unique_id=939542970]
+text = "There is nothing left of you anymore.
+                                                                                                                
+Your lucidity can now be eliminated.
+                                                                                                                
+[Press C to close]"
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Platform5"]
+[editable path="Area2"]

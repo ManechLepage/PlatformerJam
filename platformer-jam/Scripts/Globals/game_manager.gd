@@ -4,7 +4,6 @@ extends Node
 @onready var audio_manager: AudioManager = $AudioManager
 @onready var event_manager: EventManager = $EventManager
 @onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
-
 var seen_intro: bool = false
 
 var lucidity: float = 0:

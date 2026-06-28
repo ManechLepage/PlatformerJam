@@ -55,7 +55,6 @@
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
-[ext_resource type="PackedScene" uid="uid://k74suqdar2h5" path="res://test.tscn" id="56_ptfg5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -437,5 +436,3 @@ collision_mask = 64
 position = Vector2(-2134, -3978)
 shape = SubResource("RectangleShape2D_kqrg6")
 debug_color = Color(0.5110002, 0, 0.73, 0)
-
-[node name="Test" parent="." unique_id=131779804 instance=ExtResource("56_ptfg5")]

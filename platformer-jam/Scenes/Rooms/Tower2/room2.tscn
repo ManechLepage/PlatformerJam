@@ -913,14 +913,14 @@ offset_bottom = 521.0
 grow_horizontal = 1
 grow_vertical = 1
 text = "\"One day, on my way back from school, I saw a cyclist pass by, with a massive camera hanging from their neck.
-My eyes lingered on them  for a little while, for no particular reason, and I noticed them abruptly stop, point their lens off to the side, take a photo, and continue on their path.
+My eyes lingered on them for a little while, for no particular reason, and I noticed them abruptly stop, point their lens off to the side, take a photo, and continue on their path.
 ' I wonder what made them take that photo? '
-So I diverged off my usual trail, entranced by the curiosity, to see for myself what could've possibly been so captivating.
+So, I diverged off my usual trail, entranced by the curiosity, to see for myself what could've possibly been so captivating.
 I wasn't disappointed. It was beautiful.
 It was one of those scenes that seem out of a movie. A white scooter surrounded by pink leaves. The sun at the perfect angle, creating a fabulous sheen on the clean body of the Vespa.
 I wonder what would've happened if I didn't notice the cyclist, or if I didn't let myself get carried by the current of coincidences. Maybe I don't want to know.
 
-I'll never forget this memory, it defines who I am.\"
+I'll never forget this memory; it defines who I am.\"
 [Press C to forget]"
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=997318240]

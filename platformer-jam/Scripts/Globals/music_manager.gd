@@ -16,8 +16,15 @@ func _ready() -> void:
 	$"../Areas/End".body_entered.connect(func (_body): set_bridge(1))
 	$"../Areas/End".body_exited.connect(func (_body): set_bridge(0))
 	play_at_corrrect_time()
-#func clear_sound():
-	#
+	
+func clear_audio():
+	sound_layers["base"].stream = null
+	sound_layers["lucid_1"].stream = null
+	sound_layers["lucid_2"].stream = null
+	sound_layers["lucid_3"].stream = null
+	sound_layers["lucid_4"].stream = null
+	play_at_corrrect_time()
+	
 func play_at_corrrect_time():
 	var time = sound_layers["noise"].get_playback_position()
 	for i in ["base","lucid_1","lucid_2","lucid_3","lucid_4"]:

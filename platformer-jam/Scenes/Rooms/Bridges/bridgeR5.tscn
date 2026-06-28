@@ -136,14 +136,14 @@ offset_right = 930.0
 offset_bottom = 527.0
 grow_horizontal = 1
 grow_vertical = 1
-text = "\"My motivation to get better at  music mostly is due to my favorite band breaking up. I wanted more of their kind of music to exist, which usually doesn't happen with dead bands.
+text = "\"My motivation to get better at music mostly is due to my favorite band breaking up. I wanted more of their kind of music to exist, which usually doesn't happen with dead bands.
 I had concluded that there was only one person I could trust to make music that'd ever come close to scratching the itch they did. Which is myself.
-I spent alot of time analysing their music. I had already tried figuring out what they do to sound so good to me, so I knew that was so much to learn from them. And, to my credit, my music has gotten better because of it.
+I spent a lot of time analysing their music. I had already tried figuring out what they do to sound so good to me, so I knew that was so much to learn from them. And, to my credit, my music has gotten better because of it.
 I knew I was fighting an uphill battle from the start, though. So much of what made their music stand out were from the deeply personal lyrics, those of hardships I'd never wish to live through.
 I had to accept that the only way I could ever make music as good as them is if I specifically don't try to do that. I need to find interest in my own life. I need to feel like I'm worth talking about.
 (And that there will be no one else like Glass Beach)
 
-I will never forget this memory, it defines who I am.\"
+I will never forget this memory; it defines who I am.\"
 [Press C to forget]"
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
