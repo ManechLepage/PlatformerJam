@@ -1892,12 +1892,12 @@ scale = Vector2(0.13890229, 0.99990505)
 skew = -0.09841871
 texture = ExtResource("14_43664")
 
-[node name="tutorrial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1754253968 instance=ExtResource("6_04iir")]
+[node name="tutorial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1754253968 instance=ExtResource("6_04iir")]
 position = Vector2(-178, 189)
 scale = Vector2(0.6413263, 0.6413263)
 destroyable = false
 
-[node name="PoemText" parent="Offset/Deco/tutorrial_text" index="2" unique_id=1098363463]
+[node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
 z_index = 5
 offset_left = -46.77806
 offset_top = -291.58325
@@ -2575,4 +2575,4 @@ vertical_alignment = 1
 visible_characters_behavior = 1
 
 [editable path="Offset/Obstacles/Door"]
-[editable path="Offset/Deco/tutorrial_text"]
+[editable path="Offset/Deco/tutorial_text"]

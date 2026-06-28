@@ -1,11 +1,13 @@
 class_name Game_Manager
 extends Node
 
-@onready var audio_manager: AudioManager = $AudioManager
+@onready var audio_manager: Node
 @onready var event_manager: EventManager = $EventManager
 @onready var tween_animations_manager: TweenAnimations = $TweenAnimationsManager
-@onready var world_env: WorldEnvironment = $WorldEnvironment
+var world_env: WorldEnvironment
+var credits: Control
 var seen_intro: bool = false
+var end_popup: Node2D
 
 var lucidity: float = 0:
 	set(value):

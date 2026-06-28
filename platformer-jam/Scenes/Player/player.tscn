@@ -72,14 +72,6 @@ region = Rect2(192, 192, 64, 64)
 atlas = ExtResource("2_jhyir")
 region = Rect2(256, 192, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2jnj1"]
-atlas = ExtResource("2_jhyir")
-region = Rect2(192, 256, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_enij7"]
-atlas = ExtResource("2_jhyir")
-region = Rect2(256, 256, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwii3"]
 atlas = ExtResource("2_jhyir")
 region = Rect2(192, 256, 64, 64)
@@ -186,14 +178,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ahak")
 }, {
-"duration": 1.0,
+"duration": 24.0,
 "texture": SubResource("AtlasTexture_rukb4")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2jnj1")
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_mwii3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_enij7")
+"texture": SubResource("AtlasTexture_2aanf")
 }],
 "loop": 0,
 "name": &"meditate_end",
@@ -208,15 +200,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ahak")
-}, {
-"duration": 12.0,
-"texture": SubResource("AtlasTexture_rukb4")
-}, {
-"duration": 12.0,
-"texture": SubResource("AtlasTexture_mwii3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2aanf")
 }],
 "loop": 0,
 "name": &"meditation_idle",
@@ -285,10 +268,8 @@ wash_timer = NodePath("WashStepper")
 z_index = 5
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"meditation_idle"
+animation = &"meditate_end"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
 z_index = 10
@@ -418,12 +399,13 @@ stream = ExtResource("13_7g0yx")
 volume_db = -9.448
 max_polyphony = 2
 
-[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867 node_paths=PackedStringArray("meditation_state")]
+[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867 node_paths=PackedStringArray("meditation_state", "meditation_end_state")]
 stream = ExtResource("14_dey5f")
 volume_db = -80.0
 parameters/looping = true
 script = ExtResource("15_dey5f")
 meditation_state = NodePath("../../StateMachine/MeditateIdle")
+meditation_end_state = NodePath("../../StateMachine/MeditateEnd")
 
 [node name="lucid3" type="AudioStreamPlayer" parent="Sounds/meditate" unique_id=1227968001]
 

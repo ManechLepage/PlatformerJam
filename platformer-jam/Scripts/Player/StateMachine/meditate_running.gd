@@ -19,6 +19,24 @@ func exit():
 	Game.clear_shake()
 	parent.is_meditating = false
 
+func process_inputs(event):
+	if Input.is_action_pressed("Meditate"):
+		Game.start_meditation_animation()
+		parent.is_meditating = true
+	else:
+		parent.is_meditating = false
+		Game.clear_shake()
+
+
 func process_physics(delta):
-	progress += delta
+	if parent.is_meditating or progress > 10: progress += delta
+	Game.world_env.environment.adjustment_brightness = (ease(progress/13,2.3)*13)
+	$"../../Sounds/meditate".max_vol = 1-(ease(progress/15,5))
+	Game.audio_manager.set_noise_level(1-(ease(progress/15,1)))
+	if progress>15:
+		Game.credits.start_credits()
+		$"../../Sounds/meditate".max_vol = 0
+		Game.audio_manager.set_noise_level(0)
+		return idle
 	
+	return null

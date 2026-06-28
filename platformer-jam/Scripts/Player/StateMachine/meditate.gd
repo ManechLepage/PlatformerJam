@@ -31,6 +31,7 @@ func process_inputs(event):
 	if Input.is_action_just_pressed("Jump"):
 		return jump
 	if Game.max_lucidity == 100:
+		
 		return meditate_end
 	return null
 
@@ -43,7 +44,7 @@ func process_physics(delta):
 	
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()
-	if parent.is_on_floor():
+	if not parent.is_on_floor():
 		return fall
 	if Input.get_axis("Left", "Right") != 0:
 		return running

@@ -55,6 +55,8 @@
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
+[ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -97,6 +99,7 @@ var tweenC: Tween
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Game.event_manager.lucidity_changed.connect(update_lucidity)
+	Game.world_env = $\"../WorldEnvironment\"
 	$\"lucid bg\".material.set_shader_parameter(\"alpha\",0)
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",0)
 	$\"../Areas/Tower1Area\".body_entered.connect(func(_body):change_colors(\"1\"))
@@ -191,12 +194,18 @@ size = Vector2(931, 3734)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqrg6"]
 size = Vector2(934.5, 3011)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptfg5"]
+content_margin_left = 90.0
+content_margin_top = 90.0
+content_margin_right = 90.0
+content_margin_bottom = 90.0
+
 [node name="Main" type="Node2D" unique_id=295821621]
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower3-02"
-initial_player_pos = Vector2(-2100, -1000)
+initial_room = "Tower1-07"
+initial_player_pos = Vector2(150, -3250)
 initial_lucidity = 60.0
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
@@ -436,3 +445,58 @@ collision_mask = 64
 position = Vector2(-2134, -3978)
 shape = SubResource("RectangleShape2D_kqrg6")
 debug_color = Color(0.5110002, 0, 0.73, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
+layer = 99
+
+[node name="Credits" type="Control" parent="CanvasLayer" unique_id=1217656592]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("56_ptfg5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Credits" unique_id=757233727]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("57_2daye")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ptfg5")
+text = "Ti-Die:
+Art, Music & Sound, Writing,
+Game Design, Code
+
+Mediano:
+Game Design, Level Design,
+Code
+
+AquaFly:
+Level Design, Code
+
+Eliradon:
+Level Design (Visual), Code
+
+
+Special Thanks to Vociferi for 
+Pillar of Currents Memory"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Credits" unique_id=74318676]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("57_2daye")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ptfg5")
+text = "Thank you for playing to completion."
+vertical_alignment = 2

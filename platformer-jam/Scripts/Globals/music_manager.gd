@@ -8,6 +8,7 @@ var bridge_tween_value := 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Game.event_manager.lucidity_changed.connect(update_vol)
+	Game.audio_manager = self
 	set_bridge_effects(0)
 	$"../Areas/BridgeArea1".body_entered.connect(func (_body): set_bridge(1))
 	$"../Areas/BridgeArea1".body_exited.connect(func (_body): set_bridge(0))
@@ -17,6 +18,9 @@ func _ready() -> void:
 	$"../Areas/End".body_exited.connect(func (_body): set_bridge(0))
 	play_at_corrrect_time()
 	
+func set_noise_level(linear):
+	sound_layers["noise"].volume_linear = linear
+
 func clear_audio():
 	sound_layers["base"].stream = null
 	sound_layers["lucid_1"].stream = null

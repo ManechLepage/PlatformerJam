@@ -68,17 +68,17 @@ shape = SubResource("RectangleShape2D_bpnnk")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="Area2" parent="." index="1" unique_id=1754253968 instance=ExtResource("4_bpnnk")]
+[node name="END" parent="." index="1" unique_id=1754253968 instance=ExtResource("4_bpnnk")]
 position = Vector2(0, -4227)
 
-[node name="TextureRect2" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
+[node name="TextureRect2" parent="END/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
 offset_left = 586.0
 offset_top = 125.0
 offset_right = 842.0
 offset_bottom = 381.0
 texture = ExtResource("5_fjww1")
 
-[node name="PoemText" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
+[node name="PoemText" parent="END/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
 offset_left = 9.0
 offset_top = -4.0
 offset_right = 456.0
@@ -94,25 +94,27 @@ And so, I did... but I don't remember anything about my shift. All I remember is
 I'll never forget this memory; it defines who I am.\"
 [Press C to forget]"
 
-[node name="upgrade" parent="Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="3" unique_id=939542970]
+[node name="upgrade" parent="END/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="3" unique_id=939542970]
 text = "There is nothing left of you anymore.
                                                                                                                 
 Your lucidity can now be eliminated.
                                                                                                                 
 [Press C to close]"
 
-[node name="tutorialpopup" parent="Area2" index="4" unique_id=846695906 instance=ExtResource("6_44pv4")]
+[node name="end_tutorial" parent="." index="2" unique_id=846695906 instance=ExtResource("6_44pv4")]
+process_mode = 3
+position = Vector2(0, -4227)
 destroyable = false
 
-[node name="CollisionShape2D" parent="Area2/tutorialpopup" index="0" unique_id=1885497316]
+[node name="CollisionShape2D" parent="end_tutorial" index="0" unique_id=1885497316]
 scale = Vector2(56.424355, 56.26829)
 disabled = true
 debug_color = Color(0, 0.5950001, 0.7, 0)
 
-[node name="Parchemin" parent="Area2/tutorialpopup" index="1" unique_id=2027513]
+[node name="Parchemin" parent="end_tutorial" index="1" unique_id=2027513]
 visible = false
 
-[node name="PoemText" parent="Area2/tutorialpopup" index="2" unique_id=1098363463]
+[node name="PoemText" parent="end_tutorial" index="2" unique_id=1098363463]
 offset_left = -99.0
 offset_top = -567.0
 offset_right = 99.0
@@ -123,5 +125,5 @@ text = "[Hold X to forget yourself]"
 
 [editable path="Offset/Obstacles/Platform5"]
 [editable path="Offset/Obstacles/Platform6"]
-[editable path="Area2"]
-[editable path="Area2/tutorialpopup"]
+[editable path="END"]
+[editable path="end_tutorial"]
