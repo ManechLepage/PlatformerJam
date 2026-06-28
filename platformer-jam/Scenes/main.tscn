@@ -194,9 +194,8 @@ size = Vector2(934.5, 3011)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-06"
-initial_player_pos = Vector2(0, -2700)
-initial_lucidity = 60.0
+initial_room = "Tower1-03"
+initial_player_pos = Vector2(-200, -900)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
