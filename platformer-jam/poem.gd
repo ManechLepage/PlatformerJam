@@ -2,28 +2,32 @@ class_name Poem
 extends Area2D
 @export var poem_text: RichTextLabel
 
-@onready var image: Sprite2D = $CanvasLayer/Image
+@onready var image: TextureRect = $CanvasLayer/HBoxContainer/HBoxContainer/TextureRect
+@onready var bg: TextureRect = $CanvasLayer/back/TextureRect
 var has_been_found: bool = false
 @export var destroyable: bool = true
 var progress: float = 0.0
 var transparency: float = 0.0
 var activated: bool = false
 var collecting: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
 	poem_text.modulate.a = 0
 	image.modulate.a = 0
+	bg.modulate.a = 0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if activated:
+	if true:
 		progress += delta
-		poem_text.visible_characters = int(progress*20)
+		poem_text.visible_characters = int(progress*70)
 		if poem_text.modulate.a < 1:
 			poem_text.modulate.a += delta*3
 			image.modulate.a += delta*3
+			bg.modulate.a += delta*3
 			
 		if poem_text.visible_characters >= len(poem_text.text):
 			Game.event_manager.interactable_object = self
@@ -32,6 +36,7 @@ func _process(delta: float) -> void:
 		if poem_text.modulate.a > 0 and not collecting:
 			poem_text.modulate.a += delta*3
 			image.modulate.a += delta*3
+			bg.modulate.a += delta*3
 
 		
 func _on_area_entered(body):

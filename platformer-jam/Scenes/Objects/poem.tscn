@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bl1oxp0rndhll"]
 
 [ext_resource type="Script" uid="uid://bcoxuifgb5o40" path="res://poem.gd" id="1_dtwml"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="3_gpa2e"]
+[ext_resource type="Texture2D" uid="uid://cnqrrwk1wvmlk" path="res://Sprites/water_poem.png" id="3_m3tp1"]
 [ext_resource type="Texture2D" uid="uid://ygcmkwr85t25" path="res://Sprites/E.png" id="3_neamx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
@@ -22,16 +24,22 @@ fill_from = Vector2(0.5, 0.5)
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_57qmd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpa2e"]
+content_margin_left = 50.0
+content_margin_right = 50.0
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yf5fn"]
-noise = SubResource("FastNoiseLite_57qmd")
+[sub_resource type="Gradient" id="Gradient_gpa2e"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gpa2e"]
+gradient = SubResource("Gradient_gpa2e")
 
 [node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_dtwml")
-poem_text = NodePath("CanvasLayer/PoemText")
+poem_text = NodePath("CanvasLayer/HBoxContainer/PoemText")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
 scale = Vector2(4.825, 4.825)
@@ -58,20 +66,67 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1989050324]
-layer = 2
+layer = 30
 
-[node name="PoemText" type="RichTextLabel" parent="CanvasLayer" unique_id=1098363463]
-offset_left = -190.0
-offset_top = -78.0
-offset_right = 192.0
-offset_bottom = -27.0
-text = "Un chameau moins une bosse est un dromadaire
-Un dromadaire moins une bosse est mort de soif"
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=941170713]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PoemText" type="RichTextLabel" parent="CanvasLayer/HBoxContainer" unique_id=1098363463]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_fonts/normal_font = ExtResource("3_gpa2e")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpa2e")
+text = "\"One day, on my way back from school, I saw a cyclist pass by, with a massive camera hanging from their neck.
+                                                                   
+My eyes lingered on them  for a little while, for no particular reason, and I noticed them abruptly stop, point their lens off to the side, take a photo, and continue on their path.
+                                                                   
+' I wonder what made them take that photo? '
+So I diverged off my usual trail, entranced by the curiosity, to see for myself what could've possibly been so captivating.
+                                                                 
+I wasn't disappointed. It was beautiful.
+It was one of those scenes that seem out of a movie. A white scooter surrounded by pink leaves. The sun at the perfect angle, creating a fabulous sheen on the clean body of the Vespa.
+                                                                             
+I wonder what would've happened if I didn't notice the cyclist, or if I didn't let myself get carried by the current of coincidences. Maybe I don't want to know.
+I'll never forget this memory, it defines who I am.\"
+                                                        
+[Press X to forget]"
 scroll_active = false
-autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 visible_characters_behavior = 1
 
-[node name="Image" type="Sprite2D" parent="CanvasLayer" unique_id=1753372658]
-position = Vector2(325, 14.000015)
-scale = Vector2(0.4, 0.4)
-texture = SubResource("NoiseTexture2D_yf5fn")
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=1484569499]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/HBoxContainer" unique_id=1326721095]
+custom_maximum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.72
+texture = ExtResource("3_m3tp1")
+
+[node name="back" type="CanvasLayer" parent="CanvasLayer" unique_id=2138754769]
+layer = 29
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/back" unique_id=140148495]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0.45882353)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.72
+texture = SubResource("GradientTexture2D_gpa2e")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=266383156]
+position = Vector2(483, 268)
