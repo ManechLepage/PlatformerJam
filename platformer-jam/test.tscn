@@ -257,8 +257,6 @@ curve = SubResource("Curve2D_1f472")
 
 [node name="Room30" parent="." unique_id=108794042 instance=ExtResource("33_6qlrc")]
 
-[editable path="Tutorial_3"]
-[editable path="Tutorial_3/Offset/Obstacles/Enter_floor"]
 [editable path="Room3"]
 [editable path="Room3/Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform"]
 [editable path="Room3/Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform2"]

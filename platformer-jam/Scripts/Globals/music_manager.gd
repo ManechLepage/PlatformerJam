@@ -7,13 +7,13 @@ var bridge_tween: Tween
 var bridge_tween_value := 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_pillar_3()
 	Game.event_manager.lucidity_changed.connect(update_vol)
 	set_bridge_effects(0)
 	$"../Areas/BridgeArea1".body_entered.connect(func (_body): set_bridge(1))
 	$"../Areas/BridgeArea1".body_exited.connect(func (_body): set_bridge(0))
 	$"../Areas/BridgeArea2".body_entered.connect(func (_body): set_bridge(1))
 	$"../Areas/BridgeArea2".body_exited.connect(func (_body): set_bridge(0))
+	play_at_corrrect_time()
 #func clear_sound():
 	#
 func play_at_corrrect_time():
@@ -27,7 +27,7 @@ func set_pillar_1():
 	sound_layers["lucid_2"].stream = sound_lib[3]
 	sound_layers["lucid_3"].stream = sound_lib[4]
 	sound_layers["lucid_4"].stream = null
-	play_at_corrrect_time()
+	
 
 func set_pillar_2():
 	sound_layers["base"].stream = sound_lib[5]
