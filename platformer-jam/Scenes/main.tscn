@@ -166,6 +166,7 @@ shader_parameter/colorC = Color(4.243727, 2.573132, 2.573132, 1)
 shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
+shader_parameter/speed_scale = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u50mg"]
 shader = ExtResource("25_u50mg")
@@ -175,6 +176,7 @@ shader_parameter/colorC = Color(4.7454042, 2.0310392, 3.8406157, 1)
 shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
+shader_parameter/speed_scale = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8k8"]
 size = Vector2(934.5, 3011)
