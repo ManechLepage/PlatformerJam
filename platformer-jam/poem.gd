@@ -81,6 +81,6 @@ func next():
 
 func next_2():
 	upgrade_text = 2
-	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 1)
-	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 1)
+	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 2)
+	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 2)
 	

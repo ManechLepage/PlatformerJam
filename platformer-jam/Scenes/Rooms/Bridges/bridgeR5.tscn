@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_03o0b"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_0ergh"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="5_srppu"]
+[ext_resource type="Texture2D" uid="uid://d2wqpgj7s8ael" path="res://Sprites/poem_rythm.png" id="6_6d1mf"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -120,6 +121,30 @@ shape = SubResource("RectangleShape2D_6d1mf")
 
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1754253968 instance=ExtResource("5_srppu")]
 position = Vector2(-186, -64)
+
+[node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
+offset_left = 31.0
+offset_top = 263.0
+offset_right = 287.0
+offset_bottom = 519.0
+texture = ExtResource("6_6d1mf")
+
+[node name="PoemText" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
+offset_left = 381.0
+offset_top = 8.0
+offset_right = 930.0
+offset_bottom = 527.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "\"My motivation to get better at  music mostly is due to my favorite band breaking up. I wanted more of their kind of music to exist, which usually doesn't happen with dead bands.
+I had concluded that there was only one person I could trust to make music that'd ever come close to scratching the itch they did. Which is myself.
+I spent alot of time analysing their music. I had already tried figuring out what they do to sound so good to me, so I knew that was so much to learn from them. And, to my credit, my music has gotten better because of it.
+I knew I was fighting an uphill battle from the start, though. So much of what made their music stand out were from the deeply personal lyrics, those of hardships I'd never wish to live through.
+I had to accept that the only way I could ever make music as good as them is if I specifically don't try to do that. I need to find interest in my own life. I need to feel like I'm worth talking about.
+(And that there will be no one else like Glass Beach)
+
+I will never forget this memory, it defines who I am.\"
+[Press C to forget]"
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
