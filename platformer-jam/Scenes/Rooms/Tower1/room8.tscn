@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="5_7najt"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_ly4mi"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="7_rast3"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="8_yt55h"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="9_7najt"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="10_ly4mi"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="11_rast3"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -86,20 +90,12 @@ radius = 45.398254
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvj6t"]
 size = Vector2(39.943115, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py6be"]
+size = Vector2(75.21194, 14.747314)
+
 [sub_resource type="Curve" id="Curve_rhydc"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_nvj6t"]
-resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
-
-[sub_resource type="Curve2D" id="Curve2D_yt55h"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector2Array(153.67323, 187.6462, -153.67323, -187.6462, 256, 161, 225.38104, 92.044525, -225.38104, -92.044525, -228, 33)
-}
-point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_ivhod"]
 resource_local_to_scene = true
@@ -108,7 +104,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 [sub_resource type="Curve2D" id="Curve2D_dhx7u"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(-30.82356, 101.65867, 30.82356, -101.65867, -268, -32, -21.668892, 129.04587, 21.668892, -129.04587, -187.30626, -227.1831)
+"points": PackedVector2Array(153.67323, 187.6462, -153.67323, -187.6462, 256, 161, 225.38104, 92.044525, -225.38104, -92.044525, -228, 33)
 }
 point_count = 2
 
@@ -119,7 +115,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 [sub_resource type="Curve2D" id="Curve2D_ly4mi"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(65.26873, 19.254494, -65.26873, -19.254494, -289.31525, 71.53223, -18.41882, 74.06985, 18.41882, -74.06985, -344.1261, -88.00879)
+"points": PackedVector2Array(-30.82356, 101.65867, 30.82356, -101.65867, -268, -32, -21.668892, 129.04587, 21.668892, -129.04587, -187.30626, -227.1831)
 }
 point_count = 2
 
@@ -130,7 +126,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 [sub_resource type="Curve2D" id="Curve2D_py6be"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(-63.33371, 254.87915, 63.33371, -254.87915, -304.50443, -27.15625, -18.133966, 84.28088, 18.133966, -84.28088, -77.6486, -123.898926)
+"points": PackedVector2Array(65.26873, 19.254494, -65.26873, -19.254494, -289.31525, 71.53223, -18.41882, 74.06985, 18.41882, -74.06985, -344.1261, -88.00879)
 }
 point_count = 2
 
@@ -139,6 +135,17 @@ resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_p6w4h"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(-63.33371, 254.87915, 63.33371, -254.87915, -304.50443, -27.15625, -18.133966, 84.28088, 18.133966, -84.28088, -77.6486, -123.898926)
+}
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_3ydlr"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_awqp5"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-43.362434, 51.403667, 43.362434, -51.403667, -346.99997, 159.99976, 3.6175961, 90.701004, -3.6175961, -90.701004, -264.99997, -94.000244, 0, 0, 0, 0, -303.99997, -320.00024)
@@ -191,6 +198,11 @@ position = Vector2(55.787807, 60.979004)
 rotation = -0.011795685
 shape = SubResource("RectangleShape2D_axaay")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform1" index="1" unique_id=1614322136]
+position = Vector2(265.7878, 23.979004)
+rotation = -0.011795685
+shape = SubResource("RectangleShape2D_axaay")
+
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1159129307 instance=ExtResource("4_dhx7u")]
 position = Vector2(140, 160)
 collision_layer = 33
@@ -229,15 +241,15 @@ collision_layer = 33
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
-position = Vector2(-437.99887, -203.51463)
-rotation = -3.1415927
-shape = SubResource("RectangleShape2D_nvj6t")
+position = Vector2(-438.73633, -203.51416)
+rotation = 3.1415925
+shape = SubResource("RectangleShape2D_py6be")
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=162576436 instance=ExtResource("6_ly4mi")]
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_nvj6t")
+grad = SubResource("Gradient_ivhod")
 progress = 0.35
 sample_count = 4.0
 has_hitbox = true
@@ -245,7 +257,7 @@ hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
 position = Vector2(-284, -24)
-curve = SubResource("Curve2D_yt55h")
+curve = SubResource("Curve2D_dhx7u")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=299554415]
 position = Vector2(190.13208, 97.89049)
@@ -257,7 +269,7 @@ rotates = false
 position = Vector2(278, 168)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_ivhod")
+grad = SubResource("Gradient_7najt")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
@@ -265,7 +277,7 @@ hitbox_size = 20.0
 [node name="Path2D" parent="Offset/Obstacles/Plant4" index="0" unique_id=2105629789]
 position = Vector2(-375.97635, -37.14595)
 scale = Vector2(0.65680474, 0.5891892)
-curve = SubResource("Curve2D_dhx7u")
+curve = SubResource("Curve2D_ly4mi")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant4/Path2D" index="0" unique_id=522942337]
 position = Vector2(-228.07672, -113.76956)
@@ -277,7 +289,7 @@ rotates = false
 position = Vector2(278, 168)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_7najt")
+grad = SubResource("Gradient_rast3")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
@@ -285,7 +297,7 @@ hitbox_size = 20.0
 [node name="Path2D" parent="Offset/Obstacles/Plant6" index="0" unique_id=2105629789]
 position = Vector2(-375.97635, -37.14595)
 scale = Vector2(0.65680474, 0.5891892)
-curve = SubResource("Curve2D_ly4mi")
+curve = SubResource("Curve2D_py6be")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant6/Path2D" index="0" unique_id=1292806533]
 position = Vector2(-349.10355, 8.4501295)
@@ -297,7 +309,7 @@ rotates = false
 position = Vector2(294, 26)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_rast3")
+grad = SubResource("Gradient_ww02r")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
@@ -305,7 +317,7 @@ hitbox_size = 20.0
 [node name="Path2D" parent="Offset/Obstacles/Plant7" index="0" unique_id=2105629789]
 position = Vector2(-376.00003, -36.999954)
 scale = Vector2(0.65680474, 0.5891892)
-curve = SubResource("Curve2D_py6be")
+curve = SubResource("Curve2D_p6w4h")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant7/Path2D" index="0" unique_id=311509341]
 position = Vector2(-270.72122, -111.7337)
@@ -317,14 +329,14 @@ rotates = false
 position = Vector2(277.99997, 168.00024)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_ww02r")
+grad = SubResource("Gradient_3ydlr")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant5" index="0" unique_id=2105629789]
 position = Vector2(-284, -24)
-curve = SubResource("Curve2D_p6w4h")
+curve = SubResource("Curve2D_awqp5")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant5/Path2D" index="0" unique_id=1206185506]
 position = Vector2(-301.13882, 81.17885)
@@ -352,6 +364,29 @@ scale = Vector2(1.3142104, 1.3142104)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce3" index="1" unique_id=1602848246]
 frame = 4
+
+[node name="Gear5" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1353983551 instance=ExtResource("8_yt55h")]
+position = Vector2(397, 303)
+scale = Vector2(1.2345618, 1.2345618)
+rpm = 10.0
+
+[node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1162658241]
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=819509161]
+position = Vector2(30.999998, -141)
+scale = Vector2(0.57780087, 0.57780087)
+texture = ExtResource("9_7najt")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=2106122470]
+position = Vector2(3, -33)
+rotation = -0.2906313
+scale = Vector2(0.64394987, 0.6045326)
+texture = ExtResource("10_ly4mi")
+
+[node name="Platform1" type="Sprite2D" parent="." index="2" unique_id=1051328852]
+position = Vector2(2, -4003.0002)
+scale = Vector2(0.39830765, 0.39830765)
+texture = ExtResource("11_rast3")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
