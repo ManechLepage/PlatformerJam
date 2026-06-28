@@ -6,6 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_fpuid"]
 [ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="4_gnwgp"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_cpv15"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="7_2a6c1"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="7_tsa3g"]
+[ext_resource type="Texture2D" uid="uid://u3agmklyjnwo" path="res://Sprites/leaf4.tres" id="8_2vddk"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="8_qdm2s"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="9_cpj53"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="10_bci1p"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="11_qdm2s"]
+[ext_resource type="Texture2D" uid="uid://d3pwmreafgynk" path="res://Sprites/leaf2.tres" id="14_1edoy"]
+[ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="15_ubnhe"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -75,11 +84,20 @@ size = Vector2(843, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnwgp"]
 size = Vector2(116, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b52t7"]
+size = Vector2(74.4953, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpj53"]
+size = Vector2(85.753174, 13)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpv15"]
-size = Vector2(116, 79.5)
+size = Vector2(59.89205, 30.757568)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhydc"]
-size = Vector2(116, 54.5)
+size = Vector2(49, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdm2s"]
+size = Vector2(49, 32.656494)
 
 [sub_resource type="Curve" id="Curve_rhydc"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
@@ -139,17 +157,17 @@ position = Vector2(59, 0)
 shape = SubResource("RectangleShape2D_gnwgp")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform1" index="1" unique_id=599450335]
-position = Vector2(-48, -105)
+position = Vector2(-27.929832, -99.7229)
 rotation = 0.2571153
-shape = SubResource("RectangleShape2D_gnwgp")
+shape = SubResource("RectangleShape2D_b52t7")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform1" index="2" unique_id=1705955559]
-position = Vector2(186, -125)
+position = Vector2(170.92422, -123.80054)
 rotation = -0.0793933
-shape = SubResource("RectangleShape2D_gnwgp")
+shape = SubResource("RectangleShape2D_cpj53")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform1" index="3" unique_id=564146579]
-position = Vector2(295, -113)
+position = Vector2(320.20566, -143.7749)
 rotation = -0.27629355
 shape = SubResource("RectangleShape2D_cpv15")
 
@@ -158,13 +176,13 @@ position = Vector2(-59, 245)
 collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
-position = Vector2(452, -209)
+position = Vector2(434, -197)
 shape = SubResource("RectangleShape2D_rhydc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=1572952831]
-position = Vector2(417, -426)
+position = Vector2(362.89017, -430.5381)
 rotation = -0.2398475
-shape = SubResource("RectangleShape2D_rhydc")
+shape = SubResource("RectangleShape2D_qdm2s")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="2" unique_id=583480365]
 position = Vector2(210.99998, -490)
@@ -192,6 +210,102 @@ position = Vector2(142.47006, 56.051968)
 rotation = -2.1676095
 progress = 106.87955
 rotates = false
+
+[node name="Grass2" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=683917352]
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Grass2" index="0" unique_id=1021726334]
+position = Vector2(-27.000002, 233)
+rotation = -0.15211794
+scale = Vector2(0.66251534, 0.66251534)
+texture = ExtResource("7_tsa3g")
+
+[node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Grass2" index="1" unique_id=1989252582]
+position = Vector2(-47.99997, 155)
+rotation = 0.26524833
+scale = Vector2(0.24089462, 0.24089462)
+texture = ExtResource("8_2vddk")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Grass2" index="2" unique_id=575402242]
+position = Vector2(389, 19)
+scale = Vector2(0.7627931, 0.7627931)
+texture = ExtResource("7_tsa3g")
+
+[node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=861514385]
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=1576841694]
+position = Vector2(-71.99999, 155)
+rotation = 0.23461674
+scale = Vector2(0.73709357, 0.73709357)
+texture = ExtResource("7_2a6c1")
+
+[node name="Platform3" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=152950102]
+position = Vector2(-1, 248)
+texture = ExtResource("8_qdm2s")
+
+[node name="Platform4" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=404496949]
+position = Vector2(-87, 147)
+rotation = 0.27103943
+scale = Vector2(0.61400753, 0.61400753)
+texture = ExtResource("8_qdm2s")
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="3" unique_id=238602101]
+position = Vector2(112, 123)
+rotation = -0.08252607
+scale = Vector2(0.47084498, 0.5497703)
+texture = ExtResource("9_cpj53")
+flip_h = true
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=1603630229]
+position = Vector2(262.99997, 98)
+rotation = -0.30603042
+scale = Vector2(1.3787595, 1.3787595)
+texture = ExtResource("10_bci1p")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="5" unique_id=718058737]
+position = Vector2(373, 45.999756)
+scale = Vector2(0.8871002, 0.8871002)
+texture = ExtResource("11_qdm2s")
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=729806578]
+position = Vector2(305, -186.00024)
+rotation = -0.19446413
+scale = Vector2(0.9838893, 1.2473669)
+texture = ExtResource("7_2a6c1")
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/Rocks" index="7" unique_id=1297729429]
+position = Vector2(150.99998, -247.00024)
+rotation = 0.14887139
+scale = Vector2(0.8654489, 0.8654489)
+texture = ExtResource("11_qdm2s")
+
+[node name="Leaf2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1575949652]
+position = Vector2(398.00003, 40)
+rotation = -0.3466875
+scale = Vector2(0.32263583, 0.32263583)
+texture = ExtResource("14_1edoy")
+
+[node name="Grass" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1440098997]
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Grass" index="0" unique_id=935025524]
+position = Vector2(58, 230)
+texture = ExtResource("7_tsa3g")
+
+[node name="Leaf7" type="Sprite2D" parent="Offset/Deco/Grass" index="1" unique_id=1286977777]
+position = Vector2(165.00002, -273)
+rotation = 0.14383559
+texture = ExtResource("7_tsa3g")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Grass" index="2" unique_id=51824286]
+position = Vector2(252, 82)
+rotation = -0.35133368
+scale = Vector2(0.45900977, 0.45900977)
+texture = ExtResource("7_tsa3g")
+
+[node name="Leaf3" type="Sprite2D" parent="Offset/Deco/Grass" index="3" unique_id=1552573860]
+position = Vector2(-120.00001, 139)
+rotation = 0.33294094
+scale = Vector2(0.33468378, 0.33468378)
+texture = ExtResource("15_ubnhe")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
