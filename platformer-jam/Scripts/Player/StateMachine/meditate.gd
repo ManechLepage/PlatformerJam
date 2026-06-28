@@ -26,8 +26,6 @@ func process_inputs(event):
 	if Input.is_action_just_released("Meditate"):
 		Game.player.sprite.play("meditation_idle",-1)
 		return idle
-	if Input.is_action_just_pressed("Left") or Input.is_action_just_pressed("Right"):
-		return running
 	if Input.is_action_just_pressed("Jump"):
 		return jump
 	if Game.max_lucidity == 100:
@@ -46,7 +44,5 @@ func process_physics(delta):
 	parent.move_and_slide()
 	if not parent.is_on_floor():
 		return fall
-	if Input.get_axis("Left", "Right") != 0:
-		return running
 	
 	return null

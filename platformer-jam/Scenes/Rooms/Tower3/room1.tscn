@@ -635,7 +635,7 @@ script = ExtResource("3_o18ho")
 room_name = "Bridge1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
+position = Vector2(35.5, -34)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
