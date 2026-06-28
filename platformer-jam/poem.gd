@@ -21,7 +21,7 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if true:
+	if activated:
 		progress += delta
 		poem_text.visible_characters = int(progress*70)
 		if poem_text.modulate.a < 1:
