@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_c51jx"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_ughlu"]
 [ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="3_1b78x"]
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="3_65hum"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_ewb4s"]
 [ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="3_jvahp"]
 [ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="4_1b78x"]
@@ -82,6 +83,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0, -6.283185307179586]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.27400002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -145,11 +158,277 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
 &"Lucidity": SubResource("Animation_snhcn"),
 &"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="Animation" id="Animation_cgwye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oipvh"]
+resource_name = "waterr"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65hum"]
+_data = {
+&"RESET": SubResource("Animation_cgwye"),
+&"waterr": SubResource("Animation_oipvh")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
@@ -199,7 +478,7 @@ radius = 49.0306
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_2eb28"]
+[sub_resource type="Gradient" id="Gradient_65hum"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
 
@@ -245,6 +524,106 @@ script = ExtResource("2_ughlu")
 position = Vector2(-3840, -540)
 offset = Vector2i(4, 1)
 
+[node name="Parallax2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="0" unique_id=739467125]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=501507152]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=1006066411]
+root_node = NodePath("../Waterfall5")
+libraries/ = SubResource("AnimationLibrary_65hum")
+autoplay = &"waterr"
+
+[node name="Waterfall" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="1" unique_id=1081387095]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-165, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall2" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="2" unique_id=1984939585]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-101, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall3" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="3" unique_id=112599403]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-37, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall4" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="4" unique_id=696249231]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(27, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall5" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="5" unique_id=1597239780]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(91, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall6" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="6" unique_id=600742828]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(155, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall7" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="7" unique_id=1624030251]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-293, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall8" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="8" unique_id=336490907]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-229, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall9" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="9" unique_id=194200196]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(219, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall10" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="10" unique_id=596897543]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(283, -2)
+texture = ExtResource("3_65hum")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
 [node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 
@@ -252,82 +631,71 @@ modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 position = Vector2(-21, 174)
 texture = ExtResource("3_1b78x")
 
-[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=171734883]
-position = Vector2(-23, 79)
-texture = ExtResource("3_1b78x")
-flip_h = true
-
-[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=43450740]
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=43450740]
 position = Vector2(-8, -43)
 texture = ExtResource("3_1b78x")
 
-[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=535957013]
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=535957013]
 position = Vector2(-4, -149)
 texture = ExtResource("3_1b78x")
 flip_h = true
 
-[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=586119105]
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=586119105]
 position = Vector2(-7, -253)
 texture = ExtResource("3_1b78x")
 flip_h = true
 
-[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=1752890690]
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=1752890690]
 position = Vector2(-173, 118)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("4_1b78x")
 flip_h = true
 
-[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="6" unique_id=1184793517]
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=1184793517]
 position = Vector2(-48, 17)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="7" unique_id=1520322404]
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="6" unique_id=1520322404]
 position = Vector2(77, 16)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("4_1b78x")
 flip_h = true
 
-[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="8" unique_id=1788955148]
-position = Vector2(162, 75)
-scale = Vector2(0.99616855, 1)
-texture = ExtResource("5_4i05a")
-flip_h = true
-
-[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="9" unique_id=1900255058]
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="7" unique_id=1900255058]
 position = Vector2(150, 196)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="10" unique_id=922099280]
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="8" unique_id=922099280]
 position = Vector2(169, 246)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="11" unique_id=1533589023]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="9" unique_id=1533589023]
 position = Vector2(-118, -107)
 scale = Vector2(1.052997, 0.74390244)
 texture = ExtResource("5_4i05a")
 flip_h = true
 
-[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=178396870]
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="10" unique_id=178396870]
 position = Vector2(128, -97)
 scale = Vector2(1.142519, 1.2015345)
 texture = ExtResource("4_1b78x")
 flip_h = true
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="13" unique_id=1219487849]
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="11" unique_id=1219487849]
 position = Vector2(-169, -211)
 scale = Vector2(0.97482866, 1.1927235)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="14" unique_id=42242439]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=42242439]
 position = Vector2(142, -248)
 scale = Vector2(0.99616855, 1.3884163)
 texture = ExtResource("3_jvahp")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="15" unique_id=1872624428]
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="13" unique_id=1872624428]
 position = Vector2(-32, 263)
 texture = ExtResource("3_1b78x")
 
@@ -405,122 +773,113 @@ flip_h = true
 position = Vector2(253, 140)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="14" unique_id=865898862]
-position = Vector2(250, -93)
-scale = Vector2(1.1074423, 1)
-texture = ExtResource("5_4i05a")
-
-[node name="BrickBg32" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="15" unique_id=221613007]
+[node name="BrickBg32" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="14" unique_id=221613007]
 position = Vector2(326.25223, -49)
 scale = Vector2(0.9161371, 1)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="16" unique_id=325982656]
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="15" unique_id=325982656]
 position = Vector2(203, -165)
 scale = Vector2(1.1074423, 1)
 texture = ExtResource("3_jvahp")
 flip_h = true
 
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="17" unique_id=1005854334]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="16" unique_id=1005854334]
 position = Vector2(194, -1)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg31" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="18" unique_id=1013178980]
+[node name="BrickBg31" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="17" unique_id=1013178980]
 position = Vector2(310, 51.000046)
 scale = Vector2(0.81914896, 1.3181808)
 texture = ExtResource("3_jvahp")
 flip_h = true
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="19" unique_id=648307431]
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="18" unique_id=648307431]
 position = Vector2(200, -254)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="20" unique_id=1375093659]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="19" unique_id=1375093659]
 position = Vector2(265, -292)
 scale = Vector2(1.1074423, 1)
 texture = ExtResource("4_1b78x")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="21" unique_id=833609065]
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="20" unique_id=833609065]
 position = Vector2(141, -282)
 texture = ExtResource("3_jvahp")
 flip_h = true
 
-[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="22" unique_id=319417987]
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="21" unique_id=319417987]
 position = Vector2(-257, 183)
 scale = Vector2(1.0799608, 1.0147722)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg26" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="23" unique_id=1354910768]
+[node name="BrickBg26" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="22" unique_id=1354910768]
 position = Vector2(-314, 121)
 scale = Vector2(1.0799608, 1.0147722)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="24" unique_id=1453149489]
+[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="23" unique_id=1453149489]
 position = Vector2(-175, 207)
 scale = Vector2(0.917996, 1.0326381)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="25" unique_id=69665634]
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="24" unique_id=69665634]
 position = Vector2(-255, 93)
 scale = Vector2(0.90887344, 1.0917009)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="26" unique_id=61555822]
+[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="25" unique_id=61555822]
 position = Vector2(-285, 39)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg25" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="27" unique_id=987958195]
+[node name="BrickBg25" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="26" unique_id=987958195]
 position = Vector2(-256, 262)
 scale = Vector2(1.6818181, 1.3536586)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg20" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="28" unique_id=441411320]
+[node name="BrickBg20" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="27" unique_id=441411320]
 position = Vector2(-189, 21)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="29" unique_id=1691650132]
+[node name="BrickBg21" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="28" unique_id=1691650132]
 position = Vector2(-240, -171)
 scale = Vector2(0.9553494, 1.1868724)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg22" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="30" unique_id=1842904801]
+[node name="BrickBg22" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="29" unique_id=1842904801]
 position = Vector2(-199, -118)
 scale = Vector2(1.0219216, 0.896057)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg23" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="31" unique_id=160574886]
+[node name="BrickBg23" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="30" unique_id=160574886]
 position = Vector2(-289, -232)
 scale = Vector2(1.6059004, 0.7793465)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg24" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="32" unique_id=1837108278]
+[node name="BrickBg24" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="31" unique_id=1837108278]
 position = Vector2(-245, -269)
 scale = Vector2(0.8936865, 1.2188869)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg27" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="33" unique_id=1384438195]
+[node name="BrickBg27" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="32" unique_id=1384438195]
 position = Vector2(-303, 25)
 scale = Vector2(0.8936865, 1.2188869)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg35" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="34" unique_id=252817747]
+[node name="BrickBg35" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="33" unique_id=252817747]
 position = Vector2(-330, -29)
 texture = ExtResource("3_jvahp")
 
-[node name="BrickBg36" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="35" unique_id=726389923]
+[node name="BrickBg36" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="34" unique_id=726389923]
 position = Vector2(-353, 205)
 texture = ExtResource("5_4i05a")
 
-[node name="BrickBg37" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="36" unique_id=292467663]
-position = Vector2(-315, -53)
-texture = ExtResource("3_jvahp")
-
-[node name="BrickBg38" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="37" unique_id=859698506]
+[node name="BrickBg38" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="35" unique_id=859698506]
 position = Vector2(-352, -161)
 texture = ExtResource("4_1b78x")
 
-[node name="BrickBg39" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="38" unique_id=198335866]
+[node name="BrickBg39" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="36" unique_id=198335866]
 position = Vector2(370, -237)
 texture = ExtResource("3_jvahp")
 
@@ -630,7 +989,7 @@ shape = SubResource("RectangleShape2D_4i05a")
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=822347322 instance=ExtResource("4_1078h")]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
-position = Vector2(-183.04028, -110)
+position = Vector2(-313, -110)
 collision_layer = 33
 sync_to_physics = false
 
@@ -680,7 +1039,7 @@ texture = ExtResource("16_65hum")
 modulate = Color(0.17536464, 0.69025, 1.2786903, 1)
 z_index = -1
 position = Vector2(19, -29)
-rotation = -2.3192968
+rotation = -6.2831855
 scale = Vector2(0.5482998, 0.5482998)
 enabled = false
 
@@ -688,7 +1047,7 @@ enabled = false
 modulate = Color(0.17536464, 0.69025, 1.2786903, 1)
 z_index = -1
 position = Vector2(95.87256, -29)
-rotation = -2.3192968
+rotation = -6.2831855
 scale = Vector2(0.5482998, 0.5482998)
 enabled = false
 
@@ -720,8 +1079,8 @@ shape = SubResource("CircleShape2D_4sqie")
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_2eb28")
-progress = 0.4181818246841431
+grad = SubResource("Gradient_65hum")
+progress = 1.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_size = 20.0
 
@@ -729,9 +1088,9 @@ hitbox_size = 20.0
 curve = SubResource("Curve2D_xbu1k")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=424054915]
-position = Vector2(272.6871, -169.77438)
+position = Vector2(214.00003, -303.00003)
 rotation = -2.1676095
-progress = 372.5312
+progress = 897.17163
 rotates = false
 
 [node name="Yellowball" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1760792903 instance=ExtResource("6_2fq3i")]

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_y1vax"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_y7hdm"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_bjn7v"]
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="3_ypfkq"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_74567"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_8ymx6"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_7cprj"]
@@ -47,6 +48,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [-1.5707964, 1.5707964]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.27400002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -86,11 +99,277 @@ tracks/2/keys = {
 "update": 0,
 "values": [-1.5707964]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
 &"Lucidity": SubResource("Animation_snhcn"),
 &"RESET": SubResource("Animation_mhqpd")
+}
+
+[sub_resource type="Animation" id="Animation_cgwye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oipvh"]
+resource_name = "waterr"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wetxh"]
+_data = {
+&"RESET": SubResource("Animation_cgwye"),
+&"waterr": SubResource("Animation_oipvh")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
@@ -124,6 +403,10 @@ radius = 53.11544
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7hdm"]
 size = Vector2(310, 9)
 
+[sub_resource type="Gradient" id="Gradient_k6tjj"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+
 [sub_resource type="Curve2D" id="Curve2D_8ymx6"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -142.80627, 59.069824, -34.625233, -49.309513, 34.625233, 49.309513, -51.739258, 150.13449, 6.776366, -22.832531, -6.776366, 22.832531, -23.428833, 247.49213, 0, 0, 0, 0, -57.326782, 278.42627)
@@ -142,6 +425,106 @@ script = ExtResource("2_y7hdm")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-3840, 0)
 offset = Vector2i(4, 0)
+
+[node name="Parallax2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="0" unique_id=739467125]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=374543736]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=543324456]
+root_node = NodePath("../Waterfall5")
+libraries/ = SubResource("AnimationLibrary_wetxh")
+autoplay = &"waterr"
+
+[node name="Waterfall" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="1" unique_id=132470042]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-165, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall2" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="2" unique_id=1923249368]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-101, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall3" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="3" unique_id=249097976]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-37, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall4" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="4" unique_id=267634206]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(27, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall5" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="5" unique_id=1199382803]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(91, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall6" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="6" unique_id=810033507]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(155, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall7" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="7" unique_id=1087584590]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-293, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall8" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="8" unique_id=488002262]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-229, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall9" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="9" unique_id=1980111689]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(219, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall10" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="10" unique_id=838055034]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(283, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
@@ -207,7 +590,7 @@ shape = SubResource("RectangleShape2D_6i037")
 
 [node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1980273417 instance=ExtResource("4_74567")]
 position = Vector2(62, -92)
-rotation = 0.418879
+rotation = 1.5707964
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/DecoPlatform1" index="0" unique_id=1349571073]
@@ -241,7 +624,7 @@ shape = SubResource("CircleShape2D_y1vax")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=2142497465 instance=ExtResource("4_74567")]
 position = Vector2(-31, 226)
-rotation = 0.20943956
+rotation = 1.5707964
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 position = Vector2(-155, 0)
@@ -249,10 +632,10 @@ shape = SubResource("RectangleShape2D_y7hdm")
 
 [node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=901383637 instance=ExtResource("6_7cprj")]
 position = Vector2(-144, -258)
-rotation = 0.0
-progress = 0.356293
+grad = SubResource("Gradient_k6tjj")
+progress = 1.0
 
-[node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=545245425]
+[node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_8ymx6")
 
 [node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("8_ypfkq")]

@@ -38,6 +38,20 @@ script = ExtResource("2_5tk1n")
 position = Vector2(-960, 0)
 offset = Vector2i(1, 0)
 
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(0.3835, 0.4456834, 0.65, 0.29411766)
+
+[node name="Sand4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=20856992]
+position = Vector2(-1041.5, 26.75)
+scale = Vector2(4.0168266, 9.844262)
+texture = ExtResource("7_d1m4r")
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=874858646]
+position = Vector2(192, 170.00002)
+scale = Vector2(1.5960549, 4.6923075)
+texture = ExtResource("6_o7sgk")
+flip_h = true
+
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 visible = false
 position = Vector2(-35, -294)

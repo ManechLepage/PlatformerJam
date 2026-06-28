@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_tm7n3"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_usw26"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_vciox"]
+[ext_resource type="Texture2D" uid="uid://bakrqh40fbpmk" path="res://Sprites/sand1.tres" id="5_usw26"]
+[ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="6_vciox"]
+[ext_resource type="Texture2D" uid="uid://eu2ru6yk4llb" path="res://Sprites/sand3.tres" id="7_vciox"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -37,6 +40,19 @@ script = ExtResource("2_tm7n3")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, 0)
 offset = Vector2i(3, 0)
+
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(0.3835, 0.4456834, 0.65, 0.29411766)
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=391448067]
+position = Vector2(-329, 189.99998)
+scale = Vector2(1.7024014, 5.1794868)
+texture = ExtResource("5_usw26")
+
+[node name="Sand2" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=231469150]
+position = Vector2(361, 106)
+scale = Vector2(1.2978723, 6.6335616)
+texture = ExtResource("6_vciox")
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 visible = false
@@ -77,6 +93,23 @@ position = Vector2(0, 247)
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1167760555]
+z_index = 5
+position = Vector2(-18, 247)
+texture = ExtResource("5_usw26")
+
+[node name="Sand2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1310751023]
+z_index = 5
+position = Vector2(-246, 238)
+scale = Vector2(1.6531914, 1)
+texture = ExtResource("6_vciox")
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=2135685487]
+z_index = 5
+position = Vector2(328, 211)
+scale = Vector2(1, 2.1065574)
+texture = ExtResource("7_vciox")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

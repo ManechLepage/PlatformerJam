@@ -93,7 +93,7 @@ func next_2():
 	Game.player.process_mode = Node.PROCESS_MODE_INHERIT
 	Game.max_lucidity += 20
 	print(Game.max_lucidity)
-	if Game.max_lucidity == 100: 
+	if Game.max_lucidity == 100 and $"../end_tutorial/CollisionShape2D":
 		Game.audio_manager.clear_audio()
 		get_tree().create_timer(3.5).timeout.connect(func(): $"../end_tutorial/CollisionShape2D".disabled = false)
 	

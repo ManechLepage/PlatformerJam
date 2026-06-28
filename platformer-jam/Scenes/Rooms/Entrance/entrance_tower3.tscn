@@ -6,14 +6,41 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_w2y4j"]
 [ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="5_wtw1x"]
 [ext_resource type="Texture2D" uid="uid://bakrqh40fbpmk" path="res://Sprites/sand1.tres" id="7_xwmqs"]
+[ext_resource type="Texture2D" uid="uid://bytkq8gmrh0a6" path="res://Sprites/house.png" id="8_6147m"]
 [ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="8_xwmqs"]
+[ext_resource type="Texture2D" uid="uid://dq55qwb5w33eq" path="res://Sprites/house_glow.png" id="9_6147m"]
+[ext_resource type="Texture2D" uid="uid://eu2ru6yk4llb" path="res://Sprites/sand3.tres" id="10_8fpyh"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
 step = 0.001953125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Deco/AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2.005617, 2.005617, 2.005617, 0), Color(2.005617, 2.005617, 2.005617, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/Deco/AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(2.005617, 2.005617, 2.005617, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
@@ -31,6 +58,49 @@ size = Vector2(987, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtw1x"]
 size = Vector2(462, 193)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fpyh"]
+atlas = ExtResource("9_6147m")
+region = Rect2(0, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_036s1"]
+atlas = ExtResource("9_6147m")
+region = Rect2(139, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qse58"]
+atlas = ExtResource("9_6147m")
+region = Rect2(278, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kice6"]
+atlas = ExtResource("9_6147m")
+region = Rect2(417, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liuo8"]
+atlas = ExtResource("9_6147m")
+region = Rect2(556, 0, 139, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fpyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_036s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qse58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kice6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liuo8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_osvg5")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
@@ -45,7 +115,15 @@ position = Vector2(-1920, 0)
 offset = Vector2i(2, 0)
 
 [node name="Camera2D" parent="Offset" index="0" unique_id=946351804]
-z_index = 2
+z_index = 8
+
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(0.3835, 0.4456834, 0.65, 0.29411766)
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=250067270]
+position = Vector2(-81.50006, 26.75)
+scale = Vector2(4.0168266, 9.844262)
+texture = ExtResource("10_8fpyh")
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 visible = false
@@ -130,6 +208,34 @@ position = Vector2(58, 268)
 scale = Vector2(2.9180853, 1.2710271)
 texture = ExtResource("8_xwmqs")
 flip_h = true
+
+[node name="House" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=485740804]
+position = Vector2(55, 30)
+texture = ExtResource("8_6147m")
+region_rect = Rect2(0, 0, 960, 540)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1627934981]
+modulate = Color(2.005617, 2.005617, 2.005617, 0)
+position = Vector2(-8.5, 179)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=740210587]
+z_index = 5
+position = Vector2(-978, 247)
+texture = ExtResource("7_xwmqs")
+
+[node name="Sand4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=196957132]
+z_index = 5
+position = Vector2(-1206, 238)
+scale = Vector2(1.6531914, 1)
+texture = ExtResource("8_xwmqs")
+
+[node name="Sand5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=1947611022]
+z_index = 5
+position = Vector2(-632, 211)
+scale = Vector2(1, 2.1065574)
+texture = ExtResource("10_8fpyh")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
