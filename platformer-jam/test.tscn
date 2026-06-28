@@ -159,37 +159,37 @@ shape = SubResource("RectangleShape2D_2h37t")
 [node name="CollisionShape2D" parent="Room3/Offset/RoomTriggers/RoomTrigger2" parent_id_path=PackedInt32Array(1192215833, 2096990041) index="0" unique_id=630776865]
 shape = SubResource("RectangleShape2D_2h37t")
 
-[node name="vine2" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="7" unique_id=1323222840]
+[node name="vine2" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="6" unique_id=1323222840]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine2" index="0" unique_id=963478316]
 curve = SubResource("Curve2D_dvnpp")
 
-[node name="vine3" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="8" unique_id=1793787206]
+[node name="vine3" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="7" unique_id=1793787206]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine3" index="0" unique_id=462271414]
 curve = SubResource("Curve2D_ffwl0")
 
-[node name="vine4" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="9" unique_id=852055521]
+[node name="vine4" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="8" unique_id=852055521]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine4" index="0" unique_id=110737289]
 curve = SubResource("Curve2D_yg34o")
 
-[node name="vine5" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="10" unique_id=2010550358]
+[node name="vine5" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="9" unique_id=2010550358]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine5" index="0" unique_id=742034994]
 curve = SubResource("Curve2D_21gct")
 
-[node name="vine6" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="11" unique_id=1805944183]
+[node name="vine6" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="10" unique_id=1805944183]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine6" index="0" unique_id=1300983946]
 curve = SubResource("Curve2D_svjfs")
 
-[node name="vine7" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="12" unique_id=289618919]
+[node name="vine7" parent="Room3/Offset/Obstacles" parent_id_path=PackedInt32Array(1192215833, 457880380) index="11" unique_id=289618919]
 grad = SubResource("Gradient_adp8l")
 
 [node name="Path2D" parent="Room3/Offset/Obstacles/vine7" index="0" unique_id=1672302656]
@@ -283,7 +283,6 @@ curve = SubResource("Curve2D_wy5de")
 [editable path="Room3/Offset/Obstacles/Wall2"]
 [editable path="Room3/Offset/Obstacles/Platform"]
 [editable path="Room3/Offset/Obstacles/Platform2"]
-[editable path="Room3/Offset/Obstacles/Platform3"]
 [editable path="Room3/Offset/Obstacles/Block2"]
 [editable path="Room3/Offset/Deco/Leaf1/Plantplat1"]
 [editable path="Room3/Offset/Deco/Leaf4/Plantplat1"]

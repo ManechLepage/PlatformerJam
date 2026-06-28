@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="8_xwmqs"]
 [ext_resource type="Texture2D" uid="uid://dq55qwb5w33eq" path="res://Sprites/house_glow.png" id="9_6147m"]
 [ext_resource type="Texture2D" uid="uid://eu2ru6yk4llb" path="res://Sprites/sand3.tres" id="10_8fpyh"]
+[ext_resource type="PackedScene" uid="uid://fbv3k25te8ta" path="res://Scenes/Objects/tutorial_popup.tscn" id="11_036s1"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="12_qse58"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -26,6 +28,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(2.005617, 2.005617, 2.005617, 0), Color(2.005617, 2.005617, 2.005617, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Deco/tutorial_text/PoemText/PoemText2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20037545),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.13999987, 0, 0.7, 0), Color(0.3367259, 0.3367259, 3.251167, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -40,6 +54,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(2.005617, 2.005617, 2.005617, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Deco/tutorial_text/PoemText/PoemText2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.13999987, 0, 0.7, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -237,8 +263,48 @@ position = Vector2(-632, 211)
 scale = Vector2(1, 2.1065574)
 texture = ExtResource("10_8fpyh")
 
+[node name="tutorial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=1754253968 instance=ExtResource("11_036s1")]
+position = Vector2(-173, 207)
+destroyable = false
+
+[node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
+z_index = 5
+clip_contents = false
+offset_left = -8.999893
+offset_top = -534.0
+offset_right = 655.0001
+offset_bottom = -138.43817
+text = "						Three Pillars of Lucidity:
+                                                         
+																One :  
+													Pillar of the Garden                                                                         
+			Two :  
+Pillar of Currents                                                                              
+										Three :  
+								Pillar of Rythm"
+horizontal_alignment = 0
+
+[node name="PoemText2" type="RichTextLabel" parent="Offset/Deco/tutorial_text/PoemText" index="2" unique_id=766612524]
+modulate = Color(0.13999987, 0, 0.7, 0)
+z_index = 5
+layout_mode = 0
+offset_left = 164.0
+offset_top = 371.0
+offset_right = 294.0
+offset_bottom = 449.56183
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("12_qse58")
+text = "Four:
+Pillar of the Will"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Platform"]
+[editable path="Offset/Deco/tutorial_text"]
