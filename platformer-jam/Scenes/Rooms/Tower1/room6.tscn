@@ -103,11 +103,11 @@ size = Vector2(49, 32.656494)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_cpv15"]
+[sub_resource type="Gradient" id="Gradient_tsa3g"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_rhydc"]
+[sub_resource type="Curve2D" id="Curve2D_2vddk"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(263.62814, 59.7649, -263.62814, -59.7649, 241, 96, 155.75789, 86.0261, -155.75789, -86.0261, -94, -308, 107.672195, -91.31232, -107.672195, 91.31232, -453, -341)
@@ -196,14 +196,14 @@ position = Vector2(0, -294)
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_cpv15")
+grad = SubResource("Gradient_tsa3g")
 progress = 0.5293062955141068
 sample_count = 4.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_rhydc")
+curve = SubResource("Curve2D_2vddk")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=299554415]
 position = Vector2(142.47006, 56.051968)
