@@ -84,7 +84,7 @@ size = Vector2(144.3135, 19.508545)
 radius = 45.398254
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvj6t"]
-size = Vector2(143.72797, 20)
+size = Vector2(39.943115, 20)
 
 [sub_resource type="Curve" id="Curve_rhydc"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
@@ -130,7 +130,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 [sub_resource type="Curve2D" id="Curve2D_py6be"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(280.17755, 59.90609, -280.17755, -59.90609, -289.31525, 71.53223, 4.515127, 88.48894, -4.515127, -88.48894, -366.96393, -101.586914)
+"points": PackedVector2Array(-63.33371, 254.87915, 63.33371, -254.87915, -304.50443, -27.15625, -18.133966, 84.28088, 18.133966, -84.28088, -77.6486, -123.898926)
 }
 point_count = 2
 
@@ -171,15 +171,14 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 [node name="RoomTrigger2" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=932573967]
 position = Vector2(-35, -292)
 script = ExtResource("3_ivhod")
-room_name = "Tower1-04"
+room_name = "Tower1-09"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(390, -7)
+position = Vector2(34, -44)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="FallWater" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1652650217 instance=ExtResource("5_7najt")]
-position = Vector2(0, -294)
 active = false
 
 [node name="Platform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_dhx7u")]
@@ -208,10 +207,33 @@ collision_layer = 33
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
-rotation = -0.09783439
+position = Vector2(-437.99887, -165.17139)
+rotation = 2.8797934
 shape = SubResource("RectangleShape2D_nvj6t")
 
-[node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=162576436 instance=ExtResource("6_ly4mi")]
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=2059004253 instance=ExtResource("4_dhx7u")]
+position = Vector2(-295, -274)
+scale = Vector2(-0.6780839, -0.6780839)
+collision_layer = 33
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
+position = Vector2(-480.76648, -196.1409)
+rotation = -3.1415927
+shape = SubResource("RectangleShape2D_nvj6t")
+
+[node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1260176945 instance=ExtResource("4_dhx7u")]
+position = Vector2(-295, -361)
+scale = Vector2(-0.6780839, -0.6780839)
+collision_layer = 33
+is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
+position = Vector2(-437.99887, -203.51463)
+rotation = -3.1415927
+shape = SubResource("RectangleShape2D_nvj6t")
+
+[node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=162576436 instance=ExtResource("6_ly4mi")]
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
@@ -231,7 +253,7 @@ rotation = -2.1676095
 progress = 91.507965
 rotates = false
 
-[node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=497567128 instance=ExtResource("6_ly4mi")]
+[node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=497567128 instance=ExtResource("6_ly4mi")]
 position = Vector2(278, 168)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
@@ -251,7 +273,7 @@ rotation = -2.1676095
 progress = 91.507965
 rotates = false
 
-[node name="Plant6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=206558293 instance=ExtResource("6_ly4mi")]
+[node name="Plant6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=206558293 instance=ExtResource("6_ly4mi")]
 position = Vector2(278, 168)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
@@ -271,7 +293,7 @@ rotation = -2.1676095
 progress = 91.507965
 rotates = false
 
-[node name="Plant7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=802174225 instance=ExtResource("6_ly4mi")]
+[node name="Plant7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=802174225 instance=ExtResource("6_ly4mi")]
 position = Vector2(294, 26)
 width = 20.0
 width_curve = SubResource("Curve_rhydc")
@@ -286,12 +308,12 @@ scale = Vector2(0.65680474, 0.5891892)
 curve = SubResource("Curve2D_py6be")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant7/Path2D" index="0" unique_id=311509341]
-position = Vector2(-377.96222, 48.91976)
+position = Vector2(-270.72122, -111.7337)
 rotation = -2.1676095
 progress = 91.507965
 rotates = false
 
-[node name="Plant5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=586076656 instance=ExtResource("6_ly4mi")]
+[node name="Plant5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=586076656 instance=ExtResource("6_ly4mi")]
 position = Vector2(277.99997, 168.00024)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
@@ -310,22 +332,22 @@ rotation = -2.1676095
 progress = 91.507965
 rotates = false
 
-[node name="FlowerBounce" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=376175354 instance=ExtResource("7_rast3")]
+[node name="FlowerBounce" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=376175354 instance=ExtResource("7_rast3")]
 position = Vector2(-218.00002, 16.000008)
 scale = Vector2(1.3142104, 1.3142104)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce" index="1" unique_id=1602848246]
 frame = 4
 
-[node name="FlowerBounce2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1875244839 instance=ExtResource("7_rast3")]
+[node name="FlowerBounce2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1875244839 instance=ExtResource("7_rast3")]
 position = Vector2(-323, 96)
 scale = Vector2(1.3142104, 1.3142104)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce2" index="1" unique_id=1602848246]
 frame = 4
 
-[node name="FlowerBounce3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1251584941 instance=ExtResource("7_rast3")]
-position = Vector2(-320.00003, -53.999985)
+[node name="FlowerBounce3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1251584941 instance=ExtResource("7_rast3")]
+position = Vector2(-128.00002, -77.999985)
 scale = Vector2(1.3142104, 1.3142104)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce3" index="1" unique_id=1602848246]
@@ -337,6 +359,8 @@ frame = 4
 [editable path="Offset/Obstacles/Platform1"]
 [editable path="Offset/Obstacles/Platform2"]
 [editable path="Offset/Obstacles/Platform3"]
+[editable path="Offset/Obstacles/Platform5"]
+[editable path="Offset/Obstacles/Platform6"]
 [editable path="Offset/Obstacles/Plant3"]
 [editable path="Offset/Obstacles/Plant4"]
 [editable path="Offset/Obstacles/Plant6"]

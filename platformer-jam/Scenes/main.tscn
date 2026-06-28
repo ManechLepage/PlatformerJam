@@ -54,6 +54,8 @@
 [ext_resource type="PackedScene" uid="uid://bvxppolgn2tqv" path="res://Scenes/Rooms/Tower1/room6.tscn" id="34_54nrm"]
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
+[ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
+[ext_resource type="PackedScene" uid="uid://k74suqdar2h5" path="res://test.tscn" id="56_ptfg5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -220,6 +222,7 @@ rooms = Dictionary[String, PackedScene]({
 "Tower1-06": ExtResource("34_54nrm"),
 "Tower1-07": ExtResource("35_55jeb"),
 "Tower1-08": ExtResource("36_gsvbx"),
+"Tower1-09": ExtResource("37_bv80c"),
 "Tower2-01": ExtResource("12_hibaj"),
 "Tower2-02": ExtResource("18_jwpg7"),
 "Tower2-03": ExtResource("20_aqgau"),
@@ -389,6 +392,30 @@ position = Vector2(-3981.5, -1290)
 shape = SubResource("RectangleShape2D_8cuat")
 debug_color = Color(0.17199995, 0.43, 0, 0)
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Areas/BridgeArea2" unique_id=1057725652]
+position = Vector2(-5657, -1301)
+scale = Vector2(1.0126319, 0.041876093)
+shape = SubResource("RectangleShape2D_o1aky")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="End" type="Area2D" parent="Areas" unique_id=1728686609]
+z_index = -50
+position = Vector2(1099, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Areas/End" unique_id=1826498711]
+position = Vector2(-1092, -4509.0005)
+scale = Vector2(1, 0.23999906)
+shape = SubResource("RectangleShape2D_o1aky")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Areas/End" unique_id=1731461964]
+position = Vector2(-1327.9999, -2093.0002)
+scale = Vector2(0.10902829, 0.028808886)
+shape = SubResource("RectangleShape2D_o1aky")
+debug_color = Color(0.17199995, 0.43, 0, 0)
+
 [node name="BridgeArea1" type="Area2D" parent="Areas" unique_id=123807223]
 z_index = -50
 position = Vector2(1099, 0)
@@ -410,3 +437,5 @@ collision_mask = 64
 position = Vector2(-2134, -3978)
 shape = SubResource("RectangleShape2D_kqrg6")
 debug_color = Color(0.5110002, 0, 0.73, 0)
+
+[node name="Test" parent="." unique_id=131779804 instance=ExtResource("56_ptfg5")]

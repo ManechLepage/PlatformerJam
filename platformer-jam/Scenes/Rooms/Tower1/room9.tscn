@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cmmjjvlkf14up"]
+
+[ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_nksja"]
+[ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="2_ymlia"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="3_1f4pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f4pu"]
+resource_local_to_scene = true
+size = Vector2(1168, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpnnk"]
+size = Vector2(1551.4307, 79.71777)
+
+[node name="Room" unique_id=197990627 instance=ExtResource("1_nksja")]
+
+[node name="Offset" parent="." index="0" unique_id=652906693]
+position = Vector2(0, -4320)
+offset = Vector2i(0, 8)
+
+[node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=1648949608]
+position = Vector2(-35, 297)
+script = ExtResource("2_ymlia")
+room_name = "Tower1-08"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=897013234]
+position = Vector2(54, -1)
+shape = SubResource("RectangleShape2D_1f4pu")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("3_1f4pu")]
+position = Vector2(-1, 272)
+scale = Vector2(-0.6780839, -0.6780839)
+collision_layer = 33
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
+position = Vector2(-2.9494324, 8.848555)
+shape = SubResource("RectangleShape2D_bpnnk")
+one_way_collision = true
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=1706702273]
+position = Vector2(-2.9494324, 311.17102)
+shape = SubResource("RectangleShape2D_bpnnk")
+one_way_collision = true
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
+
+[editable path="Offset/Obstacles/Platform5"]

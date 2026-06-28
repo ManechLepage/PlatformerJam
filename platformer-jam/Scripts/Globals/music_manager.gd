@@ -13,6 +13,8 @@ func _ready() -> void:
 	$"../Areas/BridgeArea1".body_exited.connect(func (_body): set_bridge(0))
 	$"../Areas/BridgeArea2".body_entered.connect(func (_body): set_bridge(1))
 	$"../Areas/BridgeArea2".body_exited.connect(func (_body): set_bridge(0))
+	$"../Areas/End".body_entered.connect(func (_body): set_bridge(1))
+	$"../Areas/End".body_exited.connect(func (_body): set_bridge(0))
 	play_at_corrrect_time()
 #func clear_sound():
 	#
