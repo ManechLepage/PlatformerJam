@@ -267,7 +267,7 @@ position = Vector2(116.11281, -83.97837)
 scale = Vector2(2.165733, 2.165733)
 texture = ExtResource("10_ch7k8")
 
-[node name="RoomTrigger" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("2_l3fbw")]
+[node name="Enter" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819 instance=ExtResource("2_l3fbw")]
 position = Vector2(-296, 353)
 scale = Vector2(10.83, 1)
 room_name = "tutorial_1"
@@ -320,6 +320,7 @@ modulate = Color(0.126, 0.161, 0.21, 1)
 position = Vector2(158, 214)
 rotation = -0.05235988
 scale = Vector2(4.82, 1)
+is_platform = true
 
 [node name="Brick81" type="Sprite2D" parent="Offset/Obstacles/Rising_floor" index="1" unique_id=1070819797]
 modulate = Color(1.4643909, 1.4643909, 1.4643909, 1)

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_cheee"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_pd6bw"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_kr4pd"]
+[ext_resource type="Texture2D" uid="uid://d33uupm3pbqib" path="res://Sprites/garden_poem.png" id="6_hpt3e"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_nx8yr"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="7_vwbao"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="8_3k6h7"]
@@ -281,33 +282,33 @@ size = Vector2(84, 68)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_vwbao"]
+[sub_resource type="Gradient" id="Gradient_hpt3e"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_hpt3e"]
+[sub_resource type="Curve2D" id="Curve2D_3k6h7"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-22.554474, 29.029297, 22.554474, -29.029297, 37, 63, -55.209305, 68.57377, 55.209305, -68.57377, 212, 35, -18.874853, 93.96865, 18.874853, -93.96865, 245, -144, -207.78236, -17.67596, 207.78236, 17.67596, 485, -48)
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_3k6h7"]
+[sub_resource type="Gradient" id="Gradient_4b2l3"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_4b2l3"]
+[sub_resource type="Curve2D" id="Curve2D_fdhjq"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-22.554474, 29.029297, 22.554474, -29.029297, 37, 63, -19.75476, 74.93741, 19.75476, -74.93741, 172, -41, 93.85242, 112.150475, -93.85242, -112.150475, 105, -295, 107.672195, -91.31232, -107.672195, 91.31232, -291, -340)
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_fdhjq"]
+[sub_resource type="Gradient" id="Gradient_pxdxb"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_pxdxb"]
+[sub_resource type="Curve2D" id="Curve2D_1bahu"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(11.797424, 37.935345, -11.797424, -37.935345, 241, -16, 55.386753, -24.05304, -55.386753, 24.05304, 156, -30)
@@ -422,20 +423,60 @@ sync_to_physics = false
 position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_vwbao")
 
-[node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1652650217 instance=ExtResource("8_3k6h7")]
+[node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1754253968 instance=ExtResource("7_vwbao")]
+position = Vector2(-229, 68)
+
+[node name="TextureRect" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="0" unique_id=140148495]
+offset_left = 1.0
+offset_right = 1.0
+
+[node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
+offset_left = 637.0
+offset_top = 260.0
+offset_right = 893.0
+offset_bottom = 516.0
+texture = ExtResource("6_hpt3e")
+
+[node name="PoemText" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
+offset_left = 126.0
+offset_top = -26.0
+offset_right = 667.0
+offset_bottom = 481.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "\"When I got home after my 3-day vacation at the hospital for a
+pneumothorax, my mom told me my grand-parents had sent me
+flowers.
+They were nice.
+But they didn't feel like they belonged to me.
+What did I do to deserve flowers? If anything, the doctors and
+nurses should be getting bouquets.
+Flowers are for successful plays, performances and marriages...
+I lingered with that, I felt like that logic was sound.
+I didn't consider for a long time that maybe support didn't need to be earned, and it took much longer to truly believe it.
+...But, since then, I've never seen flowers the same way.
+
+I will never forget this memory, it defines who I am.\"
+[Press C to forget]"
+
+[node name="upgrade" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="3" unique_id=939542970]
+offset_left = 1.0
+offset_right = 1.0
+
+[node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("8_3k6h7")]
 position = Vector2(-37, 233)
 
-[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=586076656 instance=ExtResource("6_nx8yr")]
+[node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=586076656 instance=ExtResource("6_nx8yr")]
 position = Vector2(-362, 47)
 width = 40.0
 width_curve = SubResource("Curve_vwbao")
-grad = SubResource("Gradient_vwbao")
+grad = SubResource("Gradient_hpt3e")
 progress = 0.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_hpt3e")
+curve = SubResource("Curve2D_3k6h7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1635811881]
 position = Vector2(140.93968, 66.38243)
@@ -443,18 +484,18 @@ rotation = -2.1676095
 progress = 106.87955
 rotates = false
 
-[node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=493851956 instance=ExtResource("6_nx8yr")]
+[node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=493851956 instance=ExtResource("6_nx8yr")]
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_vwbao")
-grad = SubResource("Gradient_3k6h7")
+grad = SubResource("Gradient_4b2l3")
 progress = 0.0
 sample_count = 4.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_4b2l3")
+curve = SubResource("Curve2D_fdhjq")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=1170391774]
 position = Vector2(131.29471, 14.141148)
@@ -462,26 +503,23 @@ rotation = -2.1676095
 progress = 106.87955
 rotates = false
 
-[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=153237552 instance=ExtResource("6_nx8yr")]
+[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=153237552 instance=ExtResource("6_nx8yr")]
 position = Vector2(-362, 47)
 width = 40.0
 width_curve = SubResource("Curve_vwbao")
-grad = SubResource("Gradient_fdhjq")
+grad = SubResource("Gradient_pxdxb")
 progress = 0.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_pxdxb")
+curve = SubResource("Curve2D_1bahu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant2/Path2D" index="0" unique_id=964828746]
 position = Vector2(156.00002, -29.999998)
 rotation = -2.1676095
 progress = 106.87955
 rotates = false
-
-[node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1754253968 instance=ExtResource("7_vwbao")]
-position = Vector2(-234, 80)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
@@ -493,8 +531,8 @@ position = Vector2(-234, 80)
 [editable path="Offset/Obstacles/Path2D/PathFollow2D/Wall3"]
 [editable path="Offset/Obstacles/Path2D3/PathFollow2D/Wall3"]
 [editable path="Offset/Obstacles/Path2D2/PathFollow2D/Wall3"]
+[editable path="Offset/Obstacles/Area2"]
 [editable path="Offset/Obstacles/Fountain"]
 [editable path="Offset/Obstacles/Plant1"]
 [editable path="Offset/Obstacles/Plant3"]
 [editable path="Offset/Obstacles/Plant2"]
-[editable path="Offset/Obstacles/Area2"]

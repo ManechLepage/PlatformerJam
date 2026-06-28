@@ -106,12 +106,11 @@ func _ready() -> void:
 	$\"../Areas/BridgeArea2\".body_entered.connect(func(_body):change_colors(\"bridge2\"))
 	change_colors(\"start\")
 
-func change_colors(name: String):
-	print(1)
+func change_colors(color_name: String):
 	var c:Array[Color] = []
 	for tween in [tweenA,tweenB,tweenC]:
 		if tween: tween.kill()
-	match name:
+	match color_name:
 		\"start\":
 			c = [area_start_color1,area_start_color2,area_start_color3]
 		\"1\":
