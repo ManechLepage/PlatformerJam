@@ -11,6 +11,7 @@ var transparency: float = 0.0
 var activated: bool = false
 var collecting: bool = false
 var upgrade_text: int = 0
+var end_seq := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -89,5 +90,7 @@ func next_2():
 	create_tween().tween_property(AudioServer.get_bus_effect(2,2), "volume_linear", 1, 2)
 	Game.player.process_mode = Node.PROCESS_MODE_INHERIT
 	Game.max_lucidity += 20
-	if Game.max_lucidity == 80: Game.audio_manager.clear_audio()
+	if Game.max_lucidity == 100: 
+		Game.audio_manager.clear_audio()
+		get_tree().create_timer(3.5).timeout.connect(func(): $tutorialpopup/CollisionShape2D.disabled = false)
 	
