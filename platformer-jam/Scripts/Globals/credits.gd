@@ -5,10 +5,12 @@ extends Control
 func _ready() -> void:
 	Game.credits = self
 	hide()
+	
 
 func start_credits():
 	Game.end_popup.hide()
 	Game.player.hide()
+	Game.world_env.environment.adjustment_brightness = 20
 	show()
 	modulate.a=0
 	create_tween().tween_property(self,"modulate:a",1.,0)

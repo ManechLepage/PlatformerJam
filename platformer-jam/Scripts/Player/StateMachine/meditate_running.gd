@@ -29,7 +29,7 @@ func process_inputs(event):
 
 
 func process_physics(delta):
-	if parent.is_meditating or progress > 10: progress += delta
+	if parent.is_meditating or progress > 8: progress += delta
 	Game.world_env.environment.adjustment_brightness = (ease(progress/13,2.3)*13)
 	$"../../Sounds/meditate".max_vol = 1-(ease(progress/15,5))
 	Game.audio_manager.set_noise_level(1-(ease(progress/15,1)))

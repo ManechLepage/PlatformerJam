@@ -185,7 +185,7 @@ size = Vector2(934.5, 3011)
 size = Vector2(1010.5, 3734)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1aky"]
-size = Vector2(934.5, 3398)
+size = Vector2(934.5, 2986)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cuat"]
 size = Vector2(933, 3734)
@@ -206,8 +206,8 @@ content_margin_bottom = 90.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Entrance3"
-initial_player_pos = Vector2(-2000, 0)
+initial_room = "Tower3-02"
+initial_player_pos = Vector2(-2000, -1000)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
@@ -385,7 +385,7 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Tower3Area" unique_id=723410420]
-position = Vector2(-4055.25, -1454)
+position = Vector2(-4055.25, -1660)
 shape = SubResource("RectangleShape2D_o1aky")
 debug_color = Color(0.17199995, 0.43, 0, 0)
 

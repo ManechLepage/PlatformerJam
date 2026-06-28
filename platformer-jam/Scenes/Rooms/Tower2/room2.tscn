@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="16_cgwye"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="17_oipvh"]
 [ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="19_nv8a4"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="21_oipvh"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -657,6 +658,32 @@ fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
 
+[sub_resource type="Curve" id="Curve_oawka"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ic0jm"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
+
+[sub_resource type="Gradient" id="Gradient_x34c6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_estoj"]
+gradient = SubResource("Gradient_x34c6")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve2D" id="Curve2D_mkrgf"]
+_data = {
+"points": PackedVector2Array(79.50757, 267.0346, -79.50757, -267.0346, -345, -59, -126.95436, 47.150482, 126.95436, -47.150482, -70, -291, 12.483571, 226.0498, -12.483571, -226.0498, 114, -675)
+}
+point_count = 3
+
 [node name="Room4" unique_id=197990627 instance=ExtResource("1_xuur6")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
@@ -976,6 +1003,7 @@ texture = ExtResource("5_g3f8u")
 flip_h = true
 
 [node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="21" unique_id=1126767987]
+z_index = -1
 position = Vector2(141, -282)
 texture = ExtResource("6_eikqt")
 flip_h = true
@@ -1791,6 +1819,25 @@ z_index = -1
 position = Vector2(293, -248)
 texture = ExtResource("5_g3f8u")
 
+[node name="Plant1" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=586076656 instance=ExtResource("21_oipvh")]
+z_index = -6
+position = Vector2(-28, 188)
+width = 80.0
+width_curve = SubResource("Curve_oawka")
+grad = SubResource("Gradient_ic0jm")
+progress = 1.0
+texture_base = SubResource("GradientTexture2D_estoj")
+hitbox_size = 20.0
+
+[node name="Path2D" parent="Offset/Deco/Plant1" index="0" unique_id=2105629789]
+curve = SubResource("Curve2D_mkrgf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Offset/Deco/Plant1/Path2D" index="0" unique_id=451837180]
+position = Vector2(114.85023, -656.44934)
+rotation = -2.1676095
+progress = 897.17163
+rotates = false
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
@@ -1811,3 +1858,4 @@ texture = ExtResource("5_g3f8u")
 [editable path="Offset/Obstacles/Waterfall2"]
 [editable path="Offset/Obstacles/Lever"]
 [editable path="Offset/Obstacles/Area2"]
+[editable path="Offset/Deco/Plant1"]

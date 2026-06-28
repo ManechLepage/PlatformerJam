@@ -144,7 +144,7 @@ offset = Vector2i(2, 0)
 z_index = 8
 
 [node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
-modulate = Color(0.3835, 0.4456834, 0.65, 0.29411766)
+modulate = Color(0.25370002, 0.29483673, 0.43, 1)
 
 [node name="Sand3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=250067270]
 position = Vector2(-81.50006, 26.75)
