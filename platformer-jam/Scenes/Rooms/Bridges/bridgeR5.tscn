@@ -126,3 +126,4 @@ position = Vector2(-186, -64)
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger5" to="Offset/RoomTriggers/RoomTrigger5" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Platform2"]
+[editable path="Offset/Obstacles/Area2"]

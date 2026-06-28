@@ -24,22 +24,22 @@ fill_from = Vector2(0.5, 0.5)
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpa2e"]
-content_margin_left = 50.0
-content_margin_right = 50.0
-
 [sub_resource type="Gradient" id="Gradient_gpa2e"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_gpa2e"]
 gradient = SubResource("Gradient_gpa2e")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpa2e"]
+content_margin_left = 50.0
+content_margin_right = 50.0
 
 [node name="Area2" type="Area2D" unique_id=1754253968 node_paths=PackedStringArray("poem_text")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_dtwml")
-poem_text = NodePath("CanvasLayer/HBoxContainer/PoemText")
+poem_text = NodePath("CanvasLayer/PoemText")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885497316]
 scale = Vector2(4.825, 4.825)
@@ -66,18 +66,37 @@ position = Vector2(0, -28)
 texture = ExtResource("3_neamx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1989050324]
-layer = 30
+layer = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=941170713]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=140148495]
+modulate = Color(0, 0, 0, 0)
+self_modulate = Color(1, 1, 1, 0.6)
+z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.72
+texture = SubResource("GradientTexture2D_gpa2e")
 
-[node name="PoemText" type="RichTextLabel" parent="CanvasLayer/HBoxContainer" unique_id=1098363463]
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1326721095]
+custom_maximum_size = Vector2(256, 256)
+offset_left = -75.5
+offset_top = -128.0
+offset_right = 180.5
+offset_bottom = 128.0
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.72
+texture = ExtResource("3_m3tp1")
+
+[node name="PoemText" type="RichTextLabel" parent="CanvasLayer" unique_id=1098363463]
 clip_contents = false
-layout_mode = 2
+offset_left = -52.5
+offset_right = 48.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 theme_override_fonts/normal_font = ExtResource("3_gpa2e")
@@ -102,31 +121,25 @@ horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=1484569499]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/HBoxContainer" unique_id=1326721095]
-custom_maximum_size = Vector2(256, 256)
-layout_mode = 2
-size_flags_vertical = 4
-size_flags_stretch_ratio = 2.72
-texture = ExtResource("3_m3tp1")
-
-[node name="back" type="CanvasLayer" parent="CanvasLayer" unique_id=2138754769]
-layer = 29
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/back" unique_id=140148495]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0.45882353)
+[node name="upgrade" type="RichTextLabel" parent="CanvasLayer" unique_id=939542970]
+clip_contents = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 4
-size_flags_stretch_ratio = 2.72
-texture = SubResource("GradientTexture2D_gpa2e")
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_gpa2e")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpa2e")
+text = "You can feel your mind's plasticity has increased.
+Your lucidity can now be further decreased.
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=266383156]
-position = Vector2(483, 268)
+[Press C to continue]"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
