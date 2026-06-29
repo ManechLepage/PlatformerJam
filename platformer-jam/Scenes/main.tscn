@@ -57,7 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
-[ext_resource type="PackedScene" uid="uid://dsmr1tlc71hfj" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
+[ext_resource type="PackedScene" uid="uid://ctkeb5r1ievjq" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
