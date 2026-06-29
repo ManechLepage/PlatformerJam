@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="19_ntt1a"]
 [ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="20_ntt1a"]
 [ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="20_xn73o"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="21_1k2ho"]
 [ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="21_xn73o"]
 
 [sub_resource type="Animation" id="Animation_76onr"]
@@ -227,13 +228,13 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_088u0"]
+[sub_resource type="Gradient" id="Gradient_1k2ho"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.5652985)
 colors = PackedColorArray(0.13725491, 0.06666667, 0.09411765, 1, 0.043137256, 0.043137256, 0.09803922, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vohyl"]
-gradient = SubResource("Gradient_088u0")
+gradient = SubResource("Gradient_1k2ho")
 fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
@@ -351,10 +352,11 @@ _data = {
 }
 point_count = 2
 
-[node name="Room3" unique_id=197990627 instance=ExtResource("1_cj5pp")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_cj5pp")]
 
 [node name="LeverAnim" type="AnimationPlayer" parent="." index="0" unique_id=1143961156]
 libraries/ = SubResource("AnimationLibrary_trhpv")
+speed_scale = 0.5
 script = ExtResource("2_trhpv")
 lever_index = 1
 
@@ -855,12 +857,18 @@ scale = Vector2(0.39999998, 1)
 shape = SubResource("RectangleShape2D_trhpv")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="1" unique_id=1048879702]
-position = Vector2(261, -9.000001)
-rotation = 0.4558207
-scale = Vector2(0.50206566, 1)
+position = Vector2(226, -10)
+rotation = 0.0035964253
+scale = Vector2(0.5420656, 0.99999994)
 shape = SubResource("RectangleShape2D_trhpv")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="2" unique_id=1991751112]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="2" unique_id=1144941192]
+position = Vector2(451, 38)
+rotation = 0.0035964253
+scale = Vector2(0.30221212, 0.99999994)
+shape = SubResource("RectangleShape2D_trhpv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="3" unique_id=1991751112]
 position = Vector2(-172.99998, 144)
 scale = Vector2(0.3241104, 1.6278642)
 shape = SubResource("RectangleShape2D_trhpv")
@@ -955,7 +963,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_v6k05")]
-position = Vector2(72.41553, 80)
+position = Vector2(120, 80)
 sync_to_physics = false
 is_platform = true
 
@@ -987,7 +995,7 @@ scale = Vector2(0.58026, 0.58026)
 rpm = 20.0
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=876391017 instance=ExtResource("4_v6k05")]
-position = Vector2(-72.41553, -50)
+position = Vector2(120, -50)
 sync_to_physics = false
 is_platform = true
 
@@ -1466,7 +1474,7 @@ modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/Wall2" index="0" unique_id=1336914815]
 position = Vector2(486.78107, -94.95166)
 rotation = 1.4827983
-scale = Vector2(2.5028286, 3.295391)
+scale = Vector2(2.5028286, 3.2953908)
 texture = ExtResource("7_3r0yk")
 
 [node name="Brick11" type="Sprite2D" parent="Offset/Deco/Wall2" index="1" unique_id=1780147853]
@@ -1573,8 +1581,8 @@ texture = ExtResource("8_6lp3r")
 
 [node name="Brick21" type="Sprite2D" parent="Offset/Deco/Wall2" index="18" unique_id=869611061]
 position = Vector2(400, -100.00011)
-rotation = -0.005771159
-scale = Vector2(0.97965336, 0.93850344)
+rotation = -0.0057711587
+scale = Vector2(0.9796534, 0.93850344)
 texture = ExtResource("10_g76cd")
 flip_h = true
 
@@ -1716,6 +1724,10 @@ texture = ExtResource("15_vohyl")
 position = Vector2(-314, -106)
 scale = Vector2(0.72564095, 0.99999994)
 texture = ExtResource("20_xn73o")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/Wall2" index="42" unique_id=1251852294]
+position = Vector2(319, -213)
+texture = ExtResource("21_1k2ho")
 
 [node name="vine9" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1841590830]
 z_index = -10

@@ -6,15 +6,22 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_xxnsr"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_3niuj"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_a6otp"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="6_ju2xe"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="6_lhuu4"]
-[ext_resource type="Script" uid="uid://cfe5cwxh4rnyh" path="res://Scripts/Objects/lever.gd" id="7_8ib6j"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="6_wqrxy"]
+[ext_resource type="PackedScene" uid="uid://b3bbg1ec8gyf4" path="res://Scenes/Objects/lever.tscn" id="7_ju2xe"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="7_v2bs3"]
+[ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="8_vsubf"]
+[ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="9_a6otp"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="10_1l4pq"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="11_1l4pq"]
 
 [sub_resource type="Animation" id="Animation_xxnsr"]
 resource_name = "L2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
+tracks/0/path = NodePath("Offset/Obstacles/Platform5/Platform4:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,7 +33,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
+tracks/1/path = NodePath("Offset/Obstacles/Platform5/Platform4:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,26 +48,170 @@ resource_name = "LeverAnim"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
-tracks/0/interp = 1
+tracks/0/path = NodePath("Offset/Obstacles/Platform5:rotation")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.49999982, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(65, 1), Vector2(21, 129)]
+"values": [0.0, -0.7290052]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
-tracks/1/interp = 1
+tracks/1/path = NodePath("Offset/Obstacles/Platform5/Platform4/Gear:rotation")
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.3789291, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, -0.55676]
+"values": [0.0, -2.740167]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Lever2/handle:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.2030143, -1.2285844]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Platform5/Platform4:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.9665272, 0.010280132]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.85603577, 0.08726646]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5894272, 0.08726646]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.4886922, 0.08726646]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4:rotation")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5410121, 0.08726646]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Gear:rotation")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.8186218, 0.89011794]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.8185594, -6.693337681398254]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.7661995, 3.858923]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.248426, -0.7661995]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.7661995, 7.6201077]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Offset/Background/Parallax2D/Gear4:rotation")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.1117747335203878]
 }
 
 [sub_resource type="Animation" id="Animation_xuur6"]
@@ -68,26 +219,182 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform4:position")
+tracks/0/path = NodePath("Offset/Obstacles/Platform5/Platform4:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(65, 1)]
+"values": [Vector2(-201, -83)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/Platform4:rotation")
+tracks/1/path = NodePath("Offset/Obstacles/Platform5/Platform4:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
+"values": [-1.9665272]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Platform5:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
 "values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Platform5/Platform4/Gear:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Obstacles/Lever2/handle:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2030143]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.85603577]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5894272]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.4886922]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5410121]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Gear:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.8186218]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.8185594]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.7661995]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8.248426]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4/Gear:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.7661995]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Offset/Background/Parallax2D/Gear4:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.17326848]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3niuj"]
@@ -107,10 +414,46 @@ tracks/0/path = NodePath("Offset/Obstacles/Plant2:progress")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.502),
+"times": PackedFloat32Array(0.2054067, 0.502),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.21, 0.504),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.41000003, 0.504),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce/AnimatedSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.328, 0.492, 0.5, 0.50600004, 0.51000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -126,6 +469,42 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Obstacles/Plant2/Path2D/FlowerBounce/AnimatedSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -148,29 +527,35 @@ size = Vector2(138.58473, 21.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a6otp"]
 size = Vector2(148.01016, 21.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhuu4"]
-size = Vector2(153.58475, 28.875)
+[sub_resource type="CircleShape2D" id="CircleShape2D_6d1mf"]
+radius = 103.3
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxnsr"]
-size = Vector2(153.58475, 151.5)
+[sub_resource type="Gradient" id="Gradient_088u0"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.56713784)
+colors = PackedColorArray(0.13725491, 0.06666667, 0.09411765, 1, 0.044, 0.044, 0.1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ju2xe"]
+gradient = SubResource("Gradient_088u0")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 0.50284094)
+repeat = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_up11p"]
 radius = 82.91798
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3niuj"]
-size = Vector2(80, 69)
 
 [sub_resource type="Curve" id="Curve_00xgr"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.8392283, 0.4551282), -1.0902444, -1.0902444, 0, 0, Vector2(1, 0.24999994), -1.834101, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_xxnsr"]
+[sub_resource type="Gradient" id="Gradient_ju2xe"]
 resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.18938726, 0.09751173, 0, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(-33.05416, -99.19896, 33.05416, 99.19896, -279, -147, 127.92575, 115.095856, -127.92575, -115.095856, -149, -159)
+"points": PackedVector2Array(-33.05416, -99.19896, 33.05416, 99.19896, -273, -136, 127.92575, 115.095856, -127.92575, -115.095856, -72, -165)
 }
 point_count = 2
 
@@ -178,6 +563,7 @@ point_count = 2
 
 [node name="LeverAnim" type="AnimationPlayer" parent="." index="0" unique_id=756163168]
 libraries/ = SubResource("AnimationLibrary_3niuj")
+speed_scale = 0.5
 script = ExtResource("2_xxnsr")
 lever_index = 1
 
@@ -191,6 +577,28 @@ script = ExtResource("2_8ib6j")
 [node name="Offset" parent="." index="2" unique_id=652906693]
 position = Vector2(-960, -2160)
 offset = Vector2i(1, 4)
+
+[node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("6_ju2xe")]
+modulate = Color(0.53999996, 0.64733344, 1, 1)
+z_index = -4
+position = Vector2(-59, 191)
+rotation = -0.17326848
+scale = Vector2(3.675236, 3.675236)
+enabled = false
+
+[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=510922071 instance=ExtResource("6_ju2xe")]
+modulate = Color(0.53999996, 0.64733344, 1, 1)
+z_index = -4
+position = Vector2(272, 14)
+scale = Vector2(4.800822, 4.800822)
+enabled = false
+
+[node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=830360760 instance=ExtResource("6_ju2xe")]
+modulate = Color(0.53999996, 0.64733344, 1, 1)
+z_index = -4
+position = Vector2(-402, 114)
+scale = Vector2(4.9574957, 4.9574957)
+enabled = false
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -236,83 +644,331 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_3niuj")]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(-466, -109)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 position = Vector2(-3.2923584, 0)
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=1922543963]
-position = Vector2(129, -20)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=1715914043]
+position = Vector2(-3, 309)
+shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="2" unique_id=1922543963]
+position = Vector2(168, -33)
 rotation = -0.28972465
+scale = Vector2(1.524236, 1.188212)
 shape = SubResource("RectangleShape2D_a6otp")
 
-[node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=834668060 instance=ExtResource("4_3niuj")]
-position = Vector2(-465, 215)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="3" unique_id=828958946]
+position = Vector2(738, 123)
+rotation = -0.17326847
+scale = Vector2(1.0109426, 1.0109426)
+shape = SubResource("CircleShape2D_6d1mf")
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
-position = Vector2(4.2076416, -3.5625)
-shape = SubResource("RectangleShape2D_lhuu4")
+[node name="Brick38" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=1202273344]
+position = Vector2(-18.047974, 300.03723)
+rotation = -0.062117934
+texture = ExtResource("6_wqrxy")
+flip_h = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="1" unique_id=283308649]
-position = Vector2(221, -86)
-rotation = 0.35430184
-shape = SubResource("RectangleShape2D_lhuu4")
+[node name="Brick39" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=269622220]
+position = Vector2(31.125854, 304.2058)
+rotation = 0.321769
+texture = ExtResource("6_wqrxy")
+flip_h = true
 
-[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2131455662 instance=ExtResource("4_3niuj")]
-position = Vector2(272, -61)
+[node name="Brick41" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="6" unique_id=1195668342]
+position = Vector2(45.125854, 303.2058)
+rotation = -0.17220628
+scale = Vector2(1.1974571, 1.1974571)
+texture = ExtResource("7_v2bs3")
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
-position = Vector2(4, 58)
-shape = SubResource("RectangleShape2D_xxnsr")
+[node name="Brick9" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="7" unique_id=114286729]
+position = Vector2(-2.9999993, 306.34204)
+rotation = -0.96186805
+scale = Vector2(1.4890927, 1.4890927)
+texture = ExtResource("8_vsubf")
 
-[node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1181429540 instance=ExtResource("4_3niuj")]
-position = Vector2(65, 1)
+[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2131455662 instance=ExtResource("4_3niuj")]
+position = Vector2(272, 14)
+
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1677427866]
+z_index = 1
+position = Vector2(-246.99994, -468)
+points = PackedVector2Array(248, 468, 63, 393)
+width = 75.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=1349571073]
+shape = SubResource("CircleShape2D_6d1mf")
+disabled = true
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Offset/Obstacles/Platform5" index="2" unique_id=260441271]
+remote_path = NodePath("../../../Background/Parallax2D/Gear6")
+update_position = false
+update_scale = false
+
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Offset/Obstacles/Platform5" index="3" unique_id=601252952]
+remote_path = NodePath("../../../Background/Parallax2D/Gear5")
+update_position = false
+update_scale = false
+
+[node name="Gear3" parent="Offset/Obstacles/Platform5" index="4" unique_id=14876425 instance=ExtResource("6_ju2xe")]
+position = Vector2(-1.0728836e-06, 0)
+rotation = -0.1732685
+scale = Vector2(1.4878213, 1.4878213)
+enabled = false
+rpm = 0.0
+
+[node name="Platform4" parent="Offset/Obstacles/Platform5" index="5" unique_id=1181429540 instance=ExtResource("4_3niuj")]
+position = Vector2(-201, -83)
+rotation = -1.9665272
 sync_to_physics = false
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
-position = Vector2(4, -74)
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4" index="0" unique_id=102272756]
+z_index = 1
+position = Vector2(-246.99994, -467.99976)
+points = PackedVector2Array(235.52753, 463.13354, 105.68933, 408.84717)
+width = 60.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4" index="1" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
 shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
 
-[node name="Lever" type="Area2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=415754532]
-position = Vector2(271, -88)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("7_8ib6j")
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4" index="2" unique_id=992834581 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Lever" index="0" unique_id=1980596293]
+[node name="Platform4" parent="Offset/Obstacles/Platform5/Platform4" index="3" unique_id=97707618 instance=ExtResource("4_3niuj")]
+position = Vector2(-154.4169, -65.49509)
+rotation = -0.85603577
+scale = Vector2(0.7954476, 0.7954476)
+sync_to_physics = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/Obstacles/Lever" index="1" unique_id=171960460]
-position = Vector2(2, -23)
-shape = SubResource("RectangleShape2D_3niuj")
-debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4" index="0" unique_id=627788695]
+z_index = 1
+position = Vector2(-246.99988, -468)
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(235.52753, 463.13354, 105.68933, 408.84717)
+width = 60.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
-[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=790154690 instance=ExtResource("5_a6otp")]
-width = 40.0
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4" index="1" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
+shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4/Platform4" index="2" unique_id=1841519177 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+rotation = -0.8186218
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
+
+[node name="Platform4" parent="Offset/Obstacles/Platform5/Platform4/Platform4" index="3" unique_id=1279575814 instance=ExtResource("4_3niuj")]
+position = Vector2(-154.4169, -65.49509)
+rotation = -0.5894272
+scale = Vector2(0.7954476, 0.7954476)
+sync_to_physics = false
+
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4" index="0" unique_id=1367799914]
+z_index = 1
+position = Vector2(-247, -467.99976)
+points = PackedVector2Array(235.52753, 463.13354, 105.68933, 408.84717)
+width = 60.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4" index="1" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
+shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4" index="2" unique_id=461732703 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+rotation = -0.8185594
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
+
+[node name="Platform4" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4" index="3" unique_id=1123134571 instance=ExtResource("4_3niuj")]
+position = Vector2(-154.4169, -65.49509)
+rotation = -0.4886922
+scale = Vector2(0.7954476, 0.7954476)
+sync_to_physics = false
+
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=829328754]
+z_index = 1
+position = Vector2(-246.99988, -467.9995)
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(235.52753, 463.13354, 105.68933, 408.84717)
+width = 60.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4" index="1" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
+shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4" index="2" unique_id=1577036602 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+rotation = -0.7661995
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
+
+[node name="Platform4" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4" index="3" unique_id=724209398 instance=ExtResource("4_3niuj")]
+position = Vector2(-154.4169, -65.49509)
+rotation = -0.5410121
+scale = Vector2(0.7954476, 0.7954476)
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
+shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4" index="1" unique_id=1866164249 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+rotation = 8.248426
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
+
+[node name="Platform4" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4" index="2" unique_id=1721617926 instance=ExtResource("4_3niuj")]
+position = Vector2(-154.4169, -65.49509)
+rotation = 0.09309603
+scale = Vector2(0.7954476, 0.7954476)
+sync_to_physics = false
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=1349571073]
+z_index = 1
+position = Vector2(0.8489344, 0.52850676)
+shape = SubResource("CircleShape2D_up11p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Gear" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4" index="1" unique_id=510811784 instance=ExtResource("6_ju2xe")]
+position = Vector2(0.8489307, 0.5285139)
+rotation = -0.7661995
+scale = Vector2(2.2458758, 2.2458758)
+enabled = false
+rpm = 0.0
+
+[node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4" index="3" unique_id=1998289777]
+z_index = 1
+position = Vector2(-246.99994, -467.99976)
+points = PackedVector2Array(235.52753, 463.13354, 105.68933, 408.84717)
+width = 60.0
+texture = SubResource("GradientTexture2D_ju2xe")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Lever2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=415754532 instance=ExtResource("7_ju2xe")]
+z_index = -2
+position = Vector2(274, -105)
+
+[node name="handle" parent="Offset/Obstacles/Lever2" index="0" unique_id=1518814724]
+rotation = 1.2030143
+
+[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=790154690 instance=ExtResource("5_a6otp")]
+width = 10.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_xxnsr")
+grad = SubResource("Gradient_ju2xe")
 progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_ntg8m")
 
-[node name="FlowerBounce" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=376175354 instance=ExtResource("6_lhuu4")]
-position = Vector2(-150.56079, -148.48755)
+[node name="FlowerBounce" parent="Offset/Obstacles/Plant2/Path2D" index="0" unique_id=376175354 instance=ExtResource("6_lhuu4")]
+position = Vector2(-72.00001, -165.00002)
 rotation = -2.501057
-progress = 0.0
+progress = 338.53693
 rotates = false
+
+[node name="Area" parent="Offset/Obstacles/Plant2/Path2D/FlowerBounce" index="0" unique_id=221360279]
+position = Vector2(1.1249518, 3.7340999)
+
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant2/Path2D/FlowerBounce" index="1" unique_id=1602848246]
+position = Vector2(4.1222215, 5.6034007)
+frame = 4
+
+[node name="Node2D" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1213422341]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/Node2D" index="0" unique_id=1500267522]
+position = Vector2(-473.219, -94.95166)
+rotation = 1.4827983
+scale = Vector2(2.5028286, 3.2953906)
+texture = ExtResource("9_a6otp")
+
+[node name="Brick21" type="Sprite2D" parent="Offset/Deco/Node2D" index="1" unique_id=2021274519]
+position = Vector2(-560, -100)
+rotation = -0.0057711587
+scale = Vector2(0.9796535, 0.93850344)
+texture = ExtResource("10_1l4pq")
+flip_h = true
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Node2D" index="2" unique_id=1195820601]
+position = Vector2(-298, -135)
+rotation = -0.26856577
+scale = Vector2(1.3759322, 1.4249564)
+texture = ExtResource("11_1l4pq")
+
+[node name="Gear2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=621360183 instance=ExtResource("6_ju2xe")]
+z_index = -2
+position = Vector2(272, 14)
+rotation = -0.17326847
+scale = Vector2(2.8477256, 2.8477256)
+enabled = false
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
-[connection signal="area_entered" from="Offset/Obstacles/Lever" to="Offset/Obstacles/Lever" method="_on_area_entered"]
-[connection signal="area_exited" from="Offset/Obstacles/Lever" to="Offset/Obstacles/Lever" method="_on_area_exited"]
-[connection signal="on_activated" from="Offset/Obstacles/Lever" to="LeverAnim" method="_on_lever_on_activated"]
+[connection signal="on_activated" from="Offset/Obstacles/Lever2" to="LeverAnim" method="_on_lever_on_activated"]
 
 [editable path="Offset/Obstacles/Platform2"]
-[editable path="Offset/Obstacles/Platform3"]
 [editable path="Offset/Obstacles/Platform5"]
-[editable path="Offset/Obstacles/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4"]
+[editable path="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4"]
+[editable path="Offset/Obstacles/Lever2"]
 [editable path="Offset/Obstacles/Plant2"]
+[editable path="Offset/Obstacles/Plant2/Path2D/FlowerBounce"]
