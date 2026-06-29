@@ -1899,15 +1899,19 @@ destroyable = false
 
 [node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
 z_index = 5
-offset_left = -46.77806
-offset_top = -291.58325
-offset_right = 335.22192
-offset_bottom = -73.77806
+offset_left = -70.16709
+offset_top = -333.6835
+offset_right = 375.78384
+offset_bottom = 88.878265
 theme_override_font_sizes/normal_font_size = 32
 text = "Arrow Keys: Move
 Z: Jump
 X: Forget Yourself
-C: Interact"
+C: Interact
+
+
+
+R: Restart room (hold 2s)"
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=379381942]
 modulate = Color(0.126, 0.161, 0.21, 1)

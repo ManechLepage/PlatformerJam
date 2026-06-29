@@ -20,3 +20,4 @@ func change_room(room: String):
 	var room_instance = rooms[room].instantiate()
 	current_room = room_instance
 	get_parent().add_child.call_deferred(room_instance)
+	room_instance.initialize(room)

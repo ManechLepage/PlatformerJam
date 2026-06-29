@@ -213,8 +213,8 @@ content_margin_bottom = 90.0
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower1-06"
-initial_player_pos = Vector2(0, -2700)
+initial_room = "tutorial_1"
+initial_player_pos = Vector2(-1767, 1557)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
