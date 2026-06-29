@@ -111,17 +111,17 @@ size = Vector2(53.73712, 8.890137)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_keqoi"]
+[sub_resource type="Gradient" id="Gradient_uab21"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(-224.23868, -146.53645, 224.23868, 146.53645, 56, -317, 45.709282, -134.78003, -45.709282, 134.78003, 274, 161)
+"points": PackedVector2Array(-224.23868, -146.53645, 224.23868, 146.53645, 56, -317, 45.709282, -134.78003, -45.709282, 134.78003, 306, 237)
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_fsu8v"]
+[sub_resource type="Gradient" id="Gradient_jnmc2"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -131,7 +131,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_uab21"]
+[sub_resource type="Gradient" id="Gradient_85re1"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -164,6 +164,27 @@ script = ExtResource("2_keqoi")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, -2160)
 offset = Vector2i(3, 4)
+
+[node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("8_fsu8v")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-363, 261)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = -10.0
+
+[node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=539188930 instance=ExtResource("8_fsu8v")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-466, 220)
+scale = Vector2(2.535099, 2.535099)
+rpm = 5.0
+
+[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=2076606287 instance=ExtResource("8_fsu8v")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(208, 189)
+scale = Vector2(3.86, 3.86)
+rpm = -5.0
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -263,7 +284,7 @@ shape = SubResource("RectangleShape2D_kaqui")
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=790154690 instance=ExtResource("5_r476u")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_keqoi")
+grad = SubResource("Gradient_uab21")
 progress = 0.0
 has_hitbox = true
 hitbox_size = 20.0
@@ -275,7 +296,7 @@ curve = SubResource("Curve2D_ntg8m")
 position = Vector2(-183, 84)
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_fsu8v")
+grad = SubResource("Gradient_jnmc2")
 progress = 1.0
 hitbox_size = 20.0
 
@@ -287,7 +308,7 @@ curve = SubResource("Curve2D_jnmc2")
 position = Vector2(-183, 84)
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_uab21")
+grad = SubResource("Gradient_85re1")
 progress = 1.0
 hitbox_size = 20.0
 
@@ -337,7 +358,7 @@ joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="Gear4" parent="Offset/Deco/Gears" index="2" unique_id=1353983551 instance=ExtResource("8_fsu8v")]
+[node name="Gear4" parent="Offset/Deco/Gears" index="2" unique_id=1134802862 instance=ExtResource("8_fsu8v")]
 position = Vector2(475, 242)
 scale = Vector2(2.7069335, 2.7069335)
 rpm = -2.0
@@ -370,6 +391,7 @@ rpm = 4.0
 [node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1456768929]
 
 [node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=113258669]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(513, -1)
 rotation = 0.14718792
 texture = ExtResource("9_m518m")

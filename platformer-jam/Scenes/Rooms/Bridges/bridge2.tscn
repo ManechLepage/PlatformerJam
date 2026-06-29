@@ -90,7 +90,7 @@ size = Vector2(779, 23)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_57w1k"]
+[sub_resource type="Gradient" id="Gradient_1pdai"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -100,7 +100,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_g57bs"]
+[sub_resource type="Gradient" id="Gradient_57w1k"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -131,7 +131,7 @@ point_count = 3
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntg8m"]
 radius = 41.34002
 
-[sub_resource type="Gradient" id="Gradient_1pdai"]
+[sub_resource type="Gradient" id="Gradient_g57bs"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -153,6 +153,35 @@ script = ExtResource("2_00xgr")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, -1080)
 offset = Vector2i(3, 2)
+
+[node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("12_eq2xk")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(51, -49)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = -10.0
+
+[node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=1501400754 instance=ExtResource("12_eq2xk")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-154.99976, 33)
+scale = Vector2(3.86, 3.86)
+rpm = 5.0
+
+[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=1041388821 instance=ExtResource("12_eq2xk")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(148, 125)
+scale = Vector2(3.86, 3.86)
+rpm = -5.0
+
+[node name="Gear7" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="3" unique_id=1281218191 instance=ExtResource("12_eq2xk")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(438, 16.000015)
+rotation = -0.192273
+scale = Vector2(3.86, 3.86)
+rpm = 5.0
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -189,7 +218,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=790154690 instance=ExtResource("7_1d1jq")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_57w1k")
+grad = SubResource("Gradient_1pdai")
 progress = 1.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
@@ -199,7 +228,7 @@ curve = SubResource("Curve2D_ntg8m")
 position = Vector2(-186, 269)
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_g57bs")
+grad = SubResource("Gradient_57w1k")
 progress = 1.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
@@ -287,13 +316,15 @@ rotation = 1.6859877
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_a3ta5")
 
-[node name="Gear" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform3" index="2" unique_id=1353983551 instance=ExtResource("12_eq2xk")]
+[node name="Gear" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform3" index="2" unique_id=2112031478 instance=ExtResource("12_eq2xk")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
 position = Vector2(-8.1623535, 18.69165)
 rotation = 2.179916
 scale = Vector2(1.8188663, 1.8188663)
 rpm = 2.5
 
 [node name="Gear2" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform3" index="3" unique_id=904869792 instance=ExtResource("12_eq2xk")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
 position = Vector2(21.073242, -38.947266)
 rotation = 2.179916
 scale = Vector2(1.1050166, 1.1050166)
@@ -302,7 +333,7 @@ rpm = 5.0
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=901383637 instance=ExtResource("7_1d1jq")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_1pdai")
+grad = SubResource("Gradient_g57bs")
 progress = 1.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
@@ -320,10 +351,12 @@ frame = 4
 [node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=2065429846]
 
 [node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=1100407980]
+modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-470, 255)
 texture = ExtResource("7_ysw6c")
 
 [node name="Platform1" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=1929139522]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(450.00024, 250)
 scale = Vector2(1.1470128, 1.1470128)
 texture = ExtResource("9_ysw6c")
@@ -341,6 +374,7 @@ scale = Vector2(1.6911968, 1.6911968)
 texture = ExtResource("11_2jrtc")
 
 [node name="Platform3" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=945563693]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(449, -52)
 rotation = -0.07131359
 texture = ExtResource("7_ysw6c")
@@ -353,6 +387,7 @@ scale = Vector2(1.2740892, 1.2740892)
 texture = ExtResource("9_ysw6c")
 
 [node name="Platform5" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=80593639]
+modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-443, -67)
 scale = Vector2(1.0955168, 1.0955168)
 texture = ExtResource("9_ysw6c")

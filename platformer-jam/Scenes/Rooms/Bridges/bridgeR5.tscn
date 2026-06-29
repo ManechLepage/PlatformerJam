@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_6d1mf"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_fe05v"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_03o0b"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="3_e35mi"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_0ergh"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="5_srppu"]
 [ext_resource type="Texture2D" uid="uid://d2wqpgj7s8ael" path="res://Sprites/poem_rythm.png" id="6_6d1mf"]
@@ -63,6 +64,13 @@ script = ExtResource("2_fe05v")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-960, -2700)
 offset = Vector2i(1, 5)
+
+[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("3_e35mi")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = -2
+position = Vector2(-402.00006, 30.999985)
+scale = Vector2(3.86, 3.86)
+rpm = -5.0
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
@@ -162,11 +170,13 @@ scale = Vector2(1.6649679, 1.6649679)
 texture = ExtResource("8_0ergh")
 
 [node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=1892818354]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(-416, -38)
 scale = Vector2(2.3118804, 2.3118804)
 texture = ExtResource("7_03o0b")
 
 [node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=1019333730]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(-493.00012, -40.000244)
 scale = Vector2(1.8893178, 1.8893178)
 texture = ExtResource("8_0ergh")
@@ -178,6 +188,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("9_fe38n")
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=1069552893]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(-197.32898, 34.7063)
 scale = Vector2(2.2397199, 2.2397199)
 texture = ExtResource("10_6f617")

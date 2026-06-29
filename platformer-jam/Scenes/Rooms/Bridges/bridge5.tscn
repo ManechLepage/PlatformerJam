@@ -300,11 +300,13 @@ scale = Vector2(0.80958766, 0.80958766)
 rpm = 9.0
 
 [node name="Platform2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1472825055]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(371, 210)
 scale = Vector2(0.65297186, 0.65297186)
 texture = ExtResource("8_b2jqe")
 
 [node name="Platform1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=352990177]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(509, -48)
 texture = ExtResource("10_qacjv")
 

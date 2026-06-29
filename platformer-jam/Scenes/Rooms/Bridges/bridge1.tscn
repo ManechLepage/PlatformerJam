@@ -1361,15 +1361,16 @@ position = Vector2(-362, 47)
 width = 80.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_kfxri")
-progress = 0.0
+progress = 0.028964542
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_2fq3i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1981468037]
-position = Vector2(224, 345)
-rotation = -1.4453679
+position = Vector2(227.43626, 318.74432)
+rotation = -1.4358492
+progress = 26.478167
 
 [node name="Marker2D" type="Marker2D" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1183872290]
 gizmo_extents = 54.8
