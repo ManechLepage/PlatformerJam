@@ -204,6 +204,7 @@ size = Vector2(934.5, 217.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ml46"]
 size = Vector2(934.5, 217.5)
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 normal = Vector2(1, 0)
 
@@ -522,6 +523,7 @@ collision_mask = 64
 position = Vector2(-3248, 1572)
 shape = SubResource("RectangleShape2D_6ml46")
 debug_color = Color(0.5110002, 0, 0.73, 0)
+
 [node name="WorldEdge1" type="AnimatableBody2D" parent="Areas" unique_id=285698044]
 position = Vector2(-4428, 2)
 script = ExtResource("56_1semv")
