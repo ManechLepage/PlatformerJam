@@ -559,7 +559,7 @@ _data = {
 }
 point_count = 2
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_lhuu4")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_lhuu4")]
 
 [node name="LeverAnim" type="AnimationPlayer" parent="." index="0" unique_id=756163168]
 libraries/ = SubResource("AnimationLibrary_3niuj")
@@ -643,7 +643,10 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_3niuj")]
+[node name="Obstacles" parent="Offset" index="3" unique_id=457880380]
+z_index = 0
+
+[node name="Platform2" parent="Offset/Obstacles" index="0" unique_id=2119178859 instance=ExtResource("4_3niuj")]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(-466, -109)
 
@@ -691,7 +694,7 @@ rotation = -0.96186805
 scale = Vector2(1.4890927, 1.4890927)
 texture = ExtResource("8_vsubf")
 
-[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2131455662 instance=ExtResource("4_3niuj")]
+[node name="Platform5" parent="Offset/Obstacles" index="1" unique_id=2131455662 instance=ExtResource("4_3niuj")]
 position = Vector2(272, 14)
 
 [node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1677427866]
@@ -890,14 +893,14 @@ joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="Lever2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=415754532 instance=ExtResource("7_ju2xe")]
+[node name="Lever2" parent="Offset/Obstacles" index="2" unique_id=415754532 instance=ExtResource("7_ju2xe")]
 z_index = -2
 position = Vector2(274, -105)
 
 [node name="handle" parent="Offset/Obstacles/Lever2" index="0" unique_id=1518814724]
 rotation = 1.2030143
 
-[node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=790154690 instance=ExtResource("5_a6otp")]
+[node name="Plant2" parent="Offset/Obstacles" index="3" unique_id=790154690 instance=ExtResource("5_a6otp")]
 width = 10.0
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_wqrxy")
@@ -920,7 +923,10 @@ position = Vector2(1.1249518, 3.7340999)
 position = Vector2(4.1222215, 5.6034007)
 frame = 4
 
-[node name="Node2D" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1213422341]
+[node name="Deco" parent="Offset" index="4" unique_id=102725464]
+z_index = 0
+
+[node name="Node2D" type="Node2D" parent="Offset/Deco" index="0" unique_id=1213422341]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/Node2D" index="0" unique_id=1500267522]
@@ -942,7 +948,7 @@ rotation = -0.26856577
 scale = Vector2(1.3759322, 1.4249564)
 texture = ExtResource("11_1l4pq")
 
-[node name="Gear2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=621360183 instance=ExtResource("6_ju2xe")]
+[node name="Gear2" parent="Offset/Deco" index="1" unique_id=621360183 instance=ExtResource("6_ju2xe")]
 z_index = -2
 position = Vector2(272, 14)
 rotation = -0.17326847

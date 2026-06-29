@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
+[ext_resource type="Shader" uid="uid://c8tom5iwtis6x" path="res://Scripts/Shaders/chromabber.gdshader" id="55_qax2n"]
 [ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="56_1semv"]
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
@@ -159,6 +160,7 @@ func update_lucidity(lucidity):
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"speed\",ease(lucidity/100,5)*6)
 	$\"lucid bg\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
 	$\"lucid bg/Overlay/lucid overlay\".material.set_shader_parameter(\"alpha\",ease(lucidity/100,0.8))
+	$\"lucid bg/Overlay/CanvasLayer/ColorRect\".material.set_shader_parameter(\"amount\",lucidity/100)
 "
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3pmx8"]
@@ -180,6 +182,13 @@ shader_parameter/discomode = false
 shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
 shader_parameter/speed_scale = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ml46"]
+shader = ExtResource("55_qax2n")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-3, 0)
+shader_parameter/amount = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8k8"]
 size = Vector2(934.5, 3011)
@@ -244,6 +253,8 @@ func show_flavor_text(_body,area: Area2D):
 			text = sub
 		\"ruins\":
 			text = ruins
+		_:
+			print(area,area.name)
 	if tween: tween.kill()
 	tween = create_tween()
 	tween.tween_property(text,\"modulate:a\",1,0.7)
@@ -405,6 +416,17 @@ offset_left = -150.0
 offset_top = -128.0
 offset_right = 158.0
 offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Lucid/lucid bg/Overlay" unique_id=799318145]
+layer = 51
+
+[node name="ColorRect" type="ColorRect" parent="Lucid/lucid bg/Overlay/CanvasLayer" unique_id=1210167974]
+material = SubResource("ShaderMaterial_6ml46")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
