@@ -901,7 +901,11 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
-size = Vector2(776, 23)
+size = Vector2(892, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xntc"]
+resource_local_to_scene = true
+size = Vector2(959, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snhcn"]
 size = Vector2(42, 700)
@@ -1025,13 +1029,13 @@ point_count = 3
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Gradient" id="Gradient_oompw"]
+[sub_resource type="Gradient" id="Gradient_0xntc"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.6908602)
 colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g2blk"]
-gradient = SubResource("Gradient_oompw")
+gradient = SubResource("Gradient_0xntc")
 width = 32
 height = 16
 fill = 1
@@ -1252,7 +1256,7 @@ script = ExtResource("3_omffa")
 room_name = "Tower1-01"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(32, 18)
+position = Vector2(-26, 18)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -1264,6 +1268,17 @@ room_name = "Tower1-03"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
 position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=828401685]
+position = Vector2(-476, 0)
+script = ExtResource("3_omffa")
+room_name = "BridgeR1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1753371133]
+position = Vector2(-26, 2)
+scale = Vector2(0.022323506, -26.404112)
+shape = SubResource("RectangleShape2D_0xntc")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_x34c6")]
@@ -1307,7 +1322,6 @@ rotates = false
 
 [node name="CirclePlatform" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=1927746051 instance=ExtResource("4_x34c6")]
 position = Vector2(22.780666, 147.70256)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/CirclePlatform" index="0" unique_id=1349571073]
@@ -1316,7 +1330,6 @@ shape = SubResource("CircleShape2D_fla8c")
 
 [node name="CirclePlatform2" parent="Offset/Obstacles/Path2D/PathFollow2D" index="1" unique_id=508424134 instance=ExtResource("4_x34c6")]
 position = Vector2(-1.0272427, 182.27399)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/CirclePlatform2" index="0" unique_id=1349571073]
@@ -1327,8 +1340,7 @@ shape = SubResource("CircleShape2D_x34c6")
 z_index = 3
 position = Vector2(283.55472, 167.344)
 rotation = 0.110904805
-scale = Vector2(1e-05, 1e-05)
-sync_to_physics = false
+scale = Vector2(6.7477736, 1.1125658)
 is_platform = true
 
 [node name="Leaf3" type="Sprite2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=2108948881]
@@ -1344,9 +1356,11 @@ flip_h = true
 z_index = 3
 position = Vector2(295, -24)
 rotation = 0.12138559
-scale = Vector2(1e-05, 1e-05)
-sync_to_physics = false
+scale = Vector2(6.245754, 0.9540072)
 is_platform = true
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(-3.3995388, 7.9948444)
 
 [node name="Leaf4" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=265859321]
 z_index = 3
@@ -1358,14 +1372,13 @@ texture = ExtResource("16_f87qe")
 
 [node name="vine" type="Line2D" parent="Offset" index="4" unique_id=901383637]
 texture_filter = 1
-width = 0.0
+width = 20.0
 width_curve = SubResource("Curve_x34c6")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_nc07u")
-progress = 0.0
 sample_count = 4.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("10_f87qe")
@@ -1376,14 +1389,13 @@ curve = SubResource("Curve2D_6pduo")
 [node name="vine2" type="Line2D" parent="Offset" index="5" unique_id=1693234960]
 z_index = -1
 texture_filter = 1
-width = 0.0
+width = 20.0
 width_curve = SubResource("Curve_x34c6")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_nc07u")
-progress = 0.0
 sample_count = 4.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("10_f87qe")
@@ -1393,9 +1405,9 @@ position = Vector2(0, -29)
 curve = SubResource("Curve2D_2ef3v")
 
 [node name="Path2" type="PathFollow2D" parent="Offset/vine2/Path2D" index="0" unique_id=1760792903 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
-position = Vector2(370, 89)
-rotation = -2.6655858
-scale = Vector2(1e-05, 1e-05)
+position = Vector2(244, 84.000015)
+rotation = -2.6776013
+progress = 129.73083
 script = ExtResource("13_nc07u")
 poem_text = NodePath("AnimatedSprite2D/PoemText")
 particles = NodePath("AnimatedSprite2D/Parchemin")
@@ -1456,7 +1468,7 @@ visible_characters_behavior = 1
 texture_filter = 1
 position = Vector2(-186, -85)
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 60.0
 width_curve = SubResource("Curve_58cu4")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1464,7 +1476,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_gep6u")
-progress = 0.0
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_g2blk")
 has_hitbox = true
@@ -1817,6 +1828,7 @@ position = Vector2(228, -306)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Wall"]
 [editable path="Offset/Obstacles/Wall2"]

@@ -6,6 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_0ergh"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="5_srppu"]
 [ext_resource type="Texture2D" uid="uid://d2wqpgj7s8ael" path="res://Sprites/poem_rythm.png" id="6_6d1mf"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="7_03o0b"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="8_0ergh"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="9_fe38n"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="10_6f617"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="11_6f617"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="12_068o1"]
+[ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="13_e35mi"]
+[ext_resource type="Texture2D" uid="uid://u3agmklyjnwo" path="res://Sprites/leaf4.tres" id="14_2wtjj"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -145,6 +153,73 @@ I had to accept that the only way I could ever make music as good as them is if 
 
 I will never forget this memory; it defines who I am.\"
 [Press C to forget]"
+
+[node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=623320764]
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=2018651341]
+position = Vector2(-123, 21)
+scale = Vector2(1.6649679, 1.6649679)
+texture = ExtResource("8_0ergh")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=1892818354]
+position = Vector2(-416, -38)
+scale = Vector2(2.3118804, 2.3118804)
+texture = ExtResource("7_03o0b")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=1019333730]
+position = Vector2(-493.00012, -40.000244)
+scale = Vector2(1.8893178, 1.8893178)
+texture = ExtResource("8_0ergh")
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="3" unique_id=1272628463]
+position = Vector2(-91.32898, -10.293457)
+rotation = -0.36053887
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("9_fe38n")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=1069552893]
+position = Vector2(-197.32898, 34.7063)
+scale = Vector2(2.2397199, 2.2397199)
+texture = ExtResource("10_6f617")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/Rocks" index="5" unique_id=812780929]
+position = Vector2(176, -53)
+rotation = 0.13828757
+scale = Vector2(1.4895917, 1.4895917)
+texture = ExtResource("11_6f617")
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=565329799]
+position = Vector2(398, -88)
+rotation = -0.1677516
+scale = Vector2(1.4117299, 1.4117299)
+texture = ExtResource("10_6f617")
+
+[node name="Leaves" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=578523082]
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Leaves" index="0" unique_id=1889119062]
+position = Vector2(-461, -69)
+texture = ExtResource("12_068o1")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Leaves" index="1" unique_id=1585438991]
+position = Vector2(-132, -23)
+rotation = -0.15464431
+scale = Vector2(1.2584004, 1.2584004)
+texture = ExtResource("12_068o1")
+
+[node name="Leaf7" type="Sprite2D" parent="Offset/Deco/Leaves" index="2" unique_id=279564182]
+position = Vector2(122.00006, -84)
+rotation = 0.2542271
+scale = Vector2(0.9146772, 0.9146772)
+texture = ExtResource("12_068o1")
+
+[node name="Leaf3" type="Sprite2D" parent="Offset/Deco/Leaves" index="3" unique_id=829552098]
+position = Vector2(377, -101)
+texture = ExtResource("13_e35mi")
+flip_h = true
+
+[node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Leaves" index="4" unique_id=2033592372]
+position = Vector2(-121, 4)
+texture = ExtResource("14_2wtjj")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]

@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="10_gd47o"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="12_ovd7s"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="14_hpnsq"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="15_5wclw"]
+[ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="15_txjfb"]
+[ext_resource type="Texture2D" uid="uid://d3pwmreafgynk" path="res://Sprites/leaf2.tres" id="17_inh3h"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -309,6 +312,45 @@ position = Vector2(407.99976, -101)
 rotation = -0.12436082
 scale = Vector2(0.90481067, 0.90481067)
 texture = ExtResource("14_hpnsq")
+
+[node name="Leaves" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=593669294]
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Leaves" index="0" unique_id=415327388]
+position = Vector2(-266, 172)
+rotation = 0.22940433
+texture = ExtResource("15_5wclw")
+
+[node name="Leaf3" type="Sprite2D" parent="Offset/Deco/Leaves" index="1" unique_id=1164781507]
+position = Vector2(-470, 113)
+rotation = -0.54752904
+scale = Vector2(0.5492624, 0.5492624)
+texture = ExtResource("15_txjfb")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Leaves" index="2" unique_id=2135857826]
+position = Vector2(315, -113)
+scale = Vector2(0.5599241, 0.5599241)
+texture = ExtResource("15_5wclw")
+
+[node name="Leaf2" type="Sprite2D" parent="Offset/Deco/Leaves" index="3" unique_id=332879210]
+position = Vector2(-258.00024, 193.00012)
+rotation = -0.524865
+scale = Vector2(0.31824616, 0.31824616)
+texture = ExtResource("17_inh3h")
+
+[node name="Leaf7" type="Sprite2D" parent="Offset/Deco/Leaves" index="4" unique_id=1041155593]
+position = Vector2(-108, 43)
+texture = ExtResource("15_5wclw")
+
+[node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Leaves" index="5" unique_id=677473837]
+position = Vector2(314, -96)
+rotation = -0.56493235
+scale = Vector2(0.52725375, 0.52725375)
+texture = ExtResource("15_txjfb")
+
+[node name="Leaf8" type="Sprite2D" parent="Offset/Deco/Leaves" index="6" unique_id=594999556]
+position = Vector2(378, -126)
+scale = Vector2(1.238508, 1.238508)
+texture = ExtResource("15_5wclw")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]

@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 
 [node name="Platform" type="AnimatableBody2D" unique_id=2119178859]
+sync_to_physics = false
 script = ExtResource("1_3apk8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1349571073]
