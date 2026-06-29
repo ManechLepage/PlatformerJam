@@ -203,22 +203,22 @@ size = Vector2(112.41011, 19.508545)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_rdks5"]
+[sub_resource type="Gradient" id="Gradient_xfr0l"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_ns8m6"]
+[sub_resource type="Curve2D" id="Curve2D_hdrkm"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-43.362434, 51.403667, 43.362434, -51.403667, -374.99997, -107.000244, 33.901104, 87.45938, -33.901104, -87.45938, -307.99997, -209.00024, -37.460537, 24.118427, 37.460537, -24.118427, -254.99997, -309.00024, 0, 0, 0, 0, -187.99997, -382.00024)
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_xl1j5"]
+[sub_resource type="Gradient" id="Gradient_urn1v"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_anpc0"]
+[sub_resource type="Curve2D" id="Curve2D_dqq3o"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(140.14957, 147.0752, -140.14957, -147.0752, 163, 126, 138.67836, 272.55753, -138.67836, -272.55753, 244, -399)
@@ -228,11 +228,11 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpq64"]
 size = Vector2(66.48404, 16.485779)
 
-[sub_resource type="Gradient" id="Gradient_ujay7"]
+[sub_resource type="Gradient" id="Gradient_m6ob5"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_6t5vj"]
+[sub_resource type="Curve2D" id="Curve2D_e36lb"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-144.83226, 186.8661, 144.83226, -186.8661, -506, -49, 192.53008, 225.99974, -192.53008, -225.99974, 7, -117)
@@ -352,14 +352,14 @@ shape = SubResource("RectangleShape2D_axaay")
 position = Vector2(277.99997, 168.00024)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_rdks5")
+grad = SubResource("Gradient_xfr0l")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant5" index="0" unique_id=2105629789]
 position = Vector2(-284, -24)
-curve = SubResource("Curve2D_ns8m6")
+curve = SubResource("Curve2D_hdrkm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant5/Path2D" index="0" unique_id=1206185506]
 position = Vector2(-299.96973, -156.51431)
@@ -371,14 +371,14 @@ rotates = false
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_xl1j5")
+grad = SubResource("Gradient_urn1v")
 progress = 0.35
 sample_count = 4.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
 position = Vector2(-284, -24)
-curve = SubResource("Curve2D_anpc0")
+curve = SubResource("Curve2D_dqq3o")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=299554415]
 position = Vector2(133.15587, 77.27779)
@@ -431,14 +431,14 @@ texture = ExtResource("10_6t5vj")
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_ujay7")
+grad = SubResource("Gradient_m6ob5")
 progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant4" index="0" unique_id=2105629789]
 position = Vector2(-284, -24)
-curve = SubResource("Curve2D_6t5vj")
+curve = SubResource("Curve2D_e36lb")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant4/Path2D" index="0" unique_id=522942337]
 position = Vector2(-430.29807, -97.54226)
