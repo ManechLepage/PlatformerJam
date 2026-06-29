@@ -177,6 +177,7 @@ radius = 74.330345
 [node name="TimeAnimation" type="AnimationPlayer" parent="." index="0" unique_id=1188777491]
 libraries/ = SubResource("AnimationLibrary_p7mac")
 autoplay = &"Time"
+speed_scale = 0.669
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1601315926]
 reset_on_save = false
@@ -262,6 +263,14 @@ flip_h = true
 [node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=51635505]
 position = Vector2(-32, 263)
 texture = ExtResource("3_oo2nn")
+
+[node name="Arrow" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="13" unique_id=553444882]
+z_index = 1
+z_as_relative = false
+position = Vector2(281, 207)
+rotation = 0.18782628
+scale = Vector2(0.37003902, 0.37003902)
+texture = ExtResource("7_3ef1n")
 
 [node name="Parallax2D3" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="2" unique_id=1988134974]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
@@ -436,15 +445,10 @@ position = Vector2(-303, 25)
 scale = Vector2(0.8936865, 1.2188869)
 texture = ExtResource("5_l4ek7")
 
-[node name="Arrow" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="34" unique_id=553444882]
-z_index = 1
-position = Vector2(281, 207)
-rotation = 0.18782626
-scale = Vector2(0.37003902, 0.37003902)
-texture = ExtResource("7_3ef1n")
-
 [node name="Rocks" type="Node2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="3" unique_id=1328244412]
 modulate = Color(1.3004436, 0.41038215, 0.4759172, 1)
+z_index = -2
+z_as_relative = false
 
 [node name="Brick50" type="Sprite2D" parent="Offset/Background/Rocks" index="0" unique_id=1288557194]
 position = Vector2(-36, -27)
@@ -721,9 +725,17 @@ rotation = -2.5254915
 frame = 4
 
 [node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1652650217 instance=ExtResource("5_fxv6i")]
+z_as_relative = false
 position = Vector2(-327, 59)
 scale = Vector2(1.8287079, 1.8287079)
 active = false
+
+[node name="PoemText" parent="Offset/Obstacles/Fountain" index="2" unique_id=1098363463]
+offset_left = -4.921467
+offset_top = -28.982254
+offset_right = 45.078533
+offset_bottom = -2.982254
+scale = Vector2(0.6779971, 0.6779971)
 
 [node name="RotateNode1" type="Node2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1991145075]
 position = Vector2(-142, -123)
@@ -758,12 +770,14 @@ rpm = 10.0
 
 [node name="Gear2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1250512885 instance=ExtResource("12_5rmhn")]
 z_index = -1
+z_as_relative = false
 position = Vector2(-142, -123)
 scale = Vector2(1.9854517, 1.9854517)
 rpm = 10.0
 
 [node name="Gear3" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=195696467 instance=ExtResource("12_5rmhn")]
 z_index = -1
+z_as_relative = false
 position = Vector2(140, -123)
 scale = Vector2(1.9854517, 1.9854517)
 rpm = 10.0
@@ -1282,3 +1296,4 @@ texture = ExtResource("12_2d8oo")
 [editable path="Offset/Obstacles/Platform10"]
 [editable path="Offset/Obstacles/Platform11"]
 [editable path="Offset/Obstacles/FlowerBounce"]
+[editable path="Offset/Obstacles/Fountain"]

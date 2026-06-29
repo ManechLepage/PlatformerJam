@@ -69,6 +69,7 @@ debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
 [node name="PoemText" type="RichTextLabel" parent="." unique_id=1814256131]
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+z_as_relative = false
 offset_left = -25.0
 offset_top = -91.0
 offset_right = 25.0
@@ -84,7 +85,8 @@ vertical_alignment = 2
 visible_characters_behavior = 1
 
 [node name="Parchemin" type="CPUParticles2D" parent="." unique_id=1732084161]
-z_index = 10
+z_index = -1
+z_as_relative = false
 position = Vector2(0, 9)
 scale = Vector2(1.0037193, 1.0037193)
 amount = 32

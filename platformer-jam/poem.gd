@@ -4,7 +4,6 @@ extends Area2D
 
 @onready var image: TextureRect = $CanvasLayer/TextureRect2
 @onready var bg: TextureRect = $CanvasLayer/TextureRect
-var has_been_found: bool = false
 @export var destroyable: bool = true
 var progress: float = 0.0
 var transparency: float = 0.0
@@ -12,9 +11,14 @@ var activated: bool = false
 var collecting: bool = false
 var upgrade_text: int = 0
 var end_seq := false
+@export var poem_index: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if Game.poems_found[poem_index]:
+		monitorable = false
+		monitoring = false
+		hide()
 	if name == "end_tutorial": Game.end_popup = self
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
@@ -86,6 +90,7 @@ func next():
 	upgrade_text = 1
 
 func next_2():
+	Game.poems_found[poem_index] = true
 	upgrade_text = 2
 	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 2)
 	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 2)

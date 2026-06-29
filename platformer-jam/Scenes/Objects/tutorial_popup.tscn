@@ -33,6 +33,7 @@ scale = Vector2(4.825, 4.825)
 shape = SubResource("CircleShape2D_bhunq")
 
 [node name="Parchemin" type="CPUParticles2D" parent="." unique_id=2027513]
+z_as_relative = false
 position = Vector2(0, 29)
 amount = 32
 texture = SubResource("GradientTexture2D_e0tat")

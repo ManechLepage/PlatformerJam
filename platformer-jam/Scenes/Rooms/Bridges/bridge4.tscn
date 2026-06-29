@@ -117,7 +117,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(-224.23868, -146.53645, 224.23868, 146.53645, 56, -317, 45.709282, -134.78003, -45.709282, 134.78003, 306, 237)
+"points": PackedVector2Array(-224.23868, -146.53645, 224.23868, 146.53645, 56, -317, 66.60928, -210.68002, -66.60928, 210.68002, 326, 320)
 }
 point_count = 2
 
@@ -168,9 +168,9 @@ offset = Vector2i(3, 4)
 [node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("8_fsu8v")]
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
-position = Vector2(-363, 261)
+position = Vector2(-302, 296)
 scale = Vector2(1.9296914, 1.9296914)
-rpm = -10.0
+rpm = -6.0
 
 [node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=539188930 instance=ExtResource("8_fsu8v")]
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
@@ -229,15 +229,17 @@ shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_m518m")]
+z_index = 4
 position = Vector2(451, 248)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
-position = Vector2(-406, 20)
+position = Vector2(-430, 2)
 shape = SubResource("CircleShape2D_fsu8v")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=704423002]
 position = Vector2(-241, -62)
 shape = SubResource("CircleShape2D_m518m")
+one_way_collision = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="2" unique_id=2063768797]
 position = Vector2(-340, 50.00006)
@@ -250,16 +252,19 @@ rotation = -4.1067595
 shape = SubResource("CircleShape2D_r476u")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=120132861]
-position = Vector2(-71.99997, -37.999947)
+position = Vector2(-95.99997, -76.999954)
 rotation = -4.1067595
+scale = Vector2(0.7146417, 0.7146417)
 shape = SubResource("CircleShape2D_84h4p")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=571576516]
-position = Vector2(-135.99997, -248.99997)
+position = Vector2(-112.99997, -305.99997)
 rotation = -4.1067595
 shape = SubResource("CircleShape2D_84h4p")
 
 [node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1915477303 instance=ExtResource("4_m518m")]
+z_index = 17
+z_as_relative = false
 position = Vector2(-426, 110)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
@@ -282,6 +287,8 @@ rotation = 0.116937056
 shape = SubResource("RectangleShape2D_kaqui")
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=790154690 instance=ExtResource("5_r476u")]
+z_index = 5
+z_as_relative = false
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_uab21")
@@ -293,6 +300,7 @@ hitbox_size = 20.0
 curve = SubResource("Curve2D_ntg8m")
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=586076656 instance=ExtResource("5_r476u")]
+z_as_relative = false
 position = Vector2(-183, 84)
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
@@ -305,6 +313,7 @@ position = Vector2(-4, 12)
 curve = SubResource("Curve2D_jnmc2")
 
 [node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=336787237 instance=ExtResource("5_r476u")]
+z_as_relative = false
 position = Vector2(-183, 84)
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
@@ -350,7 +359,7 @@ end_cap_mode = 2
 z_index = -5
 position = Vector2(-55.98169, 389.71948)
 scale = Vector2(2.8302, 2.8302)
-points = PackedVector2Array(187.6128, -51.840637, 93.97986, -71.98059, 131.07971, -138.05365)
+points = PackedVector2Array(187.6128, -51.840637, 93.97986, -71.98059, 138.85303, -157.48688)
 width = 15.0
 texture = SubResource("GradientTexture2D_fsu8v")
 texture_mode = 1
@@ -364,19 +373,19 @@ scale = Vector2(2.7069335, 2.7069335)
 rpm = -2.0
 
 [node name="Gear" parent="Offset/Deco/Gears" index="3" unique_id=1472442011 instance=ExtResource("8_fsu8v")]
-position = Vector2(315, -1)
+position = Vector2(336, -55.000008)
 scale = Vector2(1.3636024, 1.3636024)
 rpm = -3.0
 
 [node name="Gear2" parent="Offset/Deco/Gears" index="4" unique_id=882720503 instance=ExtResource("8_fsu8v")]
 position = Vector2(209.99998, 186.00002)
 scale = Vector2(0.8285752, 0.8285752)
-rpm = 4.0
+rpm = -4.0
 
 [node name="Gear5" parent="Offset/Deco/Gears" index="5" unique_id=612050286 instance=ExtResource("8_fsu8v")]
-position = Vector2(44.999985, 268)
+position = Vector2(21.999987, 250)
 scale = Vector2(1.0753582, 1.0753582)
-rpm = 4.0
+rpm = -5.0
 
 [node name="Gear6" parent="Offset/Deco/Gears" index="6" unique_id=1155333087 instance=ExtResource("8_fsu8v")]
 position = Vector2(110.99998, 298)
@@ -384,9 +393,9 @@ scale = Vector2(1.4151, 1.4151)
 rpm = 4.0
 
 [node name="Gear3" parent="Offset/Deco/Gears" index="7" unique_id=1906274699 instance=ExtResource("8_fsu8v")]
-position = Vector2(379, 210.00002)
-scale = Vector2(1.3268092, 1.3268092)
-rpm = 4.0
+position = Vector2(354, 172.00002)
+scale = Vector2(0.7708696, 0.7708696)
+rpm = 8.0
 
 [node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1456768929]
 

@@ -209,7 +209,7 @@ size = Vector2(931, 3734)
 size = Vector2(934.5, 3011)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2060n"]
-size = Vector2(934.5, 217.5)
+size = Vector2(934.5, 301.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ml46"]
 size = Vector2(934.5, 217.5)
@@ -245,7 +245,7 @@ func show_flavor_text(_body,area: Area2D):
 			text = garden
 		\"Tower2Area\":
 			text = currents
-		\"Tower2Area\":
+		\"Tower3Area\":
 			text = rythm
 		\"Tower3Area\":
 			text = will
@@ -255,7 +255,6 @@ func show_flavor_text(_body,area: Area2D):
 			text = ruins
 		_:
 			print(area,area.name)
-	if tween: tween.kill()
 	tween = create_tween()
 	tween.tween_property(text,\"modulate:a\",1,0.7)
 	tween.tween_property(text,\"modulate:a\",2,2)
@@ -531,7 +530,7 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/ruins" unique_id=1233635624]
-position = Vector2(-4062, 107.25)
+position = Vector2(-4062, 149.25)
 shape = SubResource("RectangleShape2D_2060n")
 debug_color = Color(0.5110002, 0, 0.73, 0)
 

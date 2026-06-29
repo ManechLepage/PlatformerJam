@@ -44,7 +44,7 @@ tracks/1/path = NodePath("Offset/Obstacles/Platform13:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.35, 0.46),
+"times": PackedFloat32Array(0.318, 0.428),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(397, -129), Vector2(397, -225)]
@@ -1164,7 +1164,7 @@ shape = SubResource("RectangleShape2D_kj5ac")
 position = Vector2(313, -98)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
-position = Vector2(124.75, 27)
+position = Vector2(99, 27)
 shape = SubResource("RectangleShape2D_pdxpn")
 
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=2119178859 instance=ExtResource("4_5ecxw")]
@@ -1293,12 +1293,13 @@ shape = SubResource("RectangleShape2D_o18ho")
 [node name="Lever" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=415754532 instance=ExtResource("6_o18ho")]
 position = Vector2(322, 241)
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Lever" index="1" unique_id=171960460]
+[node name="CollisionShape2D" parent="Offset/Obstacles/Lever" index="2" unique_id=171960460]
 position = Vector2(7, -21.5)
 shape = SubResource("RectangleShape2D_lgexx")
 
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1754253968 instance=ExtResource("8_okid0")]
 position = Vector2(-306, -220)
+poem_index = 1
 
 [node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
 offset_left = 635.0
@@ -1380,9 +1381,9 @@ position = Vector2(-386, 41)
 texture = ExtResource("13_2367m")
 
 [node name="Brick62" type="Sprite2D" parent="Offset/Deco/wall" index="10" unique_id=274234418]
-position = Vector2(351, -75.00001)
-rotation = 4.415964
-scale = Vector2(1.3957946, 1.0553948)
+position = Vector2(338, -73.00001)
+rotation = 4.712389
+scale = Vector2(1.0736881, 1.4956115)
 texture = ExtResource("17_oipvh")
 
 [node name="Brick63" type="Sprite2D" parent="Offset/Deco/wall" index="11" unique_id=1803961156]
@@ -1733,6 +1734,7 @@ rpm = -20.0
 [node name="Gear2" parent="Offset/Deco/wall" index="75" unique_id=1928859991 instance=ExtResource("15_epjwo")]
 modulate = Color(0.2046, 0.45507008, 0.66, 1)
 z_index = -1
+z_as_relative = false
 position = Vector2(254.99976, 231.99991)
 scale = Vector2(1.9705865, 1.9705865)
 enabled = false
@@ -1741,6 +1743,7 @@ rpm = -20.0
 [node name="Gear4" parent="Offset/Deco/wall" index="76" unique_id=1591996760 instance=ExtResource("15_epjwo")]
 modulate = Color(0.2046, 0.45507008, 0.66, 1)
 z_index = -1
+z_as_relative = false
 position = Vector2(287, 94.999985)
 scale = Vector2(1.3706291, 1.3706291)
 enabled = false
@@ -1749,6 +1752,7 @@ rpm = -20.0
 [node name="Gear6" parent="Offset/Deco/wall" index="77" unique_id=283177909 instance=ExtResource("15_epjwo")]
 modulate = Color(0.2046, 0.45507008, 0.66, 1)
 z_index = -1
+z_as_relative = false
 position = Vector2(147.00002, -112)
 scale = Vector2(1.3706291, 1.3706291)
 enabled = false
@@ -1757,6 +1761,7 @@ rpm = -20.0
 [node name="Gear5" parent="Offset/Deco/wall" index="78" unique_id=1191039037 instance=ExtResource("15_epjwo")]
 modulate = Color(0.2046, 0.45507008, 0.66, 1)
 z_index = -1
+z_as_relative = false
 position = Vector2(189, 6.999977)
 scale = Vector2(1.9705865, 1.9705865)
 enabled = false
@@ -1765,6 +1770,7 @@ rpm = -20.0
 [node name="Gear3" parent="Offset/Deco/wall" index="79" unique_id=803118493 instance=ExtResource("15_epjwo")]
 modulate = Color(0.2046, 0.53856003, 0.66, 1)
 z_index = -1
+z_as_relative = false
 position = Vector2(191.00002, -178)
 scale = Vector2(0.6294321, 0.6294321)
 enabled = false
@@ -1826,6 +1832,11 @@ position = Vector2(114.85023, -656.44934)
 rotation = -2.1676095
 progress = 897.17163
 rotates = false
+
+[node name="Platform2" type="Sprite2D" parent="." index="3" unique_id=749826631]
+modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
+position = Vector2(-3350, -816)
+texture = ExtResource("19_nv8a4")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]

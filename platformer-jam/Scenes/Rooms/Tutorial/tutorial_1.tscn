@@ -2537,7 +2537,7 @@ offset_right = -164.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_04iir")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 18
 text = "For a little over an uncountable number of years, your soul has been confined to a small room, no more than 260 square feet.
 
 [Press X to continue]"
@@ -2554,7 +2554,7 @@ offset_right = -164.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_04iir")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 18
 text = "You've noticed, however, that when you try to forget who you are, and press your palms into your eyes, this world seems to forget itself, too...
 
 [Press X to continue]"
@@ -2572,7 +2572,7 @@ offset_right = -164.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_04iir")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 18
 text = "You're sick of being here, and the only way out is by erasing the little that's left of you.
 
 [Press X to close]"

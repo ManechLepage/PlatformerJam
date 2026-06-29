@@ -386,7 +386,6 @@ rotation = 1.4835298
 position = Vector2(-132.0206, -5.52742)
 rotation = -1.272149
 scale = Vector2(5.9886546, 6.859102)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Fall_pilar_rot/Falling_pilar" index="0" unique_id=1349571073]
 position = Vector2(-2.855, 0)
@@ -742,12 +741,12 @@ modulate = Color(0, 0, 0, 1)
 z_index = 3
 
 [node name="BrickBg1" type="Sprite2D" parent="Offset/Deco/black" index="0" unique_id=1742950825]
-position = Vector2(-401.24994, 287)
+position = Vector2(-401.24994, 262)
 scale = Vector2(1.7047879, 1)
 texture = ExtResource("11_0u2am")
 
 [node name="BrickBg4" type="Sprite2D" parent="Offset/Deco/black" index="1" unique_id=1959389979]
-position = Vector2(-211, 307)
+position = Vector2(-211, 282)
 texture = ExtResource("12_3klni")
 
 [node name="BrickBg5" type="Sprite2D" parent="Offset/Deco/black" index="2" unique_id=522855653]

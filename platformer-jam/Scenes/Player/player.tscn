@@ -214,6 +214,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_06tpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g0yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dey5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqdc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr1w5")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_aqm4k")
 }, {
 "duration": 1.0,
@@ -272,10 +292,10 @@ wash_no_consent_area = NodePath("Wash_no_consent")
 wash_timer = NodePath("WashStepper")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1673098178]
-z_index = 5
+z_index = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"double_jump"
+animation = &"roll"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
@@ -350,7 +370,7 @@ wait_time = 0.1
 one_shot = true
 
 [node name="MinTimeForFlip" type="Timer" parent="StateMachine/Fall" unique_id=757737693]
-wait_time = 0.35
+wait_time = 0.7
 one_shot = true
 
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall", "double_jump")]

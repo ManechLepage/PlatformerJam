@@ -12,6 +12,7 @@ script = ExtResource("1_7fk0y")
 script = ExtResource("2_g3m34")
 
 [node name="Camera2D" type="Camera2D" parent="Offset" unique_id=946351804 groups=["Camera"]]
+z_index = 10
 script = ExtResource("2_dyxu8")
 
 [node name="Background" type="Node2D" parent="Offset" unique_id=1300832449]

@@ -26,6 +26,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0, 1.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fountain:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.28607628, 0.2916274),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -40,6 +52,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Obstacles/Fountain:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -204,7 +228,7 @@ shape = SubResource("CircleShape2D_j7dow")
 position = Vector2(-233, 3)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
-position = Vector2(-12, 3)
+position = Vector2(-31, 9)
 shape = SubResource("CircleShape2D_xdh3y")
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=586076656 instance=ExtResource("5_7h1hb")]
@@ -221,6 +245,8 @@ position = Vector2(0, 579)
 curve = SubResource("Curve2D_lvexf")
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1275880848 instance=ExtResource("5_7h1hb")]
+z_index = -1
+position = Vector2(1, -4)
 width = 40.0
 width_curve = SubResource("Curve_j7dow")
 grad = SubResource("Gradient_qacjv")
@@ -235,6 +261,7 @@ curve = SubResource("Curve2D_b2jqe")
 
 [node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1652650217 instance=ExtResource("6_qacjv")]
 position = Vector2(368, 180)
+active = false
 
 [node name="fountain" parent="Offset/Obstacles/Fountain" index="1" unique_id=551777104]
 flip_h = true
@@ -280,9 +307,9 @@ scale = Vector2(1.5329874, 1.5329874)
 rpm = 5.0
 
 [node name="Gear3" parent="Offset/Deco/Gears" index="4" unique_id=750865158 instance=ExtResource("7_lvexf")]
-position = Vector2(-245, 6)
+position = Vector2(-264, 12)
 scale = Vector2(0.82048327, 0.82048327)
-rpm = 10.0
+rpm = -7.0
 
 [node name="Gear4" parent="Offset/Deco/Gears" index="5" unique_id=427441519 instance=ExtResource("7_lvexf")]
 position = Vector2(175, -19)

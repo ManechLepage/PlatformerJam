@@ -29,5 +29,10 @@ func process_inputs(event):
 		return idle
 	return null
 
+func process_physics(delta):
+	if not Game.player.wash_area.get_overlapping_areas():
+		Game.player.is_washing = false
+		return idle
+
 
 	

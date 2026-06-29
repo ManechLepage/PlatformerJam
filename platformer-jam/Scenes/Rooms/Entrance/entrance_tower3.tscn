@@ -127,7 +127,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Room3" unique_id=197990627 instance=ExtResource("1_osvg5")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_osvg5")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -236,12 +236,15 @@ texture = ExtResource("8_xwmqs")
 flip_h = true
 
 [node name="House" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=485740804]
+z_index = -1
+z_as_relative = false
 position = Vector2(55, 30)
 texture = ExtResource("8_6147m")
 region_rect = Rect2(0, 0, 960, 540)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1627934981]
 modulate = Color(2.005617, 2.005617, 2.005617, 0)
+z_as_relative = false
 position = Vector2(-8.5, 179)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"

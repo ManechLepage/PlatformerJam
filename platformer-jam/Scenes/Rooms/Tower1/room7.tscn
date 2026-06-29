@@ -258,7 +258,7 @@ script = ExtResource("3_axaay")
 room_name = "Tower1-06"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(54, -1)
+position = Vector2(54, 52)
 shape = SubResource("RectangleShape2D_ns8m6")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -268,7 +268,7 @@ script = ExtResource("3_axaay")
 room_name = "Tower1-08"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(390, -7)
+position = Vector2(390, -34)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -349,6 +349,7 @@ rotation = 0.0026406646
 shape = SubResource("RectangleShape2D_axaay")
 
 [node name="Plant5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=586076656 instance=ExtResource("6_xl1j5")]
+z_as_relative = false
 position = Vector2(277.99997, 168.00024)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
@@ -368,6 +369,7 @@ progress = 91.507965
 rotates = false
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=162576436 instance=ExtResource("6_xl1j5")]
+z_as_relative = false
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
@@ -390,7 +392,6 @@ rotates = false
 [node name="Platform3" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D" index="0" unique_id=1940130509 instance=ExtResource("4_rdks5")]
 rotation = 2.1676095
 collision_layer = 33
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D/Platform3" index="0" unique_id=1349571073]
@@ -413,7 +414,6 @@ rotates = false
 [node name="Platform7" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D2" index="0" unique_id=1982398534 instance=ExtResource("4_rdks5")]
 rotation = 1.9620957
 collision_layer = 33
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D2/Platform7" index="0" unique_id=1349571073]
@@ -428,6 +428,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("10_6t5vj")
 
 [node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=497567128 instance=ExtResource("6_xl1j5")]
+z_as_relative = false
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
@@ -454,6 +455,7 @@ scale = Vector2(1.3142104, 1.3142104)
 frame = 4
 
 [node name="FlowerBounce2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=1875244839 instance=ExtResource("7_kpq64")]
+z_as_relative = false
 position = Vector2(-308, -45.99998)
 scale = Vector2(1.3142104, 1.3142104)
 
@@ -461,6 +463,7 @@ scale = Vector2(1.3142104, 1.3142104)
 frame = 4
 
 [node name="FlowerBounce3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=1251584941 instance=ExtResource("7_kpq64")]
+z_as_relative = false
 position = Vector2(-260, -159.99997)
 scale = Vector2(1.3142104, 1.3142104)
 

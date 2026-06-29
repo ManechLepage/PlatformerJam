@@ -16,10 +16,11 @@ var transparency: float = 0.0
 var activated: bool = false
 
 func _ready() -> void:
-	active_changed(active)
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
 	Game.event_manager.lucidity_changed.connect(func (_lucidity):active_changed(active))
+	Game.lucidity = Game.lucidity +1
+	Game.set_deferred("lucidity", Game.lucidity-1)
 
 func active_changed(value):
 	if sprite: sprite.play("active" if value else "inactive")

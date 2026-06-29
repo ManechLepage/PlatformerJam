@@ -7,13 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="5_kn6u7"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="6_5q4xn"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="7_b2yc5"]
+[ext_resource type="Texture2D" uid="uid://bytkq8gmrh0a6" path="res://Sprites/house.png" id="8_tahew"]
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="8_vmh6t"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="9_4ubn8"]
+[ext_resource type="Texture2D" uid="uid://dq55qwb5w33eq" path="res://Sprites/house_glow.png" id="9_ccxoj"]
+[ext_resource type="Texture2D" uid="uid://eu2ru6yk4llb" path="res://Sprites/sand3.tres" id="10_0cfnw"]
 [ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="10_5q4xn"]
 [ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="10_am3mk"]
 [ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="11_8h568"]
 [ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="11_b2yc5"]
+[ext_resource type="PackedScene" uid="uid://fbv3k25te8ta" path="res://Scenes/Objects/tutorial_popup.tscn" id="11_flwp5"]
 [ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="12_jqe5t"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="12_t5vnn"]
 [ext_resource type="Texture2D" uid="uid://bakrqh40fbpmk" path="res://Sprites/sand1.tres" id="15_4ubn8"]
 [ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="16_am3mk"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="17_am3mk"]
@@ -81,6 +86,49 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fpyh"]
+atlas = ExtResource("9_ccxoj")
+region = Rect2(0, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_036s1"]
+atlas = ExtResource("9_ccxoj")
+region = Rect2(139, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qse58"]
+atlas = ExtResource("9_ccxoj")
+region = Rect2(278, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kice6"]
+atlas = ExtResource("9_ccxoj")
+region = Rect2(417, 0, 139, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liuo8"]
+atlas = ExtResource("9_ccxoj")
+region = Rect2(556, 0, 139, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e25l8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fpyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_036s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qse58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kice6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liuo8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Tutorial_3" unique_id=197990627 instance=ExtResource("1_heam4")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1932419129]
@@ -140,7 +188,8 @@ scale = Vector2(3.6887693, 27.970491)
 
 [node name="BrickBg8" type="Sprite2D" parent="Offset/Obstacles/Left_wall2" index="1" unique_id=73559402]
 modulate = Color(0, 0, 0, 1)
-z_index = 10
+z_index = 9
+z_as_relative = false
 position = Vector2(-1.8260093, -7.8588967)
 rotation = -0.9126152
 scale = Vector2(0.04495924, 0.269719)
@@ -152,21 +201,90 @@ position = Vector2(86.000015, 37)
 rotation = 3.1386843
 scale = Vector2(3.074961, 33.88842)
 
-[node name="sand" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=722879689]
-z_index = -2
-
-[node name="Sand3" type="Sprite2D" parent="Offset/Deco/sand" index="0" unique_id=660855195]
+[node name="Sand1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=311058896]
+z_as_relative = false
 position = Vector2(-446, -46)
 scale = Vector2(1, 1.4102564)
 texture = ExtResource("15_4ubn8")
 
-[node name="Sand4" type="Sprite2D" parent="Offset/Deco/sand" index="1" unique_id=1347572172]
+[node name="Sand2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1285405988]
+z_as_relative = false
 position = Vector2(60, -42)
 scale = Vector2(2.9180853, 1.2710271)
 texture = ExtResource("16_am3mk")
 flip_h = true
 
-[node name="bg" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=895816081]
+[node name="House" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1849230898]
+z_index = -1
+z_as_relative = false
+position = Vector2(57, -280)
+texture = ExtResource("8_tahew")
+region_rect = Rect2(0, 0, 960, 540)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=805454209]
+modulate = Color(2.005617, 2.005617, 2.005617, 0)
+z_as_relative = false
+position = Vector2(-6.5, -131)
+sprite_frames = SubResource("SpriteFrames_e25l8")
+autoplay = "default"
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1842870462]
+z_as_relative = false
+position = Vector2(-976, -63)
+texture = ExtResource("15_4ubn8")
+
+[node name="Sand4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=1240379648]
+z_as_relative = false
+position = Vector2(-1204, -72)
+scale = Vector2(1.6531914, 1)
+texture = ExtResource("16_am3mk")
+
+[node name="Sand5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=488720284]
+z_as_relative = false
+position = Vector2(-630, -99)
+scale = Vector2(1, 2.1065574)
+texture = ExtResource("10_0cfnw")
+
+[node name="tutorial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=1754253968 instance=ExtResource("11_flwp5")]
+position = Vector2(-171, -103)
+destroyable = false
+
+[node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
+z_index = 5
+clip_contents = false
+offset_left = -8.999893
+offset_top = -534.0
+offset_right = 655.0001
+offset_bottom = -138.43817
+text = "						Three Pillars of Lucidity:
+                                                         
+																One :  
+													Pillar of the Garden                                                                         
+			Two :  
+Pillar of Currents                                                                              
+										Three :  
+								Pillar of Rythm"
+horizontal_alignment = 0
+
+[node name="PoemText2" type="RichTextLabel" parent="Offset/Deco/tutorial_text/PoemText" index="2" unique_id=1007571604]
+modulate = Color(0.13999987, 0, 0.7, 0)
+z_index = 5
+layout_mode = 0
+offset_left = 164.0
+offset_top = 371.0
+offset_right = 294.0
+offset_bottom = 449.56183
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("12_t5vnn")
+text = "Four:
+Pillar of the Will"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1
+
+[node name="bg" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="8" unique_id=895816081]
 z_index = -1
 z_as_relative = false
 
@@ -226,7 +344,7 @@ texture = ExtResource("8_vmh6t")
 position = Vector2(-9.7245865, -34.94317)
 texture = ExtResource("6_5q4xn")
 
-[node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=224379986]
+[node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="9" unique_id=224379986]
 modulate = Color(0.126, 0.161, 0.21, 1)
 z_index = 2
 
@@ -383,7 +501,7 @@ position = Vector2(-4, 25)
 texture = ExtResource("11_b2yc5")
 flip_h = true
 
-[node name="black" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1874082296]
+[node name="black" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="10" unique_id=1874082296]
 modulate = Color(0, 0, 0, 1)
 z_index = 4
 
@@ -468,7 +586,8 @@ texture = ExtResource("11_8h568")
 position = Vector2(410, 16)
 texture = ExtResource("11_8h568")
 
-[node name="Fountain" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1652650217 instance=ExtResource("17_am3mk")]
+[node name="Fountain" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="11" unique_id=1652650217 instance=ExtResource("17_am3mk")]
 position = Vector2(-28, 101)
 
 [editable path="Offset/Obstacles/Enter_floor"]
+[editable path="Offset/Deco/tutorial_text"]

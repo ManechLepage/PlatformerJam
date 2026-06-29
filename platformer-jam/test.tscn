@@ -81,6 +81,7 @@ visible = false
 [node name="Room8" parent="." unique_id=1775097023 instance=ExtResource("10_pdf00")]
 
 [node name="Room9" parent="." unique_id=1131576403 instance=ExtResource("11_a6gra")]
+rotation = 0.00040136115
 
 [node name="Room10" parent="." unique_id=1017972457 instance=ExtResource("12_dwqlq")]
 
@@ -133,3 +134,5 @@ visible = false
 [node name="Room29" parent="." unique_id=2139900169 instance=ExtResource("32_naet1")]
 
 [node name="Room30" parent="." unique_id=108794042 instance=ExtResource("33_6qlrc")]
+
+[node name="bounds" type="AnimatableBody2D" parent="." unique_id=1610684277]

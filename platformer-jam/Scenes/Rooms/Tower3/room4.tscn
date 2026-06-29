@@ -664,7 +664,6 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Wall1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=2119178859 instance=ExtResource("4_v6k05")]
 position = Vector2(-767, -11)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall1" index="0" unique_id=1349571073]
 position = Vector2(391, -107)
@@ -792,7 +791,6 @@ shape = SubResource("RectangleShape2D_6lp3r")
 
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=37246811 instance=ExtResource("4_v6k05")]
 rotation = -3.1415925
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
 position = Vector2(-2, -7.125)
@@ -848,7 +846,6 @@ texture = ExtResource("8_6lp3r")
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=862376502 instance=ExtResource("4_v6k05")]
 position = Vector2(-135, -250)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
@@ -867,6 +864,8 @@ position = Vector2(451, 38)
 rotation = 0.0035964253
 scale = Vector2(0.30221212, 0.99999994)
 shape = SubResource("RectangleShape2D_trhpv")
+one_way_collision = true
+one_way_collision_margin = 5.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="3" unique_id=1991751112]
 position = Vector2(-172.99998, 144)
@@ -875,7 +874,6 @@ shape = SubResource("RectangleShape2D_trhpv")
 
 [node name="Platform9" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1624026925 instance=ExtResource("4_v6k05")]
 rotation = -3.1415925
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="0" unique_id=1349571073]
 position = Vector2(-1.0006104, -183.5)
@@ -964,7 +962,6 @@ end_cap_mode = 2
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_v6k05")]
 position = Vector2(120, 80)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform1" index="0" unique_id=1349571073]
@@ -995,8 +992,7 @@ scale = Vector2(0.58026, 0.58026)
 rpm = 20.0
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=876391017 instance=ExtResource("4_v6k05")]
-position = Vector2(120, -50)
-sync_to_physics = false
+position = Vector2(-120, -50)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/MovingPlatform2" index="0" unique_id=1349571073]
@@ -1045,7 +1041,11 @@ frame = 4
 position = Vector2(234, -77)
 rotates = false
 
+[node name="Area" parent="Offset/Obstacles/FlowerBounce4" index="0" unique_id=221360279]
+position = Vector2(-9.37217, 7.9325733)
+
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce4" index="1" unique_id=1602848246]
+position = Vector2(-6.374901, 9.801872)
 frame = 4
 
 [node name="FlowerBounce2" type="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1942223425 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
@@ -1057,7 +1057,7 @@ poem_text = NodePath("AnimatedSprite2D/PoemText")
 particles = NodePath("AnimatedSprite2D/Parchemin")
 sprite = NodePath("AnimatedSprite2D")
 
-[node name="Area" type="Area2D" parent="Offset/Obstacles/FlowerBounce2" index="0" unique_id=221360279]
+[node name="Area" type="Area2D" parent="Offset/Obstacles/FlowerBounce2" index="0" unique_id=796347249]
 position = Vector2(6.84587, 11.0965805)
 rotation = 2.5024214
 collision_layer = 4

@@ -199,6 +199,30 @@ tracks/9/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Waterfall12:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Waterfall11:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_oipvh"]
 resource_name = "waterr"
@@ -324,6 +348,30 @@ tracks/9/keys = {
 "update": 1,
 "values": [0, 1, 2]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Waterfall12:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Waterfall11:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_snekd"]
 _data = {
@@ -399,7 +447,6 @@ offset = Vector2i(4, 3)
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 
 [node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=1808924670]
-modulate = Color(1, 1, 1, 0.30769235)
 position = Vector2(-69, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=1321273750]
@@ -566,8 +613,7 @@ shape = SubResource("RectangleShape2D_m3m6v")
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2119178859 instance=ExtResource("5_g1b11")]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
-position = Vector2(-155, 129.08334)
-sync_to_physics = false
+position = Vector2(-155, 270)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
 position = Vector2(-76, 3)

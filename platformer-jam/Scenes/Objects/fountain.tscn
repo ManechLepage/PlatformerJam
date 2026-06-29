@@ -62,6 +62,7 @@ _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0
 point_count = 3
 
 [node name="Fountain" unique_id=1652650217 node_paths=PackedStringArray("sprite", "poem_text") instance=ExtResource("1_js68f")]
+z_as_relative = false
 collision_layer = 8
 collision_mask = 8
 sprite = NodePath("fountain")
@@ -75,6 +76,7 @@ autoplay = "active"
 [node name="PoemText" type="RichTextLabel" parent="." index="2" unique_id=1098363463]
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+z_as_relative = false
 offset_left = -25.0
 offset_top = -73.0
 offset_right = 25.0
@@ -90,7 +92,8 @@ vertical_alignment = 2
 visible_characters_behavior = 1
 
 [node name="Parchemin" type="CPUParticles2D" parent="." index="3" unique_id=2027513]
-z_index = 10
+z_index = -1
+z_as_relative = false
 position = Vector2(0, 9)
 scale = Vector2(0.5900765, 0.5900765)
 amount = 32

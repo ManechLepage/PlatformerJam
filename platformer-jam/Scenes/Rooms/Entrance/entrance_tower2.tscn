@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="17_20xh4"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="18_ojtqm"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="19_20xh4"]
+[ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="21_20xh4"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -538,9 +539,6 @@ size = Vector2(1057, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i037"]
 size = Vector2(231, 11)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5lmc"]
-size = Vector2(122, 4)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_kj5ac"]
 radius = 40.35
 
@@ -788,7 +786,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_74567")]
 position = Vector2(0, 247)
-sync_to_physics = false
+collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-10.5, 7)
@@ -813,7 +811,7 @@ is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/DecoPlatform1" index="0" unique_id=1349571073]
 position = Vector2(-61, 0)
-shape = SubResource("RectangleShape2D_q5lmc")
+shape = null
 disabled = true
 
 [node name="Yellowball" parent="Offset/Obstacles/DecoPlatform1" index="1" unique_id=1760792903 instance=ExtResource("5_8ymx6")]
@@ -838,7 +836,6 @@ rpm = 0.0
 
 [node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1957311739 instance=ExtResource("4_74567")]
 position = Vector2(-381, 8)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball1" index="0" unique_id=1349571073]
@@ -850,7 +847,6 @@ shape = SubResource("RectangleShape2D_ayau5")
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 z_index = 5
 position = Vector2(-186, 58.66887)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball2" index="0" unique_id=1349571073]
@@ -900,7 +896,8 @@ texture = ExtResource("9_k6tjj")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1129996842]
 clip_children = 1
-z_index = 6
+z_index = 11
+z_as_relative = false
 position = Vector2(-442, 289.2418)
 scale = Vector2(2.6085427, 0.54498607)
 texture = SubResource("GradientTexture2D_g4v7s")
@@ -916,7 +913,7 @@ modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 z_index = 5
 
 [node name="Platform1" type="Sprite2D" parent="Offset/Deco/platforms" index="0" unique_id=804914275]
-position = Vector2(-379, -27)
+position = Vector2(-394, -24)
 texture = ExtResource("14_aa1a1")
 
 [node name="Platform2" type="Sprite2D" parent="Offset/Deco/platforms" index="1" unique_id=1317230716]
@@ -1020,20 +1017,22 @@ end_cap_mode = 2
 [node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("8_ypfkq")]
 position = Vector2(-3565, 172)
 
-[node name="Fountain2" parent="." index="3" unique_id=2131712417 instance=ExtResource("8_ypfkq")]
-position = Vector2(-4222, -62)
-
-[node name="Gear3" parent="." index="4" unique_id=1394967368 instance=ExtResource("7_ayau5")]
+[node name="Gear3" parent="." index="3" unique_id=1394967368 instance=ExtResource("7_ayau5")]
 modulate = Color(2.5355003, 10.258124, 10.129414, 1)
 position = Vector2(-3392, -329)
 scale = Vector2(1.9296914, 1.9296914)
 rpm = 10.0
 
-[node name="Gear2" parent="." index="5" unique_id=1951878299 instance=ExtResource("7_ayau5")]
+[node name="Gear2" parent="." index="4" unique_id=1951878299 instance=ExtResource("7_ayau5")]
 modulate = Color(2.5355003, 10.258124, 10.129414, 1)
 position = Vector2(-3584, -292)
 scale = Vector2(1.9296914, 1.9296914)
 rpm = -10.0
+
+[node name="FallWater" parent="." index="5" unique_id=1979529811 instance=ExtResource("21_20xh4")]
+z_index = 10
+z_as_relative = false
+position = Vector2(-4127, -263)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

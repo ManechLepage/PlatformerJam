@@ -1064,6 +1064,7 @@ scale = Vector2(1.5179502, 1.5179502)
 shape = SubResource("CircleShape2D_4sqie")
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=901383637 instance=ExtResource("5_1hgyl")]
+z_as_relative = false
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")

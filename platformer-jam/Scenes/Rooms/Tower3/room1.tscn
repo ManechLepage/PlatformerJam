@@ -815,7 +815,6 @@ rotates = false
 
 [node name="Platform10" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=458503422 instance=ExtResource("4_xuur6")]
 rotation = -0.34906584
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform10" index="0" unique_id=1349571073]
 scale = Vector2(1, 0.35999942)
@@ -853,7 +852,7 @@ scale = Vector2(0.3723033, 0.3723033)
 rpm = 50.0
 
 [node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=901383637 instance=ExtResource("6_w0k5t")]
-width = 30.0
+width = 49.325
 width_curve = SubResource("Curve_w0k5t")
 grad = SubResource("Gradient_thpn1")
 progress = 1.0

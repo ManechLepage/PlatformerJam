@@ -94,6 +94,7 @@ speed_scale = 0.0
 
 [node name="Parchemin" type="CPUParticles2D" parent="AnimatedSprite2D" unique_id=1465008559]
 z_index = -1
+z_as_relative = false
 position = Vector2(-0.17434692, 0.9847717)
 scale = Vector2(0.69135666, 0.69135666)
 amount = 32
@@ -111,6 +112,8 @@ scale_amount_max = 0.5
 scale_amount_curve = SubResource("Curve_b17am")
 
 [node name="PoemText" type="RichTextLabel" parent="AnimatedSprite2D" unique_id=1692101542]
+z_index = 10
+z_as_relative = false
 offset_left = -61.042404
 offset_top = -28.068336
 offset_right = -23.20848

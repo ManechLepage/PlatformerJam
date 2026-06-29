@@ -1134,7 +1134,6 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_jkcge")]
 position = Vector2(0, 247)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-435, -160)
@@ -1149,7 +1148,6 @@ texture = ExtResource("6_1v5si")
 
 [node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_jkcge")]
 position = Vector2(-1, 201)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
 position = Vector2(-347, -320)
@@ -1170,7 +1168,6 @@ shape = SubResource("RectangleShape2D_kfxri")
 [node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=417455758 instance=ExtResource("4_jkcge")]
 position = Vector2(-295, 132)
 rotation = 0.0026637316
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
 position = Vector2(0, -42.797485)
@@ -1185,7 +1182,6 @@ texture = ExtResource("8_rbnie")
 [node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1967111266 instance=ExtResource("4_jkcge")]
 position = Vector2(199, 92)
 rotation = -3.1337547
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_3yt2w")
@@ -1199,7 +1195,6 @@ texture = ExtResource("8_rbnie")
 [node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=462260310 instance=ExtResource("4_jkcge")]
 position = Vector2(9.00001, 80)
 rotation = -1.5689313
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
 position = Vector2(-9.292969, 5.861267)
@@ -1216,7 +1211,6 @@ flip_h = true
 [node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1693046888 instance=ExtResource("4_jkcge")]
 position = Vector2(-145.99998, 101)
 rotation = -3.1118474
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1233,7 +1227,6 @@ flip_h = true
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1650450333 instance=ExtResource("4_jkcge")]
 position = Vector2(-226.99998, 101)
 rotation = -3.1118474
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1251,7 +1244,6 @@ flip_h = true
 z_index = -1
 position = Vector2(-74.999985, 108)
 rotation = -3.1118474
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
 position = Vector2(-19.485447, 17.587301)
@@ -1269,7 +1261,6 @@ flip_h = true
 z_index = -1
 position = Vector2(296, 108)
 rotation = -3.1118474
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1287,7 +1278,6 @@ flip_h = true
 z_index = -1
 position = Vector2(85.000015, 108)
 rotation = -3.1118474
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1303,7 +1293,6 @@ flip_h = true
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=739877932 instance=ExtResource("4_jkcge")]
 position = Vector2(895, 247)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 position = Vector2(-436.49097, -159.5)
@@ -1317,7 +1306,6 @@ flip_h = true
 
 [node name="Platform8" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="11" unique_id=846085175 instance=ExtResource("4_jkcge")]
 position = Vector2(241, -132)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform8" index="0" unique_id=1349571073]
 position = Vector2(114.25, -5)
@@ -1341,7 +1329,6 @@ texture = ExtResource("6_1v5si")
 
 [node name="Platform9" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=2058529464 instance=ExtResource("4_jkcge")]
 position = Vector2(7, -158)
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="0" unique_id=1349571073]
@@ -1357,6 +1344,7 @@ flip_h = true
 
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=901383637 instance=ExtResource("6_3yt2w")]
 z_index = -1
+z_as_relative = false
 position = Vector2(-362, 47)
 width = 80.0
 width_curve = SubResource("Curve_xbu1k")
@@ -1377,6 +1365,7 @@ gizmo_extents = 54.8
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="14" unique_id=1097771579 instance=ExtResource("6_3yt2w")]
 z_index = -1
+z_as_relative = false
 position = Vector2(-362, 47)
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_llmor")
@@ -1406,6 +1395,7 @@ offset_bottom = 1.3607368
 rotation = -0.25590518
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1944685402 instance=ExtResource("6_3yt2w")]
+z_as_relative = false
 position = Vector2(-362, 47)
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_678v2")
@@ -1428,6 +1418,7 @@ position = Vector2(2.4094381, 3.2278495)
 position = Vector2(5.406708, 5.097151)
 
 [node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=586076656 instance=ExtResource("6_3yt2w")]
+z_as_relative = false
 position = Vector2(-362, 47)
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_6fshy")
@@ -1460,6 +1451,7 @@ rotation = -1.0522399
 
 [node name="Plant5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="17" unique_id=1796392449 instance=ExtResource("6_3yt2w")]
 z_index = -1
+z_as_relative = false
 position = Vector2(-362, 47)
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_388lu")

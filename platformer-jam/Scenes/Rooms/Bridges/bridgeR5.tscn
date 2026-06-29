@@ -151,6 +151,7 @@ shape = SubResource("RectangleShape2D_6d1mf")
 
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1754253968 instance=ExtResource("5_srppu")]
 position = Vector2(-186, -64)
+poem_index = 2
 
 [node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
 offset_left = 31.0

@@ -14,7 +14,7 @@ func enter():
 
 func exit():
 	super()
-	parent.is_flipping_on_landing = false
+	if not Game.player.sprite.animation == "roll" :parent.is_flipping_on_landing = false
 	
 
 func process_inputs(event):
@@ -44,6 +44,6 @@ func process_physics(delta):
 
 func _on_sprite_animation_looped() -> void:
 	if state_machine.current_state == self:
-		if parent.sprite.animation == "double_jump":
+		if parent.sprite.animation == "roll":
 			parent.sprite.play("running")
 			parent.is_flipping_on_landing = false

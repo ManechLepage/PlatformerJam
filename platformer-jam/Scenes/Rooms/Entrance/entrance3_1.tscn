@@ -25,7 +25,7 @@ _data = {
 resource_local_to_scene = true
 size = Vector2(779, 23)
 
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_s75va")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_s75va")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -93,20 +93,20 @@ script = ExtResource("4_s75va")
 position = Vector2(-119, 31)
 polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
 
-[node name="Fountain" parent="Offset" index="5" unique_id=1652650217 instance=ExtResource("5_5tk1n")]
-position = Vector2(372, 170)
-
-[node name="Sand1" type="Sprite2D" parent="." index="2" unique_id=1004185591]
+[node name="Sand1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1004185591]
 z_index = 2
-position = Vector2(-1293.0001, 276.00003)
+position = Vector2(-333.00012, 276.00003)
 scale = Vector2(1.4830496, 1.4830496)
 texture = ExtResource("6_o7sgk")
 
-[node name="Sand3" type="Sprite2D" parent="." index="3" unique_id=780308278]
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=780308278]
 z_index = 2
-position = Vector2(-1037.0001, 238.99998)
+position = Vector2(-77.00012, 238.99998)
 scale = Vector2(3.1535754, 1.5535727)
 texture = ExtResource("7_d1m4r")
+
+[node name="Fountain" parent="Offset" index="5" unique_id=1652650217 instance=ExtResource("5_5tk1n")]
+position = Vector2(372, 170)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

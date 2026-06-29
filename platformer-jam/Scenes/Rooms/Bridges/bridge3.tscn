@@ -91,7 +91,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
-"points": PackedVector2Array(178.53224, -6.623726, -178.53224, 6.623726, 378, 245, 31.918108, 25.960629, -31.918108, -25.960629, 184, 193, 67.86563, 19.856777, -67.86563, -19.856777, 96, 107, -259.0412, 66.59588, 259.0412, -66.59588, 244, -50)
+"points": PackedVector2Array(175.87024, 10.6792755, -175.87024, -10.6792755, 485, 280, 31.918108, 25.960629, -31.918108, -25.960629, 184, 193, 67.86563, 19.856777, -67.86563, -19.856777, 96, 107, -259.0412, 66.59588, 259.0412, -66.59588, 244, -50)
 }
 point_count = 4
 
@@ -181,48 +181,62 @@ rotation = 0.15184365
 shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="3" unique_id=454470781]
-position = Vector2(-87, -351)
+position = Vector2(-101.46826, -309.23413)
 rotation = -0.12042773
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_nnmsu")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=1863921234]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=1343103739]
+position = Vector2(-101.46826, -309.23413)
+rotation = -0.12042773
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_nnmsu")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=1632686643]
+position = Vector2(-44.999992, -412)
+rotation = -0.12042773
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_nnmsu")
+one_way_collision = true
+one_way_collision_margin = 5.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="6" unique_id=1863921234]
 position = Vector2(-749, -67)
 rotation = 0.35430184
 shape = SubResource("RectangleShape2D_5khlg")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=1599434039]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="7" unique_id=1599434039]
 position = Vector2(-549, 17)
 rotation = 0.35430184
 shape = SubResource("CircleShape2D_5qf00")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="6" unique_id=1145851743]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="8" unique_id=1145851743]
 position = Vector2(-491, 7)
 rotation = 0.35430184
 shape = SubResource("CircleShape2D_nnmsu")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="7" unique_id=2063768797]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="9" unique_id=2063768797]
 position = Vector2(-345, -488)
 rotation = -4.1067595
 shape = SubResource("CircleShape2D_5qf00")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="8" unique_id=338492801]
-position = Vector2(-233, -421)
-rotation = -4.1067595
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="10" unique_id=338492801]
+position = Vector2(-201, -446)
 shape = SubResource("CircleShape2D_nnmsu")
+one_way_collision = true
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="9" unique_id=1407710489]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="11" unique_id=1407710489]
 position = Vector2(-318, -415)
 rotation = -4.1067595
 shape = SubResource("CircleShape2D_itnqi")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="10" unique_id=165815586]
-position = Vector2(-926, -136)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="12" unique_id=165815586]
+position = Vector2(-926, -137)
 rotation = -0.101229094
 shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=790154690 instance=ExtResource("7_ovd7s")]
-width = 40.0
+width = 58.71
 width_curve = SubResource("Curve_00xgr")
 grad = SubResource("Gradient_5wclw")
 progress = 0.0
@@ -258,7 +272,7 @@ scale = Vector2(1.9838291, 1.9838291)
 rpm = -5.0
 
 [node name="Gear4" parent="Offset/Deco/Gears" index="4" unique_id=2049201786 instance=ExtResource("7_hpnsq")]
-position = Vector2(218, -173)
+position = Vector2(250, -198)
 scale = Vector2(1.0494964, 1.0494964)
 rpm = -6.0
 
@@ -266,70 +280,78 @@ rpm = -6.0
 
 [node name="Platform5" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=507275777]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
-position = Vector2(366.00024, -101)
+position = Vector2(351.53198, -59.234127)
 rotation = -0.11467671
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("7_cunyf")
 
-[node name="Brick6" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=2016973423]
+[node name="Platform6" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=594139870]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+position = Vector2(410, -164.00002)
+rotation = -0.11467671
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("7_cunyf")
+flip_h = true
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=2016973423]
 position = Vector2(78.999756, 244)
 rotation = -0.09481858
 scale = Vector2(1.4889581, 1.4889581)
 texture = ExtResource("7_o3cjs")
 
-[node name="Platform1" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=1127744773]
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/Rocks" index="3" unique_id=1127744773]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
 position = Vector2(444, 249)
 texture = ExtResource("7_cunyf")
 
-[node name="Platform4" type="Sprite2D" parent="Offset/Deco/Rocks" index="3" unique_id=2032441388]
+[node name="Platform4" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=2032441388]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-288, 186)
 rotation = 0.3614936
 texture = ExtResource("7_cunyf")
 
-[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=1549687071]
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="5" unique_id=1549687071]
 position = Vector2(-59.999756, 70.99988)
 rotation = 0.17070585
 scale = Vector2(0.7373359, 0.7373359)
 texture = ExtResource("8_gd47o")
 
-[node name="Platform3" type="Sprite2D" parent="Offset/Deco/Rocks" index="5" unique_id=302689647]
+[node name="Platform3" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=302689647]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-471, 113)
 rotation = -0.09766577
 scale = Vector2(0.7373359, 0.7373359)
 texture = ExtResource("8_gd47o")
 
-[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=1500934613]
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="7" unique_id=1500934613]
 position = Vector2(-6, 77)
 rotation = 0.18752442
 texture = ExtResource("9_m8s1r")
 
-[node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="7" unique_id=315534633]
+[node name="Brick2" type="Sprite2D" parent="Offset/Deco/Rocks" index="8" unique_id=315534633]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-344, 163)
 rotation = 0.37496626
 texture = ExtResource("10_gd47o")
 
-[node name="Brick4" type="Sprite2D" parent="Offset/Deco/Rocks" index="8" unique_id=1713518931]
+[node name="Brick4" type="Sprite2D" parent="Offset/Deco/Rocks" index="9" unique_id=1713518931]
 position = Vector2(150, 275)
 scale = Vector2(1.8832209, 1.8832209)
 texture = ExtResource("12_ovd7s")
 
-[node name="Brick3" type="Sprite2D" parent="Offset/Deco/Rocks" index="9" unique_id=1272583323]
+[node name="Brick3" type="Sprite2D" parent="Offset/Deco/Rocks" index="10" unique_id=1272583323]
 position = Vector2(116, 254)
 scale = Vector2(1.6533227, 1.6533227)
 texture = ExtResource("10_gd47o")
 
-[node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="10" unique_id=56606512]
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="11" unique_id=56606512]
 position = Vector2(103, 271)
 scale = Vector2(1.5939574, 1.5939574)
 texture = ExtResource("9_m8s1r")
 
-[node name="Brick7" type="Sprite2D" parent="Offset/Deco/Rocks" index="11" unique_id=551998141]
+[node name="Brick7" type="Sprite2D" parent="Offset/Deco/Rocks" index="12" unique_id=551998141]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
-position = Vector2(407.99976, -101)
+position = Vector2(393.5315, -59.234135)
 rotation = -0.12436082
 scale = Vector2(0.90481067, 0.90481067)
 texture = ExtResource("14_hpnsq")
@@ -348,7 +370,7 @@ scale = Vector2(0.5492624, 0.5492624)
 texture = ExtResource("15_txjfb")
 
 [node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Leaves" index="2" unique_id=2135857826]
-position = Vector2(315, -113)
+position = Vector2(300.53174, -71.23413)
 scale = Vector2(0.5599241, 0.5599241)
 texture = ExtResource("15_5wclw")
 
@@ -363,13 +385,23 @@ position = Vector2(-108, 43)
 texture = ExtResource("15_5wclw")
 
 [node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Leaves" index="5" unique_id=677473837]
-position = Vector2(314, -96)
+position = Vector2(299.53174, -54.23413)
 rotation = -0.56493235
 scale = Vector2(0.52725375, 0.52725375)
 texture = ExtResource("15_txjfb")
 
 [node name="Leaf8" type="Sprite2D" parent="Offset/Deco/Leaves" index="6" unique_id=594999556]
-position = Vector2(378, -126)
+position = Vector2(363.53174, -84.23413)
+scale = Vector2(1.238508, 1.238508)
+texture = ExtResource("15_5wclw")
+
+[node name="Leaf9" type="Sprite2D" parent="Offset/Deco/Leaves" index="7" unique_id=791201515]
+position = Vector2(363.53174, -84.23413)
+scale = Vector2(1.238508, 1.238508)
+texture = ExtResource("15_5wclw")
+
+[node name="Leaf10" type="Sprite2D" parent="Offset/Deco/Leaves" index="8" unique_id=1321939035]
+position = Vector2(428, -187)
 scale = Vector2(1.238508, 1.238508)
 texture = ExtResource("15_5wclw")
 
