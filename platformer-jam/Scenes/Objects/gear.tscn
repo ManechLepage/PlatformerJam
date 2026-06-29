@@ -11,6 +11,8 @@ script/source = "extends Node2D
 @onready var sprite := $Sprite2D
 var tween := 0.0
 
+func _ready() -> void:
+	tween = enabled as float
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

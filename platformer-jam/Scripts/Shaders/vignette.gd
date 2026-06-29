@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 			lerpf(
 				0.0, 
 				13.0,
-				float(Game.player.is_meditating) * (Game.lucidity * 0.009 + 0.1)
+				float(Game.player.is_meditating) * (Game.lucidity * 0.009 + 0.1) * int(Game.max_lucidity<100)
 				), 
 			5.0 * delta
 			)

@@ -72,6 +72,14 @@ region = Rect2(192, 192, 64, 64)
 atlas = ExtResource("2_jhyir")
 region = Rect2(256, 192, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwii3"]
+atlas = ExtResource("2_jhyir")
+region = Rect2(192, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aanf"]
+atlas = ExtResource("2_jhyir")
+region = Rect2(256, 256, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqm4k"]
 atlas = ExtResource("2_jhyir")
 region = Rect2(64, 0, 64, 64)
@@ -170,8 +178,28 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ahak")
 }, {
-"duration": 1.0,
+"duration": 12.0,
 "texture": SubResource("AtlasTexture_rukb4")
+}, {
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_mwii3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aanf")
+}],
+"loop": 0,
+"name": &"meditate_end",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ythyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmb2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ahak")
 }],
 "loop": 0,
 "name": &"meditation_idle",
@@ -240,10 +268,8 @@ wash_timer = NodePath("WashStepper")
 z_index = 5
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"wash"
+animation = &"meditate_end"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.7181494
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
 z_index = 10
@@ -285,12 +311,12 @@ debug_color = Color(0.37033582, 0.60469365, 0.33828056, 0.41960785)
 script = ExtResource("2_xpcdj")
 starting_state = NodePath("Fall")
 
-[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate_running", "interact")]
+[node name="Running" type="Node" parent="StateMachine" unique_id=368548954 node_paths=PackedStringArray("jump", "idle", "fall", "meditate", "interact")]
 script = ExtResource("3_xpcdj")
 jump = NodePath("../Jump")
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
-meditate_running = NodePath("../MeditateRunning")
+meditate = NodePath("../MeditateIdle")
 interact = NodePath("../Interact")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=110485849 node_paths=PackedStringArray("jump", "run", "fall", "meditate_idle", "interact")]
@@ -335,14 +361,16 @@ double_jump = NodePath(".")
 wait_time = 0.1
 one_shot = true
 
-[node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "meditate_running")]
+[node name="MeditateIdle" type="Node" parent="StateMachine" unique_id=838991202 node_paths=PackedStringArray("idle", "fall", "running", "jump", "meditate_end")]
 script = ExtResource("7_0u5uq")
 meditation_power = 5.0
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
-meditate_running = NodePath("../MeditateRunning")
+running = NodePath("../Running")
+jump = NodePath("../Jump")
+meditate_end = NodePath("../MeditateEnd")
 
-[node name="MeditateRunning" type="Node" parent="StateMachine" unique_id=651461945 node_paths=PackedStringArray("idle", "run", "fall", "meditate_idle", "jump")]
+[node name="MeditateEnd" type="Node" parent="StateMachine" unique_id=651461945 node_paths=PackedStringArray("idle", "run", "fall", "meditate_idle", "jump")]
 script = ExtResource("8_jlvik")
 meditation_power = 0.04
 idle = NodePath("../Idle")
@@ -371,12 +399,13 @@ stream = ExtResource("13_7g0yx")
 volume_db = -9.448
 max_polyphony = 2
 
-[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867 node_paths=PackedStringArray("meditation_state")]
+[node name="meditate" type="AudioStreamPlayer" parent="Sounds" unique_id=840989867 node_paths=PackedStringArray("meditation_state", "meditation_end_state")]
 stream = ExtResource("14_dey5f")
 volume_db = -80.0
 parameters/looping = true
 script = ExtResource("15_dey5f")
 meditation_state = NodePath("../../StateMachine/MeditateIdle")
+meditation_end_state = NodePath("../../StateMachine/MeditateEnd")
 
 [node name="lucid3" type="AudioStreamPlayer" parent="Sounds/meditate" unique_id=1227968001]
 

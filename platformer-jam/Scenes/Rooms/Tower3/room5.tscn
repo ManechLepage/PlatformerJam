@@ -525,7 +525,7 @@ scale = Vector2(1.1461935, 1.1461935)
 texture = ExtResource("14_3ef1n")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1245923025 instance=ExtResource("4_psknp")]
-position = Vector2(141, -207)
+position = Vector2(139, -39)
 rotation = -3.1415925
 sync_to_physics = false
 

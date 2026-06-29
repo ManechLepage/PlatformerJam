@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="14_fbnxh"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="15_81654"]
 [ext_resource type="Texture2D" uid="uid://d3pwmreafgynk" path="res://Sprites/leaf2.tres" id="17_5587x"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="19_thpn1"]
 [ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="20_thpn1"]
 [ext_resource type="Texture2D" uid="uid://iqvejs3kipon" path="res://Sprites/leaf1.tres" id="21_cetmw"]
 [ext_resource type="Texture2D" uid="uid://u3agmklyjnwo" path="res://Sprites/leaf4.tres" id="22_iqe17"]
@@ -224,6 +225,9 @@ size = Vector2(127.5, 18.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7mac"]
 size = Vector2(177, 21.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thpn1"]
+size = Vector2(198.78589, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hlo2"]
 size = Vector2(31, 357.31247)
 
@@ -240,7 +244,7 @@ size = Vector2(123, 120.875)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_j6702"]
+[sub_resource type="Gradient" id="Gradient_thpn1"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -261,7 +265,7 @@ fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
 
-[sub_resource type="Gradient" id="Gradient_thpn1"]
+[sub_resource type="Gradient" id="Gradient_cetmw"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -271,7 +275,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_cetmw"]
+[sub_resource type="Gradient" id="Gradient_iqe17"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -297,6 +301,34 @@ script = ExtResource("2_nu0ib")
 [node name="Offset" parent="." index="2" unique_id=652906693]
 position = Vector2(-1920, -540)
 offset = Vector2i(2, 1)
+
+[node name="Gear8" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=547880073 instance=ExtResource("13_wcuyr")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = 6
+position = Vector2(-469, -29)
+scale = Vector2(1.93, 1.93)
+rpm = 10.0
+
+[node name="Gear9" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=1171472135 instance=ExtResource("13_wcuyr")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = 6
+position = Vector2(-381, -143)
+scale = Vector2(1.93, 1.93)
+rpm = -10.0
+
+[node name="Gear10" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=1637018980 instance=ExtResource("13_wcuyr")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = 6
+position = Vector2(-148.99976, -240.99994)
+scale = Vector2(3.86, 3.86)
+rpm = 5.0
+
+[node name="Gear11" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="3" unique_id=275969291 instance=ExtResource("13_wcuyr")]
+modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
+z_index = 6
+position = Vector2(-102, -36)
+scale = Vector2(0.965, 0.965)
+rpm = -20.0
 
 [node name="Node2D" type="Node2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=545116750]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
@@ -384,7 +416,7 @@ flip_h = true
 position = Vector2(-32, 263)
 texture = ExtResource("3_g8nxr")
 
-[node name="Gear" type="Node2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=1353983551]
+[node name="Gear" type="Node2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=997978966]
 position = Vector2(-358, 155)
 scale = Vector2(2.124858, 2.124858)
 script = SubResource("GDScript_g4v7s")
@@ -603,7 +635,7 @@ script = ExtResource("3_o18ho")
 room_name = "Bridge1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
+position = Vector2(35.5, -34)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -644,6 +676,7 @@ is_platform = true
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
 position = Vector2(66, -3)
 shape = SubResource("RectangleShape2D_mixt2")
+disabled = true
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=450566103 instance=ExtResource("4_xuur6")]
 position = Vector2(287, 264)
@@ -736,6 +769,11 @@ rotation = -3.1415925
 position = Vector2(34, 2)
 shape = SubResource("RectangleShape2D_p7mac")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="1" unique_id=160611936]
+position = Vector2(20.61377, 20.504517)
+rotation = -2.9059734
+shape = SubResource("RectangleShape2D_thpn1")
+
 [node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=558900713 instance=ExtResource("4_xuur6")]
 position = Vector2(389, -83)
 rotation = -3.1415925
@@ -793,10 +831,10 @@ rpm = 50.0
 [node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="10" unique_id=901383637 instance=ExtResource("6_w0k5t")]
 width = 30.0
 width_curve = SubResource("Curve_w0k5t")
-grad = SubResource("Gradient_j6702")
+grad = SubResource("Gradient_thpn1")
 progress = 1.0
 has_hitbox = true
-hitbox_size = 10.0
+hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_w0k5t")
@@ -949,35 +987,21 @@ position = Vector2(320.99997, -196)
 rotation = -0.24046491
 texture = ExtResource("15_81654")
 
-[node name="Brick28" type="Sprite2D" parent="Offset/Deco/wall2" index="19" unique_id=570855043]
-position = Vector2(297.99997, -265)
-rotation = 0.186808
-scale = Vector2(1.4379447, 1.4379447)
-texture = ExtResource("15_81654")
-
-[node name="Brick25" type="Sprite2D" parent="Offset/Deco/wall2" index="20" unique_id=452770972]
+[node name="Brick25" type="Sprite2D" parent="Offset/Deco/wall2" index="19" unique_id=452770972]
 position = Vector2(345.05804, -208.82324)
 rotation = -0.92335653
 scale = Vector2(1.0391108, 1)
 texture = ExtResource("9_tc3ch")
 
-[node name="Brick26" type="Sprite2D" parent="Offset/Deco/wall2" index="21" unique_id=1847830657]
+[node name="Brick26" type="Sprite2D" parent="Offset/Deco/wall2" index="20" unique_id=1847830657]
 position = Vector2(340.00003, -292)
 rotation = -1.1563461
 texture = ExtResource("9_tc3ch")
 
-[node name="Brick31" type="Sprite2D" parent="Offset/Deco/wall2" index="22" unique_id=815557838]
-position = Vector2(268.99988, -261.9062)
-rotation = -0.24654426
-scale = Vector2(0.99999994, 0.9999999)
-texture = ExtResource("9_tc3ch")
-
-[node name="Brick32" type="Sprite2D" parent="Offset/Deco/wall2" index="23" unique_id=1428951684]
-position = Vector2(229.99988, -260.90613)
-rotation = 0.043961648
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_wcuyr")
-flip_h = true
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/wall2" index="21" unique_id=1319310693]
+z_index = 2
+position = Vector2(262, -259)
+texture = ExtResource("19_thpn1")
 
 [node name="Ground" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=314833052]
 modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
@@ -1128,8 +1152,8 @@ scale = Vector2(2.5028286, 3.2953913)
 texture = ExtResource("14_fbnxh")
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/Wall1" index="14" unique_id=527676174]
-position = Vector2(-474.99994, -89.99998)
-rotation = 1.4407179
+position = Vector2(-472.99994, -108.99998)
+rotation = 1.7534002
 scale = Vector2(2.5028286, 3.2953913)
 texture = ExtResource("14_fbnxh")
 
@@ -1182,7 +1206,7 @@ flip_h = true
 [node name="PathFollow2D2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=586076656 instance=ExtResource("6_w0k5t")]
 width = 30.0
 width_curve = SubResource("Curve_w0k5t")
-grad = SubResource("Gradient_thpn1")
+grad = SubResource("Gradient_cetmw")
 progress = 1.0
 hitbox_size = 10.0
 
@@ -1193,7 +1217,7 @@ curve = SubResource("Curve2D_5587x")
 position = Vector2(738, -272)
 width = 30.0
 width_curve = SubResource("Curve_w0k5t")
-grad = SubResource("Gradient_cetmw")
+grad = SubResource("Gradient_iqe17")
 progress = 1.0
 hitbox_size = 10.0
 

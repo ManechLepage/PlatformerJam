@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cplc83eisqsbv" path="res://Sprites/flower.png" id="18_3iaun"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="19_ntt1a"]
 [ext_resource type="Script" uid="uid://ck1xkltp05wwv" path="res://Scripts/Objects/plant_curve.gd" id="20_ntt1a"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="20_xn73o"]
 [ext_resource type="PackedScene" uid="uid://dhw1q6w7xqwne" path="res://Scenes/Objects/vine_hitbox.tscn" id="21_xn73o"]
 
 [sub_resource type="Animation" id="Animation_76onr"]
@@ -325,14 +326,14 @@ colors = PackedColorArray(0.18938726, 0.09751173, 0, 1)
 [sub_resource type="Curve2D" id="Curve2D_ntt1a"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(-43.985054, -49.86528, 43.985054, 49.86528, 33, -159, -89.81958, -14.779419, 89.81958, 14.779419, 192, -195)
+"points": PackedVector2Array(-43.985054, -49.86528, 43.985054, 49.86528, 33, -159, -80.72867, 24.063553, 80.72867, -24.063553, 229, -82)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_xn73o"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(27.367134, -55.709236, -27.367134, 55.709236, -55, -173, 20.893927, 18.36957, -20.893927, -18.36957, -145, -180)
+"points": PackedVector2Array(27.367134, -55.709236, -27.367134, 55.709236, -55, -173, 20.893927, 18.36957, -20.893927, -18.36957, -225, -195)
 }
 point_count = 2
 
@@ -360,6 +361,7 @@ lever_index = 1
 [node name="TimeAnimation" type="AnimationPlayer" parent="." index="1" unique_id=1188777491]
 libraries/ = SubResource("AnimationLibrary_p7mac")
 autoplay = &"Time"
+speed_scale = 0.669
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1601315926]
 reset_on_save = false
@@ -848,7 +850,19 @@ sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
-position = Vector2(137.99988, -12)
+position = Vector2(17, -12)
+scale = Vector2(0.39999998, 1)
+shape = SubResource("RectangleShape2D_trhpv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="1" unique_id=1048879702]
+position = Vector2(261, -9.000001)
+rotation = 0.4558207
+scale = Vector2(0.50206566, 1)
+shape = SubResource("RectangleShape2D_trhpv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="2" unique_id=1991751112]
+position = Vector2(-172.99998, 144)
+scale = Vector2(0.3241104, 1.6278642)
 shape = SubResource("RectangleShape2D_trhpv")
 
 [node name="Platform9" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1624026925 instance=ExtResource("4_v6k05")]
@@ -888,7 +902,6 @@ position = Vector2(-44.999954, 18)
 shape = SubResource("RectangleShape2D_3r0yk")
 
 [node name="Path2D" type="Path2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=503811652]
-scale = Vector2(1, 2)
 curve = SubResource("Curve2D_guonm")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=6416233]
@@ -942,7 +955,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="MovingPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=324144790 instance=ExtResource("4_v6k05")]
-position = Vector2(120, 160)
+position = Vector2(72.41553, 80)
 sync_to_physics = false
 is_platform = true
 
@@ -974,7 +987,7 @@ scale = Vector2(0.58026, 0.58026)
 rpm = 20.0
 
 [node name="MovingPlatform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=876391017 instance=ExtResource("4_v6k05")]
-position = Vector2(120, -100)
+position = Vector2(-72.41553, -50)
 sync_to_physics = false
 is_platform = true
 
@@ -1021,14 +1034,14 @@ rotates = false
 frame = 4
 
 [node name="FlowerBounce4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1958724799 instance=ExtResource("5_cj5pp")]
-position = Vector2(204, -180)
+position = Vector2(234, -77)
 rotates = false
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/FlowerBounce4" index="1" unique_id=1602848246]
 frame = 4
 
 [node name="FlowerBounce2" type="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1942223425 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
-position = Vector2(-152, -175)
+position = Vector2(-223, -186)
 rotation = -2.6776013
 progress = 129.73083
 script = ExtResource("17_1cgd5")
@@ -1390,9 +1403,9 @@ scale = Vector2(0.8437501, 0.8437501)
 texture = ExtResource("10_g76cd")
 
 [node name="Brick51" type="Sprite2D" parent="Offset/Deco/Pillar" index="32" unique_id=1585337001]
-position = Vector2(-611, -1007.0001)
+position = Vector2(-610.93335, -1007.0123)
 rotation = -0.18141331
-scale = Vector2(0.5116338, 0.5116338)
+scale = Vector2(0.51375145, 0.5116338)
 texture = ExtResource("10_g76cd")
 
 [node name="Brick41" type="Sprite2D" parent="Offset/Deco/Pillar" index="33" unique_id=154199282]
@@ -1698,6 +1711,11 @@ position = Vector2(492, 202.00002)
 rotation = -1.8838179
 scale = Vector2(1.9334666, 1.9334666)
 texture = ExtResource("15_vohyl")
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Wall2" index="41" unique_id=1464517298]
+position = Vector2(-314, -106)
+scale = Vector2(0.72564095, 0.99999994)
+texture = ExtResource("20_xn73o")
 
 [node name="vine9" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1841590830]
 z_index = -10

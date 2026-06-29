@@ -3,10 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_y1vax"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_y7hdm"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_bjn7v"]
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="3_ypfkq"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_74567"]
+[ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="5_5gyk8"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_8ymx6"]
-[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_7cprj"]
+[ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="6_aa1a1"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="7_ayau5"]
+[ext_resource type="Texture2D" uid="uid://bakrqh40fbpmk" path="res://Sprites/sand1.tres" id="8_wetxh"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="8_ypfkq"]
+[ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="9_k6tjj"]
+[ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="10_ui52w"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="14_aa1a1"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="15_kngej"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="15_qu8j5"]
+[ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="16_1j46d"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="17_20xh4"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="18_ojtqm"]
+[ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="19_20xh4"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -14,38 +27,122 @@ step = 0.001953125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform2:rotation")
+tracks/0/path = NodePath("Offset/Obstacles/DecoPlatform1:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.15, 0.45),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.5707964]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/PathFollow2D:progress")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.3526011),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Offset/Obstacles/DecoPlatform1:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-1.5707964, 1.5707964]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.27400002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Obstacles/Ball2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.30200002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-186, 189), Vector2(-186, 29)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Background/Parallax2D2/Gear7:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Background/Parallax2D2/Gear8:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.1415927]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Background/Parallax2D2/Gear9:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Background/Parallax2D2/Gear6:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -3.1415927]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Platform4/CollisionShape2D/Gear3:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Ball2/Gear:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -12.566370614359172]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Ball2/Gear2:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 12.566370614359172]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -53,38 +150,122 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Offset/Obstacles/Platform2:rotation")
+tracks/0/path = NodePath("Offset/Obstacles/DecoPlatform1:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [-1.5707964]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Offset/Obstacles/PathFollow2D:progress")
+tracks/1/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Offset/Obstacles/DecoPlatform1:rotation")
+tracks/2/path = NodePath("Offset/Obstacles/Ball2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-1.5707964]
+"values": [Vector2(-186, 189)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Offset/Background/Parallax2D2/Gear7:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Offset/Background/Parallax2D2/Gear8:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Offset/Background/Parallax2D2/Gear9:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Offset/Background/Parallax2D2/Gear6:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Offset/Obstacles/Platform4/CollisionShape2D/Gear3:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Offset/Obstacles/Ball2/Gear:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Offset/Obstacles/Ball2/Gear2:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -93,18 +274,266 @@ _data = {
 &"RESET": SubResource("Animation_mhqpd")
 }
 
+[sub_resource type="Animation" id="Animation_cgwye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oipvh"]
+resource_name = "waterr"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wetxh"]
+_data = {
+&"RESET": SubResource("Animation_cgwye"),
+&"waterr": SubResource("Animation_oipvh")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cprj"]
 size = Vector2(1057, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ymx6"]
-size = Vector2(486, 25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj5ac"]
-size = Vector2(349, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i037"]
 size = Vector2(231, 11)
@@ -115,20 +544,47 @@ size = Vector2(122, 4)
 [sub_resource type="CircleShape2D" id="CircleShape2D_kj5ac"]
 radius = 40.35
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
-size = Vector2(218, 11)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayau5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y1vax"]
-radius = 53.11544
+[sub_resource type="Gradient" id="Gradient_2qygj"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.5941781, 0.78253424)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7hdm"]
-size = Vector2(310, 9)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_2qygj")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.35511363, 0.42897728)
 
-[sub_resource type="Curve2D" id="Curve2D_8ymx6"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -142.80627, 59.069824, -34.625233, -49.309513, 34.625233, 49.309513, -51.739258, 150.13449, 6.776366, -22.832531, -6.776366, 22.832531, -23.428833, 247.49213, 0, 0, 0, 0, -57.326782, 278.42627)
-}
-point_count = 4
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("10_ui52w")
+shader_parameter/colorA = Color(0, 0.02949983, 0.59, 1)
+shader_parameter/colorB = Color(0, 0.7, 0.6183334, 1)
+shader_parameter/colorC = Color(0.42000002, 1, 0.79700005, 1)
+shader_parameter/discomode = false
+shader_parameter/speed = 1.0
+shader_parameter/alpha = 1.0
+shader_parameter/speed_scale = 19.72400103189
+
+[sub_resource type="Gradient" id="Gradient_5gyk8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k6tjj"]
+gradient = SubResource("Gradient_5gyk8")
+width = 256
+height = 256
+
+[sub_resource type="Gradient" id="Gradient_dhyn8"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.5652985)
+colors = PackedColorArray(0.067999996, 0.34, 0.3082667, 1, 0.132, 0.29720005, 0.3, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kngej"]
+gradient = SubResource("Gradient_dhyn8")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 0.50284094)
+repeat = 2
 
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_y1vax")]
 
@@ -143,13 +599,179 @@ script = ExtResource("2_y7hdm")
 position = Vector2(-3840, 0)
 offset = Vector2i(4, 0)
 
+[node name="Parallax2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="0" unique_id=739467125]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=374543736]
+modulate = Color(1, 1, 1, 0.7307692)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=543324456]
+root_node = NodePath("../Waterfall5")
+libraries/ = SubResource("AnimationLibrary_wetxh")
+autoplay = &"waterr"
+
+[node name="Waterfall" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="1" unique_id=132470042]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-165, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall2" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="2" unique_id=1923249368]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-101, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall3" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="3" unique_id=249097976]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-37, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall4" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="4" unique_id=267634206]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(27, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall5" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="5" unique_id=1199382803]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(91, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall6" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="6" unique_id=810033507]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(155, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall7" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="7" unique_id=1087584590]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-293, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall8" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="8" unique_id=488002262]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-229, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall9" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="9" unique_id=1980111689]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(219, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall10" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="10" unique_id=838055034]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(283, -2)
+texture = ExtResource("3_ypfkq")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Gear8" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=575261444 instance=ExtResource("7_ayau5")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-33, 93.99999)
+rotation = -2.576106
+scale = Vector2(2.5767398, 2.5767398)
+rpm = 0.0
+
+[node name="Gear9" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=419614809 instance=ExtResource("7_ayau5")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(-183, 221.00002)
+rotation = 2.576106
+scale = Vector2(2.1302333, 2.1302333)
+rpm = 0.0
+
+[node name="Gear6" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="2" unique_id=40988411 instance=ExtResource("7_ayau5")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(249, -189)
+rotation = -2.576106
+scale = Vector2(2.5767398, 2.5767398)
+rpm = 0.0
+
+[node name="Gear7" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="3" unique_id=1203879766 instance=ExtResource("7_ayau5")]
+modulate = Color(0.79571176, 4.369593, 4.310029, 1)
+z_index = -2
+position = Vector2(63, -92)
+rotation = 2.576106
+scale = Vector2(2.5767398, 2.5767398)
+rpm = 0.0
+
+[node name="Sprite2D" parent="Offset/Background/Parallax2D2/Gear7" index="0" unique_id=821858134]
+frame = 1
+
+[node name="ColorRect" type="ColorRect" parent="Offset/Background/Parallax2D2/Gear7" index="1" unique_id=1399095820]
+z_index = -1
+offset_left = -5.3436794
+offset_top = 35.218597
+offset_right = 5.310251
+offset_bottom = 53.758453
+color = Color(0.49, 0.10289999, 0.10289999, 1)
+
+[node name="Parallax2D3" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="2" unique_id=1988134974]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="0" unique_id=2044494954]
+position = Vector2(-289, -235.99998)
+scale = Vector2(0.90887344, 1.0917009)
+texture = ExtResource("5_5gyk8")
+
+[node name="BrickBg27" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="1" unique_id=278448894]
+position = Vector2(-367, -84)
+scale = Vector2(0.8936865, 1.2188869)
+texture = ExtResource("5_5gyk8")
+
+[node name="BrickBg35" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="2" unique_id=1307977818]
+position = Vector2(-235, -126)
+texture = ExtResource("5_5gyk8")
+
+[node name="BrickBg36" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="3" unique_id=1241826801]
+position = Vector2(-315, -165)
+texture = ExtResource("6_aa1a1")
+
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, -294)
 script = ExtResource("3_bjn7v")
 room_name = "Tower2-01"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(35.5, -4.5)
+position = Vector2(90, -39)
+scale = Vector2(0.3600098, 1)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -164,40 +786,19 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
-visible = false
-position = Vector2(-509, -152)
-rotation = 1.5707964
-script = ExtResource("3_bjn7v")
-room_name = "Entrance2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
-shape = SubResource("RectangleShape2D_f55gr")
-debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
-
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1645739517 instance=ExtResource("4_74567")]
 position = Vector2(0, 247)
+sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 position = Vector2(-10.5, 7)
 shape = SubResource("RectangleShape2D_7cprj")
+disabled = true
 
-[node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_74567")]
-position = Vector2(5, -264)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform" index="1" unique_id=1357516123]
+polygon = PackedVector2Array(-674, -454, -505, -491, -452, -2, -331, -21, 479, -50, 786, -15, 567, 127, -628, 87)
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
-position = Vector2(-296, 7)
-shape = SubResource("RectangleShape2D_8ymx6")
-
-[node name="Platform7" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=238899813 instance=ExtResource("4_74567")]
-position = Vector2(587, -248)
-
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform7" index="0" unique_id=1349571073]
-position = Vector2(-242.5, -8.5)
-shape = SubResource("RectangleShape2D_kj5ac")
-
-[node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1519992408 instance=ExtResource("4_74567")]
+[node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1519992408 instance=ExtResource("4_74567")]
 position = Vector2(-268, -115)
 is_platform = true
 
@@ -205,9 +806,9 @@ is_platform = true
 position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_6i037")
 
-[node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1980273417 instance=ExtResource("4_74567")]
+[node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1980273417 instance=ExtResource("4_74567")]
 position = Vector2(62, -92)
-rotation = 0.418879
+rotation = 1.0053097
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/DecoPlatform1" index="0" unique_id=1349571073]
@@ -216,62 +817,232 @@ shape = SubResource("RectangleShape2D_q5lmc")
 disabled = true
 
 [node name="Yellowball" parent="Offset/Obstacles/DecoPlatform1" index="1" unique_id=1760792903 instance=ExtResource("5_8ymx6")]
-position = Vector2(-122, 1)
+position = Vector2(-122, 7)
 
-[node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1026579350 instance=ExtResource("4_74567")]
+[node name="AnimatedSprite2D" parent="Offset/Obstacles/DecoPlatform1/Yellowball" index="1" unique_id=1602848246]
+modulate = Color(0.9321494, 1.8984069, 3.251167, 1)
+frame = 4
+
+[node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1026579350 instance=ExtResource("4_74567")]
 position = Vector2(62, -92)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
 shape = SubResource("CircleShape2D_kj5ac")
 
-[node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=209727397 instance=ExtResource("4_74567")]
-position = Vector2(61, -263)
+[node name="Gear3" parent="Offset/Obstacles/Platform4/CollisionShape2D" index="0" unique_id=1462521937 instance=ExtResource("7_ayau5")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+rotation = 2.576106
+scale = Vector2(1.1301464, 1.1301464)
+rpm = 0.0
+
+[node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1957311739 instance=ExtResource("4_74567")]
+position = Vector2(-381, 8)
+sync_to_physics = false
 is_platform = true
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
-shape = SubResource("RectangleShape2D_5khlg")
-
-[node name="Ball1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1957311739 instance=ExtResource("4_74567")]
-position = Vector2(-382, 12)
-sync_to_physics = false
-
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball1" index="0" unique_id=1349571073]
-shape = SubResource("CircleShape2D_y1vax")
+position = Vector2(0, -35)
+scale = Vector2(5.0400195, 1)
+shape = SubResource("RectangleShape2D_ayau5")
 
-[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=2142497465 instance=ExtResource("4_74567")]
-position = Vector2(-31, 226)
-rotation = 0.20943956
+[node name="Ball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1103107486 instance=ExtResource("4_74567")]
+modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
+z_index = 5
+position = Vector2(-186, 58.66887)
+sync_to_physics = false
+is_platform = true
 
-[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
-position = Vector2(-155, 0)
-shape = SubResource("RectangleShape2D_y7hdm")
+[node name="CollisionShape2D" parent="Offset/Obstacles/Ball2" index="0" unique_id=1349571073]
+scale = Vector2(5.0400195, 1)
+shape = SubResource("RectangleShape2D_ayau5")
 
-[node name="PathFollow2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=901383637 instance=ExtResource("6_7cprj")]
-position = Vector2(-144, -258)
-rotation = 0.0
-progress = 0.356293
+[node name="Platform1" type="Sprite2D" parent="Offset/Obstacles/Ball2" index="1" unique_id=56254556]
+position = Vector2(-1, 3)
+scale = Vector2(0.80275404, 1.2097754)
+texture = ExtResource("14_aa1a1")
+flip_h = true
 
-[node name="Path2D" parent="Offset/Obstacles/PathFollow2D" index="0" unique_id=545245425]
-curve = SubResource("Curve2D_8ymx6")
+[node name="Gear" parent="Offset/Obstacles/Ball2" index="2" unique_id=592659735 instance=ExtResource("7_ayau5")]
+modulate = Color(1.8765297, 4.9765153, 4.6148505, 1)
+z_index = -1
+position = Vector2(16, 13)
+rotation = -10.304424
+scale = Vector2(0.41185215, 0.41185215)
+rpm = 0.0
+
+[node name="Gear2" parent="Offset/Obstacles/Ball2" index="3" unique_id=1353983551 instance=ExtResource("7_ayau5")]
+modulate = Color(1.8765297, 4.9765153, 4.6148505, 1)
+z_index = -1
+position = Vector2(-15.999998, 13)
+rotation = 10.304424
+scale = Vector2(0.412, 0.412)
+rpm = 0.0
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=796355633]
+z_index = 5
+position = Vector2(76, 230)
+scale = Vector2(1.3044597, 1)
+texture = ExtResource("8_wetxh")
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1295822547]
+z_index = 5
+position = Vector2(-135, 257)
+scale = Vector2(0.87564325, 1)
+texture = ExtResource("8_wetxh")
+flip_h = true
+
+[node name="Sand2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1187125600]
+z_index = 5
+position = Vector2(553, 238.00002)
+scale = Vector2(1.8638297, 1.2945206)
+texture = ExtResource("9_k6tjj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1129996842]
+clip_children = 1
+z_index = 6
+position = Vector2(-442, 289.2418)
+scale = Vector2(2.6085427, 0.54498607)
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Offset/Deco/Sprite2D2" index="0" unique_id=1859448188]
+material = SubResource("ShaderMaterial_g4v7s")
+position = Vector2(-87.40512, -106.86841)
+scale = Vector2(1.6439427, 1)
+texture = SubResource("GradientTexture2D_k6tjj")
+
+[node name="platforms" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1180566334]
+modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
+z_index = 5
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/platforms" index="0" unique_id=804914275]
+position = Vector2(-379, -27)
+texture = ExtResource("14_aa1a1")
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/platforms" index="1" unique_id=1317230716]
+position = Vector2(-281, -110)
+texture = ExtResource("15_kngej")
+
+[node name="Platform3" type="Sprite2D" parent="Offset/Deco/platforms" index="2" unique_id=95303918]
+position = Vector2(-211, -113)
+texture = ExtResource("14_aa1a1")
+
+[node name="Brick28" type="Sprite2D" parent="Offset/Deco/platforms" index="3" unique_id=906943739]
+position = Vector2(-389, -316)
+scale = Vector2(2.6105082, 2.6105082)
+texture = ExtResource("15_qu8j5")
+
+[node name="Brick29" type="Sprite2D" parent="Offset/Deco/platforms" index="4" unique_id=1611924012]
+position = Vector2(-282, -271)
+rotation = 1.0953155
+scale = Vector2(2.3515956, 2.3515956)
+texture = ExtResource("16_1j46d")
+
+[node name="Brick30" type="Sprite2D" parent="Offset/Deco/platforms" index="5" unique_id=2025662244]
+position = Vector2(-242, -276)
+scale = Vector2(1.5357535, 1.5357535)
+texture = ExtResource("17_20xh4")
+
+[node name="Brick32" type="Sprite2D" parent="Offset/Deco/platforms" index="6" unique_id=2102146180]
+position = Vector2(-162, -269)
+texture = ExtResource("17_20xh4")
+
+[node name="Brick33" type="Sprite2D" parent="Offset/Deco/platforms" index="7" unique_id=733669926]
+position = Vector2(-198, -278)
+scale = Vector2(1.3024344, 1.1753582)
+texture = ExtResource("18_ojtqm")
+
+[node name="Brick34" type="Sprite2D" parent="Offset/Deco/platforms" index="8" unique_id=2089322546]
+position = Vector2(-149, -278)
+scale = Vector2(0.6708919, 0.6708919)
+texture = ExtResource("15_qu8j5")
+
+[node name="Brick35" type="Sprite2D" parent="Offset/Deco/platforms" index="9" unique_id=1739295666]
+position = Vector2(-129, -275)
+texture = ExtResource("17_20xh4")
+
+[node name="Brick36" type="Sprite2D" parent="Offset/Deco/platforms" index="10" unique_id=1343026562]
+position = Vector2(-105, -284)
+rotation = 0.46290544
+texture = ExtResource("18_ojtqm")
+
+[node name="Brick37" type="Sprite2D" parent="Offset/Deco/platforms" index="11" unique_id=1379081151]
+position = Vector2(-72, -280)
+scale = Vector2(2.6600919, 0.622192)
+texture = ExtResource("16_1j46d")
+
+[node name="Brick39" type="Sprite2D" parent="Offset/Deco/platforms" index="12" unique_id=1211747591]
+position = Vector2(184, -258)
+texture = ExtResource("15_qu8j5")
+
+[node name="Brick40" type="Sprite2D" parent="Offset/Deco/platforms" index="13" unique_id=539623346]
+position = Vector2(319, -275)
+scale = Vector2(2.0077434, 2.0077434)
+texture = ExtResource("17_20xh4")
+
+[node name="Brick41" type="Sprite2D" parent="Offset/Deco/platforms" index="14" unique_id=1992265216]
+position = Vector2(380, -285)
+texture = ExtResource("18_ojtqm")
+
+[node name="Brick42" type="Sprite2D" parent="Offset/Deco/platforms" index="15" unique_id=139652524]
+position = Vector2(393, -276)
+rotation = 0.90953606
+scale = Vector2(2.094788, 2.094788)
+texture = ExtResource("16_1j46d")
+
+[node name="Brick43" type="Sprite2D" parent="Offset/Deco/platforms" index="16" unique_id=410366416]
+position = Vector2(418, -266)
+texture = ExtResource("18_ojtqm")
+
+[node name="Brick44" type="Sprite2D" parent="Offset/Deco/platforms" index="17" unique_id=356337728]
+position = Vector2(431, -357)
+scale = Vector2(2.0923586, 2.0923586)
+texture = ExtResource("19_20xh4")
+
+[node name="Brick46" type="Sprite2D" parent="Offset/Deco/platforms" index="18" unique_id=1932109569]
+position = Vector2(504, -414)
+scale = Vector2(1.9572979, 1.9572979)
+texture = ExtResource("17_20xh4")
+
+[node name="belt3" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=1060964886]
+z_index = -3
+position = Vector2(49.99997, -7.999998)
+rotation = 1.5284604
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(222.05774, 246.58032, 33.887634, 239.64917)
+width = 30.0
+texture = SubResource("GradientTexture2D_kngej")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("8_ypfkq")]
-position = Vector2(-3565, 203)
+position = Vector2(-3565, 172)
 
 [node name="Fountain2" parent="." index="3" unique_id=2131712417 instance=ExtResource("8_ypfkq")]
 position = Vector2(-4222, -62)
 
+[node name="Gear3" parent="." index="4" unique_id=1394967368 instance=ExtResource("7_ayau5")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+position = Vector2(-3392, -329)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = 10.0
+
+[node name="Gear2" parent="." index="5" unique_id=1951878299 instance=ExtResource("7_ayau5")]
+modulate = Color(2.5355003, 10.258124, 10.129414, 1)
+position = Vector2(-3584, -292)
+scale = Vector2(1.9296914, 1.9296914)
+rpm = -10.0
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
-[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
+[editable path="Offset/Background/Parallax2D2/Gear7"]
 [editable path="Offset/Obstacles/Platform"]
-[editable path="Offset/Obstacles/Platform6"]
-[editable path="Offset/Obstacles/Platform7"]
 [editable path="Offset/Obstacles/Platform3"]
 [editable path="Offset/Obstacles/DecoPlatform1"]
+[editable path="Offset/Obstacles/DecoPlatform1/Yellowball"]
 [editable path="Offset/Obstacles/Platform4"]
-[editable path="Offset/Obstacles/Platform5"]
 [editable path="Offset/Obstacles/Ball1"]
-[editable path="Offset/Obstacles/Platform2"]
-[editable path="Offset/Obstacles/PathFollow2D"]
+[editable path="Offset/Obstacles/Ball2"]

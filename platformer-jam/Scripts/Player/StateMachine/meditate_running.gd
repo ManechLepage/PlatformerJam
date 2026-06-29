@@ -8,11 +8,11 @@ extends State
 @export var meditate_idle: State
 @export var jump: State
 
+var progress: float = 0.0
+
 func enter():
 	super()
-	Game.start_meditation_animation()
-	parent.is_meditating = true
-	Game.player.sprite.play("running")
+	Game.player.sprite.play("meditate_end")
 
 func exit():
 	super()
@@ -20,24 +20,23 @@ func exit():
 	parent.is_meditating = false
 
 func process_inputs(event):
-	if Input.is_action_just_released("Meditate"):
-		return run
-	if Input.is_action_just_pressed("Jump") and parent.is_on_floor():
-		return jump
+	if Input.is_action_pressed("Meditate"):
+		Game.start_meditation_animation()
+		parent.is_meditating = true
+	else:
+		parent.is_meditating = false
+		Game.clear_shake()
+
 
 func process_physics(delta):
-	Game.event_manager.change_lucidity(meditation_power*delta)
-	var direction = Input.get_axis("Left", "Right")
+	if parent.is_meditating or progress > 8: progress += delta
+	Game.world_env.environment.adjustment_brightness = (ease(progress/13,2.3)*13)
+	$"../../Sounds/meditate".max_vol = 1-(ease(progress/15,5))
+	Game.audio_manager.set_noise_level(1-(ease(progress/15,1)))
+	if progress>15:
+		Game.credits.start_credits()
+		$"../../Sounds/meditate".max_vol = 0
+		Game.audio_manager.set_noise_level(0)
+		return idle
 	
-	flip_character(direction)
-	
-	if direction != 0:
-		parent.velocity.x = move_toward(parent.velocity.x, direction * move_speed * 0.5, acceleration * delta)
-	
-	parent.velocity.y += gravity * delta
-	parent.move_and_slide()
-	
-	if direction == 0:
-		return meditate_idle
-	if parent.velocity.y > 0:
-		return fall
+	return null

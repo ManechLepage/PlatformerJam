@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_tm7n3"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_usw26"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_vciox"]
+[ext_resource type="Texture2D" uid="uid://bakrqh40fbpmk" path="res://Sprites/sand1.tres" id="5_usw26"]
+[ext_resource type="Texture2D" uid="uid://bohi3s52qqhur" path="res://Sprites/sand2.tres" id="6_vciox"]
+[ext_resource type="Texture2D" uid="uid://eu2ru6yk4llb" path="res://Sprites/sand3.tres" id="7_vciox"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -25,6 +28,9 @@ size = Vector2(779, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(987, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vciox"]
+size = Vector2(1057, 56)
+
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_kvkyy")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
@@ -37,6 +43,19 @@ script = ExtResource("2_tm7n3")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, 0)
 offset = Vector2i(3, 0)
+
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(0.2655, 0.30855006, 0.45, 1)
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=391448067]
+position = Vector2(-329, 189.99998)
+scale = Vector2(1.7024014, 5.1794868)
+texture = ExtResource("5_usw26")
+
+[node name="Sand2" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=231469150]
+position = Vector2(361, 106)
+scale = Vector2(1.2978723, 6.6335616)
+texture = ExtResource("6_vciox")
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 visible = false
@@ -78,8 +97,54 @@ position = Vector2(0, 247)
 position = Vector2(-2.5, 1.5)
 shape = SubResource("RectangleShape2D_5khlg")
 
+[node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_vciox")]
+position = Vector2(-960, 247)
+
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(-10.5, 7)
+shape = SubResource("RectangleShape2D_vciox")
+disabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=346812279]
+polygon = PackedVector2Array(-674, -454, -505, -491, -452, -2, -331, -21, 479, -50, 786, -15, 567, 127, -628, 87)
+
+[node name="Sand1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=1167760555]
+z_index = 5
+position = Vector2(-18, 247)
+texture = ExtResource("5_usw26")
+
+[node name="Sand2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1310751023]
+z_index = 5
+position = Vector2(-539, 228)
+scale = Vector2(1.6531914, 1)
+texture = ExtResource("6_vciox")
+flip_h = true
+
+[node name="Sand3" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=2135685487]
+z_index = 5
+position = Vector2(328, 211)
+scale = Vector2(1, 2.1065574)
+texture = ExtResource("7_vciox")
+
+[node name="Sand4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1452912175]
+z_index = 5
+position = Vector2(-884, 230)
+scale = Vector2(1.3044597, 1)
+texture = ExtResource("5_usw26")
+
+[node name="Sand5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1113405849]
+position = Vector2(-1116, 257)
+texture = ExtResource("5_usw26")
+flip_h = true
+
+[node name="Sand6" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=1978034895]
+position = Vector2(-407, 238.00002)
+scale = Vector2(1.8638297, 1.2945206)
+texture = ExtResource("6_vciox")
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Platform"]
+[editable path="Offset/Obstacles/Platform2"]

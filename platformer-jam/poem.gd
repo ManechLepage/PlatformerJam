@@ -11,10 +11,11 @@ var transparency: float = 0.0
 var activated: bool = false
 var collecting: bool = false
 var upgrade_text: int = 0
+var end_seq := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	if name == "end_tutorial": Game.end_popup = self
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
 	poem_text.modulate.a = 0
@@ -24,15 +25,17 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if upgrade_text >0:
 		modulate.a = 0
 		poem_text.modulate.a = 0
 		image.modulate.a = 0
 		progress += delta
 		$CanvasLayer/upgrade.visible_characters = int(progress*40)
-		if upgrade_text == 1 and Input.is_action_just_pressed("Interact") and $CanvasLayer/upgrade.visible_characters >= len($CanvasLayer/upgrade.text):
+		if upgrade_text == 1 and Input.is_action_just_pressed("Interact"):
+		#and $CanvasLayer/upgrade.visible_characters >= len($CanvasLayer/upgrade.text):
 			next_2()
-	else:
+	elif not collecting:
 		if activated:
 			progress += delta
 			poem_text.visible_characters = int(progress*150)
@@ -70,7 +73,10 @@ func collect():
 		create_tween().tween_property(poem_text, "modulate", Color(5, 5, 5, 1), 2)
 		create_tween().tween_property(image, "modulate", Color(5, 5, 5, 0), 2)
 		create_tween().tween_property(bg, "modulate", Color(1, 1, 1, 2), 2)
+		create_tween().tween_property(AudioServer.get_bus_effect(2,2), "volume_linear", 0, 2)
 		get_tree().create_timer(2.5).timeout.connect(next)
+		if name != "END":Game.player.process_mode = Node.PROCESS_MODE_DISABLED
+
 		
 func next():
 	modulate.a = 0
@@ -81,6 +87,13 @@ func next():
 
 func next_2():
 	upgrade_text = 2
-	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 1)
-	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 1)
+	create_tween().tween_property(bg, "modulate", Color(5, 5, 5, 0), 2)
+	create_tween().tween_property($CanvasLayer/upgrade, "modulate", Color(1, 1, 1, 0), 2)
+	create_tween().tween_property(AudioServer.get_bus_effect(2,2), "volume_linear", 1, 2)
+	Game.player.process_mode = Node.PROCESS_MODE_INHERIT
+	Game.max_lucidity += 20
+	print(Game.max_lucidity)
+	if Game.max_lucidity == 100 and $"../end_tutorial/CollisionShape2D":
+		Game.audio_manager.clear_audio()
+		get_tree().create_timer(3.5).timeout.connect(func(): $"../end_tutorial/CollisionShape2D".disabled = false)
 	

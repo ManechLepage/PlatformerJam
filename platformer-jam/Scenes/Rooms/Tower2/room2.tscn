@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b3bbg1ec8gyf4" path="res://Scenes/Objects/lever.tscn" id="6_o18ho"]
 [ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="7_e4ew6"]
 [ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="7_g3f8u"]
+[ext_resource type="Texture2D" uid="uid://dl4vtg3mmrm7r" path="res://Sprites/waterfall.png" id="8_cgwye"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="8_okid0"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="13_2367m"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="14_epjwo"]
@@ -18,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="15_nv8a4"]
 [ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="16_cgwye"]
 [ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="17_oipvh"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_k2f48"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="19_nv8a4"]
+[ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="21_oipvh"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -48,6 +49,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(397, -129), Vector2(397, -225)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.27400002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -74,6 +87,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(397, -129)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/Background/Parallax2D/bigwater:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -310,6 +335,260 @@ _data = {
 &"RESET": SubResource("Animation_xuur6")
 }
 
+[sub_resource type="Animation" id="Animation_cgwye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oipvh"]
+resource_name = "waterr"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Waterfall10:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Waterfall:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Waterfall2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Waterfall3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Waterfall4:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Waterfall6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Waterfall7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Waterfall8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Waterfall9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oawka"]
+_data = {
+&"RESET": SubResource("Animation_cgwye"),
+&"waterr": SubResource("Animation_oipvh")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
@@ -379,37 +658,167 @@ fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
 
+[sub_resource type="Curve" id="Curve_oawka"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ic0jm"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
+
+[sub_resource type="Gradient" id="Gradient_x34c6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_estoj"]
+gradient = SubResource("Gradient_x34c6")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve2D" id="Curve2D_mkrgf"]
+_data = {
+"points": PackedVector2Array(79.50757, 267.0346, -79.50757, -267.0346, -345, -59, -126.95436, 47.150482, 126.95436, -47.150482, -70, -291, 12.483571, 226.0498, -12.483571, -226.0498, 114, -675)
+}
+point_count = 3
+
 [node name="Room4" unique_id=197990627 instance=ExtResource("1_xuur6")]
 
-[node name="Offset_Obstacles_Area2_CanvasLayer_PoemText_CanvasLayer2#Back" type="Sprite2D" parent="." index="0" unique_id=1572904487]
-modulate = Color(0, 0, 0, 0.92156863)
-position = Vector2(478.50003, 282.49997)
-scale = Vector2(997.00006, 576.99994)
-texture = SubResource("CanvasTexture_k2f48")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1601315926]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
 libraries/ = SubResource("AnimationLibrary_mhqpd")
 autoplay = &"Lucidity"
 speed_scale = 0.0
 script = ExtResource("2_okid0")
 
-[node name="LeverAnim" type="AnimationPlayer" parent="." index="2" unique_id=1975828132]
+[node name="LeverAnim" type="AnimationPlayer" parent="." index="1" unique_id=1975828132]
 libraries/ = SubResource("AnimationLibrary_xuur6")
 script = ExtResource("3_xuur6")
 
-[node name="BrickBg1" type="Sprite2D" parent="." index="3" unique_id=1429112989]
-modulate = Color(3.595418, 4.074588, 4.5228434, 1)
-position = Vector2(-3989, -812.4332)
-scale = Vector2(0.861703, 0.14620972)
-texture = ExtResource("6_eikqt")
-
-[node name="Offset_Obstacles_Area2_CanvasLayer_PoemText#CanvasLayer2" type="CanvasLayer" parent="." index="4" unique_id=1524838630]
-layer = 0
-
-[node name="Offset" parent="." index="5" unique_id=652906693]
+[node name="Offset" parent="." index="2" unique_id=652906693]
 position = Vector2(-3840, -1080)
 offset = Vector2i(4, 2)
+
+[node name="Parallax2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="0" unique_id=739467125]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=1004685363]
+position = Vector2(-69, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=39250012]
+root_node = NodePath("../Waterfall5")
+libraries/ = SubResource("AnimationLibrary_oawka")
+autoplay = &"waterr"
+
+[node name="Waterfall" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="1" unique_id=519054654]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-165, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall2" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="2" unique_id=1487924883]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-101, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall3" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="3" unique_id=1672217649]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-37, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall4" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="4" unique_id=361027063]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(27, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall5" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="5" unique_id=1250920869]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(91, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall6" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="6" unique_id=1903000866]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(155, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall7" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="7" unique_id=138520306]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-293, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall8" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="8" unique_id=1438522362]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(-229, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall9" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="9" unique_id=1450852166]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(219, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall10" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="10" unique_id=1451152593]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(283, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall11" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="11" unique_id=381006263]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(347, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
+
+[node name="Waterfall12" type="Sprite2D" parent="Offset/Background/Parallax2D/bigwater" index="12" unique_id=2141100540]
+modulate = Color(2.4877853, 1.824974, 0.680118, 0.24313726)
+texture_repeat = 2
+position = Vector2(411, -2)
+texture = ExtResource("8_cgwye")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 192, 800)
 
 [node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
@@ -418,82 +827,68 @@ modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 position = Vector2(-21, 174)
 texture = ExtResource("4_q03bt")
 
-[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=1882823525]
-position = Vector2(-19, 88)
-texture = ExtResource("4_q03bt")
-flip_h = true
-
-[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=1131762767]
-position = Vector2(3, -66)
-texture = ExtResource("4_q03bt")
-
-[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=1709199379]
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=1709199379]
 position = Vector2(-12, -161)
 texture = ExtResource("4_q03bt")
 flip_h = true
 
-[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=1347254099]
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=1347254099]
 position = Vector2(-8, -269)
 texture = ExtResource("4_q03bt")
 flip_h = true
 
-[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=1666456929]
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=1666456929]
 position = Vector2(-173, 118)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_g3f8u")
 flip_h = true
 
-[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="6" unique_id=522628068]
-position = Vector2(-51, 1)
-scale = Vector2(0.99616855, 1)
-texture = ExtResource("6_eikqt")
-
-[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="7" unique_id=197768131]
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=197768131]
 position = Vector2(73, 1)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_g3f8u")
 flip_h = true
 
-[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="8" unique_id=1676724155]
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=1676724155]
 position = Vector2(162, 75)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("7_e4ew6")
 flip_h = true
 
-[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="9" unique_id=1513896817]
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="6" unique_id=1513896817]
 position = Vector2(150, 196)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("7_e4ew6")
 
-[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="10" unique_id=68210054]
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="7" unique_id=68210054]
 position = Vector2(169, 246)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("7_e4ew6")
 
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="11" unique_id=989713840]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="8" unique_id=989713840]
 position = Vector2(-120, -89)
 scale = Vector2(1.052997, 0.74390244)
 texture = ExtResource("7_e4ew6")
 flip_h = true
 
-[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=139377468]
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="9" unique_id=139377468]
 position = Vector2(128, -97)
 scale = Vector2(1.142519, 1.2015345)
 texture = ExtResource("5_g3f8u")
 flip_h = true
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="13" unique_id=1613780098]
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="10" unique_id=1613780098]
 position = Vector2(-169, -211)
 scale = Vector2(0.97482866, 1.1927235)
 texture = ExtResource("6_eikqt")
 
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="14" unique_id=1114412482]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="11" unique_id=1114412482]
 position = Vector2(142, -248)
 scale = Vector2(0.99616855, 1.3884163)
 texture = ExtResource("6_eikqt")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="15" unique_id=758352929]
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=758352929]
 position = Vector2(112, 254)
 texture = ExtResource("4_q03bt")
 
@@ -608,6 +1003,7 @@ texture = ExtResource("5_g3f8u")
 flip_h = true
 
 [node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="21" unique_id=1126767987]
+z_index = -1
 position = Vector2(141, -282)
 texture = ExtResource("6_eikqt")
 flip_h = true
@@ -783,7 +1179,7 @@ position = Vector2(124.75, 27)
 shape = SubResource("RectangleShape2D_pdxpn")
 
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=2119178859 instance=ExtResource("4_5ecxw")]
-position = Vector2(397, -129)
+position = Vector2(397, -225)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
 position = Vector2(-12.75, 0)
@@ -825,7 +1221,7 @@ shape = SubResource("CircleShape2D_rv12o")
 
 [node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=805369778 instance=ExtResource("4_5ecxw")]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
-position = Vector2(36, 227)
+position = Vector2(36, -70)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
@@ -913,39 +1309,30 @@ position = Vector2(7, -21.5)
 shape = SubResource("RectangleShape2D_lgexx")
 
 [node name="Area2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="13" unique_id=1754253968 instance=ExtResource("8_okid0")]
-position = Vector2(-303, -218)
+position = Vector2(-306, -220)
 
 [node name="TextureRect2" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="1" unique_id=1326721095]
-offset_left = 617.0
-offset_top = 78.0
-offset_right = 873.0
-offset_bottom = 334.0
+offset_left = 635.0
+offset_top = 125.0
+offset_right = 891.0
+offset_bottom = 381.0
 
 [node name="PoemText" parent="Offset/Obstacles/Area2/CanvasLayer" parent_id_path=PackedInt32Array(1754253968, 1989050324) index="2" unique_id=1098363463]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-offset_left = 87.0
-offset_top = 67.0
-offset_right = 615.0
-offset_bottom = 554.0
+offset_left = 117.0
+offset_top = 31.0
+offset_right = 638.0
+offset_bottom = 521.0
 grow_horizontal = 1
 grow_vertical = 1
-text = "\"One day, on my way back from school, I saw a cyclist pass by,
-with a massive camera hanging from their neck.
-My eyes lingered on them  for a little while, for no particular
-reason, and I noticed them abruptly stop, point their lens off to
-the side, take a photo, and continue on their path.
+text = "\"One day, on my way back from school, I saw a cyclist pass by, with a massive camera hanging from their neck.
+My eyes lingered on them for a little while, for no particular reason, and I noticed them abruptly stop, point their lens off to the side, take a photo, and continue on their path.
 ' I wonder what made them take that photo? '
-So I diverged off my usual trail, entranced by the curiosity, to
-see for myself what could've possibly been so captivating.
+So, I diverged off my usual trail, entranced by the curiosity, to see for myself what could've possibly been so captivating.
 I wasn't disappointed. It was beautiful.
-It was one of those scenes that seem out of a movie. A white
-scooter surrounded by pink leaves. The sun at the perfect
-angle, creating a fabulous sheen on the clean body of the Vespa.
-I wonder what would've happened if I didn't notice the cyclist,
-or if I didn't let myself get carried by the current of
-coincidences. Maybe I don't want to know.
-I'll never forget this memory, it defines who I am.\"
+It was one of those scenes that seem out of a movie. A white scooter surrounded by pink leaves. The sun at the perfect angle, creating a fabulous sheen on the clean body of the Vespa.
+I wonder what would've happened if I didn't notice the cyclist, or if I didn't let myself get carried by the current of coincidences. Maybe I don't want to know.
 
+I'll never forget this memory; it defines who I am.\"
 [Press C to forget]"
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=997318240]
@@ -1220,110 +1607,109 @@ position = Vector2(432, -5)
 scale = Vector2(1.9572979, 1.9572979)
 texture = ExtResource("16_cgwye")
 
-[node name="BrickBg3" type="Sprite2D" parent="Offset/Deco/wall" index="52" unique_id=1124606052]
-modulate = Color(0.09123999, 0.09123999, 0.09123999, 1)
-z_index = -1
-position = Vector2(-342, -259)
-texture = ExtResource("5_g3f8u")
-
-[node name="Brick31" type="Sprite2D" parent="Offset/Deco/wall" index="53" unique_id=781433693]
+[node name="Brick31" type="Sprite2D" parent="Offset/Deco/wall" index="52" unique_id=781433693]
 position = Vector2(-349.85596, -158.8559)
 scale = Vector2(1.5357535, 1.5357535)
 texture = ExtResource("16_cgwye")
 
-[node name="Brick35" type="Sprite2D" parent="Offset/Deco/wall" index="54" unique_id=100771618]
+[node name="Brick35" type="Sprite2D" parent="Offset/Deco/wall" index="53" unique_id=100771618]
 position = Vector2(-275, -149.00006)
 rotation = -0.4811519
 scale = Vector2(1.6192539, 1.6192539)
 texture = ExtResource("14_epjwo")
 
-[node name="Brick36" type="Sprite2D" parent="Offset/Deco/wall" index="55" unique_id=1574626372]
+[node name="Brick36" type="Sprite2D" parent="Offset/Deco/wall" index="54" unique_id=1574626372]
 position = Vector2(-305.85596, -160.8559)
 scale = Vector2(1.3024344, 1.1753582)
 texture = ExtResource("14_epjwo")
 
-[node name="Brick37" type="Sprite2D" parent="Offset/Deco/wall" index="56" unique_id=315801903]
+[node name="Brick37" type="Sprite2D" parent="Offset/Deco/wall" index="55" unique_id=315801903]
 position = Vector2(-236.85596, -157.8559)
 texture = ExtResource("16_cgwye")
 
-[node name="Brick5" type="Sprite2D" parent="Offset/Deco/wall" index="57" unique_id=1669586673]
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/wall" index="56" unique_id=1669586673]
 position = Vector2(-349, -142)
 scale = Vector2(1.52, 1)
 texture = ExtResource("13_2367m")
 
-[node name="Brick28" type="Sprite2D" parent="Offset/Deco/wall" index="58" unique_id=2014970120]
+[node name="Brick28" type="Sprite2D" parent="Offset/Deco/wall" index="57" unique_id=2014970120]
 position = Vector2(221, 255)
 texture = ExtResource("16_cgwye")
 
-[node name="Brick1" type="Sprite2D" parent="Offset/Deco/wall" index="59" unique_id=586476987]
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/wall" index="58" unique_id=586476987]
 position = Vector2(248, 267)
 texture = ExtResource("14_epjwo")
 
-[node name="Brick38" type="Sprite2D" parent="Offset/Deco/wall" index="60" unique_id=1493924716]
+[node name="Brick38" type="Sprite2D" parent="Offset/Deco/wall" index="59" unique_id=1493924716]
 position = Vector2(252, 221)
 scale = Vector2(2.0243988, 2.0243988)
 texture = ExtResource("17_oipvh")
 
-[node name="Brick47" type="Sprite2D" parent="Offset/Deco/wall" index="61" unique_id=2063566646]
+[node name="Brick47" type="Sprite2D" parent="Offset/Deco/wall" index="60" unique_id=2063566646]
 position = Vector2(258, 117)
 texture = ExtResource("14_epjwo")
 
-[node name="Brick48" type="Sprite2D" parent="Offset/Deco/wall" index="62" unique_id=1344920688]
+[node name="Brick48" type="Sprite2D" parent="Offset/Deco/wall" index="61" unique_id=1344920688]
 position = Vector2(376, 129)
 scale = Vector2(1.8349493, 0.751592)
 texture = ExtResource("13_2367m")
 
-[node name="Brick49" type="Sprite2D" parent="Offset/Deco/wall" index="63" unique_id=1519945826]
+[node name="Brick49" type="Sprite2D" parent="Offset/Deco/wall" index="62" unique_id=1519945826]
 position = Vector2(332, 119)
 rotation = -1.0871288
 scale = Vector2(1.3656428, 1.810072)
 texture = ExtResource("17_oipvh")
 
-[node name="Brick50" type="Sprite2D" parent="Offset/Deco/wall" index="64" unique_id=1375632431]
+[node name="Brick50" type="Sprite2D" parent="Offset/Deco/wall" index="63" unique_id=1375632431]
 position = Vector2(298, 117)
 texture = ExtResource("16_cgwye")
 
-[node name="Brick51" type="Sprite2D" parent="Offset/Deco/wall" index="65" unique_id=1758490260]
+[node name="Brick51" type="Sprite2D" parent="Offset/Deco/wall" index="64" unique_id=1758490260]
 position = Vector2(320, 136)
 texture = ExtResource("15_nv8a4")
 
-[node name="Brick52" type="Sprite2D" parent="Offset/Deco/wall" index="66" unique_id=949764780]
+[node name="Brick52" type="Sprite2D" parent="Offset/Deco/wall" index="65" unique_id=949764780]
 position = Vector2(257, 153)
 scale = Vector2(0.7460321, 1.0957488)
 texture = ExtResource("13_2367m")
 
-[node name="Brick53" type="Sprite2D" parent="Offset/Deco/wall" index="67" unique_id=1957897289]
+[node name="Brick53" type="Sprite2D" parent="Offset/Deco/wall" index="66" unique_id=1957897289]
 position = Vector2(268, 193)
 scale = Vector2(1.2353569, -2.8797064)
 texture = ExtResource("15_nv8a4")
 
-[node name="Brick30" type="Sprite2D" parent="Offset/Deco/wall" index="68" unique_id=744503233]
+[node name="Brick30" type="Sprite2D" parent="Offset/Deco/wall" index="67" unique_id=744503233]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
 position = Vector2(193.81226, 103)
 texture = ExtResource("13_2367m")
 
-[node name="Brick32" type="Sprite2D" parent="Offset/Deco/wall" index="69" unique_id=1932938791]
+[node name="Brick32" type="Sprite2D" parent="Offset/Deco/wall" index="68" unique_id=1932938791]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
 position = Vector2(184.81226, 228)
 texture = ExtResource("13_2367m")
 
-[node name="Brick34" type="Sprite2D" parent="Offset/Deco/wall" index="70" unique_id=1533431521]
+[node name="Brick34" type="Sprite2D" parent="Offset/Deco/wall" index="69" unique_id=1533431521]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
 position = Vector2(182.81226, 193)
 scale = Vector2(1.5878807, 1.2422608)
 texture = ExtResource("15_nv8a4")
 
-[node name="Brick71" type="Sprite2D" parent="Offset/Deco/wall" index="71" unique_id=1997681109]
+[node name="Brick71" type="Sprite2D" parent="Offset/Deco/wall" index="70" unique_id=1997681109]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
 position = Vector2(198.81226, 189)
 rotation = 0.8566412
 texture = ExtResource("16_cgwye")
 
-[node name="Brick72" type="Sprite2D" parent="Offset/Deco/wall" index="72" unique_id=967396951]
+[node name="Brick72" type="Sprite2D" parent="Offset/Deco/wall" index="71" unique_id=967396951]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
 position = Vector2(188.81226, 175)
 rotation = -0.15462044
 texture = ExtResource("14_epjwo")
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/wall" index="72" unique_id=691568653]
+z_index = 2
+position = Vector2(-146, 276)
+texture = ExtResource("19_nv8a4")
 
 [node name="Brick73" type="Sprite2D" parent="Offset/Deco/wall" index="73" unique_id=1828124352]
 modulate = Color(0.22320001, 0.24372002, 0.36, 1)
@@ -1427,6 +1813,31 @@ z_index = -1
 position = Vector2(-342, 75)
 texture = ExtResource("5_g3f8u")
 
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=790067288]
+modulate = Color(0.09123999, 0.09123999, 0.09123999, 1)
+z_index = -1
+position = Vector2(293, -248)
+texture = ExtResource("5_g3f8u")
+
+[node name="Plant1" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=586076656 instance=ExtResource("21_oipvh")]
+z_index = -6
+position = Vector2(-28, 188)
+width = 80.0
+width_curve = SubResource("Curve_oawka")
+grad = SubResource("Gradient_ic0jm")
+progress = 1.0
+texture_base = SubResource("GradientTexture2D_estoj")
+hitbox_size = 20.0
+
+[node name="Path2D" parent="Offset/Deco/Plant1" index="0" unique_id=2105629789]
+curve = SubResource("Curve2D_mkrgf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Offset/Deco/Plant1/Path2D" index="0" unique_id=451837180]
+position = Vector2(114.85023, -656.44934)
+rotation = -2.1676095
+progress = 897.17163
+rotates = false
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
@@ -1447,3 +1858,4 @@ texture = ExtResource("5_g3f8u")
 [editable path="Offset/Obstacles/Waterfall2"]
 [editable path="Offset/Obstacles/Lever"]
 [editable path="Offset/Obstacles/Area2"]
+[editable path="Offset/Deco/Plant1"]
