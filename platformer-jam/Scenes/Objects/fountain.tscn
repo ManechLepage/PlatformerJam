@@ -45,13 +45,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_b17am"]
+[sub_resource type="Gradient" id="Gradient_k8u3x"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.65523463)
 colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_e0tat"]
-gradient = SubResource("Gradient_b17am")
+gradient = SubResource("Gradient_k8u3x")
 width = 32
 height = 32
 fill = 1
@@ -74,6 +74,7 @@ autoplay = "active"
 
 [node name="PoemText" type="RichTextLabel" parent="." index="2" unique_id=1098363463]
 modulate = Color(1, 1, 1, 0)
+z_index = 10
 offset_left = -25.0
 offset_top = -73.0
 offset_right = 25.0
@@ -89,6 +90,7 @@ vertical_alignment = 2
 visible_characters_behavior = 1
 
 [node name="Parchemin" type="CPUParticles2D" parent="." index="3" unique_id=2027513]
+z_index = 10
 position = Vector2(0, 9)
 scale = Vector2(0.5900765, 0.5900765)
 amount = 32

@@ -253,6 +253,8 @@ func show_flavor_text(_body,area: Area2D):
 			text = sub
 		\"ruins\":
 			text = ruins
+		_:
+			print(area,area.name)
 	if tween: tween.kill()
 	tween = create_tween()
 	tween.tween_property(text,\"modulate:a\",1,0.7)
