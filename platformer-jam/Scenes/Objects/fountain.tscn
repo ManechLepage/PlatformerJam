@@ -73,6 +73,7 @@ animation = &"active"
 autoplay = "active"
 
 [node name="PoemText" type="RichTextLabel" parent="." index="2" unique_id=1098363463]
+modulate = Color(1, 1, 1, 0)
 offset_left = -25.0
 offset_top = -73.0
 offset_right = 25.0

@@ -1,17 +1,50 @@
 [gd_scene format=3 uid="uid://b3bbg1ec8gyf4"]
 
 [ext_resource type="Script" uid="uid://cfe5cwxh4rnyh" path="res://Scripts/Objects/lever.gd" id="1_f1e1e"]
+[ext_resource type="Texture2D" uid="uid://dus1nsaab8yl" path="res://Sprites/lever_handle.tres" id="2_m12dp"]
+[ext_resource type="Texture2D" uid="uid://c6v18d0xv4o7g" path="res://Sprites/lever.png" id="5_dlhrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfrgp"]
+atlas = ExtResource("5_dlhrn")
+region = Rect2(1, 0, 67, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e5lx"]
+atlas = ExtResource("5_dlhrn")
+region = Rect2(68, 0, 67, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4v44"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfrgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e5lx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(83, 76)
 
-[node name="Lever" type="Area2D" unique_id=415754532]
+[node name="Lever" type="Area2D" unique_id=415754532 node_paths=PackedStringArray("base")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_f1e1e")
+base = NodePath("base")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980596293]
+[node name="handle" type="Sprite2D" parent="." unique_id=1518814724]
+texture = ExtResource("2_m12dp")
+offset = Vector2(0, -15.04)
+
+[node name="base" type="AnimatedSprite2D" parent="." unique_id=84429009]
+sprite_frames = SubResource("SpriteFrames_i4v44")
+frame_progress = 0.6297383
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=171960460]
+position = Vector2(-0.5, -28)
 shape = SubResource("RectangleShape2D_yf5fn")
 debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
 

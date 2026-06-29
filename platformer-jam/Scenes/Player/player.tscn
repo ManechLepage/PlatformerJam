@@ -80,6 +80,10 @@ region = Rect2(192, 256, 64, 64)
 atlas = ExtResource("2_jhyir")
 region = Rect2(256, 256, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jnj1"]
+atlas = ExtResource("2_jhyir")
+region = Rect2(256, 192, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqm4k"]
 atlas = ExtResource("2_jhyir")
 region = Rect2(64, 0, 64, 64)
@@ -200,6 +204,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2ahak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jnj1")
 }],
 "loop": 0,
 "name": &"meditation_idle",
@@ -268,7 +275,7 @@ wash_timer = NodePath("WashStepper")
 z_index = 5
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"meditate_end"
+animation = &"meditation_idle"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
