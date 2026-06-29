@@ -360,7 +360,7 @@ size = Vector2(64, 1)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_g1b11"]
+[sub_resource type="Gradient" id="Gradient_m5r1q"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
 
@@ -733,12 +733,18 @@ position = Vector2(-391, -82)
 rotation = 1.1590391
 texture = ExtResource("12_1ikg6")
 
+[node name="Platform3" type="Sprite2D" parent="Offset/Deco/bricks" index="24" unique_id=1309795305]
+position = Vector2(435, 116)
+scale = Vector2(1.2569556, 1.2569556)
+texture = ExtResource("6_1fc0b")
+flip_h = true
+
 [node name="Plant1" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=586076656 instance=ExtResource("9_10rd1")]
 z_index = -4
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_1fc0b")
-grad = SubResource("Gradient_g1b11")
+grad = SubResource("Gradient_m5r1q")
 progress = 1.0
 texture_base = SubResource("GradientTexture2D_dcvk8")
 hitbox_size = 20.0

@@ -290,22 +290,22 @@ size = Vector2(84, 68)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_hcj06"]
+[sub_resource type="Gradient" id="Gradient_vswgs"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_wtt0v"]
+[sub_resource type="Curve2D" id="Curve2D_73njy"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-22.554474, 29.029297, 22.554474, -29.029297, 37, 63, -55.209305, 68.57377, 55.209305, -68.57377, 212, 35, -18.874853, 93.96865, 18.874853, -93.96865, 245, -144, -201.34032, 13.245834, 201.34032, -13.245834, 570, -36)
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_nfref"]
+[sub_resource type="Gradient" id="Gradient_4ux6w"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_y1e17"]
+[sub_resource type="Curve2D" id="Curve2D_7onki"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(-22.554474, 29.029297, 22.554474, -29.029297, 37, 63, -19.75476, 74.93741, 19.75476, -74.93741, 172, -41, 93.85242, 112.150475, -93.85242, -112.150475, 105, -295, 107.672195, -91.31232, -107.672195, 91.31232, -291, -340)
@@ -386,8 +386,8 @@ position = Vector2(-440.00003, -54)
 rotation = 0.22961375
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall4" index="0" unique_id=1349571073]
-position = Vector2(808.5071, -192.05792)
-rotation = -0.032531478
+position = Vector2(881.4495, -187.54118)
+rotation = -0.23935091
 scale = Vector2(1.0335137, 2.3915517)
 shape = SubResource("RectangleShape2D_itnsy")
 
@@ -429,11 +429,12 @@ shape = SubResource("RectangleShape2D_42vub")
 curve = SubResource("Curve2D_42vub")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=896175470]
-position = Vector2(-405, 366)
+position = Vector2(-417.98773, 38.970615)
+progress = 402.3558
 rotates = false
 
 [node name="Wall3" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=643414568 instance=ExtResource("4_kr4pd")]
-rotation = 2.0333085
+rotation = 0.23164596
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Wall3" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_itnsy")
@@ -490,14 +491,15 @@ position = Vector2(634, 63)
 curve = SubResource("Curve2D_nx8yr")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D3" index="0" unique_id=506953381]
-position = Vector2(-203, 235)
+position = Vector2(-266.60452, 38.4311)
+progress = 217.84395
 rotates = false
 
 [node name="Wall3" parent="Offset/Obstacles/Path2D3/PathFollow2D" index="0" unique_id=864223752 instance=ExtResource("4_kr4pd")]
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D3/PathFollow2D/Wall3" index="0" unique_id=1349571073]
 position = Vector2(-3.0517578e-05, 18)
-rotation = -4.6198864
+rotation = -3.3804748
 shape = SubResource("RectangleShape2D_3k6h7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Offset/Obstacles/Path2D3/PathFollow2D/Wall3/CollisionShape2D" index="0" unique_id=26769869]
@@ -511,12 +513,12 @@ scale = Vector2(0.9084088, 1)
 curve = SubResource("Curve2D_itnsy")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D2" index="0" unique_id=174621919]
-position = Vector2(87.069695, 233.88795)
-rotation = -2.3831546
-progress = 154.40887
+position = Vector2(266.20972, -69.51238)
+rotation = -0.27617508
+progress = 626.92206
 
 [node name="Wall3" parent="Offset/Obstacles/Path2D2/PathFollow2D" index="0" unique_id=1960580640 instance=ExtResource("4_kr4pd")]
-rotation = -0.5270894
+rotation = -1.6133364
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D2/PathFollow2D/Wall3" index="0" unique_id=1349571073]
 position = Vector2(-1, 2)
@@ -575,14 +577,14 @@ position = Vector2(-37, 233)
 position = Vector2(-362, 47)
 width = 40.0
 width_curve = SubResource("Curve_vwbao")
-grad = SubResource("Gradient_hcj06")
-progress = 0.0
+grad = SubResource("Gradient_vswgs")
+progress = 0.6809418333600541
 sample_count = 3.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_wtt0v")
+curve = SubResource("Curve2D_73njy")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1635811881]
 position = Vector2(140.93968, 66.38243)
@@ -594,14 +596,14 @@ rotates = false
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_vwbao")
-grad = SubResource("Gradient_nfref")
+grad = SubResource("Gradient_4ux6w")
 progress = 0.0
 sample_count = 4.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_y1e17")
+curve = SubResource("Curve2D_7onki")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=1170391774]
 position = Vector2(131.29471, 14.141148)
