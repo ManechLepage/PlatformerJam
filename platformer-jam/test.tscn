@@ -134,5 +134,3 @@ rotation = 0.00040136115
 [node name="Room29" parent="." unique_id=2139900169 instance=ExtResource("32_naet1")]
 
 [node name="Room30" parent="." unique_id=108794042 instance=ExtResource("33_6qlrc")]
-
-[node name="bounds" type="AnimatableBody2D" parent="." unique_id=1610684277]
