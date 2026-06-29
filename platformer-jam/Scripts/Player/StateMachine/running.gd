@@ -11,6 +11,10 @@ extends State
 func enter():
 	super()
 	if not parent.is_flipping_on_landing: Game.player.sprite.play("running")
+
+func exit():
+	super()
+	parent.is_flipping_on_landing = false
 	
 
 func process_inputs(event):
