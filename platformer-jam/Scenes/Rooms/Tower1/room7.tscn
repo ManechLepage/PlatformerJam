@@ -258,7 +258,7 @@ script = ExtResource("3_axaay")
 room_name = "Tower1-06"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(54, -1)
+position = Vector2(63, 14)
 shape = SubResource("RectangleShape2D_ns8m6")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -268,7 +268,7 @@ script = ExtResource("3_axaay")
 room_name = "Tower1-08"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(390, -7)
+position = Vector2(345, -29)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -390,7 +390,6 @@ rotates = false
 [node name="Platform3" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D" index="0" unique_id=1940130509 instance=ExtResource("4_rdks5")]
 rotation = 2.1676095
 collision_layer = 33
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D/Platform3" index="0" unique_id=1349571073]
@@ -413,7 +412,6 @@ rotates = false
 [node name="Platform7" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D2" index="0" unique_id=1982398534 instance=ExtResource("4_rdks5")]
 rotation = 1.9620957
 collision_layer = 33
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D2/Platform7" index="0" unique_id=1349571073]
