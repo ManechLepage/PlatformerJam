@@ -6,9 +6,12 @@ extends State
 @export var meditate: State
 @export var interact: State
 
+@onready var state_machine: StateMachine = $".."
+
 func enter():
 	super()
-	Game.player.sprite.play("running")
+	if not parent.is_flipping_on_landing: Game.player.sprite.play("running")
+	
 
 func process_inputs(event):
 	if Input.is_action_just_released("Interact"):
@@ -34,3 +37,9 @@ func process_physics(delta):
 		return idle
 	if parent.velocity.y > 0:
 		return fall
+
+func _on_sprite_animation_looped() -> void:
+	if state_machine.current_state == self:
+		if parent.sprite.animation == "double_jump":
+			parent.sprite.play("running")
+			parent.is_flipping_on_landing = false

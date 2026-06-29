@@ -275,7 +275,7 @@ wash_timer = NodePath("WashStepper")
 z_index = 5
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"meditation_idle"
+animation = &"double_jump"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=285193432]
@@ -416,5 +416,6 @@ meditation_end_state = NodePath("../../StateMachine/MeditateEnd")
 
 [node name="lucid3" type="AudioStreamPlayer" parent="Sounds/meditate" unique_id=1227968001]
 
+[connection signal="animation_looped" from="Sprite" to="StateMachine/Running" method="_on_sprite_animation_looped"]
 [connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]
 [connection signal="body_exited" from="FloorInfo" to="." method="_on_floor_info_body_exited"]

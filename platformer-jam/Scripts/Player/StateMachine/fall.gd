@@ -53,6 +53,8 @@ func process_physics(delta):
 			flip_character(movement)
 			return jump
 		if movement != 0:
+			Game.player.sprite.play("double_jump", 2.0)
+			parent.is_flipping_on_landing = true
 			return run
 		return idle
 	elif input_delay_timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
