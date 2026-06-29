@@ -548,7 +548,7 @@ radius = 82.91798
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.8392283, 0.4551282), -1.0902444, -1.0902444, 0, 0, Vector2(1, 0.24999994), -1.834101, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_ju2xe"]
+[sub_resource type="Gradient" id="Gradient_wqrxy"]
 resource_local_to_scene = true
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0.18938726, 0.09751173, 0, 1)
@@ -906,7 +906,7 @@ rotation = 1.2030143
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=790154690 instance=ExtResource("5_a6otp")]
 width = 10.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_ju2xe")
+grad = SubResource("Gradient_wqrxy")
 progress = 1.0
 hitbox_size = 20.0
 
