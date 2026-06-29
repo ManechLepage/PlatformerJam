@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_03o0b"]
 [ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="3_e35mi"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_0ergh"]
+[ext_resource type="Texture2D" uid="uid://dbt2ygv75elj3" path="res://Sprites/arrow.tres" id="4_2wtjj"]
 [ext_resource type="PackedScene" uid="uid://bl1oxp0rndhll" path="res://Scenes/Objects/poem.tscn" id="5_srppu"]
 [ext_resource type="Texture2D" uid="uid://d2wqpgj7s8ael" path="res://Sprites/poem_rythm.png" id="6_6d1mf"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="7_03o0b"]
@@ -71,6 +72,19 @@ z_index = -2
 position = Vector2(-402.00006, 30.999985)
 scale = Vector2(3.86, 3.86)
 rpm = -5.0
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=1219101611]
+modulate = Color(0.585062, 0.585062, 0.5850621, 1)
+position = Vector2(383.99994, -158)
+rotation = -1.8373979
+scale = Vector2(0.45845369, 0.45845369)
+texture = ExtResource("9_fe38n")
+
+[node name="Arrow" type="Sprite2D" parent="Offset/Background/Parallax2D/Platform2" index="0" unique_id=435924929]
+position = Vector2(79.958984, 21.83728)
+rotation = 0.27672726
+scale = Vector2(1.1531501, 1.1531501)
+texture = ExtResource("4_2wtjj")
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
