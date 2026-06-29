@@ -7,5 +7,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if player:
-		for layer: Parallax2D in get_children():
-			layer.screen_offset = (player.global_position - global_position) * Game.lucidity/100
+		for layer in get_children():
+			if layer is Parallax2D:
+				layer.screen_offset = (player.global_position - global_position) * Game.lucidity/100
