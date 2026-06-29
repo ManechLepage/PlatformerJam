@@ -12,7 +12,9 @@ func _ready() -> void:
 	Game.event_manager.lucidity_changed.connect(change_lucidity)
 	
 func change_lucidity(val):
-	if hitbox : hitbox.disabled = global_scale <= Vector2.ONE *0.01
+	if hitbox:
+		hitbox.disabled = (global_scale <= Vector2.ONE *0.01) or (hitbox.global_scale <= Vector2.ONE *0.01)
+		
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Down"):
