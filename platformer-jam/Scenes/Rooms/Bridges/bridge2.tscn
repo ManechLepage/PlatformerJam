@@ -11,6 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="9_ntg8m"]
 [ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="9_ysw6c"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="11_2jrtc"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="12_eq2xk"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="13_g65we"]
+[ext_resource type="Texture2D" uid="uid://dpf8e56uom4c6" path="res://Sprites/leaf3.tres" id="14_ixuv6"]
+[ext_resource type="Texture2D" uid="uid://iqvejs3kipon" path="res://Sprites/leaf1.tres" id="15_ixuv6"]
+[ext_resource type="Texture2D" uid="uid://u3agmklyjnwo" path="res://Sprites/leaf4.tres" id="16_1pdai"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -318,6 +323,74 @@ position = Vector2(175, -95)
 rotation = 0.076571435
 scale = Vector2(1.2740892, 1.2740892)
 texture = ExtResource("9_ysw6c")
+
+[node name="Platform5" type="Sprite2D" parent="Offset/Deco/Rocks" index="6" unique_id=80593639]
+position = Vector2(-443, -67)
+scale = Vector2(1.0955168, 1.0955168)
+texture = ExtResource("9_ysw6c")
+
+[node name="Gear" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1353983551 instance=ExtResource("12_eq2xk")]
+position = Vector2(-248, 232)
+scale = Vector2(1.818866, 1.818866)
+rpm = 10.0
+
+[node name="Gear2" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=904869792 instance=ExtResource("12_eq2xk")]
+position = Vector2(-312, 241)
+scale = Vector2(1.1050164, 1.1050164)
+rpm = 5.0
+
+[node name="Gear3" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=1102780469 instance=ExtResource("12_eq2xk")]
+position = Vector2(0, 165)
+rotation = -0.021839552
+scale = Vector2(1.8174927, 1.8174927)
+rpm = 10.0
+
+[node name="Gear4" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=109333495 instance=ExtResource("12_eq2xk")]
+position = Vector2(66, 198)
+rotation = -0.021839552
+scale = Vector2(2.113177, 2.113177)
+rpm = 20.0
+
+[node name="Leaves" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=274331718]
+
+[node name="Leaf9" type="Sprite2D" parent="Offset/Deco/Leaves" index="0" unique_id=17230086]
+position = Vector2(-409, -89)
+texture = ExtResource("13_g65we")
+
+[node name="Leaf8" type="Sprite2D" parent="Offset/Deco/Leaves" index="1" unique_id=2067451623]
+position = Vector2(-461, 230)
+texture = ExtResource("13_g65we")
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco/Leaves" index="2" unique_id=604399510]
+position = Vector2(416, -71)
+rotation = -0.45684427
+scale = Vector2(0.63212633, 0.63212633)
+texture = ExtResource("13_g65we")
+
+[node name="Leaf3" type="Sprite2D" parent="Offset/Deco/Leaves" index="3" unique_id=1707368087]
+position = Vector2(420, -54)
+rotation = -0.666632
+scale = Vector2(0.5509255, 0.5509255)
+texture = ExtResource("14_ixuv6")
+
+[node name="Leaf6" type="Sprite2D" parent="Offset/Deco/Leaves" index="4" unique_id=786037766]
+position = Vector2(152, -122)
+rotation = 0.07135391
+texture = ExtResource("13_g65we")
+
+[node name="Leaf1" type="Sprite2D" parent="Offset/Deco/Leaves" index="5" unique_id=334818042]
+position = Vector2(237.99976, 100)
+scale = Vector2(0.3791099, 0.3791099)
+texture = ExtResource("15_ixuv6")
+
+[node name="Leaf7" type="Sprite2D" parent="Offset/Deco/Leaves" index="6" unique_id=1259368416]
+position = Vector2(477, 227)
+texture = ExtResource("13_g65we")
+
+[node name="Leaf4" type="Sprite2D" parent="Offset/Deco/Leaves" index="7" unique_id=607796213]
+position = Vector2(-450, 247.00006)
+scale = Vector2(0.6132336, 0.6132336)
+texture = ExtResource("16_1pdai")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
