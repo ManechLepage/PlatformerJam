@@ -266,7 +266,7 @@ point_count = 2
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_lilds"]
+[sub_resource type="Gradient" id="Gradient_lvo7a"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -1135,7 +1135,7 @@ position = Vector2(-12, -519)
 texture = ExtResource("20_lvo7a")
 
 [node name="Wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=1216693910]
-modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+modulate = Color(2.769, 0.708, 0.811, 1)
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/Wall" index="0" unique_id=494648272]
 position = Vector2(-396, -44)
@@ -1241,7 +1241,7 @@ flip_h = true
 position = Vector2(748, 11)
 width = 30.0
 width_curve = SubResource("Curve_7pt6u")
-grad = SubResource("Gradient_lilds")
+grad = SubResource("Gradient_lvo7a")
 progress = 1.0
 hitbox_size = 10.0
 

@@ -4,9 +4,14 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_00xgr"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_1d1jq"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_ysw6c"]
+[ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="5_eq2xk"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_ntg8m"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="6_w3dp6"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="7_00xgr"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="7_1d1jq"]
+[ext_resource type="Texture2D" uid="uid://bol3kfxvm85mf" path="res://Sprites/brick2.tres" id="7_g65we"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="8_ixuv6"]
+[ext_resource type="Texture2D" uid="uid://ciswlnhaotcsr" path="res://Sprites/brick4.tres" id="9_1pdai"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -105,7 +110,7 @@ radius = 41.34002
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_00xgr"]
+[sub_resource type="Gradient" id="Gradient_57w1k"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -115,7 +120,7 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_1d1jq"]
+[sub_resource type="Gradient" id="Gradient_g57bs"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -197,25 +202,131 @@ rotation = -0.24783675
 shape = SubResource("RectangleShape2D_a3ta5")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="5" unique_id=1418678127]
+modulate = Color(2.7688425, 0.71151274, 0.80598205, 1)
 position = Vector2(176, -343)
 rotation = 0.06981317
 shape = SubResource("RectangleShape2D_00xgr")
 
+[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="0" unique_id=768342385]
+position = Vector2(-33.68701, -8.671143)
+rotation = -0.06981317
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("5_eq2xk")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="1" unique_id=1234654819]
+position = Vector2(17.746826, -4.248291)
+rotation = -0.06981317
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("6_w3dp6")
+
+[node name="Brick4" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="2" unique_id=1495185775]
+position = Vector2(-11.831299, 2.8322144)
+rotation = -0.06981317
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("7_g65we")
+
+[node name="Brick6" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="3" unique_id=1798981222]
+position = Vector2(48.999268, 12.612793)
+rotation = -0.06981317
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("8_ixuv6")
+
+[node name="Brick11" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="4" unique_id=1508103612]
+position = Vector2(-56.491455, -5.0716553)
+rotation = -0.06981317
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("6_w3dp6")
+
+[node name="Brick12" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D9" index="5" unique_id=1334412605]
+position = Vector2(-16.100586, -0.8790283)
+rotation = 3.0717795
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("5_eq2xk")
+
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="6" unique_id=1319369466]
+modulate = Color(2.7688425, 0.71151274, 0.80598205, 1)
 position = Vector2(438, -300)
 rotation = -0.04712389
 shape = SubResource("RectangleShape2D_00xgr")
 
+[node name="Brick9" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="0" unique_id=163258159]
+position = Vector2(39.38086, -7.152832)
+rotation = 0.04712389
+texture = ExtResource("5_eq2xk")
+
+[node name="Brick7" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="1" unique_id=1974406737]
+position = Vector2(-52.61133, -9.489014)
+rotation = 0.04712389
+texture = ExtResource("5_eq2xk")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="2" unique_id=474000165]
+position = Vector2(-26.734375, -6.2663574)
+rotation = 0.04712389
+texture = ExtResource("6_w3dp6")
+
+[node name="Brick8" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="3" unique_id=732036403]
+position = Vector2(10.130371, -2.5256348)
+rotation = 0.04712389
+texture = ExtResource("7_g65we")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="4" unique_id=736316953]
+position = Vector2(60.168945, -2.1679688)
+rotation = 1.3386675
+texture = ExtResource("9_1pdai")
+
+[node name="Brick10" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D10" index="5" unique_id=794230248]
+position = Vector2(-65.97388, -2.1101074)
+rotation = 0.04712389
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ixuv6")
+
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="7" unique_id=374162248]
+modulate = Color(2.7688425, 0.71151274, 0.80598205, 1)
 position = Vector2(318, -57)
 rotation = -1.2793263
 shape = SubResource("RectangleShape2D_a3ta5")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D7" index="0" unique_id=117833648]
+position = Vector2(15.22937, -1.4370117)
+rotation = 1.5411258
+scale = Vector2(0.7699999, 0.7699999)
+texture = ExtResource("8_ixuv6")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D7" index="1" unique_id=1130358381]
+position = Vector2(-20.018494, 2.8737793)
+rotation = 2.0437806
+texture = ExtResource("6_w3dp6")
+
+[node name="Brick3" type="Sprite2D" parent="Offset/Obstacles/Platform/CollisionShape2D7" index="2" unique_id=1314571481]
+position = Vector2(-6.704651, 12.451904)
+rotation = 1.2793263
+texture = ExtResource("5_eq2xk")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_ysw6c")]
 position = Vector2(451, 248)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+modulate = Color(2.7688425, 0.71151274, 0.80598205, 1)
 shape = SubResource("RectangleShape2D_5khlg")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Platform2/CollisionShape2D" index="0" unique_id=1119729816]
+position = Vector2(-47, -1)
+texture = ExtResource("6_w3dp6")
+
+[node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Platform2/CollisionShape2D" index="1" unique_id=676174520]
+position = Vector2(49, -1)
+texture = ExtResource("7_g65we")
+
+[node name="Brick4" type="Sprite2D" parent="Offset/Obstacles/Platform2/CollisionShape2D" index="2" unique_id=463081774]
+position = Vector2(-11, 1)
+rotation = 1.3788102
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("9_1pdai")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Platform2/CollisionShape2D" index="3" unique_id=498028613]
+position = Vector2(12, 2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ixuv6")
 
 [node name="Yellowball" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1760792903 instance=ExtResource("5_ntg8m")]
 position = Vector2(-152, 126)
@@ -239,11 +350,13 @@ frame = 4
 curve = SubResource("Curve2D_ysw6c")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Path2D" index="0" unique_id=1476336356]
-position = Vector2(-268, 236)
+position = Vector2(-134.00002, -122.999985)
 rotation = -2.179916
+progress = 463.17404
 rotates = false
 
 [node name="Platform3" parent="Offset/Obstacles/Path2D/PathFollow2D" index="0" unique_id=1359846352 instance=ExtResource("4_ysw6c")]
+rotation = 9.075712
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Path2D/PathFollow2D/Platform3" index="0" unique_id=1349571073]
@@ -259,7 +372,7 @@ shape = SubResource("CircleShape2D_a3ta5")
 [node name="Plant1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=901383637 instance=ExtResource("7_1d1jq")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_00xgr")
+grad = SubResource("Gradient_57w1k")
 progress = 1.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
@@ -268,7 +381,7 @@ curve = SubResource("Curve2D_1d1jq")
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=790154690 instance=ExtResource("7_1d1jq")]
 width = 40.0
 width_curve = SubResource("Curve_00xgr")
-grad = SubResource("Gradient_1d1jq")
+grad = SubResource("Gradient_g57bs")
 progress = 1.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
