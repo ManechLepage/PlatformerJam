@@ -4,16 +4,21 @@ extends State
 
 @onready var timer = $CoyoteJump
 @onready var input_delay_timer = $InputDelay
+@onready var min_time_for_flip: Timer = $MinTimeForFlip
+
 @export var double_jump: State
 @export var jump: State
 @export var run: State
 @export var idle: State
 
 var can_control: bool = true
+var will_flip: bool = false
 
 func enter():
 	Game.player.velocity.y = max(Game.player.velocity.y, -130) #quick release makes u instant fall
 	timer.start()
+	min_time_for_flip.start()
+	will_flip = false
 	super()
 	if not (Game.player.sprite.animation in ["double_jump","running"]):
 		Game.player.sprite.play("fall")
@@ -53,11 +58,15 @@ func process_physics(delta):
 			flip_character(movement)
 			return jump
 		if movement != 0:
-			Game.player.sprite.play("double_jump", 2.0)
-			parent.is_flipping_on_landing = true
+			if will_flip:
+				Game.player.sprite.play("double_jump", 2.0)
+				parent.is_flipping_on_landing = true
 			return run
 		return idle
 	elif input_delay_timer.time_left > 0 and Game.player.interact_area.get_overlapping_areas():
 		return double_jump
 	
 	return null
+
+func _on_min_time_for_flip_timeout() -> void:
+	will_flip = true

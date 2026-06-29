@@ -349,6 +349,10 @@ one_shot = true
 wait_time = 0.1
 one_shot = true
 
+[node name="MinTimeForFlip" type="Timer" parent="StateMachine/Fall" unique_id=757737693]
+wait_time = 0.35
+one_shot = true
+
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1758154468 node_paths=PackedStringArray("idle", "run", "fall", "double_jump")]
 script = ExtResource("6_jlvik")
 idle = NodePath("../Idle")
@@ -419,3 +423,4 @@ meditation_end_state = NodePath("../../StateMachine/MeditateEnd")
 [connection signal="animation_looped" from="Sprite" to="StateMachine/Running" method="_on_sprite_animation_looped"]
 [connection signal="body_entered" from="FloorInfo" to="." method="_on_floor_info_body_entered"]
 [connection signal="body_exited" from="FloorInfo" to="." method="_on_floor_info_body_exited"]
+[connection signal="timeout" from="StateMachine/Fall/MinTimeForFlip" to="StateMachine/Fall" method="_on_min_time_for_flip_timeout"]
