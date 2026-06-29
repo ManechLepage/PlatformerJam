@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="32_adp8l"]
 [ext_resource type="PackedScene" uid="uid://cr1ifiscmdqlg" path="res://Scenes/Rooms/Tower2/room4.tscn" id="32_naet1"]
 [ext_resource type="PackedScene" uid="uid://gfmoxsm2bfp" path="res://Scenes/Rooms/Tower2/room5.tscn" id="33_6qlrc"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="38_adp8l"]
 
 [sub_resource type="Gradient" id="Gradient_mf4mk"]
 interpolation_mode = 1
@@ -47,6 +48,9 @@ offsets = PackedFloat32Array(0, 0.4759036)
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mf4mk"]
 noise = SubResource("FastNoiseLite_37kl0")
 color_ramp = SubResource("Gradient_mf4mk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvnpp"]
+size = Vector2(1551.4307, 79.71777)
 
 [node name="Test" type="Node2D" unique_id=131779804]
 
@@ -134,3 +138,75 @@ rotation = 0.00040136115
 [node name="Room29" parent="." unique_id=2139900169 instance=ExtResource("32_naet1")]
 
 [node name="Room30" parent="." unique_id=108794042 instance=ExtResource("33_6qlrc")]
+
+[node name="Bounds" parent="." unique_id=2119178859 instance=ExtResource("38_adp8l")]
+position = Vector2(-1, -4048)
+rotation = 3.1415927
+scale = Vector2(0.6780839, 0.6780839)
+collision_layer = 33
+
+[node name="CollisionShape2D" parent="Bounds" index="0" unique_id=1349571073]
+position = Vector2(707.8771, 63.414055)
+rotation = -1.5707964
+scale = Vector2(2.2156498, 1.3492367)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Bounds" unique_id=315522528]
+position = Vector2(2119.2063, -4379.9897)
+rotation = -1.5707964
+scale = Vector2(1.5712119, 1.3492367)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Bounds" unique_id=52991492]
+position = Vector2(6301.579, -3445.002)
+rotation = -1.5707964
+scale = Vector2(2.7510061, 1.3492367)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Bounds" unique_id=2132074944]
+position = Vector2(4999.382, -1045.5939)
+rotation = -1.5707964
+scale = Vector2(2.7510061, 1.3492367)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounds" unique_id=149024981]
+position = Vector2(-693.1295, 436.52426)
+rotation = -1.5707964
+scale = Vector2(9.435535, 1)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bounds" unique_id=465673340]
+position = Vector2(-693.1295, 436.52426)
+rotation = -1.5707964
+scale = Vector2(9.435535, 1)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Bounds" unique_id=1053128064]
+position = Vector2(721.14923, -4468.4736)
+rotation = -1.5707964
+scale = Vector2(1.9438353, 1)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bounds" unique_id=55487601]
+position = Vector2(-582.5242, -3433.2031)
+rotation = -1.5707964
+scale = Vector2(0.52607876, 3.4153643)
+shape = SubResource("RectangleShape2D_dvnpp")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[editable path="Bounds"]

@@ -60,6 +60,7 @@
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
 [ext_resource type="PackedScene" uid="uid://ctkeb5r1ievjq" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
+[ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="58_y86h7"]
 [ext_resource type="Theme" uid="uid://dt4jr7r3lmyu6" path="res://other/theme.tres" id="59_2060n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
@@ -219,6 +220,9 @@ normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1semv"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my4ki"]
+size = Vector2(1551.4307, 79.71777)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptfg5"]
 content_margin_left = 90.0
@@ -563,6 +567,76 @@ metadata/_custom_type_script = "uid://bkueo6tu2f8v4"
 position = Vector2(45, -2)
 shape = SubResource("WorldBoundaryShape2D_1semv")
 
+[node name="Bounds" parent="Areas" unique_id=2119178859 instance=ExtResource("58_y86h7")]
+position = Vector2(-1, -4048)
+rotation = 3.1415927
+scale = Vector2(0.6780839, 0.6780839)
+collision_layer = 33
+
+[node name="CollisionShape2D" parent="Areas/Bounds" index="0" unique_id=1349571073]
+position = Vector2(707.8771, 63.414055)
+rotation = -1.5707964
+scale = Vector2(2.2156498, 1.3492367)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Areas/Bounds" unique_id=302561772]
+position = Vector2(2119.2063, -4379.9897)
+rotation = -1.5707964
+scale = Vector2(1.5712119, 1.3492367)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Areas/Bounds" unique_id=329026894]
+position = Vector2(6301.579, -3445.002)
+rotation = -1.5707964
+scale = Vector2(2.7510061, 1.3492367)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Areas/Bounds" unique_id=507968362]
+position = Vector2(4999.382, -1045.5939)
+rotation = -1.5707964
+scale = Vector2(2.7510061, 1.3492367)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1388071981]
+position = Vector2(-693.1295, 436.52426)
+rotation = -1.5707964
+scale = Vector2(9.435535, 1)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1265752014]
+position = Vector2(-693.1295, 436.52426)
+rotation = -1.5707964
+scale = Vector2(9.435535, 1)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Areas/Bounds" unique_id=705437555]
+position = Vector2(721.14923, -4468.4736)
+rotation = -1.5707964
+scale = Vector2(1.9438353, 1)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1810988887]
+position = Vector2(-582.5242, -3433.2031)
+rotation = -1.5707964
+scale = Vector2(0.52607876, 3.4153643)
+shape = SubResource("RectangleShape2D_my4ki")
+one_way_collision_margin = 5.0
+one_way_collision_direction = Vector2(0, -1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
 layer = 101
 
@@ -742,4 +816,5 @@ text = "Pillar Four: The Will"
 [connection signal="body_entered" from="Areas/ruins" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
 [connection signal="body_entered" from="Areas/sub" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
 
+[editable path="Areas/Bounds"]
 [editable path="CanvasLayer/MainMenu"]

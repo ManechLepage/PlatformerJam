@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://ctkeb5r1ievjq"]
 
 [ext_resource type="Texture2D" uid="uid://d3sechlphl7x1" path="res://Sprites/cover_guy.png" id="1_7sp8y"]
+[ext_resource type="Shader" uid="uid://bafknl5xdkqmc" path="res://Scripts/Shaders/lucidity_bg.gdshader" id="1_xwboo"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="2_pc006"]
 [ext_resource type="Theme" uid="uid://dt4jr7r3lmyu6" path="res://other/theme.tres" id="4_787fc"]
 [ext_resource type="AudioStream" uid="uid://sn3w5tmccwh6" path="res://Sound/pillar1_base.ogg" id="5_ihofj"]
 [ext_resource type="AudioStream" uid="uid://dbhw814xcf2h5" path="res://Sound/jump.ogg" id="6_xwboo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_074w1"]
+shader = ExtResource("1_xwboo")
+shader_parameter/colorA = Color(0.68, 0.03400001, 0, 0)
+shader_parameter/colorB = Color(1, 0.35000002, 0, 0)
+shader_parameter/colorC = Color(9.393987, 4.020155, 7.6027083, 0.8352941)
+shader_parameter/discomode = false
+shader_parameter/speed = 0.20000010449999991
+shader_parameter/alpha = 1.0
+shader_parameter/speed_scale = 1.0
 
 [sub_resource type="GDScript" id="GDScript_787fc"]
 resource_name = "settings"
@@ -75,6 +86,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.03137255, 0.03137255, 0.101960786, 1)
+
+[node name="lucid overlay" type="ColorRect" parent="." unique_id=817501956]
+material = SubResource("ShaderMaterial_074w1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -128.0
+offset_right = 158.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1151522330]
 layout_mode = 1
