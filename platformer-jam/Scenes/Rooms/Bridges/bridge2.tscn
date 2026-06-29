@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_ntg8m"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="7_00xgr"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="7_1d1jq"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="7_ysw6c"]
+[ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="9_ntg8m"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="9_ysw6c"]
+[ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="11_2jrtc"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -91,6 +95,9 @@ size = Vector2(68.583984, 42.024475)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00xgr"]
 size = Vector2(157.24854, 29.947906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jrtc"]
+size = Vector2(50.766663, 42.024475)
 
 [sub_resource type="Curve2D" id="Curve2D_ysw6c"]
 _data = {
@@ -207,9 +214,9 @@ rotation = -0.04712389
 shape = SubResource("RectangleShape2D_00xgr")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="7" unique_id=374162248]
-position = Vector2(318, -57)
+position = Vector2(320.56006, -65.5329)
 rotation = -1.2793263
-shape = SubResource("RectangleShape2D_a3ta5")
+shape = SubResource("RectangleShape2D_2jrtc")
 
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=2119178859 instance=ExtResource("4_ysw6c")]
 position = Vector2(451, 248)
@@ -274,8 +281,43 @@ progress = 1.0
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_ntg8m")
 
-[node name="Fountain" parent="." index="2" unique_id=1652650217 instance=ExtResource("7_00xgr")]
-position = Vector2(-3327, -1182)
+[node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=1652650217 instance=ExtResource("7_00xgr")]
+position = Vector2(-447, -102)
+
+[node name="Rocks" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=2065429846]
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco/Rocks" index="0" unique_id=1100407980]
+position = Vector2(-470, 255)
+texture = ExtResource("7_ysw6c")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco/Rocks" index="1" unique_id=1929139522]
+position = Vector2(450.00024, 250)
+scale = Vector2(1.1470128, 1.1470128)
+texture = ExtResource("9_ysw6c")
+
+[node name="Brick5" type="Sprite2D" parent="Offset/Deco/Rocks" index="2" unique_id=445456521]
+position = Vector2(320, 180)
+rotation = 0.26929748
+scale = Vector2(0.9102359, 0.9102359)
+texture = ExtResource("9_ntg8m")
+
+[node name="Brick1" type="Sprite2D" parent="Offset/Deco/Rocks" index="3" unique_id=1766804943]
+position = Vector2(219, 118)
+rotation = -0.27841383
+scale = Vector2(1.6911968, 1.6911968)
+texture = ExtResource("11_2jrtc")
+
+[node name="Platform3" type="Sprite2D" parent="Offset/Deco/Rocks" index="4" unique_id=945563693]
+position = Vector2(449, -52)
+rotation = -0.07131359
+texture = ExtResource("7_ysw6c")
+flip_h = true
+
+[node name="Platform4" type="Sprite2D" parent="Offset/Deco/Rocks" index="5" unique_id=35982787]
+position = Vector2(175, -95)
+rotation = 0.076571435
+scale = Vector2(1.2740892, 1.2740892)
+texture = ExtResource("9_ysw6c")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
