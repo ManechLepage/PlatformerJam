@@ -4,12 +4,16 @@
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_jdk3q"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_widxf"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_jkcge"]
+[ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="5_678v2"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="5_m704x"]
 [ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="6_1v5si"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="6_3yt2w"]
+[ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="6_6fshy"]
+[ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="7_388lu"]
 [ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="7_tcvbu"]
 [ext_resource type="Texture2D" uid="uid://iqvejs3kipon" path="res://Sprites/leaf1.tres" id="8_kfxri"]
 [ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="8_rbnie"]
+[ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="11_llmor"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -285,10 +289,10 @@ tracks/22/path = NodePath("Offset/Obstacles/Platform6:position")
 tracks/22/interp = 2
 tracks/22/loop_wrap = true
 tracks/22/keys = {
-"times": PackedFloat32Array(0.094, 0.356),
+"times": PackedFloat32Array(0.094, 0.35593477),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-145.99998, 101), Vector2(-113.999985, 50.000004)]
+"values": [Vector2(-145.99998, 101), Vector2(-116.99986, 94.999985)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
@@ -1100,6 +1104,57 @@ position = Vector2(491, -29)
 scale = Vector2(1.93, 1.93)
 rpm = 10.0
 
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=1236098091]
+position = Vector2(-442, -76)
+texture = ExtResource("11_llmor")
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=201410617]
+position = Vector2(-467, -153)
+texture = ExtResource("5_678v2")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=1790133179]
+position = Vector2(-229, -122)
+texture = ExtResource("6_6fshy")
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=1252637293]
+position = Vector2(-310, -122)
+texture = ExtResource("7_388lu")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=865230302]
+position = Vector2(-509, 101)
+texture = ExtResource("11_llmor")
+
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=1721775572]
+position = Vector2(-332, 88)
+scale = Vector2(0.74273497, 0.74273497)
+texture = ExtResource("5_678v2")
+
+[node name="Parallax2D3" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="2" unique_id=1988134974]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="0" unique_id=1601169874]
+position = Vector2(514, 121)
+texture = ExtResource("5_678v2")
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="1" unique_id=233689864]
+position = Vector2(427, -124)
+texture = ExtResource("11_llmor")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="2" unique_id=834256126]
+position = Vector2(474, -186)
+texture = ExtResource("5_678v2")
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="3" unique_id=2059852459]
+position = Vector2(499, 44)
+texture = ExtResource("7_388lu")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D3" index="4" unique_id=146712570]
+position = Vector2(401, 87)
+texture = ExtResource("6_6fshy")
+
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)
 script = ExtResource("3_widxf")
@@ -1166,8 +1221,8 @@ position = Vector2(-503, -305)
 shape = SubResource("RectangleShape2D_kfxri")
 
 [node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=417455758 instance=ExtResource("4_jkcge")]
-position = Vector2(-295, 132)
-rotation = 0.0026637316
+position = Vector2(-219, 142)
+rotation = -0.31415927
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
 position = Vector2(0, -42.797485)
@@ -1180,8 +1235,8 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_rbnie")
 
 [node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1967111266 instance=ExtResource("4_jkcge")]
-position = Vector2(199, 92)
-rotation = -3.1337547
+position = Vector2(136, 118)
+rotation = -2.693043
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_3yt2w")
@@ -1193,8 +1248,8 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("8_rbnie")
 
 [node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=462260310 instance=ExtResource("4_jkcge")]
-position = Vector2(9.00001, 80)
-rotation = -1.5689313
+position = Vector2(10.000008, 110)
+rotation = -2.693043
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
 position = Vector2(-9.292969, 5.861267)
@@ -1209,8 +1264,8 @@ texture = ExtResource("8_rbnie")
 flip_h = true
 
 [node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1693046888 instance=ExtResource("4_jkcge")]
-position = Vector2(-145.99998, 101)
-rotation = -3.1118474
+position = Vector2(-116.99986, 94.999985)
+rotation = -2.9181905
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1225,8 +1280,8 @@ texture = ExtResource("8_rbnie")
 flip_h = true
 
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1650450333 instance=ExtResource("4_jkcge")]
-position = Vector2(-226.99998, 101)
-rotation = -3.1118474
+position = Vector2(-196.99998, 402)
+rotation = -4.445125
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1242,8 +1297,8 @@ flip_h = true
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=719669283 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(-74.999985, 108)
-rotation = -3.1118474
+position = Vector2(-30.99998, 349.99997)
+rotation = -0.09812474
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
 position = Vector2(-19.485447, 17.587301)
@@ -1259,8 +1314,8 @@ flip_h = true
 
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=537350350 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(296, 108)
-rotation = -3.1118474
+position = Vector2(275, 416)
+rotation = -3.6761127
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1276,8 +1331,8 @@ flip_h = true
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1694297845 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(85.000015, 108)
-rotation = -3.1118474
+position = Vector2(85.000015, 441.00003)
+rotation = -4.4391756
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
 position = Vector2(-19.036865, 13.963684)
@@ -1338,7 +1393,7 @@ shape = SubResource("RectangleShape2D_llmor")
 
 [node name="Leaf1" type="Sprite2D" parent="Offset/Obstacles/Platform9" index="1" unique_id=1234291124]
 position = Vector2(-29.536253, 0)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.43298542, 0.43298542)
 texture = ExtResource("8_kfxri")
 flip_h = true
 
@@ -1349,16 +1404,16 @@ position = Vector2(-362, 47)
 width = 80.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_kfxri")
-progress = 0.028964542
+progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_2fq3i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1981468037]
-position = Vector2(227.43626, 318.74432)
-rotation = -1.4358492
-progress = 26.478167
+position = Vector2(209, -479.00006)
+rotation = -2.0694492
+progress = 914.15796
 
 [node name="Marker2D" type="Marker2D" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1183872290]
 gizmo_extents = 54.8
@@ -1367,25 +1422,26 @@ gizmo_extents = 54.8
 z_index = -1
 z_as_relative = false
 position = Vector2(-362, 47)
+width = 30.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_llmor")
-progress = 0.0
+progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_1v5si")
 
 [node name="Yellowball2" parent="Offset/Obstacles/Plant2/Path2D" index="0" unique_id=1698151701 instance=ExtResource("5_m704x")]
-position = Vector2(323, -141)
-rotation = -2.2370605
-scale = Vector2(1.001358e-05, 1.001358e-05)
-progress = 0.0
+position = Vector2(207.00002, -193.99998)
+rotation = -2.115405
+progress = 133.7315
 
 [node name="Area" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2" index="0" unique_id=221360279]
 position = Vector2(-18.1428, 23.69317)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2" index="1" unique_id=1602848246]
 position = Vector2(-15.145532, 25.562473)
+frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -61.22858
@@ -1397,42 +1453,43 @@ rotation = -0.25590518
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1944685402 instance=ExtResource("6_3yt2w")]
 z_as_relative = false
 position = Vector2(-362, 47)
+width = 30.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_678v2")
-progress = 0.0
+progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_388lu")
 
 [node name="Yellowball3" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=1223189823 instance=ExtResource("5_m704x")]
-position = Vector2(362, -186)
-rotation = 0.43195826
-scale = Vector2(1.001358e-05, 1.001358e-05)
-progress = 0.0
+position = Vector2(469, -248.00002)
+rotation = -2.3831172
+progress = 176.66766
 
 [node name="Area" parent="Offset/Obstacles/Plant3/Path2D/Yellowball3" index="0" unique_id=221360279]
 position = Vector2(2.4094381, 3.2278495)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant3/Path2D/Yellowball3" index="1" unique_id=1602848246]
 position = Vector2(5.406708, 5.097151)
+frame = 4
 
 [node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=586076656 instance=ExtResource("6_3yt2w")]
 z_as_relative = false
 position = Vector2(-362, 47)
+width = 40.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_6fshy")
-progress = 0.0
+progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant4" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_kfxri")
 
 [node name="Yellowball4" parent="Offset/Obstacles/Plant4/Path2D" index="0" unique_id=376175354 instance=ExtResource("5_m704x")]
-position = Vector2(317, -69)
-rotation = -0.9192565
-scale = Vector2(1.001358e-05, 1.001358e-05)
-progress = 0.0
+position = Vector2(583.00006, -182.00003)
+rotation = -1.4719354
+progress = 316.2642
 
 [node name="Area" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4" index="0" unique_id=221360279]
 position = Vector2(23.15783, 5.260341)
@@ -1441,6 +1498,7 @@ scale = Vector2(1.609848, 1.609848)
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4" index="1" unique_id=1602848246]
 position = Vector2(26.155102, 7.129641)
 scale = Vector2(1.6098503, 1.6098503)
+frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -36.91259
@@ -1453,25 +1511,26 @@ rotation = -1.0522399
 z_index = -1
 z_as_relative = false
 position = Vector2(-362, 47)
+width = 30.0
 width_curve = SubResource("Curve_xbu1k")
 grad = SubResource("Gradient_388lu")
-progress = 0.0
+progress = 1.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant5" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_llmor")
 
 [node name="Yellowball" parent="Offset/Obstacles/Plant5/Path2D" index="0" unique_id=1760792903 instance=ExtResource("5_m704x")]
-position = Vector2(425, -123)
-rotation = -0.1139712
-scale = Vector2(1.001358e-05, 1.001358e-05)
-progress = 0.0
+position = Vector2(663.00006, -3.9999995)
+rotation = -0.25786492
+progress = 278.93945
 
 [node name="Area" parent="Offset/Obstacles/Plant5/Path2D/Yellowball" index="0" unique_id=221360279]
 position = Vector2(2.073307, -1.5939903)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant5/Path2D/Yellowball" index="1" unique_id=1602848246]
 position = Vector2(5.0705757, 0.27531242)
+frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant5/Path2D/Yellowball/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -45.61792

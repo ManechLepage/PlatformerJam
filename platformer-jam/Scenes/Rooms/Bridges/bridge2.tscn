@@ -92,7 +92,7 @@ point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_1pdai"]
 resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_ntg8m"]
 _data = {
@@ -102,7 +102,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_57w1k"]
 resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
 size = Vector2(145.1695, 21.75)
@@ -133,7 +133,7 @@ radius = 41.34002
 
 [sub_resource type="Gradient" id="Gradient_g57bs"]
 resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_1d1jq"]
 _data = {
@@ -248,12 +248,12 @@ position = Vector2(-444.58472, -316.125)
 shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="2" unique_id=1564692368]
-position = Vector2(0, -82)
+position = Vector2(-12, -30)
 rotation = 0.17976892
 shape = SubResource("CircleShape2D_a3ta5")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Offset/Obstacles/Platform" index="3" unique_id=846305555]
-position = Vector2(67, -49)
+position = Vector2(138, -12)
 rotation = 0.17976892
 shape = SubResource("CircleShape2D_00xgr")
 
@@ -395,7 +395,7 @@ scale = Vector2(1.0955168, 1.0955168)
 texture = ExtResource("9_ysw6c")
 
 [node name="Gear3" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=1102780469 instance=ExtResource("12_eq2xk")]
-position = Vector2(0, 165)
+position = Vector2(-11, 217)
 rotation = -0.021839552
 scale = Vector2(1.8174927, 1.8174927)
 rpm = 4.0

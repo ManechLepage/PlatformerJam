@@ -1774,7 +1774,7 @@ scale = Vector2(4.76, 17.665)
 
 [node name="Left_wall2" parent="Offset/Obstacles" index="1" unique_id=261207703 instance=ExtResource("6_xq6d4")]
 position = Vector2(-369, -246)
-rotation = -0.08726646
+rotation = -0.036885865
 scale = Vector2(4.76, 17.665)
 
 [node name="Right_wall" parent="Offset/Obstacles" index="2" unique_id=1649337812 instance=ExtResource("6_xq6d4")]

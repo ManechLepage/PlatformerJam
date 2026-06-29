@@ -150,6 +150,8 @@ _data = {
 &"RESET": SubResource("Animation_2w047")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5khlg"]
+
 [node name="Tutorial_2" unique_id=197990627 instance=ExtResource("1_l3fbw")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1932419129]
@@ -288,7 +290,7 @@ scale = Vector2(18.87, 1)
 is_platform = true
 
 [node name="Left_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1418715656 instance=ExtResource("3_0p57m")]
-position = Vector2(-390.99997, 105)
+position = Vector2(-401.99997, 98)
 rotation = 0.2617994
 scale = Vector2(3.04, 17.035)
 
@@ -301,6 +303,13 @@ scale = Vector2(1.135, 17.035)
 position = Vector2(95.99999, -151.99997)
 rotation = 1.8709929
 scale = Vector2(2.9928472, 47.414444)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Right_ceiling" index="0" unique_id=469669995]
+position = Vector2(0.3045044, 1.2745724)
+rotation = -0.015780004
+scale = Vector2(1.5467796, 0.62997305)
+skew = -1.3077171
+shape = SubResource("RectangleShape2D_5khlg")
 
 [node name="Right_wall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=721685211 instance=ExtResource("3_0p57m")]
 position = Vector2(282, 54)
@@ -388,8 +397,8 @@ rotation = -1.272149
 scale = Vector2(5.9886546, 6.859102)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Fall_pilar_rot/Falling_pilar" index="0" unique_id=1349571073]
-position = Vector2(-2.855, 0)
-scale = Vector2(1.315, 1)
+position = Vector2(-5.844371, 0.03442523)
+scale = Vector2(1.615102, 1)
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=333397259]
 modulate = Color(0.126, 0.161, 0.21, 1)
@@ -861,4 +870,5 @@ position = Vector2(-28, -255)
 rotation = -0.3948632
 texture = ExtResource("12_3klni")
 
+[editable path="Offset/Obstacles/Right_ceiling"]
 [editable path="Offset/Obstacles/Fall_pilar_rot/Falling_pilar"]

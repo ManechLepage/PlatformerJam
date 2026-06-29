@@ -601,7 +601,6 @@ offset = Vector2i(4, 0)
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 
 [node name="bigwater" type="Node2D" parent="Offset/Background/Parallax2D" index="0" unique_id=374543736]
-modulate = Color(1, 1, 1, 0.7307692)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/Background/Parallax2D/bigwater" index="0" unique_id=543324456]
 root_node = NodePath("../Waterfall5")
@@ -702,7 +701,6 @@ region_rect = Rect2(0, 0, 192, 800)
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(-33, 93.99999)
-rotation = -2.576106
 scale = Vector2(2.5767398, 2.5767398)
 rpm = 0.0
 
@@ -710,7 +708,6 @@ rpm = 0.0
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(-183, 221.00002)
-rotation = 2.576106
 scale = Vector2(2.1302333, 2.1302333)
 rpm = 0.0
 
@@ -718,7 +715,6 @@ rpm = 0.0
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(249, -189)
-rotation = -2.576106
 scale = Vector2(2.5767398, 2.5767398)
 rpm = 0.0
 
@@ -726,7 +722,6 @@ rpm = 0.0
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(63, -92)
-rotation = 2.576106
 scale = Vector2(2.5767398, 2.5767398)
 rpm = 0.0
 
@@ -806,7 +801,7 @@ shape = SubResource("RectangleShape2D_6i037")
 
 [node name="DecoPlatform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=1980273417 instance=ExtResource("4_74567")]
 position = Vector2(62, -92)
-rotation = 1.0053097
+rotation = -1.5707964
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/DecoPlatform1" index="0" unique_id=1349571073]
@@ -830,7 +825,6 @@ shape = SubResource("CircleShape2D_kj5ac")
 
 [node name="Gear3" parent="Offset/Obstacles/Platform4/CollisionShape2D" index="0" unique_id=1462521937 instance=ExtResource("7_ayau5")]
 modulate = Color(2.5355003, 10.258124, 10.129414, 1)
-rotation = 2.576106
 scale = Vector2(1.1301464, 1.1301464)
 rpm = 0.0
 
@@ -846,7 +840,7 @@ shape = SubResource("RectangleShape2D_ayau5")
 [node name="Ball2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1103107486 instance=ExtResource("4_74567")]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 z_index = 5
-position = Vector2(-186, 58.66887)
+position = Vector2(-186, 189)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Ball2" index="0" unique_id=1349571073]
@@ -863,7 +857,6 @@ flip_h = true
 modulate = Color(1.8765297, 4.9765153, 4.6148505, 1)
 z_index = -1
 position = Vector2(16, 13)
-rotation = -10.304424
 scale = Vector2(0.41185215, 0.41185215)
 rpm = 0.0
 
@@ -871,7 +864,6 @@ rpm = 0.0
 modulate = Color(1.8765297, 4.9765153, 4.6148505, 1)
 z_index = -1
 position = Vector2(-15.999998, 13)
-rotation = 10.304424
 scale = Vector2(0.412, 0.412)
 rpm = 0.0
 
@@ -1032,7 +1024,7 @@ rpm = -10.0
 [node name="FallWater" parent="." index="5" unique_id=1979529811 instance=ExtResource("21_20xh4")]
 z_index = 10
 z_as_relative = false
-position = Vector2(-4127, -263)
+position = Vector2(-4127, -286)
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]

@@ -67,6 +67,7 @@ _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0
 point_count = 3
 
 [node name="FlowerBounce" type="PathFollow2D" unique_id=376175354 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
+z_as_relative = false
 rotation = -2.6776013
 progress = 129.73083
 script = ExtResource("1_1ytvh")

@@ -18,7 +18,7 @@ func exit():
 	
 
 func process_inputs(event):
-	if Input.is_action_just_released("Interact"):
+	if Input.is_action_just_pressed("Interact"):
 		return interact
 	if Input.is_action_just_pressed("Meditate"):
 		return meditate
@@ -39,7 +39,7 @@ func process_physics(delta):
 	
 	if direction == 0:
 		return idle
-	if parent.velocity.y > 0:
+	if parent.velocity.y > 0 or not Game.player.is_on_floor():
 		return fall
 
 func _on_sprite_animation_looped() -> void:

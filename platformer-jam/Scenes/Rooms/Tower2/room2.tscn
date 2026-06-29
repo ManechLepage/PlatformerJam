@@ -481,6 +481,30 @@ tracks/9/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Waterfall11:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Waterfall12:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_oipvh"]
 resource_name = "waterr"
@@ -606,6 +630,30 @@ tracks/9/keys = {
 "update": 1,
 "values": [0, 1, 2]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Waterfall11:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Waterfall12:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oawka"]
 _data = {
@@ -645,7 +693,7 @@ size = Vector2(376, 25)
 size = Vector2(202.5, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q03bt"]
-size = Vector2(92.5, 101)
+size = Vector2(92.5, 628.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xuur6"]
 radius = 39.051247
@@ -1115,11 +1163,6 @@ position = Vector2(-35, -294)
 script = ExtResource("3_lgexx")
 room_name = "Tower2-03"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(35.5, -4.5)
-shape = SubResource("RectangleShape2D_f55gr")
-debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
-
 [node name="RoomTrigger4" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="1" unique_id=245909862]
 position = Vector2(-35, 313)
 script = ExtResource("3_lgexx")
@@ -1167,6 +1210,7 @@ position = Vector2(-869, -12)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Wall2" index="0" unique_id=1349571073]
 position = Vector2(477, -14)
+scale = Vector2(1, 1.7200024)
 shape = SubResource("RectangleShape2D_xbu1k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Wall2" index="1" unique_id=1943082399]
@@ -1195,7 +1239,7 @@ shape = SubResource("RectangleShape2D_pdxpn")
 position = Vector2(397, -225)
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
-position = Vector2(-12.75, 0)
+position = Vector2(-12.75, -263.75)
 shape = SubResource("RectangleShape2D_q03bt")
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Platform13" index="1" unique_id=943959972]

@@ -3,10 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_h6fht"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_keqoi"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_fsu8v"]
+[ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="3_jnmc2"]
+[ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="4_85re1"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="4_keqoi"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_m518m"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_r476u"]
+[ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="5_tq6ra"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="6_84h4p"]
+[ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="6_rjpwa"]
 [ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="8_fsu8v"]
 [ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="9_m518m"]
 [ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="10_kaqui"]
@@ -123,7 +127,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_jnmc2"]
 resource_local_to_scene = true
-colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_jnmc2"]
 _data = {
@@ -165,21 +169,59 @@ script = ExtResource("2_keqoi")
 position = Vector2(-2880, -2160)
 offset = Vector2i(3, 4)
 
-[node name="Gear4" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="0" unique_id=1353983551 instance=ExtResource("8_fsu8v")]
+[node name="Parallax2D" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="0" unique_id=739467125]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D" index="0" unique_id=439208017]
+position = Vector2(378, 180)
+scale = Vector2(1.6338549, 1.6338549)
+texture = ExtResource("3_jnmc2")
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D" index="1" unique_id=309999630]
+position = Vector2(419, 55)
+texture = ExtResource("4_85re1")
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D" index="2" unique_id=258720011]
+position = Vector2(553, 145)
+texture = ExtResource("5_tq6ra")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D" index="3" unique_id=1447109103]
+position = Vector2(252, 72)
+scale = Vector2(1.6100297, 2.0006406)
+texture = ExtResource("6_rjpwa")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D" index="4" unique_id=989904998]
+position = Vector2(49, 102)
+texture = ExtResource("5_tq6ra")
+
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D" index="5" unique_id=244552786]
+position = Vector2(51.999996, 285)
+scale = Vector2(1.441664, 1.441664)
+texture = ExtResource("3_jnmc2")
+
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D" index="6" unique_id=1933071786]
+position = Vector2(48, 165)
+texture = ExtResource("6_rjpwa")
+
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D" index="7" unique_id=1255814371]
+position = Vector2(187, 50)
+texture = ExtResource("5_tq6ra")
+
+[node name="Gear4" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=1353983551 instance=ExtResource("8_fsu8v")]
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(-302, 296)
 scale = Vector2(1.9296914, 1.9296914)
 rpm = -6.0
 
-[node name="Gear5" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="1" unique_id=539188930 instance=ExtResource("8_fsu8v")]
+[node name="Gear5" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=539188930 instance=ExtResource("8_fsu8v")]
 modulate = Color(0.79571176, 4.369593, 4.310029, 1)
 z_index = -2
 position = Vector2(-466, 220)
 scale = Vector2(2.535099, 2.535099)
 rpm = 5.0
 
-[node name="Gear6" parent="Offset/Background/Parallax2D" parent_id_path=PackedInt32Array(739467125) index="2" unique_id=2076606287 instance=ExtResource("8_fsu8v")]
+[node name="Gear6" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="2" unique_id=2076606287 instance=ExtResource("8_fsu8v")]
 modulate = Color(0.5192469, 0.5192469, 0.5192469, 1)
 z_index = -2
 position = Vector2(208, 189)

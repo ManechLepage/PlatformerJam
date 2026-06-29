@@ -3,8 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://dmosabcgkit6v" path="res://Scenes/Rooms/room.tscn" id="1_xdh3y"]
 [ext_resource type="Script" uid="uid://cgxit30qlrl5e" path="res://Scripts/Objects/Global_animations.gd" id="2_lvexf"]
 [ext_resource type="Script" uid="uid://8c8bigrlfu18" path="res://Scripts/Room/room_trigger.gd" id="3_b2jqe"]
+[ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="3_qacjv"]
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_bllyr"]
+[ext_resource type="Texture2D" uid="uid://bwvligoi2xg45" path="res://Sprites/brick_bg1.tres" id="4_ghsgk"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_7h1hb"]
+[ext_resource type="Texture2D" uid="uid://ba68sqs7jpgj7" path="res://Sprites/brick_bg3.tres" id="5_8i4ai"]
+[ext_resource type="Texture2D" uid="uid://dqtuus4rl8i00" path="res://Sprites/brick_bg2.tres" id="6_nq83a"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="6_qacjv"]
 [ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="7_7h1hb"]
 [ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="7_lvexf"]
@@ -148,6 +152,88 @@ script = ExtResource("2_lvexf")
 [node name="Offset" parent="." index="1" unique_id=652906693]
 position = Vector2(-2880, -2700)
 offset = Vector2i(3, 5)
+
+[node name="Parallax2D2" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="1" unique_id=1426022184]
+modulate = Color(2.7688425, 0.707839, 0.8108895, 1)
+
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="0" unique_id=1042907214]
+position = Vector2(425, 306)
+scale = Vector2(1.6358242, 1.6358242)
+texture = ExtResource("3_qacjv")
+
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="1" unique_id=373150626]
+position = Vector2(492, 166)
+texture = ExtResource("4_ghsgk")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="2" unique_id=10447771]
+position = Vector2(526, 94)
+texture = ExtResource("5_8i4ai")
+
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="3" unique_id=668716349]
+position = Vector2(259, 229)
+texture = ExtResource("3_qacjv")
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="4" unique_id=1533161716]
+position = Vector2(333, 160)
+texture = ExtResource("4_ghsgk")
+
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="5" unique_id=335626339]
+position = Vector2(180, 212)
+texture = ExtResource("5_8i4ai")
+
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="6" unique_id=1013777805]
+position = Vector2(181, 126)
+texture = ExtResource("6_nq83a")
+
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="7" unique_id=766079792]
+position = Vector2(167, -12)
+texture = ExtResource("4_ghsgk")
+
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="8" unique_id=293276697]
+position = Vector2(265, 33)
+scale = Vector2(2.0088449, 1.3586707)
+texture = ExtResource("5_8i4ai")
+
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="9" unique_id=1431498371]
+position = Vector2(412, 90)
+texture = ExtResource("4_ghsgk")
+
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="10" unique_id=2127940845]
+position = Vector2(387, 7)
+texture = ExtResource("3_qacjv")
+
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="11" unique_id=984063042]
+position = Vector2(573, 22)
+texture = ExtResource("6_nq83a")
+
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="12" unique_id=1989573742]
+position = Vector2(-27, 28)
+texture = ExtResource("6_nq83a")
+
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="13" unique_id=216194780]
+position = Vector2(178, 44)
+texture = ExtResource("3_qacjv")
+
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="14" unique_id=1695080052]
+position = Vector2(-230, -5)
+texture = ExtResource("4_ghsgk")
+
+[node name="BrickBg16" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="15" unique_id=680684303]
+position = Vector2(-209, 20)
+texture = ExtResource("5_8i4ai")
+
+[node name="BrickBg17" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="16" unique_id=822943724]
+position = Vector2(85, -52)
+texture = ExtResource("6_nq83a")
+
+[node name="BrickBg18" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="17" unique_id=1963572533]
+position = Vector2(325, -117)
+scale = Vector2(1.2516305, 1.2516305)
+texture = ExtResource("3_qacjv")
+
+[node name="BrickBg19" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="18" unique_id=1032309262]
+position = Vector2(433, -72)
+texture = ExtResource("4_ghsgk")
 
 [node name="RoomTrigger" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="0" unique_id=174834819]
 position = Vector2(-35, 297)

@@ -776,6 +776,7 @@ flip_h = true
 
 [node name="Plant1" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=586076656 instance=ExtResource("9_10rd1")]
 z_index = -4
+z_as_relative = false
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_1fc0b")

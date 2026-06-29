@@ -479,7 +479,7 @@ radius = 49.0306
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_qn7c1"]
+[sub_resource type="Gradient" id="Gradient_iu6a3"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
 
@@ -707,6 +707,14 @@ position = Vector2(-123, -232)
 rotation = -3.001589
 scale = Vector2(0.4478116, 0.4478116)
 texture = ExtResource("9_iu6a3")
+
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="15" unique_id=319836866]
+position = Vector2(494, -46)
+texture = ExtResource("3_1b78x")
+
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="16" unique_id=743815452]
+position = Vector2(419, -152)
+texture = ExtResource("3_jvahp")
 
 [node name="Parallax2D3" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="2" unique_id=1988134974]
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
@@ -1078,7 +1086,7 @@ z_as_relative = false
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_qn7c1")
+grad = SubResource("Gradient_iu6a3")
 progress = 1.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_size = 20.0
@@ -1103,7 +1111,7 @@ frame = 4
 position = Vector2(0.7855773, 13.017906)
 
 [node name="Waterfall" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="12" unique_id=1652650217 instance=ExtResource("7_xbu1k")]
-position = Vector2(-340, -239)
+position = Vector2(-340, -311)
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=2103230425]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
@@ -1335,12 +1343,6 @@ texture = ExtResource("12_4i05a")
 position = Vector2(504, 126)
 scale = Vector2(1.9572979, 1.9572979)
 texture = ExtResource("15_2eb28")
-
-[node name="BrickBg3" type="Sprite2D" parent="Offset/Deco/wall" index="44" unique_id=358649260]
-modulate = Color(0.09123999, 0.09123999, 0.09123999, 1)
-z_index = -1
-position = Vector2(-342, -259)
-texture = ExtResource("4_1b78x")
 
 [node name="wall2" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=625884444]
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
