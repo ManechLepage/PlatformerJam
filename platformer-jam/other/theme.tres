@@ -69,3 +69,5 @@ HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_787fc")
 HSlider/styles/slider = SubResource("StyleBoxFlat_a1s7k")
 Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_42nn3")
+RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/fonts/normal_font = ExtResource("1_42nn3")

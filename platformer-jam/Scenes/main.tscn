@@ -58,6 +58,7 @@
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
 [ext_resource type="PackedScene" uid="uid://ctkeb5r1ievjq" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
+[ext_resource type="Theme" uid="uid://dt4jr7r3lmyu6" path="res://other/theme.tres" id="59_2060n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -197,22 +198,68 @@ size = Vector2(931, 3734)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqrg6"]
 size = Vector2(934.5, 3011)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2060n"]
+size = Vector2(934.5, 217.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ml46"]
+size = Vector2(934.5, 217.5)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptfg5"]
 content_margin_left = 90.0
 content_margin_top = 90.0
 content_margin_right = 90.0
 content_margin_bottom = 90.0
 
+[sub_resource type="GDScript" id="GDScript_2060n"]
+resource_name = "FlavorText"
+script/source = "extends Control
+
+@export var sub: RichTextLabel
+@export var ruins: RichTextLabel
+@export var garden: RichTextLabel
+@export var currents: RichTextLabel
+@export var rythm: RichTextLabel
+@export var will: RichTextLabel
+var tween: Tween
+
+func show_flavor_text(_body,area: Area2D):
+	var text: RichTextLabel
+	match area.name:
+		\"Tower1Area\":
+			text = garden
+		\"Tower2Area\":
+			text = currents
+		\"Tower2Area\":
+			text = rythm
+		\"Tower3Area\":
+			text = will
+		\"sub\":
+			text = sub
+		\"ruins\":
+			text = ruins
+	if tween: tween.kill()
+	tween = create_tween()
+	tween.tween_property(text,\"modulate:a\",1,0.7)
+	tween.tween_property(text,\"modulate:a\",2,2)
+	tween.tween_property(text,\"modulate:a\",0,3)
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2060n"]
+content_margin_left = 25.0
+content_margin_top = 25.0
+content_margin_right = 25.0
+content_margin_bottom = 25.0
+
 [node name="Main" type="Node2D" unique_id=295821621]
 
 [node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
 z_index = 2
-position = Vector2(-141, -72)
+position = Vector2(1223, -881)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
 initial_room = "tutorial_1"
-initial_player_pos = Vector2(-2000, -2000)
+initial_player_pos = Vector2(-1750, 1550)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
@@ -448,6 +495,28 @@ position = Vector2(-2134, -3978)
 shape = SubResource("RectangleShape2D_kqrg6")
 debug_color = Color(0.5110002, 0, 0.73, 0)
 
+[node name="ruins" type="Area2D" parent="Areas" unique_id=1110611957]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/ruins" unique_id=1233635624]
+position = Vector2(-4062, 107.25)
+shape = SubResource("RectangleShape2D_2060n")
+debug_color = Color(0.5110002, 0, 0.73, 0)
+
+[node name="sub" type="Area2D" parent="Areas" unique_id=96013369]
+z_index = -50
+position = Vector2(2135, 0)
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/sub" unique_id=425516233]
+position = Vector2(-3248, 1572)
+shape = SubResource("RectangleShape2D_6ml46")
+debug_color = Color(0.5110002, 0, 0.73, 0)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
 layer = 101
 
@@ -505,5 +574,126 @@ vertical_alignment = 2
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=1902003926 instance=ExtResource("58_1semv")]
 process_mode = 3
+
+[node name="FlavorText" type="Control" parent="CanvasLayer" unique_id=173933074 node_paths=PackedStringArray("sub", "ruins", "garden", "currents", "rythm", "will")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("GDScript_2060n")
+sub = NodePath("SubText")
+ruins = NodePath("RuinsText")
+garden = NodePath("GardenText")
+currents = NodePath("WaterText")
+rythm = NodePath("RythmText")
+will = NodePath("WillText")
+
+[node name="SubText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1009945860]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Subterranean
+"
+
+[node name="RuinsText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1346080957]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Ruins
+"
+
+[node name="GardenText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1493701904]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Pillar One: The Garden"
+
+[node name="WaterText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1128310466]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Pillar Two: Currents"
+
+[node name="RythmText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1163790011]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Pillar Three: Rythm"
+
+[node name="WillText" type="RichTextLabel" parent="CanvasLayer/FlavorText" unique_id=1236155241]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("59_2060n")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2060n")
+text = "Pillar Four: The Will"
+
+[connection signal="body_entered" from="Areas/Tower1Area" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
+[connection signal="body_entered" from="Areas/Tower2Area" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
+[connection signal="body_entered" from="Areas/Tower3Area" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
+[connection signal="body_entered" from="Areas/Tower4Area" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
+[connection signal="body_entered" from="Areas/ruins" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
+[connection signal="body_entered" from="Areas/sub" to="CanvasLayer/FlavorText" method="show_flavor_text" flags=18]
 
 [editable path="CanvasLayer/MainMenu"]

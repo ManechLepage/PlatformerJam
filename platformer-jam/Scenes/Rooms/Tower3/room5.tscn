@@ -661,7 +661,6 @@ shape = SubResource("RectangleShape2D_fxv6i")
 [node name="Platform" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=2016237926 instance=ExtResource("4_psknp")]
 position = Vector2(-143, -39)
 rotation = -3.1415925
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_psknp")
@@ -676,7 +675,6 @@ texture = ExtResource("14_3ef1n")
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1245923025 instance=ExtResource("4_psknp")]
 position = Vector2(139, -39)
 rotation = -3.1415925
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_psknp")
@@ -689,7 +687,6 @@ scale = Vector2(1.1319375, 0.9677666)
 texture = ExtResource("13_5rmhn")
 
 [node name="Platform9" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1024420911 instance=ExtResource("4_psknp")]
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform9" index="0" unique_id=1349571073]
 position = Vector2(5, 268)
@@ -697,7 +694,6 @@ shape = SubResource("RectangleShape2D_wqx6s")
 
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=634288388 instance=ExtResource("4_psknp")]
 position = Vector2(5, -200)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_wqx6s")
@@ -712,7 +708,6 @@ flip_h = true
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=1266816443 instance=ExtResource("4_psknp")]
 position = Vector2(-270, 169.99997)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
 position = Vector2(-68, 11)
