@@ -226,7 +226,11 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
-size = Vector2(582, 23)
+size = Vector2(1059, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b63be"]
+resource_local_to_scene = true
+size = Vector2(959, 23)
 
 [sub_resource type="Curve" id="Curve_kmnjb"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
@@ -418,7 +422,7 @@ script = ExtResource("3_pd6bw")
 room_name = "Tower1-03"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(30.5, -4.5)
+position = Vector2(75.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -428,8 +432,19 @@ script = ExtResource("3_pd6bw")
 room_name = "Tower1-05"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=2015932607]
-position = Vector2(217, -1)
+position = Vector2(79, -1)
 shape = SubResource("RectangleShape2D_f55gr")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
+[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=684332414]
+position = Vector2(-476, 0)
+script = ExtResource("3_pd6bw")
+room_name = "BridgeR3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=230449615]
+position = Vector2(-26, 2)
+scale = Vector2(0.022323506, -26.404112)
+shape = SubResource("RectangleShape2D_b63be")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
 [node name="vine4" type="Line2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=551727115]
@@ -444,7 +459,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("7_fqf4r")
 grad = SubResource("Gradient_2gha3")
-progress = 0.09999999999999998
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_b5mi3")
 hitbox_scene = ExtResource("8_b63be")
@@ -455,9 +469,9 @@ position = Vector2(-1285, -1901)
 curve = SubResource("Curve2D_ybvw1")
 
 [node name="FlowerBounce" parent="Offset/Obstacles/vine4/Path2D" index="0" unique_id=376175354 instance=ExtResource("6_pd6bw")]
-position = Vector2(-386.92783, -48.571434)
-rotation = 1.3638523
-progress = 25.300362
+position = Vector2(-397.40237, 28.808165)
+rotation = -1.2875694
+progress = 253.00362
 v_offset = -15.0
 
 [node name="Area" parent="Offset/Obstacles/vine4/Path2D/FlowerBounce" index="0" unique_id=221360279]
@@ -466,6 +480,7 @@ position = Vector2(-0.558444, 13.127193)
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/vine4/Path2D/FlowerBounce" index="1" unique_id=1602848246]
 position = Vector2(2.4388251, 14.996494)
 rotation = 1.8389235
+frame = 4
 
 [node name="vine5" type="Line2D" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1460369172]
 texture_filter = 1
@@ -490,9 +505,9 @@ position = Vector2(-1231, -1902)
 curve = SubResource("Curve2D_fqf4r")
 
 [node name="FlowerBounce" parent="Offset/Obstacles/vine5/Path2D" index="0" unique_id=1725364390 instance=ExtResource("6_pd6bw")]
-position = Vector2(-399.4268, -37.866962)
-rotation = 1.644986
-progress = 31.74436
+position = Vector2(-426.84042, 235.19914)
+rotation = 2.0713832
+progress = 317.4436
 v_offset = -15.0
 
 [node name="Area" parent="Offset/Obstacles/vine5/Path2D/FlowerBounce" index="0" unique_id=221360279]
@@ -978,6 +993,7 @@ texture = ExtResource("11_xvax0")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/vine4/Path2D/FlowerBounce"]
 [editable path="Offset/Obstacles/vine5/Path2D/FlowerBounce"]
