@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dtfcbf6moyu2w" path="res://Scenes/Objects/platform.tscn" id="4_bllyr"]
 [ext_resource type="PackedScene" uid="uid://dg2kkucvixfyt" path="res://Scenes/Objects/procedural_vine_curve.tscn" id="5_7h1hb"]
 [ext_resource type="PackedScene" uid="uid://do8vo3o07f6ql" path="res://Scenes/Objects/fountain.tscn" id="6_qacjv"]
+[ext_resource type="Texture2D" uid="uid://d10tcdha8fnjj" path="res://Sprites/leaf5.tres" id="7_7h1hb"]
+[ext_resource type="PackedScene" uid="uid://ndrishhfm4jw" path="res://Scenes/Objects/gear.tscn" id="7_lvexf"]
+[ext_resource type="Texture2D" uid="uid://cjqlbv38auhc8" path="res://Sprites/platform2.tres" id="8_b2jqe"]
+[ext_resource type="Texture2D" uid="uid://dghtf6oxjvt2e" path="res://Sprites/platform1.tres" id="10_qacjv"]
 
 [sub_resource type="Animation" id="Animation_snhcn"]
 resource_name = "Lucidity"
@@ -67,6 +71,9 @@ radius = 29.068884
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdh3y"]
 size = Vector2(83, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvexf"]
+size = Vector2(117.5, 20)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_xdh3y"]
 radius = 30.0
 
@@ -80,7 +87,7 @@ colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.
 
 [sub_resource type="Curve2D" id="Curve2D_lvexf"]
 _data = {
-"points": PackedVector2Array(-106.99354, -183.9003, 106.99354, 183.9003, -388, -527, -170.74329, -106.43505, 170.74329, 106.43505, 50, -336, 45.709282, -134.78003, -45.709282, 134.78003, 274, 161)
+"points": PackedVector2Array(-106.99354, -183.9003, 106.99354, 183.9003, -534, -606, -170.74329, -106.43505, 170.74329, 106.43505, 50, -336, 45.709282, -134.78003, -45.709282, 134.78003, 274, 161)
 }
 point_count = 3
 
@@ -93,6 +100,17 @@ _data = {
 "points": PackedVector2Array(-23.393534, 88.89973, 23.393534, -88.89973, -6, -365, 230.08623, 87.58542, -230.08623, -87.58542, -32, -620)
 }
 point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_dhyn8"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.5652985)
+colors = PackedColorArray(0.13725491, 0.06666667, 0.09411765, 1, 0.043137256, 0.043137256, 0.09803922, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lvexf"]
+gradient = SubResource("Gradient_dhyn8")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 0.50284094)
+repeat = 2
 
 [node name="Room2" unique_id=197990627 instance=ExtResource("1_xdh3y")]
 
@@ -172,6 +190,10 @@ shape = SubResource("CircleShape2D_bllyr")
 position = Vector2(665, -23)
 shape = SubResource("RectangleShape2D_xdh3y")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="5" unique_id=500411430]
+position = Vector2(549, 232)
+shape = SubResource("RectangleShape2D_lvexf")
+
 [node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=217410508 instance=ExtResource("4_bllyr")]
 position = Vector2(218, 274)
 
@@ -212,7 +234,84 @@ position = Vector2(0, 579)
 curve = SubResource("Curve2D_b2jqe")
 
 [node name="Fountain" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1652650217 instance=ExtResource("6_qacjv")]
-position = Vector2(215, 199)
+position = Vector2(368, 180)
+
+[node name="fountain" parent="Offset/Obstacles/Fountain" index="1" unique_id=551777104]
+flip_h = true
+
+[node name="Leaf5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="0" unique_id=2083018618]
+position = Vector2(402, 192)
+texture = ExtResource("7_7h1hb")
+
+[node name="Gears" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=574585147]
+
+[node name="belt2" type="Line2D" parent="Offset/Deco/Gears" index="0" unique_id=1105243308]
+z_index = -5
+position = Vector2(-55.98169, 389.71948)
+scale = Vector2(2.8302, 2.8302)
+points = PackedVector2Array(96.453186, -40.534058, 81.61322, -144.41364, 131.07971, -138.05365)
+width = 15.0
+texture = SubResource("GradientTexture2D_lvexf")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="belt3" type="Line2D" parent="Offset/Deco/Gears" index="1" unique_id=1904771824]
+z_index = -5
+position = Vector2(-55.98169, 389.71948)
+scale = Vector2(2.8302, 2.8302)
+points = PackedVector2Array(-43.112915, -145.47363, 81.61322, -144.41364, 131.07971, -138.05365)
+width = 15.0
+texture = SubResource("GradientTexture2D_lvexf")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Gear" parent="Offset/Deco/Gears" index="2" unique_id=1353983551 instance=ExtResource("7_lvexf")]
+position = Vector2(218, 274)
+scale = Vector2(1.5682614, 1.5682614)
+rpm = -1.0
+
+[node name="Gear2" parent="Offset/Deco/Gears" index="3" unique_id=1808869568 instance=ExtResource("7_lvexf")]
+position = Vector2(-178, -22)
+scale = Vector2(1.5329874, 1.5329874)
+rpm = 5.0
+
+[node name="Gear3" parent="Offset/Deco/Gears" index="4" unique_id=750865158 instance=ExtResource("7_lvexf")]
+position = Vector2(-245, 6)
+scale = Vector2(0.82048327, 0.82048327)
+rpm = 10.0
+
+[node name="Gear4" parent="Offset/Deco/Gears" index="5" unique_id=427441519 instance=ExtResource("7_lvexf")]
+position = Vector2(175, -19)
+scale = Vector2(0.6454017, 0.6454017)
+rpm = -8.0
+
+[node name="Gear5" parent="Offset/Deco/Gears" index="6" unique_id=1902321662 instance=ExtResource("7_lvexf")]
+position = Vector2(306, -50)
+scale = Vector2(1.4212425, 1.4212425)
+rpm = -3.0
+
+[node name="Gear6" parent="Offset/Deco/Gears" index="7" unique_id=531440628 instance=ExtResource("7_lvexf")]
+position = Vector2(370, -78)
+scale = Vector2(0.80958766, 0.80958766)
+rpm = 9.0
+
+[node name="Platform2" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1472825055]
+position = Vector2(371, 210)
+scale = Vector2(0.65297186, 0.65297186)
+texture = ExtResource("8_b2jqe")
+
+[node name="Platform1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=352990177]
+position = Vector2(509, -48)
+texture = ExtResource("10_qacjv")
+
+[node name="Leaf5" type="Sprite2D" parent="." index="2" unique_id=349685122]
+position = Vector2(-2387, -2774)
+scale = Vector2(1.783587, 1.783587)
+texture = ExtResource("7_7h1hb")
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
@@ -224,3 +323,4 @@ position = Vector2(215, 199)
 [editable path="Offset/Obstacles/Platform3"]
 [editable path="Offset/Obstacles/Plant2"]
 [editable path="Offset/Obstacles/Plant3"]
+[editable path="Offset/Obstacles/Fountain"]
