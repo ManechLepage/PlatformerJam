@@ -511,7 +511,7 @@ fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 0.50284094)
 repeat = 2
 
-[node name="Room4" unique_id=197990627 instance=ExtResource("1_c51jx")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_c51jx")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -980,7 +980,6 @@ shape = SubResource("RectangleShape2D_4i05a")
 modulate = Color(1.3457831, 2.1014214, 2.201223, 1)
 position = Vector2(-313, -110)
 collision_layer = 33
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
 position = Vector2(53.364502, -42.78125)

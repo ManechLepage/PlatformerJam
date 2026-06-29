@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfe5cwxh4rnyh" path="res://Scripts/Objects/lever.gd" id="1_f1e1e"]
 [ext_resource type="Texture2D" uid="uid://dus1nsaab8yl" path="res://Sprites/lever_handle.tres" id="2_m12dp"]
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="4_i4v44"]
 [ext_resource type="Texture2D" uid="uid://c6v18d0xv4o7g" path="res://Sprites/lever.png" id="5_dlhrn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfrgp"]
@@ -29,11 +30,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(83, 76)
 
-[node name="Lever" type="Area2D" unique_id=415754532 node_paths=PackedStringArray("base")]
+[sub_resource type="Gradient" id="Gradient_b17am"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.65523463)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlhrn"]
+gradient = SubResource("Gradient_b17am")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_gfrgp"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.1580756, 0.88311696), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Lever" type="Area2D" unique_id=415754532 node_paths=PackedStringArray("base", "poem_text")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_f1e1e")
 base = NodePath("base")
+poem_text = NodePath("PoemText")
 
 [node name="handle" type="Sprite2D" parent="." unique_id=1518814724]
 texture = ExtResource("2_m12dp")
@@ -47,6 +65,43 @@ frame_progress = 0.6297383
 position = Vector2(-0.5, -28)
 shape = SubResource("RectangleShape2D_yf5fn")
 debug_color = Color(0.7534542, 0.45345742, 0.16981164, 0.41960785)
+
+[node name="PoemText" type="RichTextLabel" parent="." unique_id=1814256131]
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+offset_left = -25.0
+offset_top = -91.0
+offset_right = 25.0
+offset_bottom = -65.0
+theme_override_colors/default_color = Color(3.2502122, 3.2502122, 3.2502122, 1)
+theme_override_fonts/normal_font = ExtResource("4_i4v44")
+theme_override_font_sizes/normal_font_size = 16
+text = "[C]"
+scroll_active = false
+autowrap_trim_flags = 64
+horizontal_alignment = 1
+vertical_alignment = 2
+visible_characters_behavior = 1
+
+[node name="Parchemin" type="CPUParticles2D" parent="." unique_id=1732084161]
+z_index = 10
+position = Vector2(0, 9)
+scale = Vector2(1.0037193, 1.0037193)
+amount = 32
+texture = SubResource("GradientTexture2D_dlhrn")
+lifetime = 2.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(8, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+damping_min = 30.0
+damping_max = 30.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_gfrgp")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

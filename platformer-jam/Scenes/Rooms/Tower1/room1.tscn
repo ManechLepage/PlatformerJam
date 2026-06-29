@@ -511,98 +511,86 @@ tracks/39/keys = {
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("Offset/Deco/vine9:progress")
-tracks/40/interp = 1
+tracks/40/path = NodePath("Offset/Deco/wall2/Brick27:position")
+tracks/40/interp = 2
 tracks/40/loop_wrap = true
 tracks/40/keys = {
-"times": PackedFloat32Array(0, 0.27),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/41/type = "value"
-tracks/41/imported = false
-tracks/41/enabled = true
-tracks/41/path = NodePath("Offset/Deco/vine9:width")
-tracks/41/interp = 1
-tracks/41/loop_wrap = true
-tracks/41/keys = {
-"times": PackedFloat32Array(0, 0.53),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 400.0]
-}
-tracks/42/type = "value"
-tracks/42/imported = false
-tracks/42/enabled = true
-tracks/42/path = NodePath("Offset/Deco/wall2/Brick27:position")
-tracks/42/interp = 2
-tracks/42/loop_wrap = true
-tracks/42/keys = {
 "times": PackedFloat32Array(0.08, 0.1953125, 0.31),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(313, -98), Vector2(401.00003, -137.00005), Vector2(462, -319)]
 }
-tracks/43/type = "value"
-tracks/43/imported = false
-tracks/43/enabled = true
-tracks/43/path = NodePath("Offset/Deco/wall2/Brick24:position")
-tracks/43/interp = 2
-tracks/43/loop_wrap = true
-tracks/43/keys = {
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Offset/Deco/wall2/Brick24:position")
+tracks/41/interp = 2
+tracks/41/loop_wrap = true
+tracks/41/keys = {
 "times": PackedFloat32Array(0.009999998, 0.046875, 0.14),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(301, -213), Vector2(365.00003, -205.00002), Vector2(532, -247.99998)]
 }
-tracks/44/type = "value"
-tracks/44/imported = false
-tracks/44/enabled = true
-tracks/44/path = NodePath("Offset/Deco/wall2/Brick2:position")
-tracks/44/interp = 2
-tracks/44/loop_wrap = true
-tracks/44/keys = {
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Offset/Deco/wall2/Brick2:position")
+tracks/42/interp = 2
+tracks/42/loop_wrap = true
+tracks/42/keys = {
 "times": PackedFloat32Array(0.1640625, 0.2265625, 0.359375),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(313, 145), Vector2(373, 154), Vector2(527, -84)]
 }
-tracks/45/type = "value"
-tracks/45/imported = false
-tracks/45/enabled = true
-tracks/45/path = NodePath("Offset/Deco/wall2/Brick27:rotation")
-tracks/45/interp = 2
-tracks/45/loop_wrap = true
-tracks/45/keys = {
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Offset/Deco/wall2/Brick27:rotation")
+tracks/43/interp = 2
+tracks/43/loop_wrap = true
+tracks/43/keys = {
 "times": PackedFloat32Array(0.08, 0.31),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.2607619, -2.1951625]
 }
-tracks/46/type = "value"
-tracks/46/imported = false
-tracks/46/enabled = true
-tracks/46/path = NodePath("Offset/Deco/wall2/Brick24:rotation")
-tracks/46/interp = 2
-tracks/46/loop_wrap = true
-tracks/46/keys = {
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Offset/Deco/wall2/Brick24:rotation")
+tracks/44/interp = 2
+tracks/44/loop_wrap = true
+tracks/44/keys = {
 "times": PackedFloat32Array(0.009999998, 0.14),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.24046491, -2.6114705]
 }
-tracks/47/type = "value"
-tracks/47/imported = false
-tracks/47/enabled = true
-tracks/47/path = NodePath("Offset/Deco/wall2/Brick2:rotation")
-tracks/47/interp = 2
-tracks/47/loop_wrap = true
-tracks/47/keys = {
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Offset/Deco/wall2/Brick2:rotation")
+tracks/45/interp = 2
+tracks/45/loop_wrap = true
+tracks/45/keys = {
 "times": PackedFloat32Array(0.1640625, 0.359375),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [1.6963814, 0.1999309]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Offset/Background/Parallax2D2/vine9:progress")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0, 0.12368401),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -1090,98 +1078,86 @@ tracks/39/keys = {
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("Offset/Deco/vine9:progress")
+tracks/40/path = NodePath("Offset/Deco/wall2/Brick27:position")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.1]
+"values": [Vector2(313, -98)]
 }
 tracks/41/type = "value"
 tracks/41/imported = false
 tracks/41/enabled = true
-tracks/41/path = NodePath("Offset/Deco/vine9:width")
+tracks/41/path = NodePath("Offset/Deco/wall2/Brick24:position")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(301, -213)]
 }
 tracks/42/type = "value"
 tracks/42/imported = false
 tracks/42/enabled = true
-tracks/42/path = NodePath("Offset/Deco/wall2/Brick27:position")
+tracks/42/path = NodePath("Offset/Deco/wall2/Brick2:position")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(313, -98)]
+"values": [Vector2(313, 145)]
 }
 tracks/43/type = "value"
 tracks/43/imported = false
 tracks/43/enabled = true
-tracks/43/path = NodePath("Offset/Deco/wall2/Brick24:position")
+tracks/43/path = NodePath("Offset/Deco/wall2/Brick27:rotation")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(301, -213)]
+"values": [0.2607619]
 }
 tracks/44/type = "value"
 tracks/44/imported = false
 tracks/44/enabled = true
-tracks/44/path = NodePath("Offset/Deco/wall2/Brick2:position")
+tracks/44/path = NodePath("Offset/Deco/wall2/Brick24:rotation")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(313, 145)]
+"values": [-0.24046491]
 }
 tracks/45/type = "value"
 tracks/45/imported = false
 tracks/45/enabled = true
-tracks/45/path = NodePath("Offset/Deco/wall2/Brick27:rotation")
+tracks/45/path = NodePath("Offset/Deco/wall2/Brick2:rotation")
 tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.2607619]
+"values": [1.6963814]
 }
 tracks/46/type = "value"
 tracks/46/imported = false
 tracks/46/enabled = true
-tracks/46/path = NodePath("Offset/Deco/wall2/Brick24:rotation")
+tracks/46/path = NodePath("Offset/Background/Parallax2D2/vine9:progress")
 tracks/46/interp = 1
 tracks/46/loop_wrap = true
 tracks/46/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.24046491]
-}
-tracks/47/type = "value"
-tracks/47/imported = false
-tracks/47/enabled = true
-tracks/47/path = NodePath("Offset/Deco/wall2/Brick2:rotation")
-tracks/47/interp = 1
-tracks/47/loop_wrap = true
-tracks/47/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.6963814]
+"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
@@ -1214,6 +1190,33 @@ point_count = 4
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7acu6"]
 size = Vector2(56.222946, 62.493927)
 
+[sub_resource type="Curve" id="Curve_x34c6"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ki1o7"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
+
+[sub_resource type="Gradient" id="Gradient_aor2i"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x34c6"]
+gradient = SubResource("Gradient_aor2i")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve2D" id="Curve2D_ab2yi"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(172.74529, 237.71869, -172.74529, -237.71869, -149, 396, -1.2921104, 113.25988, 1.2921104, -113.25988, 143, -29, 137.56442, -77.577835, -137.56442, 77.577835, -223, -266, -280.46457, 403.09827, 280.46457, -403.09827, 246, -200)
+}
+point_count = 4
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
 size = Vector2(779, 23)
@@ -1230,25 +1233,9 @@ size = Vector2(166.375, 25.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrn1a"]
 size = Vector2(156, 13)
 
-[sub_resource type="Curve" id="Curve_x34c6"]
-_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
-point_count = 3
-
 [sub_resource type="Gradient" id="Gradient_omffa"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
-
-[sub_resource type="Gradient" id="Gradient_x34c6"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.6908602)
-colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_x34c6"]
-gradient = SubResource("Gradient_x34c6")
-width = 32
-height = 16
-fill = 1
-fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Curve2D" id="Curve2D_3r3i8"]
 resource_local_to_scene = true
@@ -1302,10 +1289,6 @@ _data = {
 }
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_ki1o7"]
-resource_local_to_scene = true
-colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
-
 [sub_resource type="Curve2D" id="Curve2D_fig8b"]
 resource_local_to_scene = true
 _data = {
@@ -1313,14 +1296,7 @@ _data = {
 }
 point_count = 4
 
-[sub_resource type="Curve2D" id="Curve2D_ab2yi"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector2Array(172.74529, 237.71869, -172.74529, -237.71869, -149, 396, -1.2921104, 113.25988, 1.2921104, -113.25988, 143, -29, 137.56442, -77.577835, -137.56442, 77.577835, -223, -266, -280.46457, 403.09827, 280.46457, -403.09827, 246, -200)
-}
-point_count = 4
-
-[node name="Room2" unique_id=197990627 instance=ExtResource("1_nwy7d")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_nwy7d")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -1348,7 +1324,6 @@ position = Vector2(44.033974, -108.76586)
 rotation = 1.3962634
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_8y1y7")
@@ -1360,7 +1335,6 @@ rotation = -0.5235988
 scale = Vector2(0.5, 0.5)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform2" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7hyjq")
@@ -1372,7 +1346,6 @@ rotation = 2.0943952
 scale = Vector2(0.7, 0.7)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform3" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7hyjq")
@@ -1384,7 +1357,6 @@ rotation = -4.0770893
 scale = Vector2(0.7, 0.7)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform5" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7hyjq")
@@ -1396,7 +1368,6 @@ rotation = 0.6457718
 scale = Vector2(2, 2)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D/PathFollow2D/DecorationPlatform4" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_3r3i8")
@@ -1417,7 +1388,6 @@ position = Vector2(17.23497, -212.90485)
 rotation = 0.34906584
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D2/PathFollow2D/DecorationPlatform" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7acu6")
@@ -1429,7 +1399,6 @@ rotation = -0.5235988
 scale = Vector2(2.5, 2.5)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D2/PathFollow2D/DecorationPlatform2" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7acu6")
@@ -1441,7 +1410,6 @@ rotation = 1.7453293
 scale = Vector2(2.5, 2.5)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D2/PathFollow2D/DecorationPlatform3" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7acu6")
@@ -1451,87 +1419,109 @@ debug_color = Color(0.7297464, 0.47127116, 0.13536194, 0.41960785)
 position = Vector2(99.99803, 119.5363)
 collision_layer = 0
 collision_mask = 0
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Background/Parallax2D/Path2D2/PathFollow2D/DecorationPlatform4" index="0" unique_id=1349571073]
 shape = SubResource("RectangleShape2D_7acu6")
 debug_color = Color(0.7297464, 0.47127116, 0.13536194, 0.41960785)
 
-[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=828974210]
+[node name="vine9" type="Line2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="0" unique_id=1126915496]
+modulate = Color(1, 1, 1, 0.6784314)
+z_index = -12
+z_as_relative = false
+texture_filter = 1
+points = PackedVector2Array(0, 0)
+width = 200.0
+width_curve = SubResource("Curve_x34c6")
+default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("11_3r3i8")
+grad = SubResource("Gradient_ki1o7")
+progress = 0.0
+sample_count = 2.0
+texture_base = SubResource("GradientTexture2D_x34c6")
+hitbox_scene = ExtResource("12_7acu6")
+hitbox_size = 22.0
+
+[node name="Path2D" type="Path2D" parent="Offset/Background/Parallax2D2/vine9" index="0" unique_id=1856789481]
+curve = SubResource("Curve2D_ab2yi")
+
+[node name="BrickBg2" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=828974210]
 position = Vector2(-21, 174)
 texture = ExtResource("4_ki1o7")
 
-[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="1" unique_id=917667296]
+[node name="BrickBg3" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="2" unique_id=917667296]
 position = Vector2(-23, 79)
 texture = ExtResource("4_ki1o7")
 flip_h = true
 
-[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="2" unique_id=1306147738]
+[node name="BrickBg4" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="3" unique_id=1306147738]
 position = Vector2(-8, -43)
 texture = ExtResource("4_ki1o7")
 
-[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="3" unique_id=578048290]
+[node name="BrickBg5" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="4" unique_id=578048290]
 position = Vector2(-4, -149)
 texture = ExtResource("4_ki1o7")
 flip_h = true
 
-[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="4" unique_id=1901260727]
+[node name="BrickBg6" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="5" unique_id=1901260727]
 position = Vector2(-7, -253)
 texture = ExtResource("4_ki1o7")
 flip_h = true
 
-[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="5" unique_id=1440539093]
+[node name="BrickBg7" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="6" unique_id=1440539093]
 position = Vector2(-173, 118)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_ymjur")
 flip_h = true
 
-[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="6" unique_id=987529046]
+[node name="BrickBg1" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="7" unique_id=987529046]
 position = Vector2(-48, 17)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("4_7acu6")
 
-[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="7" unique_id=2066264699]
+[node name="BrickBg8" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="8" unique_id=2066264699]
 position = Vector2(77, 16)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("5_ymjur")
 flip_h = true
 
-[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="8" unique_id=69037221]
+[node name="BrickBg9" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="9" unique_id=69037221]
 position = Vector2(162, 75)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("6_ki1o7")
 flip_h = true
 
-[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="9" unique_id=1271994546]
+[node name="BrickBg10" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="10" unique_id=1271994546]
 position = Vector2(150, 196)
 scale = Vector2(0.99616855, 1)
 texture = ExtResource("6_ki1o7")
 
-[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="10" unique_id=344766790]
+[node name="BrickBg11" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="11" unique_id=344766790]
 position = Vector2(-118.00001, -107)
 scale = Vector2(1.052997, 0.74390244)
 texture = ExtResource("6_ki1o7")
 flip_h = true
 
-[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="11" unique_id=444293176]
+[node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="12" unique_id=444293176]
 position = Vector2(128, -97)
 scale = Vector2(1.142519, 1.2015345)
 texture = ExtResource("5_ymjur")
 flip_h = true
 
-[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="12" unique_id=755865800]
+[node name="BrickBg13" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="13" unique_id=755865800]
 position = Vector2(-169, -211)
 scale = Vector2(0.97482866, 1.1927235)
 texture = ExtResource("4_7acu6")
 
-[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="13" unique_id=1678344224]
+[node name="BrickBg14" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="14" unique_id=1678344224]
 position = Vector2(142, -248)
 scale = Vector2(0.99616855, 1.3884163)
 texture = ExtResource("4_7acu6")
 flip_h = true
 
-[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="14" unique_id=670389676]
+[node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="15" unique_id=670389676]
 position = Vector2(-32, 263)
 texture = ExtResource("4_ki1o7")
 
@@ -1724,8 +1714,7 @@ position = Vector2(-119, 31)
 polygon = PackedVector2Array(520, -89, 226, -42, -234, -52, -799, 42, 974, 69)
 
 [node name="Block2" parent="Offset/Obstacles" index="5" unique_id=1647798916 instance=ExtResource("2_5khlg")]
-position = Vector2(-306, 23)
-sync_to_physics = false
+position = Vector2(-240, 27)
 is_platform = true
 
 [node name="Brick1" type="Sprite2D" parent="Offset/Obstacles/Block2" index="0" unique_id=248278057]
@@ -1737,7 +1726,7 @@ position = Vector2(1, -3.5)
 shape = SubResource("RectangleShape2D_lrn1a")
 
 [node name="Brick2" type="Sprite2D" parent="Offset/Obstacles/Block2" index="2" unique_id=2082362994]
-position = Vector2(-23.621017, -9.5781555)
+position = Vector2(-21.999985, -21)
 texture = ExtResource("7_7hyjq")
 
 [node name="Brick5" type="Sprite2D" parent="Offset/Obstacles/Block2" index="3" unique_id=779525641]
@@ -1753,7 +1742,7 @@ texture = ExtResource("9_7acu6")
 [node name="vine2" type="Line2D" parent="Offset/Obstacles" index="6" unique_id=1323222840]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 15.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1761,7 +1750,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
+progress = 0.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1773,7 +1762,7 @@ curve = SubResource("Curve2D_3r3i8")
 [node name="vine3" type="Line2D" parent="Offset/Obstacles" index="7" unique_id=1793787206]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1781,7 +1770,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
+progress = 0.1
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
 hitbox_scene = ExtResource("12_7acu6")
@@ -1793,7 +1782,7 @@ curve = SubResource("Curve2D_ki1o7")
 [node name="vine4" type="Line2D" parent="Offset/Obstacles" index="8" unique_id=852055521]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 80.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1801,6 +1790,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
+progress = 0.09999999999999998
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1813,7 +1803,7 @@ curve = SubResource("Curve2D_0a7fl")
 [node name="vine5" type="Line2D" parent="Offset/Obstacles" index="9" unique_id=2010550358]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1821,7 +1811,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
+progress = 0.1
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1834,7 +1824,7 @@ curve = SubResource("Curve2D_ugaml")
 [node name="vine6" type="Line2D" parent="Offset/Obstacles" index="10" unique_id=1805944183]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -1842,7 +1832,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
-progress = 0.09999999999999998
+progress = 0.1
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 has_hitbox = true
@@ -1855,7 +1845,7 @@ curve = SubResource("Curve2D_5diaa")
 [node name="vine7" type="Line2D" parent="Offset/Obstacles" index="11" unique_id=289618919]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 4.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -2148,7 +2138,7 @@ texture = ExtResource("8_3r3i8")
 
 [node name="Brick10" type="Sprite2D" parent="Offset/Deco/wall" index="14" unique_id=1705039424]
 position = Vector2(-342, -147)
-rotation = 4.8888545
+rotation = 4.888855
 texture = ExtResource("8_3r3i8")
 
 [node name="Brick11" type="Sprite2D" parent="Offset/Deco/wall" index="15" unique_id=1087345458]
@@ -2226,11 +2216,11 @@ texture = ExtResource("10_i8h6m")
 [node name="Leaf1" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=61374778]
 position = Vector2(-31, -68)
 rotation = 0.10382633
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("17_5diaa")
 
 [node name="Plantplat1" parent="Offset/Deco/Leaf1" index="0" unique_id=204660041 instance=ExtResource("2_5khlg")]
 rotation = -0.30166873
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Deco/Leaf1/Plantplat1" index="0" unique_id=1349571073]
@@ -2250,10 +2240,10 @@ flip_h = true
 [node name="Leaf4" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="4" unique_id=1186905792]
 position = Vector2(28, 49)
 rotation = 0.2714164
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("18_aeexq")
 
 [node name="Plantplat1" parent="Offset/Deco/Leaf4" index="0" unique_id=496334771 instance=ExtResource("2_5khlg")]
-sync_to_physics = false
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Deco/Leaf4/Plantplat1" index="0" unique_id=1349571073]
@@ -2273,24 +2263,25 @@ flip_h = true
 [node name="Leaf5" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="5" unique_id=525021691]
 position = Vector2(-32, -135)
 rotation = 1.3441105
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_fig8b")
 
 [node name="Leaf6" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="6" unique_id=1927232801]
 position = Vector2(14, -19)
 rotation = 0.23959897
-scale = Vector2(0.3574546, 0.16263826)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("18_aeexq")
 
 [node name="Leaf7" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=363876438]
 position = Vector2(-75, -120)
 rotation = -1.7314351
-scale = Vector2(1.5779955, 1)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_fig8b")
 
 [node name="vine" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="8" unique_id=901383637]
 texture_filter = 1
 points = PackedVector2Array(0, 0)
-width = 40.0
+width = 4.0
 width_curve = SubResource("Curve_x34c6")
 default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
 joint_mode = 2
@@ -2298,6 +2289,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("11_3r3i8")
 grad = SubResource("Gradient_omffa")
+progress = 0.09999999999999998
 sample_count = 2.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("12_7acu6")
@@ -2308,32 +2300,11 @@ curve = SubResource("Curve2D_dsljk")
 [node name="Leaf8" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="9" unique_id=983725492]
 position = Vector2(78, -219)
 rotation = 1.1922011
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_fig8b")
 
 [node name="vine8" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="10" unique_id=333113396]
 z_index = -2
-texture_filter = 1
-points = PackedVector2Array(0, 0)
-width = 4.0
-width_curve = SubResource("Curve_x34c6")
-default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-script = ExtResource("11_3r3i8")
-grad = SubResource("Gradient_ki1o7")
-progress = 0.1
-sample_count = 2.0
-texture_base = SubResource("GradientTexture2D_x34c6")
-hitbox_scene = ExtResource("12_7acu6")
-hitbox_size = 22.0
-
-[node name="Path2D" type="Path2D" parent="Offset/Deco/vine8" index="0" unique_id=368567434]
-curve = SubResource("Curve2D_fig8b")
-
-[node name="vine9" type="Line2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="11" unique_id=722074932]
-z_index = -10
-z_as_relative = false
 texture_filter = 1
 points = PackedVector2Array(0, 0)
 width = 0.0
@@ -2350,33 +2321,33 @@ texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("12_7acu6")
 hitbox_size = 22.0
 
-[node name="Path2D" type="Path2D" parent="Offset/Deco/vine9" index="0" unique_id=695691212]
-curve = SubResource("Curve2D_ab2yi")
+[node name="Path2D" type="Path2D" parent="Offset/Deco/vine8" index="0" unique_id=368567434]
+curve = SubResource("Curve2D_fig8b")
 
-[node name="Brick38" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="12" unique_id=202205180]
+[node name="Brick38" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="11" unique_id=202205180]
 position = Vector2(242, -260)
 rotation = 1.5001566
 scale = Vector2(1, 2.3707237)
 texture = ExtResource("10_i8h6m")
 
-[node name="Brick39" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="13" unique_id=1586840279]
+[node name="Brick39" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="12" unique_id=1586840279]
 position = Vector2(166, -264)
 scale = Vector2(1.2366536, 0.48716342)
 texture = ExtResource("8_3r3i8")
 
-[node name="Brick40" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="14" unique_id=1816740379]
+[node name="Brick40" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="13" unique_id=1816740379]
 position = Vector2(127, -268)
 texture = ExtResource("9_7acu6")
 
-[node name="Brick41" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="15" unique_id=1438276541]
+[node name="Brick41" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="14" unique_id=1438276541]
 position = Vector2(99, -269)
 texture = ExtResource("6_8y1y7")
 
-[node name="Brick42" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="16" unique_id=1722081050]
+[node name="Brick42" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="15" unique_id=1722081050]
 position = Vector2(52, -264)
 texture = ExtResource("7_7hyjq")
 
-[node name="Brick43" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="17" unique_id=2122017038]
+[node name="Brick43" type="Sprite2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="16" unique_id=2122017038]
 position = Vector2(291, -245.99997)
 scale = Vector2(1.923059, 1.2844539)
 texture = ExtResource("8_3r3i8")

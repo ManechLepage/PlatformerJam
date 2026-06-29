@@ -58,7 +58,6 @@ func start_game():
 		get_tree().paused = false
 		$\"..\".hide()
 		)
-	
 "
 
 [node name="MainMenu" type="Control" unique_id=1902003926]

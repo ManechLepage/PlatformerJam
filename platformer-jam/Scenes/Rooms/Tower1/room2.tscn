@@ -457,6 +457,18 @@ tracks/35/keys = {
 "update": 0,
 "values": [0.0, 1.0]
 }
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Offset/Background/Parallax2D2/vine9:progress")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0.11, 0.238),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
 length = 0.3
@@ -892,12 +904,51 @@ tracks/35/keys = {
 "update": 0,
 "values": [1.0]
 }
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Offset/Background/Parallax2D2/vine9:progress")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqpd"]
 _data = {
 &"Lucidity": SubResource("Animation_snhcn"),
 &"RESET": SubResource("Animation_mhqpd")
 }
+
+[sub_resource type="Curve" id="Curve_0xntc"]
+_data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_58cu4"]
+resource_local_to_scene = true
+colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
+
+[sub_resource type="Gradient" id="Gradient_x34c6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.6908602)
+colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i1fp3"]
+gradient = SubResource("Gradient_x34c6")
+width = 32
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve2D" id="Curve2D_gep6u"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(172.74529, 237.71869, -172.74529, -237.71869, -261, 714, -69.76694, 367.18735, 69.76694, -367.18735, 156, 6, 414.3168, -542.636, -414.3168, 542.636, -418, -94, -280.46457, 403.09827, 280.46457, -403.09827, 664, -467)
+}
+point_count = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f55gr"]
 resource_local_to_scene = true
@@ -933,13 +984,13 @@ point_count = 3
 resource_local_to_scene = true
 colors = PackedColorArray(0.017244611, 0.071636595, 0.073657654, 1, 0.06866595, 0.1418953, 0.08675299, 1)
 
-[sub_resource type="Gradient" id="Gradient_x34c6"]
+[sub_resource type="Gradient" id="Gradient_oompw"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.6908602)
 colors = PackedColorArray(0.051, 0.15, 0.11369999, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_x34c6"]
-gradient = SubResource("Gradient_x34c6")
+gradient = SubResource("Gradient_oompw")
 width = 32
 height = 16
 fill = 1
@@ -1048,7 +1099,7 @@ _data = {
 }
 point_count = 3
 
-[node name="Room3" unique_id=197990627 instance=ExtResource("1_n4yhi")]
+[node name="Room5" unique_id=197990627 instance=ExtResource("1_n4yhi")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
 reset_on_save = false
@@ -1131,6 +1182,29 @@ flip_h = true
 [node name="BrickBg15" type="Sprite2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="12" unique_id=944714722]
 position = Vector2(-5, -288)
 texture = ExtResource("3_nhq4j")
+
+[node name="vine9" type="Line2D" parent="Offset/Background/Parallax2D2" parent_id_path=PackedInt32Array(1426022184) index="13" unique_id=1527284918]
+modulate = Color(1, 1, 1, 0.6784314)
+z_index = -13
+z_as_relative = false
+texture_filter = 1
+points = PackedVector2Array(0, 0)
+width = 200.0
+width_curve = SubResource("Curve_0xntc")
+default_color = Color(0.050980393, 0.14901961, 0.11372549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("9_fla8c")
+grad = SubResource("Gradient_58cu4")
+progress = 0.0
+sample_count = 2.0
+texture_base = SubResource("GradientTexture2D_i1fp3")
+hitbox_scene = ExtResource("10_f87qe")
+hitbox_size = 22.0
+
+[node name="Path2D" type="Path2D" parent="Offset/Background/Parallax2D2/vine9" index="0" unique_id=895308987]
+curve = SubResource("Curve2D_gep6u")
 
 [node name="BrickBg12" type="Sprite2D" parent="Offset/Background/Parallax2D3" parent_id_path=PackedInt32Array(1988134974) index="0" unique_id=918731592]
 position = Vector2(211.49207, 252)
@@ -1340,7 +1414,7 @@ shape = SubResource("CircleShape2D_x34c6")
 z_index = 3
 position = Vector2(283.55472, 167.344)
 rotation = 0.110904805
-scale = Vector2(6.7477736, 1.1125658)
+scale = Vector2(1e-05, 1e-05)
 is_platform = true
 
 [node name="Leaf3" type="Sprite2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=2108948881]
@@ -1356,7 +1430,7 @@ flip_h = true
 z_index = 3
 position = Vector2(295, -24)
 rotation = 0.12138559
-scale = Vector2(6.245754, 0.9540072)
+scale = Vector2(1e-05, 1e-05)
 is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
@@ -1372,13 +1446,14 @@ texture = ExtResource("16_f87qe")
 
 [node name="vine" type="Line2D" parent="Offset" index="4" unique_id=901383637]
 texture_filter = 1
-width = 20.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_nc07u")
+progress = 0.0
 sample_count = 4.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("10_f87qe")
@@ -1389,13 +1464,14 @@ curve = SubResource("Curve2D_6pduo")
 [node name="vine2" type="Line2D" parent="Offset" index="5" unique_id=1693234960]
 z_index = -1
 texture_filter = 1
-width = 20.0
+width = 0.0
 width_curve = SubResource("Curve_x34c6")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_nc07u")
+progress = 0.0
 sample_count = 4.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_scene = ExtResource("10_f87qe")
@@ -1405,9 +1481,9 @@ position = Vector2(0, -29)
 curve = SubResource("Curve2D_2ef3v")
 
 [node name="Path2" type="PathFollow2D" parent="Offset/vine2/Path2D" index="0" unique_id=1760792903 node_paths=PackedStringArray("poem_text", "particles", "sprite")]
-position = Vector2(244, 84.000015)
-rotation = -2.6776013
-progress = 129.73083
+position = Vector2(370, 89)
+rotation = -2.6655858
+scale = Vector2(1e-05, 1e-05)
 script = ExtResource("13_nc07u")
 poem_text = NodePath("AnimatedSprite2D/PoemText")
 particles = NodePath("AnimatedSprite2D/Parchemin")
@@ -1429,6 +1505,7 @@ rotation = 2.5024214
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"
+frame = 4
 speed_scale = 0.0
 
 [node name="Parchemin" type="CPUParticles2D" parent="Offset/vine2/Path2D/Path2/AnimatedSprite2D" index="0" unique_id=1465008559]
@@ -1476,6 +1553,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("9_fla8c")
 grad = SubResource("Gradient_gep6u")
+progress = 0.0
 sample_count = 3.0
 texture_base = SubResource("GradientTexture2D_g2blk")
 has_hitbox = true
