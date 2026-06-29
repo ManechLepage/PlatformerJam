@@ -20,7 +20,6 @@ release_ms = 2000.0
 
 [sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_j3pel"]
 resource_name = "Amplify"
-volume_db = -80.0
 
 [resource]
 bus/1/name = &"music+amb"

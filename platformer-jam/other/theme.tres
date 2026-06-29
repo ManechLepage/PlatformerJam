@@ -1,0 +1,71 @@
+[gd_resource type="Theme" format=3 uid="uid://dt4jr7r3lmyu6"]
+
+[ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="1_42nn3"]
+[ext_resource type="Texture2D" uid="uid://do4iwr8d5xeb" path="res://Sprites/slider.tres" id="1_a1s7k"]
+[ext_resource type="Texture2D" uid="uid://180yeplnsx7u" path="res://Sprites/tick.tres" id="2_a1c4r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_inwpd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0gj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_074w1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xwboo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72l6q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yst1x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehbya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pc006"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihofj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7j37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_787fc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_787fc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_bottom_left = 2
+corner_detail = 1
+expand_margin_top = 13.0
+expand_margin_right = 16.0
+expand_margin_bottom = 13.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1s7k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 14.0
+expand_margin_bottom = 14.0
+
+[resource]
+Button/colors/font_color = Color(0.8, 0.8, 0.8, 1)
+Button/colors/font_hover_color = Color(340.22443, 340.22443, 340.22443, 1)
+Button/colors/font_pressed_color = Color(0.81, 0.81, 0.81, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_inwpd")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_q0gj4")
+Button/styles/focus = SubResource("StyleBoxEmpty_074w1")
+Button/styles/hover = SubResource("StyleBoxEmpty_xwboo")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_72l6q")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_yst1x")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ehbya")
+Button/styles/normal = SubResource("StyleBoxEmpty_pc006")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_ihofj")
+Button/styles/pressed = SubResource("StyleBoxEmpty_f7j37")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_787fc")
+HSlider/icons/grabber = ExtResource("1_a1s7k")
+HSlider/icons/grabber_disabled = ExtResource("1_a1s7k")
+HSlider/icons/grabber_highlight = ExtResource("1_a1s7k")
+HSlider/icons/tick = ExtResource("2_a1c4r")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_787fc")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_787fc")
+HSlider/styles/slider = SubResource("StyleBoxFlat_a1s7k")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_42nn3")
