@@ -1898,7 +1898,6 @@ scale = Vector2(0.6413263, 0.6413263)
 destroyable = false
 
 [node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
-z_index = 5
 offset_left = -70.16709
 offset_top = -333.6835
 offset_right = 375.78384
@@ -1908,14 +1907,17 @@ text = "Arrow Keys: Move
 Z: Jump
 X: Forget Yourself
 C: Interact
+R: Restart room (hold 2s)
 
 
 
-R: Restart room (hold 2s)"
+
+
+"
 
 [node name="wall" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="1" unique_id=379381942]
 modulate = Color(0.126, 0.161, 0.21, 1)
-z_index = 2
+z_index = 5
 
 [node name="Brick7" type="Sprite2D" parent="Offset/Deco/wall" index="0" unique_id=1864172278]
 position = Vector2(-253, 185)
@@ -2276,7 +2278,7 @@ texture = ExtResource("16_2s322")
 
 [node name="doors" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="2" unique_id=1945426363]
 modulate = Color(0.126, 0.161, 0.21, 1)
-z_index = 1
+z_index = 4
 
 [node name="Brick6" type="Sprite2D" parent="Offset/Deco/doors" index="0" unique_id=1868729369]
 position = Vector2(16, 231)
@@ -2386,7 +2388,7 @@ texture = ExtResource("13_ny1y2")
 
 [node name="black" type="Node2D" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="3" unique_id=991141588]
 modulate = Color(0, 0, 0, 1)
-z_index = 3
+z_index = 7
 
 [node name="BrickBg1" type="Sprite2D" parent="Offset/Deco/black" index="0" unique_id=1675496772]
 position = Vector2(-358, 257)
