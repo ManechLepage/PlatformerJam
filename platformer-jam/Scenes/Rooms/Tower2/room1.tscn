@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cjj5dhhbw4tsg" path="res://Sprites/brick_bg4.tres" id="5_4i05a"]
 [ext_resource type="PackedScene" uid="uid://d08qp6wyfg55j" path="res://Scenes/Objects/yellow_ball.tscn" id="6_2fq3i"]
 [ext_resource type="PackedScene" uid="uid://b2mdpfhxay5x2" path="res://Scenes/Objects/fallwater.tscn" id="7_xbu1k"]
+[ext_resource type="Texture2D" uid="uid://dbt2ygv75elj3" path="res://Sprites/arrow.tres" id="9_iu6a3"]
 [ext_resource type="Texture2D" uid="uid://dif6n41t2n7x3" path="res://Sprites/brick1.tres" id="12_4i05a"]
 [ext_resource type="Texture2D" uid="uid://durfp2hh0qu0h" path="res://Sprites/brick5.tres" id="13_aw7ws"]
 [ext_resource type="Texture2D" uid="uid://c8387jnq840bo" path="res://Sprites/brick3.tres" id="14_hiixa"]
@@ -478,7 +479,7 @@ radius = 49.0306
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_65hum"]
+[sub_resource type="Gradient" id="Gradient_qn7c1"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
 
@@ -699,6 +700,14 @@ flip_h = true
 position = Vector2(-32, 263)
 texture = ExtResource("3_1b78x")
 
+[node name="Arrow" type="Sprite2D" parent="Offset/Background/Parallax2D2" index="14" unique_id=1095062920]
+modulate = Color(2.3544934, 3.4295998, 1.3487487, 1)
+z_as_relative = false
+position = Vector2(-123, -232)
+rotation = -3.001589
+scale = Vector2(0.4478116, 0.4478116)
+texture = ExtResource("9_iu6a3")
+
 [node name="Parallax2D3" parent="Offset/Background" parent_id_path=PackedInt32Array(1300832449) index="2" unique_id=1988134974]
 modulate = Color(0.4870643, 0.38152286, 1.1730844, 1)
 
@@ -889,7 +898,8 @@ script = ExtResource("3_ewb4s")
 room_name = "Tower2-02"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger" index="0" unique_id=449186360]
-position = Vector2(35.5, -4.5)
+position = Vector2(-145, -4.5)
+scale = Vector2(0.52, 1)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -1068,7 +1078,7 @@ z_as_relative = false
 position = Vector2(-28, 188)
 width = 40.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_65hum")
+grad = SubResource("Gradient_qn7c1")
 progress = 1.0
 texture_base = SubResource("GradientTexture2D_x34c6")
 hitbox_size = 20.0

@@ -15,7 +15,7 @@ var end_seq := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Game.poems_found[poem_index]:
+	if Game.poems_found[poem_index] and poem_index != 5 :
 		monitorable = false
 		monitoring = false
 		hide()

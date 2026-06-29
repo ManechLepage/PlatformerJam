@@ -86,10 +86,10 @@ tracks/5/path = NodePath("Offset/Obstacles/Plant3/Path2D/PathFollow2D2:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.55, 0.8),
+"times": PackedFloat32Array(0.724, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.2, 0.2), Vector2(1, 1)]
+"values": [Vector2(0, 0), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_mhqpd"]
@@ -275,6 +275,7 @@ debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 [node name="Platform2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1006667424 instance=ExtResource("4_rdks5")]
 position = Vector2(-59, 245)
 collision_layer = 33
+is_platform = true
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
 position = Vector2(373, -11)
@@ -296,7 +297,6 @@ shape = SubResource("RectangleShape2D_rhydc")
 
 [node name="FallWater" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="1" unique_id=1652650217 instance=ExtResource("5_ns8m6")]
 position = Vector2(0, -294)
-active = false
 
 [node name="Platform1" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=2119178859 instance=ExtResource("4_rdks5")]
 position = Vector2(-55.787804, 260.021)
@@ -374,7 +374,7 @@ position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
 grad = SubResource("Gradient_urn1v")
-progress = 0.35
+progress = 1.0
 sample_count = 4.0
 hitbox_size = 20.0
 
@@ -383,10 +383,9 @@ position = Vector2(-284, -24)
 curve = SubResource("Curve2D_dqq3o")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=299554415]
-position = Vector2(133.15587, 77.27779)
+position = Vector2(162.17274, -30.665316)
 rotation = -2.1676095
-scale = Vector2(0.3, 0.3)
-progress = 57.69817
+progress = 173.09451
 rotates = false
 
 [node name="Platform3" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D" index="0" unique_id=1940130509 instance=ExtResource("4_rdks5")]
@@ -405,10 +404,9 @@ scale = Vector2(1.1472045, 1.1472045)
 texture = ExtResource("9_ujay7")
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="1" unique_id=249073017]
-position = Vector2(135.9286, 20.55555)
+position = Vector2(272.50647, -317.5988)
 rotation = -2.332087
-scale = Vector2(0.19999999, 0.19999999)
-progress = 115.39634
+progress = 490.43445
 rotates = false
 
 [node name="Platform7" parent="Offset/Obstacles/Plant3/Path2D/PathFollow2D2" index="0" unique_id=1982398534 instance=ExtResource("4_rdks5")]

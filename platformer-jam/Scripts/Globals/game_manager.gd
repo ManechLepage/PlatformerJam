@@ -20,7 +20,7 @@ var max_lucidity: float = 20.0
 var camera: CameraManager
 var player: Player
 @export var lever_states: Array[bool]
-@onready var poems_found: Array[bool] = [false,false,false,false]
+@onready var poems_found: Array[bool] = [false,false,false,false,false,false]
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")

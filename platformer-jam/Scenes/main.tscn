@@ -251,7 +251,7 @@ func show_flavor_text(_body,area: Area2D):
 			text = currents
 		\"Tower3Area\":
 			text = rythm
-		\"Tower3Area\":
+		\"Tower4Area\":
 			text = will
 		\"sub\":
 			text = sub
