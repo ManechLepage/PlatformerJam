@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
+[ext_resource type="PackedScene" uid="uid://dsmr1tlc71hfj" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
 shader = ExtResource("5_21xkr")
@@ -204,9 +205,13 @@ content_margin_bottom = 90.0
 
 [node name="Main" type="Node2D" unique_id=295821621]
 
+[node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
+z_index = 2
+position = Vector2(-141, -72)
+
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "Tower3-04"
+initial_room = "tutorial_1"
 initial_player_pos = Vector2(-2000, -2000)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
@@ -247,10 +252,6 @@ rooms = Dictionary[String, PackedScene]({
 "tutorial_3": ExtResource("22_aqgau")
 })
 
-[node name="Player" parent="." unique_id=838431178 instance=ExtResource("1_jjgbg")]
-z_index = 2
-position = Vector2(-141, -72)
-
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=1822106909]
 layer = 2
 
@@ -264,6 +265,7 @@ grow_vertical = 2
 script = ExtResource("6_21xkr")
 
 [node name="MusicManager" type="Node" parent="." unique_id=1233065578 node_paths=PackedStringArray("sound_layers")]
+process_mode = 3
 script = ExtResource("11_jkdf5")
 sound_layers = {
 "base": NodePath("base"),
@@ -447,7 +449,7 @@ shape = SubResource("RectangleShape2D_kqrg6")
 debug_color = Color(0.5110002, 0, 0.73, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
-layer = 99
+layer = 101
 
 [node name="Credits" type="Control" parent="CanvasLayer" unique_id=1217656592]
 layout_mode = 3
@@ -500,3 +502,8 @@ theme_override_fonts/normal_font = ExtResource("57_2daye")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ptfg5")
 text = "Thank you for playing to completion."
 vertical_alignment = 2
+
+[node name="MainMenu" parent="CanvasLayer" unique_id=1902003926 instance=ExtResource("58_1semv")]
+process_mode = 3
+
+[editable path="CanvasLayer/MainMenu"]
