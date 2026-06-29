@@ -269,6 +269,7 @@ texture = ExtResource("10_8fpyh")
 [node name="tutorial_text" parent="Offset/Deco" parent_id_path=PackedInt32Array(102725464) index="7" unique_id=1754253968 instance=ExtResource("11_036s1")]
 position = Vector2(-173, 207)
 destroyable = false
+poem_index = 5
 
 [node name="PoemText" parent="Offset/Deco/tutorial_text" index="2" unique_id=1098363463]
 z_index = 5

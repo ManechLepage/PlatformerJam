@@ -224,6 +224,9 @@ normal = Vector2(-1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my4ki"]
 size = Vector2(1551.4307, 79.71777)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y86h7"]
+size = Vector2(1551.4307, 79.71777)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptfg5"]
 content_margin_left = 90.0
 content_margin_top = 90.0
@@ -574,68 +577,76 @@ scale = Vector2(0.6780839, 0.6780839)
 collision_layer = 33
 
 [node name="CollisionShape2D" parent="Areas/Bounds" index="0" unique_id=1349571073]
-position = Vector2(707.8771, 63.414055)
+position = Vector2(707.8771, 321.49423)
 rotation = -1.5707964
 scale = Vector2(2.2156498, 1.3492367)
 shape = SubResource("RectangleShape2D_my4ki")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Areas/Bounds" unique_id=302561772]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Areas/Bounds" unique_id=844700602]
 position = Vector2(2119.2063, -4379.9897)
 rotation = -1.5707964
 scale = Vector2(1.5712119, 1.3492367)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Areas/Bounds" unique_id=329026894]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1867774157]
 position = Vector2(6301.579, -3445.002)
 rotation = -1.5707964
 scale = Vector2(2.7510061, 1.3492367)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Areas/Bounds" unique_id=507968362]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1568267241]
 position = Vector2(4999.382, -1045.5939)
 rotation = -1.5707964
 scale = Vector2(2.7510061, 1.3492367)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1388071981]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Areas/Bounds" unique_id=687698695]
 position = Vector2(-693.1295, 436.52426)
 rotation = -1.5707964
 scale = Vector2(9.435535, 1)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1265752014]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1652348998]
 position = Vector2(-693.1295, 436.52426)
 rotation = -1.5707964
 scale = Vector2(9.435535, 1)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Areas/Bounds" unique_id=705437555]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1036225553]
 position = Vector2(721.14923, -4468.4736)
 rotation = -1.5707964
 scale = Vector2(1.9438353, 1)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1810988887]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Areas/Bounds" unique_id=1478938583]
 position = Vector2(-582.5242, -3433.2031)
 rotation = -1.5707964
 scale = Vector2(0.52607876, 3.4153643)
-shape = SubResource("RectangleShape2D_my4ki")
+shape = SubResource("RectangleShape2D_y86h7")
 one_way_collision_margin = 5.0
 one_way_collision_direction = Vector2(0, -1)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Areas/Bounds" unique_id=583101241]
+position = Vector2(709.35156, -2176.7214)
+rotation = -1.9365733
+scale = Vector2(0.61279196, 0.7879788)
+shape = SubResource("RectangleShape2D_y86h7")
+one_way_collision = true
+one_way_collision_margin = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
 layer = 101

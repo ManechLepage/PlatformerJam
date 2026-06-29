@@ -665,7 +665,7 @@ shape = SubResource("RectangleShape2D_a6otp")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="3" unique_id=828958946]
 position = Vector2(738, 123)
 rotation = -0.17326847
-scale = Vector2(1.0109426, 1.0109426)
+scale = Vector2(1.1398122, 1.1398122)
 shape = SubResource("CircleShape2D_6d1mf")
 
 [node name="Brick38" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="4" unique_id=1202273344]
@@ -707,6 +707,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="1" unique_id=1349571073]
+rotation = -0.005677979
 shape = SubResource("CircleShape2D_6d1mf")
 disabled = true
 debug_color = Color(0, 0.5950001, 0.7, 0)
@@ -746,6 +747,7 @@ end_cap_mode = 2
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4" index="1" unique_id=1349571073]
 z_index = 1
 position = Vector2(0.8489344, 0.52850676)
+scale = Vector2(1.0999784, 1.0999784)
 shape = SubResource("CircleShape2D_up11p")
 debug_color = Color(0, 0.5950001, 0.7, 0)
 

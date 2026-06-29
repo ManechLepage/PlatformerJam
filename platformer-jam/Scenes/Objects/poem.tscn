@@ -133,7 +133,7 @@ size_flags_stretch_ratio = 2.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_gpa2e")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gpa2e")
-text = "You can feel your mind's plasticity has increased.
+text = "You can feel your mind's plasticity increase.
 Your lucidity can now be further decreased.
 
 [Press C to continue]"
