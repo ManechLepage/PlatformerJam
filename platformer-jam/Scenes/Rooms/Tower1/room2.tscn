@@ -1359,6 +1359,9 @@ rotation = 0.12138559
 scale = Vector2(6.245754, 0.9540072)
 is_platform = true
 
+[node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
+position = Vector2(-3.3995388, 7.9948444)
+
 [node name="Leaf4" type="Sprite2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=265859321]
 z_index = 3
 position = Vector2(-0.18215048, 7.5373554)
