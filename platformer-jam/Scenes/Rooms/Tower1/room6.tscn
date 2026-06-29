@@ -93,21 +93,24 @@ size = Vector2(85.753174, 13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpv15"]
 size = Vector2(59.89205, 30.757568)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhydc"]
-size = Vector2(49, 42)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa3g"]
+size = Vector2(49, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qdm2s"]
 size = Vector2(49, 32.656494)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhydc"]
+size = Vector2(49, 42)
 
 [sub_resource type="Curve" id="Curve_rhydc"]
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_tsa3g"]
+[sub_resource type="Gradient" id="Gradient_2vddk"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
-[sub_resource type="Curve2D" id="Curve2D_2vddk"]
+[sub_resource type="Curve2D" id="Curve2D_1edoy"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(263.62814, 59.7649, -263.62814, -59.7649, 241, 96, 155.75789, 86.0261, -155.75789, -86.0261, -94, -308, 107.672195, -91.31232, -107.672195, 91.31232, -453, -341)
@@ -176,8 +179,8 @@ position = Vector2(-59, 245)
 collision_layer = 33
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="0" unique_id=1349571073]
-position = Vector2(434, -197)
-shape = SubResource("RectangleShape2D_rhydc")
+position = Vector2(434, -206.5)
+shape = SubResource("RectangleShape2D_tsa3g")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Offset/Obstacles/Platform2" index="1" unique_id=1572952831]
 position = Vector2(362.89017, -430.5381)
@@ -196,14 +199,14 @@ position = Vector2(0, -294)
 position = Vector2(278, 168)
 width = 40.0
 width_curve = SubResource("Curve_rhydc")
-grad = SubResource("Gradient_tsa3g")
+grad = SubResource("Gradient_2vddk")
 progress = 0.5293062955141068
 sample_count = 4.0
 has_hitbox = true
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
-curve = SubResource("Curve2D_2vddk")
+curve = SubResource("Curve2D_1edoy")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=299554415]
 position = Vector2(142.47006, 56.051968)
