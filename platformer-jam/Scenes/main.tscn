@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
+[ext_resource type="Shader" uid="uid://b6vldbyngmfy3" path="res://Scripts/Shaders/chromatic.gdshader" id="55_qax2n"]
 [ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="56_1semv"]
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
@@ -181,6 +182,12 @@ shader_parameter/speed = 0.20000010449999991
 shader_parameter/alpha = 1.0
 shader_parameter/speed_scale = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ml46"]
+shader = ExtResource("55_qax2n")
+shader_parameter/strength = 1.0
+shader_parameter/edge_falloff = true
+shader_parameter/distortion_amount = -0.08
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8k8"]
 size = Vector2(934.5, 3011)
 
@@ -204,6 +211,7 @@ size = Vector2(934.5, 217.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ml46"]
 size = Vector2(934.5, 217.5)
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 normal = Vector2(1, 0)
 
@@ -407,6 +415,14 @@ offset_bottom = 97.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ChromaticAberration" type="ColorRect" parent="Lucid" unique_id=1820385454]
+material = SubResource("ShaderMaterial_6ml46")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1438021251]
 environment = ExtResource("26_cbgmd")
 
@@ -522,6 +538,7 @@ collision_mask = 64
 position = Vector2(-3248, 1572)
 shape = SubResource("RectangleShape2D_6ml46")
 debug_color = Color(0.5110002, 0, 0.73, 0)
+
 [node name="WorldEdge1" type="AnimatableBody2D" parent="Areas" unique_id=285698044]
 position = Vector2(-4428, 2)
 script = ExtResource("56_1semv")
