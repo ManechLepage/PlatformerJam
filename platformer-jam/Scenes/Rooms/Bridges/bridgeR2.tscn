@@ -21,6 +21,10 @@ _data = {
 resource_local_to_scene = true
 size = Vector2(1046, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hreh4"]
+resource_local_to_scene = true
+size = Vector2(959, 23)
+
 [node name="Room3" unique_id=197990627 instance=ExtResource("1_hreh4")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" unique_id=1601315926]
@@ -69,6 +73,18 @@ position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
+[node name="RoomTrigger5" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=822727721]
+position = Vector2(524, -28)
+script = ExtResource("3_ucgji")
+room_name = "Tower1-03"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger5" index="0" unique_id=889033708]
+position = Vector2(-9, 6)
+scale = Vector2(0.022323506, -26.404112)
+shape = SubResource("RectangleShape2D_hreh4")
+debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
+
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
+[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger5" to="Offset/RoomTriggers/RoomTrigger5" method="_on_body_entered"]
