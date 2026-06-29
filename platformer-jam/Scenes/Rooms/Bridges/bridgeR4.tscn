@@ -730,7 +730,6 @@ rpm = 0.0
 [node name="Platform4" parent="Offset/Obstacles/Platform5" index="5" unique_id=1181429540 instance=ExtResource("4_3niuj")]
 position = Vector2(-201, -83)
 rotation = -1.9665272
-sync_to_physics = false
 
 [node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4" index="0" unique_id=102272756]
 z_index = 1
@@ -759,7 +758,6 @@ rpm = 0.0
 position = Vector2(-154.4169, -65.49509)
 rotation = -0.85603577
 scale = Vector2(0.7954476, 0.7954476)
-sync_to_physics = false
 
 [node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4" index="0" unique_id=627788695]
 z_index = 1
@@ -790,7 +788,6 @@ rpm = 0.0
 position = Vector2(-154.4169, -65.49509)
 rotation = -0.5894272
 scale = Vector2(0.7954476, 0.7954476)
-sync_to_physics = false
 
 [node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4" index="0" unique_id=1367799914]
 z_index = 1
@@ -820,7 +817,6 @@ rpm = 0.0
 position = Vector2(-154.4169, -65.49509)
 rotation = -0.4886922
 scale = Vector2(0.7954476, 0.7954476)
-sync_to_physics = false
 
 [node name="belt" type="Line2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=829328754]
 z_index = 1
@@ -851,7 +847,6 @@ rpm = 0.0
 position = Vector2(-154.4169, -65.49509)
 rotation = -0.5410121
 scale = Vector2(0.7954476, 0.7954476)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=1349571073]
 z_index = 1
@@ -870,7 +865,6 @@ rpm = 0.0
 position = Vector2(-154.4169, -65.49509)
 rotation = 0.09309603
 scale = Vector2(0.7954476, 0.7954476)
-sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5/Platform4/Platform4/Platform4/Platform4/Platform4/Platform4" index="0" unique_id=1349571073]
 z_index = 1
@@ -899,6 +893,9 @@ end_cap_mode = 2
 [node name="Lever2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=415754532 instance=ExtResource("7_ju2xe")]
 z_index = -2
 position = Vector2(274, -105)
+
+[node name="handle" parent="Offset/Obstacles/Lever2" index="0" unique_id=1518814724]
+rotation = 1.2030143
 
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=790154690 instance=ExtResource("5_a6otp")]
 width = 10.0
