@@ -10,10 +10,10 @@ func _process(delta: float) -> void:
 		Game.event_manager.lucidity_changed.emit(Game.lucidity)
 
 func _on_lever_on_activated() -> void:
-	play_anim(Game.lever_states[lever_index])
 	Game.lever_states[lever_index] = not Game.lever_states[lever_index]
+	play_anim(Game.lever_states[lever_index])
+	
 
 func play_anim(value: bool) -> void:
 	if not value: play_backwards("LeverAnim")
 	else: play("LeverAnim")
-	print(value)

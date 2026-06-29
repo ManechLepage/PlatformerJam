@@ -285,7 +285,7 @@ tracks/22/path = NodePath("Offset/Obstacles/Platform6:position")
 tracks/22/interp = 2
 tracks/22/loop_wrap = true
 tracks/22/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-145.99998, 101), Vector2(-113.999985, 50.000004)]
@@ -297,7 +297,7 @@ tracks/23/path = NodePath("Offset/Obstacles/Platform5:position")
 tracks/23/interp = 2
 tracks/23/loop_wrap = true
 tracks/23/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(9.00001, 80), Vector2(10.000008, 110)]
@@ -309,7 +309,7 @@ tracks/24/path = NodePath("Offset/Obstacles/Platform4:position")
 tracks/24/interp = 2
 tracks/24/loop_wrap = true
 tracks/24/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(199, 92), Vector2(136, 118)]
@@ -321,7 +321,7 @@ tracks/25/path = NodePath("Offset/Obstacles/Platform3:position")
 tracks/25/interp = 2
 tracks/25/loop_wrap = true
 tracks/25/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-295, 132), Vector2(-219, 142)]
@@ -333,7 +333,7 @@ tracks/26/path = NodePath("Offset/Obstacles/Platform6:rotation")
 tracks/26/interp = 2
 tracks/26/loop_wrap = true
 tracks/26/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-3.1118474, -2.9181905]
@@ -345,7 +345,7 @@ tracks/27/path = NodePath("Offset/Obstacles/Platform5:rotation")
 tracks/27/interp = 2
 tracks/27/loop_wrap = true
 tracks/27/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-1.5689313, -2.693043]
@@ -357,7 +357,7 @@ tracks/28/path = NodePath("Offset/Obstacles/Platform4:rotation")
 tracks/28/interp = 2
 tracks/28/loop_wrap = true
 tracks/28/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-3.1337547, -2.693043]
@@ -369,7 +369,7 @@ tracks/29/path = NodePath("Offset/Obstacles/Platform3:rotation")
 tracks/29/interp = 2
 tracks/29/loop_wrap = true
 tracks/29/keys = {
-"times": PackedFloat32Array(0.008, 0.27),
+"times": PackedFloat32Array(0.094, 0.356),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0026637316, -0.31415927]
@@ -381,7 +381,7 @@ tracks/30/path = NodePath("Offset/Obstacles/Platform10:position")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
-"times": PackedFloat32Array(0.008, 0.124000005),
+"times": PackedFloat32Array(0.094, 0.21),
 "transitions": PackedFloat32Array(1.2745609, 1),
 "update": 0,
 "values": [Vector2(-226.99998, 101), Vector2(-196.99998, 402)]
@@ -393,7 +393,7 @@ tracks/31/path = NodePath("Offset/Obstacles/Platform10:rotation")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
-"times": PackedFloat32Array(0.008, 0.124000005),
+"times": PackedFloat32Array(0.094, 0.21),
 "transitions": PackedFloat32Array(1.2745609, 1),
 "update": 0,
 "values": [-3.1118474, -4.445125]
@@ -405,7 +405,7 @@ tracks/32/path = NodePath("Offset/Obstacles/Platform11:position")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
-"times": PackedFloat32Array(0.052, 0.202),
+"times": PackedFloat32Array(0.138, 0.288),
 "transitions": PackedFloat32Array(1.4640859, 1),
 "update": 0,
 "values": [Vector2(-74.999985, 108), Vector2(-30.99998, 349.99997)]
@@ -417,7 +417,7 @@ tracks/33/path = NodePath("Offset/Obstacles/Platform11:rotation")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/keys = {
-"times": PackedFloat32Array(0.052, 0.202),
+"times": PackedFloat32Array(0.138, 0.288),
 "transitions": PackedFloat32Array(1.4640859, 1),
 "update": 0,
 "values": [-3.1118474, -0.09812474]
@@ -429,7 +429,7 @@ tracks/34/path = NodePath("Offset/Obstacles/Platform12:position")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
-"times": PackedFloat32Array(0, 0.006, 0.17),
+"times": PackedFloat32Array(0.085999995, 0.09199999, 0.25599998),
 "transitions": PackedFloat32Array(2.9281707, 2.9281707, 1),
 "update": 0,
 "values": [Vector2(85.000015, 108), Vector2(85.000015, 108), Vector2(85.000015, 441.00003)]
@@ -441,10 +441,10 @@ tracks/35/path = NodePath("Offset/Obstacles/Platform12:rotation")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
-"times": PackedFloat32Array(0, 0.006, 0.17),
+"times": PackedFloat32Array(0.085999995, 0.09199999, 0.25599998),
 "transitions": PackedFloat32Array(2.9281707, 2.9281707, 1),
 "update": 0,
-"values": [-3.1118474, -3.1118474, -4.4391756]
+"values": [-3.1118474, -3.1118474, -4.4391756000000004]
 }
 tracks/36/type = "value"
 tracks/36/imported = false
@@ -453,7 +453,7 @@ tracks/36/path = NodePath("Offset/Obstacles/Platform13:position")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/keys = {
-"times": PackedFloat32Array(0.085, 0.24000001),
+"times": PackedFloat32Array(0.17099999, 0.32600003),
 "transitions": PackedFloat32Array(2.7320807, 1),
 "update": 0,
 "values": [Vector2(296, 108), Vector2(275, 416)]
@@ -465,7 +465,7 @@ tracks/37/path = NodePath("Offset/Obstacles/Platform13:rotation")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/keys = {
-"times": PackedFloat32Array(0.085, 0.24000001),
+"times": PackedFloat32Array(0.17099999, 0.32600003),
 "transitions": PackedFloat32Array(2.7320807, 1),
 "update": 0,
 "values": [-3.1118474, -3.6761127]
@@ -477,7 +477,7 @@ tracks/38/path = NodePath("Offset/Obstacles/Platform9/Leaf1:scale")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.19800001),
+"times": PackedFloat32Array(0.085999995, 0.23599999, 0.28400004),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0), Vector2(0.43298542, 0.43298542)]
@@ -996,7 +996,7 @@ size = Vector2(75.06738, 12)
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_1v5si"]
+[sub_resource type="Gradient" id="Gradient_kfxri"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.027199997, 0.06856, 0.08, 1, 0.072799996, 0.13, 0.11760666, 1)
 
@@ -1006,7 +1006,7 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_kfxri"]
+[sub_resource type="Gradient" id="Gradient_llmor"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -1016,7 +1016,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_llmor"]
+[sub_resource type="Gradient" id="Gradient_678v2"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -1026,7 +1026,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_678v2"]
+[sub_resource type="Gradient" id="Gradient_6fshy"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -1036,7 +1036,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_6fshy"]
+[sub_resource type="Gradient" id="Gradient_388lu"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -1168,8 +1168,8 @@ position = Vector2(-503, -305)
 shape = SubResource("RectangleShape2D_kfxri")
 
 [node name="Platform3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="2" unique_id=417455758 instance=ExtResource("4_jkcge")]
-position = Vector2(-219, 142)
-rotation = -0.31415927
+position = Vector2(-295, 132)
+rotation = 0.0026637316
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform3" index="0" unique_id=1349571073]
@@ -1183,8 +1183,8 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_rbnie")
 
 [node name="Platform4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=1967111266 instance=ExtResource("4_jkcge")]
-position = Vector2(136, 118)
-rotation = -2.693043
+position = Vector2(199, 92)
+rotation = -3.1337547
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform4" index="0" unique_id=1349571073]
@@ -1197,8 +1197,8 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("8_rbnie")
 
 [node name="Platform5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=462260310 instance=ExtResource("4_jkcge")]
-position = Vector2(10.000008, 110)
-rotation = -2.693043
+position = Vector2(9.00001, 80)
+rotation = -1.5689313
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform5" index="0" unique_id=1349571073]
@@ -1214,8 +1214,8 @@ texture = ExtResource("8_rbnie")
 flip_h = true
 
 [node name="Platform6" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="5" unique_id=1693046888 instance=ExtResource("4_jkcge")]
-position = Vector2(-113.999985, 50.000004)
-rotation = -2.9181905
+position = Vector2(-145.99998, 101)
+rotation = -3.1118474
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform6" index="0" unique_id=1349571073]
@@ -1231,8 +1231,8 @@ texture = ExtResource("8_rbnie")
 flip_h = true
 
 [node name="Platform10" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="6" unique_id=1650450333 instance=ExtResource("4_jkcge")]
-position = Vector2(-196.99998, 402)
-rotation = -4.445125
+position = Vector2(-226.99998, 101)
+rotation = -3.1118474
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform10" index="0" unique_id=1349571073]
@@ -1249,8 +1249,8 @@ flip_h = true
 
 [node name="Platform11" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="7" unique_id=719669283 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(-30.99998, 349.99997)
-rotation = -0.09812474
+position = Vector2(-74.999985, 108)
+rotation = -3.1118474
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform11" index="0" unique_id=1349571073]
@@ -1267,8 +1267,8 @@ flip_h = true
 
 [node name="Platform13" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="8" unique_id=537350350 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(275, 416)
-rotation = -3.6761127
+position = Vector2(296, 108)
+rotation = -3.1118474
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform13" index="0" unique_id=1349571073]
@@ -1285,8 +1285,8 @@ flip_h = true
 
 [node name="Platform12" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="9" unique_id=1694297845 instance=ExtResource("4_jkcge")]
 z_index = -1
-position = Vector2(85.000015, 441.00003)
-rotation = -4.4391756
+position = Vector2(85.000015, 108)
+rotation = -3.1118474
 sync_to_physics = false
 
 [node name="CollisionShape2D" parent="Offset/Obstacles/Platform12" index="0" unique_id=1349571073]
@@ -1351,7 +1351,7 @@ shape = SubResource("RectangleShape2D_llmor")
 
 [node name="Leaf1" type="Sprite2D" parent="Offset/Obstacles/Platform9" index="1" unique_id=1234291124]
 position = Vector2(-29.536253, 0)
-scale = Vector2(0.67385757, 0.43298542)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_kfxri")
 flip_h = true
 
@@ -1360,17 +1360,16 @@ z_index = -1
 position = Vector2(-362, 47)
 width = 80.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_1v5si")
-progress = 1.0
+grad = SubResource("Gradient_kfxri")
+progress = 0.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant1" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_2fq3i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Offset/Obstacles/Plant1/Path2D" index="0" unique_id=1981468037]
-position = Vector2(209, -479.00006)
-rotation = -2.0694492
-progress = 914.15796
+position = Vector2(224, 345)
+rotation = -1.4453679
 
 [node name="Marker2D" type="Marker2D" parent="Offset/Obstacles/Plant1/Path2D/PathFollow2D" index="0" unique_id=1183872290]
 gizmo_extents = 54.8
@@ -1378,26 +1377,25 @@ gizmo_extents = 54.8
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="14" unique_id=1097771579 instance=ExtResource("6_3yt2w")]
 z_index = -1
 position = Vector2(-362, 47)
-width = 30.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_kfxri")
-progress = 1.0
+grad = SubResource("Gradient_llmor")
+progress = 0.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant2" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_1v5si")
 
 [node name="Yellowball2" parent="Offset/Obstacles/Plant2/Path2D" index="0" unique_id=1698151701 instance=ExtResource("5_m704x")]
-position = Vector2(207.00002, -193.99998)
-rotation = -2.115405
-progress = 133.7315
+position = Vector2(323, -141)
+rotation = -2.2370605
+scale = Vector2(1.001358e-05, 1.001358e-05)
+progress = 0.0
 
 [node name="Area" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2" index="0" unique_id=221360279]
 position = Vector2(-18.1428, 23.69317)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2" index="1" unique_id=1602848246]
 position = Vector2(-15.145532, 25.562473)
-frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant2/Path2D/Yellowball2/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -61.22858
@@ -1408,42 +1406,41 @@ rotation = -0.25590518
 
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="15" unique_id=1944685402 instance=ExtResource("6_3yt2w")]
 position = Vector2(-362, 47)
-width = 30.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_llmor")
-progress = 1.0
+grad = SubResource("Gradient_678v2")
+progress = 0.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant3" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_388lu")
 
 [node name="Yellowball3" parent="Offset/Obstacles/Plant3/Path2D" index="0" unique_id=1223189823 instance=ExtResource("5_m704x")]
-position = Vector2(469, -248.00002)
-rotation = -2.3831172
-progress = 176.66766
+position = Vector2(362, -186)
+rotation = 0.43195826
+scale = Vector2(1.001358e-05, 1.001358e-05)
+progress = 0.0
 
 [node name="Area" parent="Offset/Obstacles/Plant3/Path2D/Yellowball3" index="0" unique_id=221360279]
 position = Vector2(2.4094381, 3.2278495)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant3/Path2D/Yellowball3" index="1" unique_id=1602848246]
 position = Vector2(5.406708, 5.097151)
-frame = 4
 
 [node name="Plant4" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="16" unique_id=586076656 instance=ExtResource("6_3yt2w")]
 position = Vector2(-362, 47)
-width = 40.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_678v2")
-progress = 1.0
+grad = SubResource("Gradient_6fshy")
+progress = 0.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant4" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_kfxri")
 
 [node name="Yellowball4" parent="Offset/Obstacles/Plant4/Path2D" index="0" unique_id=376175354 instance=ExtResource("5_m704x")]
-position = Vector2(576.6141, -155.59259)
-rotation = -1.154344
-progress = 289.0103
+position = Vector2(317, -69)
+rotation = -0.9192565
+scale = Vector2(1.001358e-05, 1.001358e-05)
+progress = 0.0
 
 [node name="Area" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4" index="0" unique_id=221360279]
 position = Vector2(23.15783, 5.260341)
@@ -1452,7 +1449,6 @@ scale = Vector2(1.609848, 1.609848)
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4" index="1" unique_id=1602848246]
 position = Vector2(26.155102, 7.129641)
 scale = Vector2(1.6098503, 1.6098503)
-frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant4/Path2D/Yellowball4/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -36.91259
@@ -1464,26 +1460,25 @@ rotation = -1.0522399
 [node name="Plant5" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="17" unique_id=1796392449 instance=ExtResource("6_3yt2w")]
 z_index = -1
 position = Vector2(-362, 47)
-width = 30.0
 width_curve = SubResource("Curve_xbu1k")
-grad = SubResource("Gradient_6fshy")
-progress = 1.0
+grad = SubResource("Gradient_388lu")
+progress = 0.0
 hitbox_size = 20.0
 
 [node name="Path2D" parent="Offset/Obstacles/Plant5" index="0" unique_id=2105629789]
 curve = SubResource("Curve2D_llmor")
 
 [node name="Yellowball" parent="Offset/Obstacles/Plant5/Path2D" index="0" unique_id=1760792903 instance=ExtResource("5_m704x")]
-position = Vector2(663.00006, -3.9999995)
-rotation = -0.25786492
-progress = 278.93945
+position = Vector2(425, -123)
+rotation = -0.1139712
+scale = Vector2(1.001358e-05, 1.001358e-05)
+progress = 0.0
 
 [node name="Area" parent="Offset/Obstacles/Plant5/Path2D/Yellowball" index="0" unique_id=221360279]
 position = Vector2(2.073307, -1.5939903)
 
 [node name="AnimatedSprite2D" parent="Offset/Obstacles/Plant5/Path2D/Yellowball" index="1" unique_id=1602848246]
 position = Vector2(5.0705757, 0.27531242)
-frame = 4
 
 [node name="PoemText" parent="Offset/Obstacles/Plant5/Path2D/Yellowball/AnimatedSprite2D" index="1" unique_id=1692101542]
 offset_left = -45.61792
