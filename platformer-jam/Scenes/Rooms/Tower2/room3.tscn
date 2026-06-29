@@ -536,17 +536,6 @@ position = Vector2(36, 16)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
-[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="2" unique_id=1717649198]
-position = Vector2(-509, -152)
-rotation = 1.5707964
-script = ExtResource("4_1fc0b")
-room_name = "Entrance2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
-shape = SubResource("RectangleShape2D_f55gr")
-debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
-
 [node name="Wall2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="0" unique_id=1484256895 instance=ExtResource("5_g1b11")]
 position = Vector2(-869, -12)
 
@@ -760,7 +749,6 @@ rotates = false
 
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
-[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 
 [editable path="Offset/Obstacles/Wall2"]
 [editable path="Offset/Obstacles/Platform7"]

@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://bm7hcepkq8uvo" path="res://Scenes/Rooms/Tower1/room7.tscn" id="35_55jeb"]
 [ext_resource type="PackedScene" uid="uid://kgj2mdggrin0" path="res://Scenes/Rooms/Tower1/room8.tscn" id="36_gsvbx"]
 [ext_resource type="PackedScene" uid="uid://cmmjjvlkf14up" path="res://Scenes/Rooms/Tower1/room9.tscn" id="37_bv80c"]
+[ext_resource type="Script" uid="uid://bkueo6tu2f8v4" path="res://Scripts/Objects/platform.gd" id="56_1semv"]
 [ext_resource type="Script" uid="uid://cdextbjrb8tsx" path="res://Scripts/Globals/credits.gd" id="56_ptfg5"]
 [ext_resource type="FontFile" uid="uid://bk61qsxmu5yfm" path="res://other/EBGaramond-Bold.ttf" id="57_2daye"]
 [ext_resource type="PackedScene" uid="uid://ctkeb5r1ievjq" path="res://Scenes/Main_menu.tscn" id="58_1semv"]
@@ -203,6 +204,11 @@ size = Vector2(934.5, 217.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ml46"]
 size = Vector2(934.5, 217.5)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1semv"]
+normal = Vector2(-1, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptfg5"]
 content_margin_left = 90.0
@@ -258,8 +264,8 @@ position = Vector2(1223, -881)
 
 [node name="RoomManager" type="Node" parent="." unique_id=1500035244]
 script = ExtResource("1_8gbba")
-initial_room = "tutorial_1"
-initial_player_pos = Vector2(-1750, 1550)
+initial_room = "Tower1-06"
+initial_player_pos = Vector2(0, -2700)
 rooms = Dictionary[String, PackedScene]({
 "Bridge1": ExtResource("15_kltya"),
 "Bridge2": ExtResource("16_e08e2"),
@@ -516,6 +522,23 @@ collision_mask = 64
 position = Vector2(-3248, 1572)
 shape = SubResource("RectangleShape2D_6ml46")
 debug_color = Color(0.5110002, 0, 0.73, 0)
+[node name="WorldEdge1" type="AnimatableBody2D" parent="Areas" unique_id=285698044]
+position = Vector2(-4428, 2)
+script = ExtResource("56_1semv")
+metadata/_custom_type_script = "uid://bkueo6tu2f8v4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/WorldEdge1" unique_id=1155116966]
+position = Vector2(45, -2)
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="WorldEdge2" type="AnimatableBody2D" parent="Areas" unique_id=1363801691]
+position = Vector2(425, -471)
+script = ExtResource("56_1semv")
+metadata/_custom_type_script = "uid://bkueo6tu2f8v4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/WorldEdge2" unique_id=952360619]
+position = Vector2(45, -2)
+shape = SubResource("WorldBoundaryShape2D_1semv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344669378]
 layer = 101

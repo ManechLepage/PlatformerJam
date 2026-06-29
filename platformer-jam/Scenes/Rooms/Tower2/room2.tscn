@@ -662,7 +662,7 @@ repeat = 2
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_ic0jm"]
+[sub_resource type="Gradient" id="Gradient_oipvh"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.024699999, 0.09489998, 0.13, 1, 0.0475, 0.16149996, 0.19, 1)
 
@@ -1114,17 +1114,6 @@ room_name = "Bridge2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger2" index="0" unique_id=1472265828]
 position = Vector2(36, 16)
-shape = SubResource("RectangleShape2D_f55gr")
-debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
-
-[node name="RoomTrigger3" type="Area2D" parent="Offset/RoomTriggers" parent_id_path=PackedInt32Array(281844601) index="3" unique_id=1717649198]
-position = Vector2(-509, -152)
-rotation = 1.5707964
-script = ExtResource("3_lgexx")
-room_name = "Entrance2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Offset/RoomTriggers/RoomTrigger3" index="0" unique_id=1290570866]
-position = Vector2(35.5, -4.5)
 shape = SubResource("RectangleShape2D_f55gr")
 debug_color = Color(0.9935898, 0, 0.24218386, 0.41960785)
 
@@ -1824,7 +1813,7 @@ z_index = -6
 position = Vector2(-28, 188)
 width = 80.0
 width_curve = SubResource("Curve_oawka")
-grad = SubResource("Gradient_ic0jm")
+grad = SubResource("Gradient_oipvh")
 progress = 1.0
 texture_base = SubResource("GradientTexture2D_estoj")
 hitbox_size = 20.0
@@ -1841,7 +1830,6 @@ rotates = false
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger" to="Offset/RoomTriggers/RoomTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger4" to="Offset/RoomTriggers/RoomTrigger4" method="_on_body_entered"]
 [connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger2" to="Offset/RoomTriggers/RoomTrigger2" method="_on_body_entered"]
-[connection signal="body_entered" from="Offset/RoomTriggers/RoomTrigger3" to="Offset/RoomTriggers/RoomTrigger3" method="_on_body_entered"]
 [connection signal="on_activated" from="Offset/Obstacles/Lever" to="LeverAnim" method="_on_lever_on_activated"]
 
 [editable path="Offset/Obstacles/Wall1"]
