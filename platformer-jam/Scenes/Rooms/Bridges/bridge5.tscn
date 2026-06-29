@@ -81,7 +81,7 @@ radius = 30.0
 _data = [Vector2(0, 0.98749995), 0.0, -0.12137143, 0, 0, Vector2(0.93355477, 0.33749998), -1.5049994, -1.5049994, 0, 0, Vector2(1, 0), -7.524985, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_xdh3y"]
+[sub_resource type="Gradient" id="Gradient_7h1hb"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -91,7 +91,7 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Gradient" id="Gradient_lvexf"]
+[sub_resource type="Gradient" id="Gradient_qacjv"]
 resource_local_to_scene = true
 colors = PackedColorArray(0.050980393, 0.14901961, 0.11372549, 1, 0.15665644, 0.28046843, 0.18713436, 1)
 
@@ -210,7 +210,7 @@ shape = SubResource("CircleShape2D_xdh3y")
 [node name="Plant2" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="3" unique_id=586076656 instance=ExtResource("5_7h1hb")]
 width = 40.0
 width_curve = SubResource("Curve_j7dow")
-grad = SubResource("Gradient_xdh3y")
+grad = SubResource("Gradient_7h1hb")
 progress = 1.0
 sample_count = 4.0
 has_hitbox = true
@@ -223,7 +223,7 @@ curve = SubResource("Curve2D_lvexf")
 [node name="Plant3" parent="Offset/Obstacles" parent_id_path=PackedInt32Array(457880380) index="4" unique_id=1275880848 instance=ExtResource("5_7h1hb")]
 width = 40.0
 width_curve = SubResource("Curve_j7dow")
-grad = SubResource("Gradient_lvexf")
+grad = SubResource("Gradient_qacjv")
 progress = 0.0
 sample_count = 4.0
 has_hitbox = true
